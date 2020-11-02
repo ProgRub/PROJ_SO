@@ -6,7 +6,7 @@
 
 main()
 {
-    int fileDialog = open("teste", O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
+    int fileDialog = open("test", O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
     write(fileDialog, "Hello, world !\n", 15);
     close(fileDialog);
     return 0;
