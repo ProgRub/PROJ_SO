@@ -4,10 +4,12 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-main()
+main(int argc, char *argv[])
 {
-    int fileDialog = open("teste", O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
-    write(fileDialog, "Hello, world !\n", 15);
-    close(fileDialog);
+    //verificar se argc == 2
+    FILE *configFile;
+    configFile=fopen(argv[1],"r");
+    //lidar com os parâmetros
+    fclose(configFile);
     return 0;
 }

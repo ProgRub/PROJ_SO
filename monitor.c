@@ -23,27 +23,32 @@ int main()
   
 	return(0);
 }*/
-int main()
+main(int argc, char *argv[])
 {
-	int num;
-	FILE *f;
-	int a = 2;
-	f = fopen("test.txt","w");
+	//verificar se argc==2
+    FILE *configFile;
+    configFile=fopen(argv[1],"r");
+    //lidar com os parâmetros
+    fclose(configFile);
+	// int num;
+	// FILE *f;
+	// int a = 2;
+	// f = fopen("test.txt","w");
 
-	if(f == NULL)
-	{
-		printf("Error!");   
-		exit(1);             
-	}
+	// if(f == NULL)
+	// {
+	// 	perror("Error!");   
+	// 	exit(1);             
+	// }
 
-	printf("Numero: " );
-	scanf("%d",&num);
+	// printf("Numero: " );
+	// scanf("%d",&num);
 	
-	//fwrite(&num, sizeof(), 1, f);
+	// //fwrite(&num, sizeof(), 1, f);
 	
-	fprintf(f,"%d", a);
-	fprintf(f,"%d",num + a);
-	fclose(f);
+	// fprintf(f,"%d", a);
+	// fprintf(f,"%d",num + a);
+	// fclose(f);
 
 	return 0;
 }
