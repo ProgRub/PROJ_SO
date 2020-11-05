@@ -25,11 +25,10 @@ int main()
 }*/
 main(int argc, char *argv[])
 {
-	//verificar se argc==2
-    FILE *configFile;
-    configFile=fopen(argv[1],"r");
-    //lidar com os parâmetros
-    fclose(configFile);
+    FILE *registoFile;
+    registoFile=fopen(argv[1],"w");
+    //escrever mensagem
+    fclose(registoFile);
 	// int num;
 	// FILE *f;
 	// int a = 2;
