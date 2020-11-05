@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 {
     if (argc == 2)
     {
-        struct Configuration config;
+        struct Configuration configuracao;
         FILE *configFile;
         configFile = fopen(argv[1], "r");
         if (configFile == NULL)
@@ -66,26 +66,26 @@ int main(int argc, char *argv[])
             }
             values[index]=array[1];
         }
-        config.tempoMedioChegada = (int)strtol(values[0], &end, 10);
-        config.tempoTesteNormal = strtol(values[1], &end, 10);
-        config.tempoTesteRapido = strtol(values[2], &end, 10);
-        config.tempoEsperaCentro1 = strtol(values[3], &end, 10);
-        config.tempoEsperaCentro2 = strtol(values[4], &end, 10);
-        config.tamanhoFilaCentro1 = strtol(values[5], &end, 10);
-        config.tamanhoFilaCentro2 = strtol(values[6], &end, 10);
-        config.tamanhoHospital = strtol(values[7], &end, 10);
-        config.probabilidadePositivo = strtof(values[8], &end);
-        config.tempoSimulacao = strtol(values[9], &end, 10);
-        // printf("%d\n", config.tempoMedioChegada);
-        // printf("%d\n", config.tempoTesteNormal);
-        // printf("%d\n", config.tempoTesteRapido);
-        // printf("%d\n", config.tempoEsperaCentro1);
-        // printf("%d\n", config.tempoEsperaCentro2);
-        // printf("%d\n", config.tamanhoFilaCentro1);
-        // printf("%d\n", config.tamanhoFilaCentro2);
-        // printf("%d\n", config.tamanhoHospital);
-        // printf("%f\n", config.probabilidadePositivo);
-        // printf("%d\n", config.tempoSimulacao);
+        configuracao.tempoMedioChegada = (int)strtol(values[0], &end, 10);
+        configuracao.tempoTesteNormal = strtol(values[1], &end, 10);
+        configuracao.tempoTesteRapido = strtol(values[2], &end, 10);
+        configuracao.tempoEsperaCentro1 = strtol(values[3], &end, 10);
+        configuracao.tempoEsperaCentro2 = strtol(values[4], &end, 10);
+        configuracao.tamanhoFilaCentro1 = strtol(values[5], &end, 10);
+        configuracao.tamanhoFilaCentro2 = strtol(values[6], &end, 10);
+        configuracao.tamanhoHospital = strtol(values[7], &end, 10);
+        configuracao.probabilidadePositivo = strtof(values[8], &end);
+        configuracao.tempoSimulacao = strtol(values[9], &end, 10);
+        // printf("%d\n", configuracao.tempoMedioChegada);
+        // printf("%d\n", configuracao.tempoTesteNormal);
+        // printf("%d\n", configuracao.tempoTesteRapido);
+        // printf("%d\n", configuracao.tempoEsperaCentro1);
+        // printf("%d\n", configuracao.tempoEsperaCentro2);
+        // printf("%d\n", configuracao.tamanhoFilaCentro1);
+        // printf("%d\n", configuracao.tamanhoFilaCentro2);
+        // printf("%d\n", configuracao.tamanhoHospital);
+        // printf("%f\n", configuracao.probabilidadePositivo);
+        // printf("%d\n", configuracao.tempoSimulacao);
         // printf("%s\n", array[i]);
         fclose(configFile);
         return 0;

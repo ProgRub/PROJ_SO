@@ -1,0 +1,5 @@
+Estado atual => Simulacao a decorrer!
+Utilizadores: 203
+Casos positivos: 18
+Casos em estudo: 11
+Tempo medio de espera: 13 min.
