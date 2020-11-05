@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
         rewind(configFile);
         char buffer[fileSize];
         fread(buffer, 1, fileSize, configFile);
+        fclose(configFile);
         // printf("%s\n\n\n", buffer);
         int i = 0;
         char *p = strtok(buffer, "\n");
@@ -87,7 +88,6 @@ int main(int argc, char *argv[])
         // printf("%f\n", configuracao.probabilidadePositivo);
         // printf("%d\n", configuracao.tempoSimulacao);
         // printf("%s\n", array[i]);
-        fclose(configFile);
         return 0;
     }
     perror("ERRO!\n(Só) É preciso passar como argumento o ficheiro de configuração.");
