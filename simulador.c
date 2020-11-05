@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
             perror("ERRO!\nFicheiro de configuração não existe.");
             exit(EXIT_FAILURE);
         }
-        else if(strcmp(argv[1],"simulador.conf")!=0)
+        else if(strcmp(argv[1],"simulador.conf")!=0) //se strcmp retorn 0, então os string são iguais
         {
             perror("ERRO!\nNão é o ficheiro de configuração.");
             exit(EXIT_FAILURE);
