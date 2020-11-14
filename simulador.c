@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <pthread.h>
 #include <fcntl.h>
 #include <string.h>
 
@@ -150,6 +151,16 @@ struct Configuration
 //                 close(newsockfd);
 //         }
 // }
+
+//  if (pthread_create(&tarefa_id[i],NULL, fact_iterativo,
+//                            (void *) &dados[i]) != 0) {
+//                 printf("Erro na cria▒▒o da tarefa\n");
+//                 exit(1);
+//             }
+
+// for (i=0; i < DIM_DADOS; i++) {
+//         pthread_join(tarefa_id[i],NULL);
+//                 }
 
 
 int main(int argc, char *argv[])
