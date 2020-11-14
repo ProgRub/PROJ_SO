@@ -16,6 +16,8 @@ struct Configuration
     int tamanhoFilaCentro2;
     int tamanhoHospital;
     float probabilidadePositivo;
+    float probabilidadeTesteNormalFalsoPositivo;
+    float probabilidadeTesteRapidoFalsoPositivo;
     int tempoSimulacao;
 };
 
@@ -43,7 +45,7 @@ int main(int argc, char *argv[])
         char buffer[fileSize];
         fread(buffer, 1, fileSize, configFile);
         fclose(configFile);
-        // printf("%s\n\n\n", buffer);
+
         int i = 0;
         char *p = strtok(buffer, "\n");
         char *lines[25];
@@ -53,10 +55,9 @@ int main(int argc, char *argv[])
             p = strtok(NULL, "\n");
         }
         char *end;
-        // printf("%d",(int)strtol(array[0],&end,10));
         char *array[2];
-        char *values[10];
-        for (int index = 0; index < 10; index++)
+        char *values[12];
+        for (int index = 0; index < 12; index++)
         {
             char *aux = strtok(lines[index], ":");
             i = 0;
@@ -67,6 +68,8 @@ int main(int argc, char *argv[])
             }
             values[index]=array[1];
         }
+
+        //guardar os valores do ficheiro na estrutura de configuracao
         configuracao.tempoMedioChegada = (int)strtol(values[0], &end, 10);
         configuracao.tempoTesteNormal = strtol(values[1], &end, 10);
         configuracao.tempoTesteRapido = strtol(values[2], &end, 10);
@@ -76,18 +79,22 @@ int main(int argc, char *argv[])
         configuracao.tamanhoFilaCentro2 = strtol(values[6], &end, 10);
         configuracao.tamanhoHospital = strtol(values[7], &end, 10);
         configuracao.probabilidadePositivo = strtof(values[8], &end);
-        configuracao.tempoSimulacao = strtol(values[9], &end, 10);
-        // printf("%d\n", configuracao.tempoMedioChegada);
-        // printf("%d\n", configuracao.tempoTesteNormal);
-        // printf("%d\n", configuracao.tempoTesteRapido);
-        // printf("%d\n", configuracao.tempoEsperaCentro1);
-        // printf("%d\n", configuracao.tempoEsperaCentro2);
-        // printf("%d\n", configuracao.tamanhoFilaCentro1);
-        // printf("%d\n", configuracao.tamanhoFilaCentro2);
-        // printf("%d\n", configuracao.tamanhoHospital);
-        // printf("%f\n", configuracao.probabilidadePositivo);
-        // printf("%d\n", configuracao.tempoSimulacao);
-        // printf("%s\n", array[i]);
+        configuracao.probabilidadeTesteNormalFalsoPositivo = strtof(values[9], &end);
+        configuracao.probabilidadeTesteRapidoFalsoPositivo = strtof(values[10], &end);
+        configuracao.tempoSimulacao = strtol(values[11], &end, 10);
+
+        printf("Tempo medio de chegada: %d\n", configuracao.tempoMedioChegada);
+        printf("Tempo ate o resultado do teste normal: %d\n", configuracao.tempoTesteNormal);
+        printf("Tempo ate o resultado do teste rapido: %d\n", configuracao.tempoTesteRapido);
+        printf("Tempo de espera no centro de testes 1: %d\n", configuracao.tempoEsperaCentro1);
+        printf("Tempo de espera no centro de testes 2: %d\n", configuracao.tempoEsperaCentro2);
+        printf("Tamanho maximo da fila no centro de testes 1: %d\n", configuracao.tamanhoFilaCentro1);
+        printf("Tamanho maximo da fila no centro de testes 2: %d\n", configuracao.tamanhoFilaCentro2);
+        printf("Tamanho maximo do hospital: %d\n", configuracao.tamanhoHospital);
+        printf("Probabilidade de um teste regressar positivo: %f\n", configuracao.probabilidadePositivo);
+        printf("Probabilidade do teste normal dar falso positivo: %f\n", configuracao.probabilidadeTesteNormalFalsoPositivo);
+        printf("Probabilidade do teste rapido dar falso positivo: %f\n", configuracao.probabilidadeTesteRapidoFalsoPositivo);
+        printf("Duracao da simulacao: %d\n", configuracao.tempoSimulacao);
         return 0;
     }
     perror("ERRO!\n(Só) É preciso passar como argumento o ficheiro de configuração.");
