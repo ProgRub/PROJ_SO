@@ -1,0 +1,570 @@
+
+Simulação de: Sun Jan  8 22:29:02 2017
+ 
+Número de clientes VIP: 38 
+Número de clientes NORMAL: 105 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 50 
+Número de pessoas que usufruíram da atração: 42 
+Número de boias despachadas: 21 
+Número de desistências: 7 
+Número de pessoas na fila de espera: 1 
+Tempo máximo de espera: 189 
+Tempo médio de espera: 81.00 
+50 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 59 
+Número de pessoas que usufruíram da atração: 59 
+Número de pessoas dentro da piscina: 12 
+Número de desistências: 0 
+Tempo máximo de espera: 0 
+Número de pessoas na fila de espera: 0 
+59 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 34 
+Número de pessoas que usufruíram da atração: 32 
+Número de viagens: 4 
+Tempo médio de espera: 0.00 
+
+Simulação de: Wed Jan 11 21:50:05 2017
+ 
+Número de clientes VIP: 37 
+Número de clientes NORMAL: 102 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 78 
+Número de pessoas que usufruíram da atração: 50 
+Número de boias despachadas: 25 
+Número de desistências: 22 
+Número de pessoas na fila de espera: 6 
+Tempo máximo de espera: 197 
+Tempo médio de espera: 111.00 
+78 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 42 
+Número de pessoas que usufruíram da atração: 42 
+Número de pessoas dentro da piscina: 5 
+Número de desistências: 0 
+Tempo máximo de espera: 0 
+Número de pessoas na fila de espera: 0 
+42 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 19 
+Número de pessoas que usufruíram da atração: 16 
+Número de viagens: 2 
+Tempo médio de espera: 0.00 
+
+Simulação de: Wed Jan 11 22:17:06 2017
+ 
+Número de clientes VIP: 37 
+Número de clientes NORMAL: 100 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 34 
+Número de pessoas que usufruíram da atração: 30 
+Número de boias despachadas: 15 
+Número de desistências: 4 
+Número de pessoas na fila de espera: 0 
+Tempo máximo de espera: 200 
+Tempo médio de espera: 86.00 
+34 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 46 
+Número de pessoas que usufruíram da atração: 46 
+Número de pessoas dentro da piscina: 15 
+Número de desistências: 0 
+Tempo máximo de espera: 0 
+Número de pessoas na fila de espera: 0 
+46 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 57 
+Número de pessoas que usufruíram da atração: 56 
+Número de viagens: 7 
+Tempo médio de espera: 0.00 
+
+Simulação de: Wed Jan 11 22:18:33 2017
+ 
+Número de clientes VIP: 37 
+Número de clientes NORMAL: 98 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 51 
+Número de pessoas que usufruíram da atração: 40 
+Número de boias despachadas: 20 
+Número de desistências: 10 
+Número de pessoas na fila de espera: 1 
+Tempo máximo de espera: 197 
+Tempo médio de espera: 94.00 
+51 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 37 
+Número de pessoas que usufruíram da atração: 37 
+Número de pessoas dentro da piscina: 4 
+Número de desistências: 0 
+Tempo máximo de espera: 0 
+Número de pessoas na fila de espera: 0 
+37 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 47 
+Número de pessoas que usufruíram da atração: 40 
+Número de viagens: 5 
+Tempo médio de espera: 0.00 
+
+Simulação de: Wed Jan 11 22:29:00 2017
+ 
+Número de clientes VIP: 37 
+Número de clientes NORMAL: 288 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 58 
+Número de pessoas que usufruíram da atração: 30 
+Número de boias despachadas: 15 
+Número de desistências: 28 
+Número de pessoas na fila de espera: 0 
+Tempo máximo de espera: 199 
+Tempo médio de espera: 96.00 
+58 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 146 
+Número de pessoas que usufruíram da atração: 146 
+Número de pessoas dentro da piscina: 44 
+Número de desistências: 0 
+Tempo máximo de espera: 0 
+Número de pessoas na fila de espera: 0 
+146 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 121 
+Número de pessoas que usufruíram da atração: 120 
+Número de viagens: 15 
+Tempo médio de espera: 8.00 
+
+Simulação de: Wed Jan 11 22:31:24 2017
+ 
+Número de clientes VIP: 37 
+Número de clientes NORMAL: 485 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 107 
+Número de pessoas que usufruíram da atração: 25 
+Número de boias despachadas: 12 
+Número de desistências: 80 
+Número de pessoas na fila de espera: 2 
+Tempo máximo de espera: 200 
+Tempo médio de espera: 100.00 
+107 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 179 
+Número de pessoas que usufruíram da atração: 161 
+Número de pessoas dentro da piscina: 14 
+Número de desistências: 17 
+Tempo máximo de espera: 314 
+Número de pessoas na fila de espera: -1 
+177 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 233 
+Número de pessoas que usufruíram da atração: 231 
+Número de viagens: 29 
+Tempo médio de espera: 28.00 
+
+Simulação de: Wed Jan 11 22:34:15 2017
+ 
+Número de clientes VIP: 37 
+Número de clientes NORMAL: 462 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 185 
+Número de pessoas que usufruíram da atração: 42 
+Número de boias despachadas: 21 
+Número de desistências: 134 
+Número de pessoas na fila de espera: 5 
+Tempo máximo de espera: 200 
+Tempo médio de espera: 118.00 
+181 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 119 
+Número de pessoas que usufruíram da atração: 119 
+Número de pessoas dentro da piscina: 18 
+Número de desistências: 0 
+Tempo máximo de espera: 164 
+Número de pessoas na fila de espera: 0 
+119 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 195 
+Número de pessoas que usufruíram da atração: 190 
+Número de viagens: 24 
+Tempo médio de espera: 25.00 
+
+Simulação de: Wed Jan 11 22:35:18 2017
+ 
+Número de clientes VIP: 39 
+Número de clientes NORMAL: 479 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 146 
+Número de pessoas que usufruíram da atração: 38 
+Número de boias despachadas: 19 
+Número de desistências: 104 
+Número de pessoas na fila de espera: 5 
+Tempo máximo de espera: 200 
+Tempo médio de espera: 115.00 
+147 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 175 
+Número de pessoas que usufruíram da atração: 143 
+Número de pessoas dentro da piscina: 15 
+Número de desistências: 32 
+Tempo máximo de espera: 430 
+Número de pessoas na fila de espera: 0 
+175 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 197 
+Número de pessoas que usufruíram da atração: 190 
+Número de viagens: 24 
+Tempo médio de espera: 31.00 
+
+Simulação de: Wed Jan 11 22:38:56 2017
+ 
+Número de clientes VIP: 38 
+Número de clientes NORMAL: 505 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 212 
+Número de pessoas que usufruíram da atração: 39 
+Número de boias despachadas: 20 
+Número de desistências: 155 
+Número de pessoas na fila de espera: 16 
+Tempo máximo de espera: 200 
+Tempo médio de espera: 116.00 
+210 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 224 
+Número de pessoas que usufruíram da atração: 205 
+Número de pessoas dentro da piscina: 48 
+Número de desistências: 15 
+Tempo máximo de espera: 150 
+Número de pessoas na fila de espera: 3 
+223 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 106 
+Número de pessoas que usufruíram da atração: 100 
+Número de viagens: 13 
+Tempo médio de espera: 31.00 
+
+Simulação de: Wed Jan 11 23:45:48 2017
+ 
+Número de clientes VIP: 38 
+Número de clientes NORMAL: 478 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 189 
+Número de pessoas que usufruíram da atração: 38 
+Número de boias despachadas: 20 
+Número de desistências: 148 
+Número de pessoas na fila de espera: 1 
+Tempo máximo de espera: 200 
+Tempo médio de espera: 114.00 
+187 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 99 
+Número de pessoas que usufruíram da atração: 99 
+Número de pessoas dentro da piscina: 38 
+Número de desistências: 0 
+Tempo máximo de espera: 0 
+Número de pessoas na fila de espera: 0 
+99 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 227 
+Número de pessoas que usufruíram da atração: 224 
+Número de viagens: 28 
+Tempo médio de espera: 25.00 
+
+Simulação de: Wed Jan 11 23:46:37 2017
+ 
+Número de clientes VIP: 38 
+Número de clientes NORMAL: 428 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 90 
+Número de pessoas que usufruíram da atração: 26 
+Número de boias despachadas: 13 
+Número de desistências: 55 
+Número de pessoas na fila de espera: 9 
+Tempo máximo de espera: 200 
+Tempo médio de espera: 116.00 
+90 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 241 
+Número de pessoas que usufruíram da atração: 103 
+Número de pessoas dentro da piscina: 18 
+Número de desistências: 139 
+Tempo máximo de espera: 716 
+Número de pessoas na fila de espera: 0 
+242 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 133 
+Número de pessoas que usufruíram da atração: 128 
+Número de viagens: 16 
+Tempo médio de espera: 20.00 
+
+Simulação de: Wed Jan 11 23:49:55 2017
+ 
+Número de clientes VIP: 39 
+Número de clientes NORMAL: 275 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 141 
+Número de pessoas que usufruíram da atração: 56 
+Número de boias despachadas: 28 
+Número de desistências: 81 
+Número de pessoas na fila de espera: 3 
+Tempo máximo de espera: 198 
+Tempo médio de espera: 137.00 
+140 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 121 
+Número de pessoas que usufruíram da atração: 88 
+Número de pessoas dentro da piscina: 25 
+Número de desistências: 23 
+Tempo máximo de espera: 565 
+Número de pessoas na fila de espera: 10 
+121 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 52 
+Número de pessoas que usufruíram da atração: 48 
+Número de viagens: 6 
+Tempo médio de espera: 0.00 
+
+Simulação de: Wed Jan 11 23:59:06 2017
+ 
+Número de clientes VIP: 39 
+Número de clientes NORMAL: 285 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 131 
+Número de pessoas que usufruíram da atração: 54 
+Número de boias despachadas: 27 
+Número de desistências: 69 
+Número de pessoas na fila de espera: 8 
+Tempo máximo de espera: 200 
+Tempo médio de espera: 126.00 
+131 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 110 
+Número de pessoas que usufruíram da atração: 110 
+Número de pessoas dentro da piscina: 17 
+Número de desistências: 0 
+Tempo máximo de espera: 175 
+Número de pessoas na fila de espera: 0 
+110 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 83 
+Número de pessoas que usufruíram da atração: 80 
+Número de viagens: 20 
+Tempo médio de espera: 31.00 
+
+Simulação de: Thu Jan 12 00:03:15 2017
+ 
+Número de clientes VIP: 39 
+Número de clientes NORMAL: 461 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 185 
+Número de pessoas que usufruíram da atração: 47 
+Número de boias despachadas: 24 
+Número de desistências: 119 
+Número de pessoas na fila de espera: 18 
+Tempo máximo de espera: 200 
+Tempo médio de espera: 144.00 
+184 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 154 
+Número de pessoas que usufruíram da atração: 102 
+Número de pessoas dentro da piscina: 25 
+Número de desistências: 50 
+Tempo máximo de espera: 497 
+Número de pessoas na fila de espera: 2 
+154 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 161 
+Número de pessoas que usufruíram da atração: 160 
+Número de viagens: 40 
+Tempo médio de espera: 148.00 
+
+Simulação de: Thu Jan 12 00:07:03 2017
+ 
+Número de clientes VIP: 39 
+Número de clientes NORMAL: 499 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 158 
+Número de pessoas que usufruíram da atração: 52 
+Número de boias despachadas: 26 
+Número de desistências: 106 
+Número de pessoas na fila de espera: 0 
+Tempo máximo de espera: 199 
+Tempo médio de espera: 128.00 
+158 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 238 
+Número de pessoas que usufruíram da atração: 135 
+Número de pessoas dentro da piscina: 25 
+Número de desistências: 93 
+Tempo máximo de espera: 510 
+Número de pessoas na fila de espera: 10 
+238 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 142 
+Número de pessoas que usufruíram da atração: 136 
+Número de viagens: 34 
+Tempo médio de espera: 121.00 
+
+Simulação de: Thu Jan 12 08:30:53 2017
+ 
+Número de clientes VIP: 39 
+Número de clientes NORMAL: 105 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 43 
+Número de pessoas que usufruíram da atração: 34 
+Número de boias despachadas: 17 
+Número de desistências: 1 
+Número de pessoas na fila de espera: 8 
+Tempo máximo de espera: 187 
+Tempo médio de espera: 68.00 
+43 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 54 
+Número de pessoas que usufruíram da atração: 54 
+Número de pessoas dentro da piscina: 11 
+Número de desistências: 0 
+Tempo máximo de espera: 0 
+Número de pessoas na fila de espera: 0 
+54 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 47 
+Número de pessoas que usufruíram da atração: 44 
+Número de viagens: 11 
+Tempo médio de espera: 0.00 
+
+Simulação de: Thu Jan 12 08:34:15 2017
+ 
+Número de clientes VIP: 39 
+Número de clientes NORMAL: 469 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 179 
+Número de pessoas que usufruíram da atração: 52 
+Número de boias despachadas: 26 
+Número de desistências: 116 
+Número de pessoas na fila de espera: 11 
+Tempo máximo de espera: 200 
+Tempo médio de espera: 118.00 
+179 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 177 
+Número de pessoas que usufruíram da atração: 106 
+Número de pessoas dentro da piscina: 21 
+Número de desistências: 71 
+Tempo máximo de espera: 548 
+Número de pessoas na fila de espera: 0 
+177 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 152 
+Número de pessoas que usufruíram da atração: 152 
+Número de viagens: 38 
+Tempo médio de espera: 58.00 
+
+Simulação de: Thu Jan 12 08:53:44 2017
+ 
+Número de clientes VIP: 39 
+Número de clientes NORMAL: 105 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 59 
+Número de pessoas que usufruíram da atração: 45 
+Número de boias despachadas: 22 
+Número de desistências: 14 
+Número de pessoas na fila de espera: 1 
+Tempo máximo de espera: 200 
+Tempo médio de espera: 99.00 
+60 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 47 
+Número de pessoas que usufruíram da atração: 47 
+Número de pessoas dentro da piscina: 8 
+Número de desistências: 0 
+Tempo máximo de espera: 0 
+Número de pessoas na fila de espera: 0 
+47 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 38 
+Número de pessoas que usufruíram da atração: 36 
+Número de viagens: 9 
+Tempo médio de espera: 0.00 
+
+Simulação de: Thu Jan 12 09:01:58 2017
+ 
+Número de clientes VIP: 39 
+Número de clientes NORMAL: 488 
+
+*** Zona 1 *** 
+Número de pessoas que entraram na atração: 178 
+Número de pessoas que usufruíram da atração: 47 
+Número de boias despachadas: 23 
+Número de desistências: 118 
+Número de pessoas na fila de espera: 12 
+Tempo máximo de espera: 200 
+Tempo médio de espera: 127.00 
+177 
+
+*** Zona 2 *** 
+Número de pessoas que entraram na atração: 160 
+Número de pessoas que usufruíram da atração: 106 
+Número de pessoas dentro da piscina: 25 
+Número de desistências: 47 
+Tempo máximo de espera: 654 
+Número de pessoas na fila de espera: 7 
+160 
+
+*** Zona 3 *** 
+Número de pessoas que entraram na atração: 189 
+Número de pessoas que usufruíram da atração: 178 
+Número de viagens: 45 
+Tempo médio de espera: 64.00 

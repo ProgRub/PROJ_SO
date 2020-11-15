@@ -1,0 +1,1235 @@
+Uma pessoa foi criadaUma pessoa está a ser atendida na estacao 0 e esperou 0.000000
+Uma pessoa comprou bilhete na estação 0 e demorou 1.690000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa está a ser atendida na estacao 1 e esperou 0.000000
+Uma pessoa comprou bilhete na estação 1 e demorou 1.510000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 18.250000
+Uma pessoa comprou bilhete na estação 0 e demorou 1.740000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 21.360001
+Uma pessoa comprou bilhete na estação 1 e demorou 4.080000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 40.880001
+Uma pessoa comprou bilhete na estação 0 e demorou 2.080000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 47.610001
+Uma pessoa comprou bilhete na estação 1 e demorou 1.860000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 65.060005
+Uma pessoa comprou bilhete na estação 0 e demorou 1.590000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 67.010002
+Uma pessoa comprou bilhete na estação 1 e demorou 2.260000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 77.200005
+Uma pessoa comprou bilhete na estação 0 e demorou 2.880000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 79.820000
+Uma pessoa comprou bilhete na estação 1 e demorou 2.190000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 86.949997
+Uma pessoa comprou bilhete na estação 0 e demorou 1.810000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 108.169998
+Uma pessoa comprou bilhete na estação 1 e demorou 2.070000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 91.489998
+Uma pessoa comprou bilhete na estação 0 e demorou 2.500000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 128.059998
+Uma pessoa comprou bilhete na estação 1 e demorou 1.610000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 110.279999
+Uma pessoa comprou bilhete na estação 0 e demorou 2.660000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 138.750000
+Uma pessoa comprou bilhete na estação 1 e demorou 3.250000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 131.529999
+Uma pessoa comprou bilhete na estação 0 e demorou 2.630000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 166.779999
+Uma pessoa comprou bilhete na estação 1 e demorou 1.910000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 150.750000
+Uma pessoa comprou bilhete na estação 0 e demorou 1.830000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 187.129990
+Uma pessoa comprou bilhete na estação 1 e demorou 2.280000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 177.519989
+Uma pessoa comprou bilhete na estação 0 e demorou 2.120000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 209.449997
+Uma pessoa comprou bilhete na estação 1 e demorou 1.720000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 201.609985
+Uma pessoa comprou bilhete na estação 0 e demorou 1.910000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 223.050003
+Uma pessoa comprou bilhete na estação 1 e demorou 1.990000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 223.229996
+Uma pessoa comprou bilhete na estação 0 e demorou 2.740000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 240.940002
+Uma pessoa comprou bilhete na estação 1 e demorou 2.530000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 246.699997
+Uma pessoa comprou bilhete na estação 0 e demorou 2.360000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 345.969971
+Uma pessoa comprou bilhete na estação 1 e demorou 2.270000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 355.180023
+Uma pessoa comprou bilhete na estação 0 e demorou 1.990000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 360.790009
+Uma pessoa comprou bilhete na estação 1 e demorou 2.610000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 363.789978
+Uma pessoa comprou bilhete na estação 0 e demorou 1.870000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 386.199982
+Uma pessoa comprou bilhete na estação 1 e demorou 2.820000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 385.570007
+Uma pessoa comprou bilhete na estação 0 e demorou 1.830000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 414.049988
+Uma pessoa comprou bilhete na estação 1 e demorou 2.360000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 421.979980
+Uma pessoa comprou bilhete na estação 0 e demorou 2.100000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 436.609985
+Uma pessoa comprou bilhete na estação 1 e demorou 2.250000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 433.220001
+Uma pessoa comprou bilhete na estação 0 e demorou 2.480000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 457.720001
+Uma pessoa comprou bilhete na estação 1 e demorou 2.090000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 458.000000
+Uma pessoa comprou bilhete na estação 0 e demorou 2.500000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 479.580017
+Uma pessoa comprou bilhete na estação 1 e demorou 2.210000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+AcabouAcabouAcabouAcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 485.589996
+Uma pessoa comprou bilhete na estação 0 e demorou 2.060000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 494.670013
+Uma pessoa comprou bilhete na estação 1 e demorou 1.940000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 488.349976
+Uma pessoa comprou bilhete na estação 0 e demorou 2.280000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 517.290039
+Uma pessoa comprou bilhete na estação 1 e demorou 2.900000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 510.490021
+Uma pessoa comprou bilhete na estação 0 e demorou 2.260000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 534.339966
+Uma pessoa comprou bilhete na estação 1 e demorou 1.630000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 521.450012
+Uma pessoa comprou bilhete na estação 0 e demorou 2.560000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 559.610046
+Uma pessoa comprou bilhete na estação 1 e demorou 2.390000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 550.890015
+Uma pessoa comprou bilhete na estação 0 e demorou 1.810000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 574.859985
+Uma pessoa comprou bilhete na estação 1 e demorou 1.720000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 561.059998
+Uma pessoa comprou bilhete na estação 0 e demorou 3.840000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 600.000000
+Uma pessoa comprou bilhete na estação 1 e demorou 2.890000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 580.330017
+Uma pessoa comprou bilhete na estação 0 e demorou 1.710000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+AcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 1 e esperou 614.989990
+Uma pessoa comprou bilhete na estação 1 e demorou 1.850000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 602.389954
+Uma pessoa comprou bilhete na estação 0 e demorou 2.250000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 635.349976
+Uma pessoa comprou bilhete na estação 1 e demorou 1.580000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 618.190002
+Uma pessoa comprou bilhete na estação 0 e demorou 1.890000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 655.900024
+Uma pessoa comprou bilhete na estação 1 e demorou 1.810000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 609.409973
+Uma pessoa comprou bilhete na estação 0 e demorou 1.860000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 671.780029
+Uma pessoa comprou bilhete na estação 1 e demorou 2.120000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 645.479980
+Uma pessoa comprou bilhete na estação 0 e demorou 2.620000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 702.859985
+Uma pessoa comprou bilhete na estação 1 e demorou 1.970000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 657.680054
+Uma pessoa comprou bilhete na estação 0 e demorou 2.700000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 721.089966
+Uma pessoa comprou bilhete na estação 1 e demorou 2.110000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 680.710022
+Uma pessoa comprou bilhete na estação 0 e demorou 1.880000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 737.489990
+Uma pessoa comprou bilhete na estação 1 e demorou 4.180000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 715.230042
+Uma pessoa comprou bilhete na estação 0 e demorou 1.850000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 769.820007
+Uma pessoa comprou bilhete na estação 1 e demorou 2.820000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 728.650024
+Uma pessoa comprou bilhete na estação 0 e demorou 2.500000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 790.740051
+Uma pessoa comprou bilhete na estação 1 e demorou 3.550000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 749.209961
+Uma pessoa comprou bilhete na estação 0 e demorou 2.010000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 816.410034
+Uma pessoa comprou bilhete na estação 1 e demorou 1.990000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 779.939941
+Uma pessoa comprou bilhete na estação 0 e demorou 2.380000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 847.600037
+Uma pessoa comprou bilhete na estação 1 e demorou 2.010000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 803.880005
+Uma pessoa comprou bilhete na estação 0 e demorou 1.760000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 871.530029
+Uma pessoa comprou bilhete na estação 1 e demorou 1.560000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 726.109985
+Uma pessoa comprou bilhete na estação 0 e demorou 1.890000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 879.260010
+Uma pessoa comprou bilhete na estação 1 e demorou 1.520000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 743.030029
+Uma pessoa comprou bilhete na estação 0 e demorou 1.780000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 886.449951
+Uma pessoa comprou bilhete na estação 1 e demorou 3.590000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+AcabouAcabouAcabouAcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 780.360046
+Uma pessoa comprou bilhete na estação 0 e demorou 4.440000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 911.919983
+Uma pessoa comprou bilhete na estação 1 e demorou 1.740000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 802.609985
+Uma pessoa comprou bilhete na estação 0 e demorou 2.110000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 827.679993
+Uma pessoa comprou bilhete na estação 1 e demorou 2.320000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 818.160034
+Uma pessoa comprou bilhete na estação 0 e demorou 3.070000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 842.730042
+Uma pessoa comprou bilhete na estação 1 e demorou 2.030000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 845.599976
+Uma pessoa comprou bilhete na estação 0 e demorou 1.830000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 863.869995
+Uma pessoa comprou bilhete na estação 1 e demorou 1.590000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 857.630005
+Uma pessoa comprou bilhete na estação 0 e demorou 2.360000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 876.210022
+Uma pessoa comprou bilhete na estação 1 e demorou 1.790000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 878.539978
+Uma pessoa comprou bilhete na estação 0 e demorou 1.840000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 893.300049
+Uma pessoa comprou bilhete na estação 1 e demorou 3.210000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 890.700012
+Uma pessoa comprou bilhete na estação 0 e demorou 1.530000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 914.900024
+Uma pessoa comprou bilhete na estação 1 e demorou 2.160000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 0 e esperou 918.610046
+Uma pessoa comprou bilhete na estação 0 e demorou 1.900000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 924.080017
+Uma pessoa comprou bilhete na estação 1 e demorou 1.780000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 932.890015
+Uma pessoa comprou bilhete na estação 0 e demorou 1.750000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 934.500000
+Uma pessoa comprou bilhete na estação 1 e demorou 1.570000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 928.729980
+Uma pessoa comprou bilhete na estação 0 e demorou 1.890000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 954.840027
+Uma pessoa foi criadaUma pessoa comprou bilhete na estação 1 e demorou 2.780000 a comprar o bilhete
+Uma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 950.609985
+Uma pessoa comprou bilhete na estação 0 e demorou 2.370000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 957.809998
+Uma pessoa comprou bilhete na estação 1 e demorou 2.130000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 952.289978
+Uma pessoa comprou bilhete na estação 0 e demorou 1.800000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 981.039978
+Uma pessoa comprou bilhete na estação 1 e demorou 2.370000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 976.539978
+Uma pessoa comprou bilhete na estação 0 e demorou 1.950000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 1002.419983
+Uma pessoa comprou bilhete na estação 1 e demorou 1.750000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1005.479980
+Uma pessoa comprou bilhete na estação 0 e demorou 2.000000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 1 e esperou 1036.880005
+Uma pessoa comprou bilhete na estação 1 e demorou 1.930000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1027.760010
+Uma pessoa comprou bilhete na estação 0 e demorou 2.670000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 1058.050049
+Uma pessoa comprou bilhete na estação 1 e demorou 1.790000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 1046.619995
+Uma pessoa comprou bilhete na estação 0 e demorou 2.050000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1080.150024
+Uma pessoa comprou bilhete na estação 1 e demorou 1.910000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+AcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 1067.849976
+Uma pessoa comprou bilhete na estação 0 e demorou 6.500000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1083.880005
+Uma pessoa comprou bilhete na estação 1 e demorou 1.590000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1090.130005
+Uma pessoa comprou bilhete na estação 0 e demorou 1.990000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1106.400024
+Uma pessoa comprou bilhete na estação 1 e demorou 1.460000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1093.679932
+Uma pessoa comprou bilhete na estação 0 e demorou 1.950000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1118.400024
+Uma pessoa comprou bilhete na estação 1 e demorou 1.660000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1103.520020
+Uma pessoa comprou bilhete na estação 0 e demorou 2.650000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 1 e esperou 1148.489990
+AcabouAcabouAcabouAcabouUma pessoa comprou bilhete na estação 1 e demorou 7.910000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1138.079956
+Uma pessoa comprou bilhete na estação 0 e demorou 2.540000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1177.890015
+Uma pessoa comprou bilhete na estação 1 e demorou 2.020000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1152.700073
+Uma pessoa comprou bilhete na estação 0 e demorou 1.570000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1202.000000
+Uma pessoa comprou bilhete na estação 1 e demorou 1.890000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 1182.689941
+Uma pessoa comprou bilhete na estação 0 e demorou 1.700000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1220.420044
+Uma pessoa comprou bilhete na estação 1 e demorou 1.460000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1275.559937
+Uma pessoa comprou bilhete na estação 0 e demorou 1.250000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 1315.140015
+Uma pessoa comprou bilhete na estação 1 e demorou 1.730000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1301.780029
+Uma pessoa comprou bilhete na estação 0 e demorou 1.800000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1340.409912
+Uma pessoa comprou bilhete na estação 1 e demorou 1.820000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1325.280029
+Uma pessoa comprou bilhete na estação 0 e demorou 2.130000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 1360.969971
+Uma pessoa comprou bilhete na estação 1 e demorou 1.510000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouAcabouAcabouAcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1352.630005
+Uma pessoa comprou bilhete na estação 0 e demorou 1.730000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1372.250000
+Uma pessoa comprou bilhete na estação 1 e demorou 1.500000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1368.209961
+Uma pessoa comprou bilhete na estação 0 e demorou 1.960000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 1383.890015
+Uma pessoa comprou bilhete na estação 1 e demorou 1.670000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1384.149902
+Uma pessoa comprou bilhete na estação 0 e demorou 1.650000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1397.359985
+Uma pessoa comprou bilhete na estação 1 e demorou 3.100000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1393.049927
+Uma pessoa comprou bilhete na estação 0 e demorou 1.650000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 1430.819946
+Uma pessoa comprou bilhete na estação 1 e demorou 1.640000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1420.799927
+Uma pessoa comprou bilhete na estação 0 e demorou 1.340000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1442.289917
+Uma pessoa comprou bilhete na estação 1 e demorou 1.970000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1443.019897
+Uma pessoa comprou bilhete na estação 0 e demorou 2.980000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1450.630005
+Uma pessoa comprou bilhete na estação 1 e demorou 1.770000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1453.160034
+Uma pessoa comprou bilhete na estação 0 e demorou 2.490000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1471.900024
+Uma pessoa comprou bilhete na estação 1 e demorou 1.990000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1480.250000
+Uma pessoa comprou bilhete na estação 0 e demorou 1.450000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1504.430054
+Uma pessoa comprou bilhete na estação 1 e demorou 1.530000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1476.229980
+Uma pessoa comprou bilhete na estação 0 e demorou 1.770000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 1519.709961
+Uma pessoa comprou bilhete na estação 1 e demorou 1.370000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1491.439941
+Uma pessoa comprou bilhete na estação 0 e demorou 1.470000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1539.979980
+Uma pessoa comprou bilhete na estação 1 e demorou 2.340000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1518.799927
+Uma pessoa comprou bilhete na estação 0 e demorou 1.910000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1560.109985
+Uma pessoa comprou bilhete na estação 1 e demorou 1.760000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa está a ser atendida na estacao 0 e esperou 1508.410034
+Uma pessoa comprou bilhete na estação 0 e demorou 1.310000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1568.569946
+Uma pessoa comprou bilhete na estação 1 e demorou 1.670000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1532.260010
+Uma pessoa comprou bilhete na estação 0 e demorou 1.620000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1592.380005
+Uma pessoa comprou bilhete na estação 1 e demorou 1.540000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1553.030029
+Uma pessoa comprou bilhete na estação 0 e demorou 1.780000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+AcabouAcabouAcabouAcabouAcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1625.439941
+Uma pessoa comprou bilhete na estação 1 e demorou 1.870000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1579.579956
+Uma pessoa comprou bilhete na estação 0 e demorou 2.630000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1643.430054
+Uma pessoa comprou bilhete na estação 1 e demorou 1.440000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1597.719971
+Uma pessoa comprou bilhete na estação 0 e demorou 1.650000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1663.340088
+Uma pessoa comprou bilhete na estação 1 e demorou 2.280000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1599.489990
+Uma pessoa comprou bilhete na estação 0 e demorou 1.780000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 1664.540039
+Uma pessoa comprou bilhete na estação 1 e demorou 2.020000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1654.559937
+Uma pessoa comprou bilhete na estação 0 e demorou 3.680000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa está a ser atendida na estacao 1 e esperou 1726.089966
+Uma pessoa comprou bilhete na estação 1 e demorou 2.040000 a comprar o bilhete
+Uma pessoa foi criadaUma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 0.
+AcabouUma pessoa foi criadaUma pessoa Normal desistiu na estacao 1.
+AcabouUma pessoa está a ser atendida na estacao 0 e esperou 1672.910034
+Uma pessoa comprou bilhete na estação 0 e demorou 1.610000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1733.819946
+Uma pessoa comprou bilhete na estação 1 e demorou 1.850000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1657.599976
+Uma pessoa comprou bilhete na estação 0 e demorou 1.430000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1726.750000
+Uma pessoa comprou bilhete na estação 1 e demorou 1.720000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 1667.650024
+Uma pessoa comprou bilhete na estação 0 e demorou 1.850000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1738.859985
+Uma pessoa comprou bilhete na estação 1 e demorou 1.430000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1664.959961
+Uma pessoa comprou bilhete na estação 0 e demorou 1.600000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1734.119995
+Uma pessoa comprou bilhete na estação 1 e demorou 1.380000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1660.290039
+Uma pessoa comprou bilhete na estação 0 e demorou 1.720000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1738.869995
+Uma pessoa comprou bilhete na estação 1 e demorou 1.430000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1664.070068
+Uma pessoa comprou bilhete na estação 0 e demorou 1.360000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1754.599976
+Uma pessoa comprou bilhete na estação 1 e demorou 1.620000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1683.820068
+Uma pessoa comprou bilhete na estação 0 e demorou 1.240000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1755.229980
+Uma pessoa comprou bilhete na estação 1 e demorou 1.510000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1673.399902
+Uma pessoa comprou bilhete na estação 0 e demorou 1.560000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1753.049927
+Uma pessoa comprou bilhete na estação 1 e demorou 1.830000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1664.719971
+Uma pessoa comprou bilhete na estação 0 e demorou 1.660000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1749.890015
+Uma pessoa comprou bilhete na estação 1 e demorou 1.420000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 1682.409912
+Uma pessoa comprou bilhete na estação 0 e demorou 1.710000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1768.430054
+Uma pessoa comprou bilhete na estação 1 e demorou 1.790000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1680.299927
+Uma pessoa comprou bilhete na estação 0 e demorou 2.020000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1744.400024
+Uma pessoa comprou bilhete na estação 1 e demorou 1.330000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1684.300049
+Uma pessoa comprou bilhete na estação 0 e demorou 1.240000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1744.319946
+Uma pessoa comprou bilhete na estação 1 e demorou 1.880000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 1756.150024
+Uma pessoa comprou bilhete na estação 0 e demorou 1.590000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1807.640015
+Uma pessoa comprou bilhete na estação 1 e demorou 1.510000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1734.839966
+Uma pessoa comprou bilhete na estação 0 e demorou 1.610000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1812.209961
+Uma pessoa comprou bilhete na estação 1 e demorou 1.970000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1737.579956
+Uma pessoa comprou bilhete na estação 0 e demorou 2.200000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1807.940063
+Uma pessoa comprou bilhete na estação 1 e demorou 1.610000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 1749.459961
+Uma pessoa comprou bilhete na estação 0 e demorou 1.320000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1818.699951
+Uma pessoa comprou bilhete na estação 1 e demorou 2.320000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1748.520020
+Uma pessoa comprou bilhete na estação 0 e demorou 1.350000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1824.419922
+Uma pessoa comprou bilhete na estação 1 e demorou 1.280000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1748.840088
+Uma pessoa comprou bilhete na estação 0 e demorou 1.610000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1807.099976
+Uma pessoa comprou bilhete na estação 1 e demorou 1.640000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1748.639893
+Uma pessoa comprou bilhete na estação 0 e demorou 1.710000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1797.849976
+Uma pessoa comprou bilhete na estação 1 e demorou 1.500000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1746.599976
+Uma pessoa comprou bilhete na estação 0 e demorou 1.440000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1801.609985
+Uma pessoa comprou bilhete na estação 1 e demorou 1.710000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1744.010010
+Uma pessoa comprou bilhete na estação 0 e demorou 1.870000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1796.619995
+Uma pessoa comprou bilhete na estação 1 e demorou 2.490000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1745.329956
+Uma pessoa comprou bilhete na estação 0 e demorou 1.710000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1791.400024
+Uma pessoa comprou bilhete na estação 1 e demorou 1.770000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 1778.650024
+Uma pessoa comprou bilhete na estação 0 e demorou 1.320000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1817.390015
+Uma pessoa comprou bilhete na estação 1 e demorou 1.930000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1782.270020
+Uma pessoa comprou bilhete na estação 0 e demorou 1.730000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1820.839966
+Uma pessoa comprou bilhete na estação 1 e demorou 2.740000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1784.549927
+Uma pessoa comprou bilhete na estação 0 e demorou 1.830000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1815.620117
+Uma pessoa comprou bilhete na estação 1 e demorou 1.720000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 1794.800049
+Uma pessoa comprou bilhete na estação 0 e demorou 2.230000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1792.560059
+Uma pessoa comprou bilhete na estação 1 e demorou 2.650000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1793.279907
+Uma pessoa comprou bilhete na estação 0 e demorou 2.060000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1790.670044
+Uma pessoa comprou bilhete na estação 1 e demorou 1.880000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1798.510010
+Uma pessoa comprou bilhete na estação 0 e demorou 1.660000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1783.359985
+Uma pessoa comprou bilhete na estação 1 e demorou 1.580000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1795.180054
+Uma pessoa comprou bilhete na estação 0 e demorou 1.580000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 1 e esperou 1787.180054
+Uma pessoa comprou bilhete na estação 1 e demorou 1.310000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1807.149902
+Uma pessoa comprou bilhete na estação 0 e demorou 1.600000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1772.830078
+Uma pessoa comprou bilhete na estação 1 e demorou 1.950000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1808.479980
+Uma pessoa comprou bilhete na estação 0 e demorou 1.620000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1780.059937
+Uma pessoa comprou bilhete na estação 1 e demorou 1.880000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1812.310059
+Uma pessoa comprou bilhete na estação 0 e demorou 1.850000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1783.740112
+Uma pessoa comprou bilhete na estação 1 e demorou 1.700000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1808.989990
+Uma pessoa comprou bilhete na estação 0 e demorou 1.820000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1786.690063
+Uma pessoa comprou bilhete na estação 1 e demorou 1.760000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1813.299927
+Uma pessoa comprou bilhete na estação 0 e demorou 1.320000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1765.119995
+Uma pessoa comprou bilhete na estação 1 e demorou 1.950000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1813.010010
+Uma pessoa comprou bilhete na estação 0 e demorou 2.890000 a comprar o bilhete
+AcabouAcabouAcabouUma pessoa está a ser atendida na estacao 1 e esperou 1808.599976
+Uma pessoa comprou bilhete na estação 1 e demorou 2.070000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1854.369995
+Uma pessoa comprou bilhete na estação 0 e demorou 2.150000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1803.260010
+Uma pessoa comprou bilhete na estação 1 e demorou 2.210000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1851.709961
+Uma pessoa comprou bilhete na estação 0 e demorou 2.160000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1808.130005
+Uma pessoa comprou bilhete na estação 1 e demorou 2.150000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1839.979980
+Uma pessoa comprou bilhete na estação 0 e demorou 3.190000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 1 e esperou 1797.380005
+Uma pessoa comprou bilhete na estação 1 e demorou 1.340000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1869.849976
+Uma pessoa comprou bilhete na estação 0 e demorou 1.890000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1797.770020
+Uma pessoa comprou bilhete na estação 1 e demorou 1.600000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1866.910034
+Uma pessoa comprou bilhete na estação 0 e demorou 1.300000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1779.419922
+Uma pessoa comprou bilhete na estação 1 e demorou 2.030000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1861.840088
+Uma pessoa comprou bilhete na estação 0 e demorou 4.290000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 1866.459961
+Uma pessoa está a ser atendida na estacao 1 e esperou 1780.119995
+Uma pessoa comprou bilhete na estação 0 e demorou 10.059999 a comprar o bilhete
+AcabouAcabouAcabouAcabouUma pessoa comprou bilhete na estação 1 e demorou 14.230000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1872.449951
+Uma pessoa está a ser atendida na estacao 1 e esperou 1788.319946
+Uma pessoa comprou bilhete na estação 0 e demorou 2.580000 a comprar o bilhete
+Uma pessoa comprou bilhete na estação 1 e demorou 3.560000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1875.420044
+Uma pessoa comprou bilhete na estação 0 e demorou 1.690000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1794.880005
+Uma pessoa comprou bilhete na estação 1 e demorou 1.370000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1792.059937
+Uma pessoa comprou bilhete na estação 1 e demorou 1.880000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1874.380005
+Uma pessoa comprou bilhete na estação 0 e demorou 3.940000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1784.069946
+Uma pessoa comprou bilhete na estação 1 e demorou 1.320000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1883.710083
+Uma pessoa comprou bilhete na estação 0 e demorou 1.430000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1787.900024
+Uma pessoa comprou bilhete na estação 1 e demorou 4.230000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1890.250000
+Uma pessoa comprou bilhete na estação 0 e demorou 1.250000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1789.540039
+Uma pessoa comprou bilhete na estação 1 e demorou 1.890000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1894.839966
+Uma pessoa comprou bilhete na estação 0 e demorou 1.230000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 1 e esperou 1805.500000
+Uma pessoa comprou bilhete na estação 1 e demorou 1.710000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1905.969971
+Uma pessoa comprou bilhete na estação 0 e demorou 1.530000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1809.940063
+Uma pessoa comprou bilhete na estação 1 e demorou 2.080000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1907.160034
+Uma pessoa comprou bilhete na estação 0 e demorou 2.640000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1814.579956
+Uma pessoa comprou bilhete na estação 1 e demorou 1.590000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1905.959961
+Uma pessoa comprou bilhete na estação 0 e demorou 2.440000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 1 e esperou 1882.019897
+Uma pessoa comprou bilhete na estação 1 e demorou 1.450000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1964.630005
+Uma pessoa comprou bilhete na estação 0 e demorou 3.030000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1870.059937
+Uma pessoa comprou bilhete na estação 1 e demorou 1.590000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1966.869995
+Uma pessoa comprou bilhete na estação 0 e demorou 1.340000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1861.239990
+Uma pessoa comprou bilhete na estação 1 e demorou 1.390000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1971.289917
+Uma pessoa comprou bilhete na estação 0 e demorou 1.400000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1853.699951
+Uma pessoa comprou bilhete na estação 1 e demorou 1.970000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1967.719971
+Uma pessoa comprou bilhete na estação 0 e demorou 3.490000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 1 e esperou 1839.859985
+Uma pessoa comprou bilhete na estação 1 e demorou 1.200000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1979.299927
+Uma pessoa comprou bilhete na estação 0 e demorou 1.860000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1835.589966
+Uma pessoa comprou bilhete na estação 1 e demorou 2.410000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1962.780029
+Uma pessoa comprou bilhete na estação 0 e demorou 1.860000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1835.109985
+Uma pessoa comprou bilhete na estação 1 e demorou 1.310000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1967.809937
+Uma pessoa comprou bilhete na estação 0 e demorou 1.880000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1840.380005
+Uma pessoa comprou bilhete na estação 1 e demorou 1.720000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1974.360107
+Uma pessoa comprou bilhete na estação 0 e demorou 1.810000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1837.940063
+Uma pessoa comprou bilhete na estação 1 e demorou 1.660000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1939.990112
+Uma pessoa comprou bilhete na estação 0 e demorou 2.860000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1836.589966
+Uma pessoa comprou bilhete na estação 1 e demorou 2.820000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1940.259888
+Uma pessoa comprou bilhete na estação 0 e demorou 5.380000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 1 e esperou 1863.410034
+Uma pessoa comprou bilhete na estação 1 e demorou 1.390000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1967.130005
+Uma pessoa comprou bilhete na estação 0 e demorou 1.210000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1852.640015
+Uma pessoa comprou bilhete na estação 1 e demorou 1.730000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1967.349976
+Uma pessoa comprou bilhete na estação 0 e demorou 1.660000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1851.849976
+Uma pessoa comprou bilhete na estação 1 e demorou 2.380000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1968.200073
+Uma pessoa comprou bilhete na estação 0 e demorou 1.900000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1840.109985
+Uma pessoa comprou bilhete na estação 1 e demorou 1.580000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1949.959961
+Uma pessoa comprou bilhete na estação 0 e demorou 2.150000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 1 e esperou 1852.030029
+Uma pessoa comprou bilhete na estação 1 e demorou 1.310000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1935.089966
+Uma pessoa comprou bilhete na estação 0 e demorou 3.280000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1823.190063
+Uma pessoa comprou bilhete na estação 1 e demorou 1.480000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1916.220093
+Uma pessoa comprou bilhete na estação 0 e demorou 1.410000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1804.270020
+Uma pessoa comprou bilhete na estação 1 e demorou 2.170000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1901.489990
+Uma pessoa comprou bilhete na estação 0 e demorou 1.370000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 1884.520020
+Uma pessoa comprou bilhete na estação 0 e demorou 1.630000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1815.540039
+Uma pessoa comprou bilhete na estação 1 e demorou 3.660000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1861.760010
+Uma pessoa comprou bilhete na estação 0 e demorou 1.720000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1821.500122
+Uma pessoa comprou bilhete na estação 1 e demorou 1.990000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 1837.310059
+Uma pessoa comprou bilhete na estação 0 e demorou 1.390000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 1822.619995
+Uma pessoa comprou bilhete na estação 1 e demorou 1.510000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 3019.370117
+Uma pessoa comprou bilhete na estação 0 e demorou 1.890000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 3011.589844
+Uma pessoa comprou bilhete na estação 1 e demorou 1.830000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2991.239990
+Uma pessoa comprou bilhete na estação 0 e demorou 1.570000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 3010.849854
+Uma pessoa comprou bilhete na estação 1 e demorou 1.640000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2973.330078
+Uma pessoa comprou bilhete na estação 0 e demorou 1.190000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2987.230225
+Uma pessoa comprou bilhete na estação 1 e demorou 2.200000 a comprar o bilhete
+AcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 2960.210205
+Uma pessoa comprou bilhete na estação 0 e demorou 1.460000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2977.100098
+Uma pessoa comprou bilhete na estação 1 e demorou 2.300000 a comprar o bilhete
+AcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 2943.150146
+Uma pessoa comprou bilhete na estação 0 e demorou 2.190000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2965.300049
+Uma pessoa comprou bilhete na estação 1 e demorou 2.310000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2913.050049
+Uma pessoa comprou bilhete na estação 0 e demorou 1.490000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2932.110107
+Uma pessoa comprou bilhete na estação 1 e demorou 1.620000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2892.239990
+Uma pessoa comprou bilhete na estação 0 e demorou 2.220000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2909.209961
+Uma pessoa comprou bilhete na estação 1 e demorou 2.420000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 2877.979980
+Uma pessoa comprou bilhete na estação 0 e demorou 1.350000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2886.410156
+Uma pessoa comprou bilhete na estação 1 e demorou 1.230000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2773.979980
+Uma pessoa comprou bilhete na estação 0 e demorou 1.550000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2877.469971
+Uma pessoa comprou bilhete na estação 1 e demorou 3.010000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2758.019775
+Uma pessoa comprou bilhete na estação 0 e demorou 2.570000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2779.659912
+Uma pessoa comprou bilhete na estação 1 e demorou 1.280000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 2748.749756
+Uma pessoa comprou bilhete na estação 0 e demorou 1.440000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2766.110107
+Uma pessoa comprou bilhete na estação 1 e demorou 1.940000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2725.110107
+Uma pessoa comprou bilhete na estação 0 e demorou 1.920000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2751.170166
+Uma pessoa comprou bilhete na estação 1 e demorou 1.650000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2705.020020
+Uma pessoa comprou bilhete na estação 0 e demorou 1.810000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2730.630127
+Uma pessoa comprou bilhete na estação 1 e demorou 1.740000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2698.530029
+Uma pessoa comprou bilhete na estação 0 e demorou 1.910000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2713.000000
+Uma pessoa comprou bilhete na estação 1 e demorou 1.000000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2666.920166
+Uma pessoa comprou bilhete na estação 0 e demorou 1.380000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2698.160156
+Uma pessoa comprou bilhete na estação 1 e demorou 1.340000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2643.780029
+Uma pessoa comprou bilhete na estação 0 e demorou 1.770000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2655.820068
+Uma pessoa comprou bilhete na estação 1 e demorou 1.180000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2620.599854
+Uma pessoa comprou bilhete na estação 0 e demorou 1.620000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2648.459961
+Uma pessoa comprou bilhete na estação 1 e demorou 1.440000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 2623.719971
+Uma pessoa comprou bilhete na estação 0 e demorou 1.520000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2641.609863
+Uma pessoa comprou bilhete na estação 1 e demorou 1.360000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2592.330078
+Uma pessoa comprou bilhete na estação 0 e demorou 1.160000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2623.850098
+Uma pessoa comprou bilhete na estação 1 e demorou 1.470000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2570.489990
+Uma pessoa comprou bilhete na estação 0 e demorou 1.460000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 1 e esperou 2588.649902
+Uma pessoa comprou bilhete na estação 1 e demorou 5.930000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 2577.719971
+Uma pessoa comprou bilhete na estação 0 e demorou 1.090000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2593.159912
+Uma pessoa comprou bilhete na estação 1 e demorou 1.580000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2542.500000
+Uma pessoa comprou bilhete na estação 0 e demorou 2.390000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2576.199951
+Uma pessoa comprou bilhete na estação 1 e demorou 1.560000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2525.039795
+Uma pessoa comprou bilhete na estação 0 e demorou 1.820000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2560.780029
+Uma pessoa comprou bilhete na estação 1 e demorou 1.550000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouUma pessoa está a ser atendida na estacao 0 e esperou 2531.580078
+Uma pessoa comprou bilhete na estação 0 e demorou 1.410000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2565.949951
+Uma pessoa comprou bilhete na estação 1 e demorou 1.840000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2522.489990
+Uma pessoa comprou bilhete na estação 0 e demorou 1.090000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2539.040039
+Uma pessoa comprou bilhete na estação 1 e demorou 1.230000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2483.560059
+Uma pessoa comprou bilhete na estação 0 e demorou 2.040000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2508.650146
+Uma pessoa comprou bilhete na estação 1 e demorou 1.250000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2475.160156
+Uma pessoa comprou bilhete na estação 0 e demorou 1.890000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2494.179932
+Uma pessoa comprou bilhete na estação 1 e demorou 1.330000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2456.800049
+Uma pessoa comprou bilhete na estação 0 e demorou 1.700000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2478.409912
+Uma pessoa comprou bilhete na estação 1 e demorou 1.350000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 2406.619873
+Uma pessoa comprou bilhete na estação 0 e demorou 1.530000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2423.630127
+Uma pessoa comprou bilhete na estação 1 e demorou 1.310000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 2419.010010
+Uma pessoa comprou bilhete na estação 1 e demorou 1.440000 a comprar o bilhete
+AcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabouAcabou
