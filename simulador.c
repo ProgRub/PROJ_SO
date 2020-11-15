@@ -1,3 +1,8 @@
+// Grupo constituído por:
+// 2046018 Rúben José Gouveia Rodrigues
+// 2045218 Filipe Orlando Namora Gomes
+// 2028616 José Alejandro Ferreira Gouveia
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
