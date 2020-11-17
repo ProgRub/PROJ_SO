@@ -61,7 +61,6 @@ int main(int argc, char *argv[])
             lines[i++] = p;
             p = strtok(NULL, "\n");
         }
-        char *end;
         char *array[2];
         char *values[12];
         for (int index = 0; index < 12; index++)
@@ -77,18 +76,18 @@ int main(int argc, char *argv[])
         }
 
         //guardar os valores do ficheiro na estrutura de configuracao
-        configuracao.tempoMedioChegada = (int)strtol(values[0], &end, 10);
-        configuracao.tempoTesteNormal = strtol(values[1], &end, 10);
-        configuracao.tempoTesteRapido = strtol(values[2], &end, 10);
-        configuracao.tempoEsperaCentro1 = strtol(values[3], &end, 10);
-        configuracao.tempoEsperaCentro2 = strtol(values[4], &end, 10);
-        configuracao.tamanhoFilaCentro1 = strtol(values[5], &end, 10);
-        configuracao.tamanhoFilaCentro2 = strtol(values[6], &end, 10);
-        configuracao.tamanhoHospital = strtol(values[7], &end, 10);
-        configuracao.probabilidadePositivo = strtof(values[8], &end);
-        configuracao.probabilidadeTesteNormalFalsoPositivo = strtof(values[9], &end);
-        configuracao.probabilidadeTesteRapidoFalsoPositivo = strtof(values[10], &end);
-        configuracao.tempoSimulacao = strtol(values[11], &end, 10);
+        configuracao.tempoMedioChegada = (int)strtol(values[0], NULL, 10);
+        configuracao.tempoTesteNormal = strtol(values[1], NULL, 10);
+        configuracao.tempoTesteRapido = strtol(values[2], NULL, 10);
+        configuracao.tempoEsperaCentro1 = strtol(values[3], NULL, 10);
+        configuracao.tempoEsperaCentro2 = strtol(values[4], NULL, 10);
+        configuracao.tamanhoFilaCentro1 = strtol(values[5], NULL, 10);
+        configuracao.tamanhoFilaCentro2 = strtol(values[6], NULL, 10);
+        configuracao.tamanhoHospital = strtol(values[7], NULL, 10);
+        configuracao.probabilidadePositivo = strtof(values[8], NULL);
+        configuracao.probabilidadeTesteNormalFalsoPositivo = strtof(values[9], NULL);
+        configuracao.probabilidadeTesteRapidoFalsoPositivo = strtof(values[10], NULL);
+        configuracao.tempoSimulacao = strtol(values[11], NULL, 10);
 
         printf("Tempo medio de chegada: %d\n", configuracao.tempoMedioChegada);
         printf("Tempo ate o resultado do teste normal: %d\n", configuracao.tempoTesteNormal);
