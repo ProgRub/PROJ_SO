@@ -1,0 +1,8 @@
+politica 1:
+na bilheteira temos que os idosos têm prioridade em serem atendidos.os restantes clientes sao atendidos pela ordem de chegada.
+
+politica 2
+ao entrar para a montanha russa, tem de entrar sempre uma criança acompanhada por um adulto.
+
+politica 3:
+existem duas montanhas russas, uma maior e outra menor. na maior temos que crianças menores de 6 anos nao podem entrar. na menor qualquer utilizador pode utiliza-la.

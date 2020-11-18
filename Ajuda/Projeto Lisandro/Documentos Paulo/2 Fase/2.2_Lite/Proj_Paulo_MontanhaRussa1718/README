@@ -1,0 +1,14 @@
+->Utilizador Deve Executar o Comando "make" na Consola 
+
+->Apos a Criacao dos Executivos, o Utilizador Deve Abrir Dois Terminais.
+-->Num dos Terminais Executa-se o Comando "./Simulador"
+-->No Outro Executa-se o Comando "./Monitor"
+(Nota: Deve Ser Respeitada Esta Sequência, Pois Iniciar o Monitor Antes do Simulador Provocará Erro na Socket)
+
+->Em Seguida Escolher a Opcao 1 no Monitor (Inicio Simulacao) e Pressionar Enter no Simulador (Por Esta Ordem)
+
+->Apos Seleccionar Esta Opcao, Escolher o Modo de Apresentacao do Decorrer da Simulacao em Tempo Real (Escolhas 2, 3 ou 4) 
+
+->Quando a Simulacao Terminar, o Utilizador Deve Escolher a Opcao 7 (Sair) no Monitor
+
+Para Mais Informações, No Monitor Escolher a Opção 6 (Ajuda)

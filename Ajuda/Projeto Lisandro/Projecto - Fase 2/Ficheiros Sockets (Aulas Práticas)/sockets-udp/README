@@ -1,0 +1,5 @@
+
+Exemplo semelhante ao sockets datagram mas agora utilizando protocolo udp.
+
+Aconselha-se que analise primeiro o exemplo sockets stream.
+

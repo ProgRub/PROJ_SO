@@ -1,0 +1,30 @@
+-----INÍCIO DA SIMULAÇÃO-----
+tempo_medio:20
+tem_serv_prod:25
+prob_des: 0.05
+capacidade_fila:20
+-----FIM DA SIMULAÇÃO-----
+-----INÍCIO DA SIMULAÇÃO-----
+tempo_medio:20
+tem_serv_prod:25
+prob_des: 0.05
+capacidade_fila:20
+-----FIM DA SIMULAÇÃO-----
+-----INÍCIO DA SIMULAÇÃO-----
+tempo_medio:20
+tem_serv_prod:25
+prob_des: 0.05
+capacidade_fila:20
+-----FIM DA SIMULAÇÃO-----
+-----INÍCIO DA SIMULAÇÃO-----
+tempo_medio:20
+tem_serv_prod:25
+prob_des: 0.05
+capacidade_fila:20
+-----FIM DA SIMULAÇÃO-----
+-----INÍCIO DA SIMULAÇÃO-----
+tempo_medio:20
+tem_serv_prod:25
+prob_des: 0.05
+capacidade_fila:20
+-----FIM DA SIMULAÇÃO-----

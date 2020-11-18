@@ -1,0 +1,6 @@
+num:cliente : 12
+tempo_medio : 10
+temp_sim : 15
+capac_fila : 5
+prob_des : 30
+tempo_serv_prod : 5

@@ -1,0 +1,108 @@
+Eventos Feira: 
+
+->Cliente Nº 1 ((Cri)) Chegou a  Fila das Bilheteiras As: 0:0:1 
+-----------------------------------------------------
+->Cliente Nº 1 Entrou na Feira As: 0:0:2 
+-----------------------------------------------------
+->Cliente Nº 1 (Idade=11) Chegou a Fila do Carroussel As: 0:0:3 
+-----------------------------------------------------
+->Cliente Nº 2 ((MR)) Chegou a  Fila das Bilheteiras As: 0:0:4 
+-----------------------------------------------------
+->Cliente Nº 2 Entrou na Feira As: 0:0:5 
+-----------------------------------------------------
+->Cliente Nº 2 Chegou a Fila do Bar As: 0:0:6 
+-----------------------------------------------------
+->Cliente Nº 2 Foi Atendido no Bar As: 0:0:7 e Saiu do Bar 
+-----------------------------------------------------
+->Cliente Nº 2 (Idade=33) Chegou a Fila do Carroussel As: 0:0:8 
+-----------------------------------------------------
+->Cliente Nº 5 ((Cri)) Chegou a  Fila das Bilheteiras As: 0:0:9 
+-----------------------------------------------------
+->Cliente Nº 5 Entrou na Feira As: 0:0:10 
+-----------------------------------------------------
+->Cliente Nº 6 ((MR)) Chegou a  Fila das Bilheteiras As: 0:0:11 
+-----------------------------------------------------
+->Cliente Nº 6 Entrou na Feira As: 0:0:12 
+-----------------------------------------------------
+->Cliente Nº 6 (Idade=14) Chegou a Fila do Carroussel As: 0:0:13 
+-----------------------------------------------------
+->Cliente Nº 3 ((Cri)) Chegou a  Fila das Bilheteiras As: 0:0:14 
+-----------------------------------------------------
+->Cliente Nº 3 Entrou na Feira As: 0:0:15 
+-----------------------------------------------------
+->Cliente Nº 3 Chegou a Fila da Montanha Russa As: 0:0:16 
+-----------------------------------------------------
+->Cliente Nº 1 (Idade=11) Entrou no Carroussel As: 0:0:17 
+-----------------------------------------------------
+->Cliente Nº 10 ((Cri)) Chegou a  Fila das Bilheteiras As: 0:0:18 
+-----------------------------------------------------
+->Cliente Nº 10 Entrou na Feira As: 0:0:19 
+-----------------------------------------------------
+->Cliente Nº 10 Chegou a Fila da Montanha Russa As: 0:0:20 
+-----------------------------------------------------
+->Cliente Nº 10 Andou na Montanha Russa As: 0:0:21 
+-----------------------------------------------------
+->Cliente Nº 12 ((Cri)) Chegou a  Fila das Bilheteiras As: 0:0:22 
+-----------------------------------------------------
+->Cliente Nº 12 Entrou na Feira As: 0:0:23 
+-----------------------------------------------------
+->Cliente Nº 12 Chegou a Fila da Montanha Russa As: 0:0:24 
+-----------------------------------------------------
+->Cliente Nº 14 ((Cri)) Chegou a  Fila das Bilheteiras As: 0:0:25 
+-----------------------------------------------------
+->Cliente Nº 14 Entrou na Feira As: 0:0:26 
+-----------------------------------------------------
+->Cliente Nº 14 Saiu da Feira As: 0:0:27 
+-----------------------------------------------------
+->Cliente Nº 9 ((Cri)) Chegou a  Fila das Bilheteiras As: 0:0:28 
+-----------------------------------------------------
+->Cliente Nº 9 Entrou na Feira As: 0:0:29 
+-----------------------------------------------------
+->Cliente Nº 9 Saiu da Feira As: 0:0:30 
+-----------------------------------------------------
+->Cliente Nº 2 (Idade=33) Desistiu da Fila do Carroussel As: 0:0:31 
+-----------------------------------------------------
+->Cliente Nº 18 ((Cri)) Chegou a  Fila das Bilheteiras As: 0:0:32 
+-----------------------------------------------------
+->Cliente Nº 18 Entrou na Feira As: 0:0:33 
+-----------------------------------------------------
+->Cliente Nº 18 Saiu da Feira As: 0:0:34 
+-----------------------------------------------------
+->Cliente Nº 11 ((MR)) Chegou a  Fila das Bilheteiras As: 0:0:35 
+-----------------------------------------------------
+->Cliente Nº 11 Entrou na Feira As: 0:0:36 
+-----------------------------------------------------
+->Cliente Nº 11 Saiu da Feira As: 0:0:37 
+-----------------------------------------------------
+->Cliente Nº 3 Andou na Montanha Russa As: 0:0:38 
+-----------------------------------------------------
+->Cliente Nº 4 ((Cri)) Chegou a  Fila das Bilheteiras As: 0:0:39 
+-----------------------------------------------------
+->Cliente Nº 4 Entrou na Feira As: 0:0:40 
+-----------------------------------------------------
+->Cliente Nº 4 Saiu da Feira As: 0:0:41 
+-----------------------------------------------------
+->Cliente Nº 6 (Idade=14) Desistiu da Fila do Carroussel As: 0:0:42 
+-----------------------------------------------------
+->Cliente Nº 7 ((Cri)) Chegou a  Fila das Bilheteiras As: 0:0:43 
+-----------------------------------------------------
+->Cliente Nº 7 Entrou na Feira As: 0:0:44 
+-----------------------------------------------------
+->Cliente Nº 7 Saiu da Feira As: 0:0:45 
+-----------------------------------------------------
+->Cliente Nº 24 ((Cri)) Chegou a  Fila das Bilheteiras As: 0:0:46 
+-----------------------------------------------------
+->Cliente Nº 24 Entrou na Feira As: 0:0:47 
+-----------------------------------------------------
+->Cliente Nº 24 Saiu da Feira As: 0:0:48 
+-----------------------------------------------------
+->Cliente Nº 8 ((Cri)) Chegou a  Fila das Bilheteiras As: 0:0:49 
+-----------------------------------------------------
+->Cliente Nº 8 Entrou na Feira As: 0:0:50 
+-----------------------------------------------------
+->Cliente Nº 8 Saiu da Feira As: 0:0:51 
+-----------------------------------------------------
+->Cliente Nº 27 ((Cri)) Chegou a  Fila das Bilheteiras As: 0:0:52 
+-----------------------------------------------------
+->Cliente Nº 27 Entrou na Feira As: 0:0:53 
+-----------------------------------------------------

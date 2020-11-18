@@ -3,13 +3,7 @@
 // 2045218 Filipe Orlando Namora Gomes
 // 2028616 José Alejandro Ferreira Gouveia
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <pthread.h>
-#include <fcntl.h>
-#include <string.h>
+#include "config.h"
 
 struct Configuration
 {

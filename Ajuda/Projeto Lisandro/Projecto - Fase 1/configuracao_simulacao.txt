@@ -1,0 +1,5 @@
+tempo_medio : 10
+tempo_serv_prod : 5
+prob_des : 30
+inicio_sim : 1
+temp_sim : 15
