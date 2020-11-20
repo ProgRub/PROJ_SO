@@ -5,23 +5,6 @@
 
 #include "config.h"
 
-struct Configuration
-{
-    int tempoMedioChegada;
-    int tempoTesteNormal;
-    int tempoTesteRapido;
-    int tempoEsperaCentro1;
-    int tempoEsperaCentro2;
-    int tamanhoFilaCentro1;
-    int tamanhoFilaCentro2;
-    int tamanhoHospital;
-    float probabilidadePositivo;
-    float probabilidadeTesteNormalFalsoPositivo;
-    float probabilidadeTesteRapidoFalsoPositivo;
-    int tempoSimulacao;
-};
-
-
 int main(int argc, char *argv[])
 {
     if (argc == 2)
