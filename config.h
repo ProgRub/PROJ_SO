@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/un.h>
@@ -11,3 +10,6 @@
 #include <fcntl.h>
 #include <string.h>
 #include <time.h>
+
+#define TRUE 1
+#define FALSE 0
