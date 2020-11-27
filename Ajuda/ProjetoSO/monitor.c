@@ -1,7 +1,7 @@
 #include "config.h"
 
 //Variavel global que indica o estado da simulacao
-int fimSimulacao = 0;                                       
+int fimSimulacao = 0;
 
 struct metro metros[2];
 struct bilheteira bilheteiras[5];
@@ -19,7 +19,7 @@ void escreverMonitorFicheiro(char textoFicheiro []){
     fp = fopen ("monitor.txt", "a");  // Abre o ficheiro em modo de acrescentar texto
 
     if (fp == NULL) { // Verifica se o ficheiro existe
-        printf("Não foi possível abrir o ficheiro %s.", "monitor.txt"); 
+        printf("Não foi possível abrir o ficheiro %s.", "monitor.txt");
     }else{
         fprintf(fp, "%s", textoFicheiro); // Escreve no ficheiro o texto
         printf(textoFicheiro);
@@ -63,7 +63,7 @@ void imprimeInfo(){
         escreverMonitorFicheiro("Pessoas que desistiram de realizar a viagem: %i\n",estacoes[e].numeroPassageirosDesistiram);
         escreverMonitorFicheiro("\n");
     }*/
-	
+
     //Bilheteiras
 	escreverMonitorFicheiro("*********************************\n");
 	escreverMonitorFicheiro(" * * * B I L H E T E I R A  * * *\n");
@@ -99,25 +99,25 @@ void trata_mensagem(char palavraSeparar[]){
     //Para funcionar
     char buffer[90];
     strcpy(buffer, palavraSeparar);
-    
+
     //Onde vai guardar os valores depois da divisao
     char matrix [3][90];
     int i = 0;
 
     //Começa a divisao
-    char *token = strtok(buffer, "-"); 
+    char *token = strtok(buffer, "-");
     strcpy(matrix[i], token);
-    
+
     //Ciclo que percorre e vai separando pelos . e copiando para matrix[i]
     while (token != NULL) {
         i++;
         strcpy(matrix[i], token);
-        token = strtok(NULL, "-"); 
+        token = strtok(NULL, "-");
         if (token != NULL) {
             strcpy(matrix[i], token);
         }
-        
-    } 
+
+    }
     if (matrix[0][0]=='X'){
    		if(matrix[2][0] ==  '0'){
 	    	printf("Bem-vindo! A Simulação está a decorrer.\n");
@@ -130,7 +130,7 @@ void trata_mensagem(char palavraSeparar[]){
         int atributo = atoi(matrix[1]);
         float valor = atof((char *)matrix[2]);
         int instancia = atoi((char *)&matrix[0][1]);
-        if(estrutura == 'E'){ 
+        if(estrutura == 'E'){
 
         }else if(estrutura== 'B'){
             switch(atributo){
@@ -144,7 +144,7 @@ void trata_mensagem(char palavraSeparar[]){
                         printf("Erro!!!!");
                     }
                     break;
-                
+
                 //Uma pessoa desistiu
                 case 1:
                     if (valor == 1){
@@ -166,7 +166,7 @@ void trata_mensagem(char palavraSeparar[]){
                         printf("Erro!!!!");
                     }
                     break;
-            
+
                 //Tempo medio de espera na fila
                 case 3:
                     bilheteiras[instancia].somaTempoEspera += valor;
@@ -193,16 +193,16 @@ void trata_mensagem(char palavraSeparar[]){
                         printf("Erro!!!!");
                     }
                     break;
-                    
+
                 case 6:
-                    
+
                     break;
 
                 default:
                     printf("Erro!");
                     break;
             }
-        }else if(estrutura == 'M'){ 
+        }else if(estrutura == 'M'){
             switch (atributo){
                 case 0:
                     metros[instancia].numeroPassageirosAtual++;
@@ -220,11 +220,11 @@ void trata_mensagem(char palavraSeparar[]){
                     printf("Erro!!");
                     break;
             }
-            
+
         }
     }
-    imprimeInfo(); 
-    
+    imprimeInfo();
+
 }
 
 
@@ -232,23 +232,23 @@ void trata_mensagem(char palavraSeparar[]){
 /*        Leitura Sucessiva das mensagens            */
 /*###################################################*/
 void LeituraSucessiva (int sockfd) {
-    int numero = 0; 
+    int numero = 0;
     char buffer[TamLinha];                                  //Cria um buffer com o TamLinha definido
     while(!fimSimulacao) {                                  //Enquanto a simulacao nao acabar
         //printf("Chegou \n");
-        numero = read(sockfd, buffer, TamLinha);            //Le a mensagem do socket e guarda no buffer                          
+        numero = read(sockfd, buffer, TamLinha);            //Le a mensagem do socket e guarda no buffer
         if(numero==0) {                                     //Quando chega ao fim
             //trata_mensagem(buffer);
             //printf("chegou ao fim");
             break;
-        }else if( numero < 0 ) {        
+        }else if( numero < 0 ) {
             printf ( "Erro: Nao leu do socket \n" );
         }else{
             trata_mensagem(buffer);
             //printf("LeituraSucessiva: \n");
             //printf("%s", buffer);                           //Faz print da mensagem guardada no buffer
         }
-       
+
     }
 }
 
@@ -262,18 +262,18 @@ void criaServidor () {
     //tamCliente -> guarda o tamanho do endereco do cliente
     //tamanhoServidor -> guarda o tamanho do servidor
     int sockfd, novoSocket, tamCliente, tamanhoServidor;
-    struct sockaddr_un end_cli , serv_addr;             
-	
+    struct sockaddr_un end_cli , serv_addr;
+
     //Verifica a criacao do socket
     if ((sockfd = socket(AF_UNIX, SOCK_STREAM, 0)) < 0 ){
         printf ( "Erro ao criar o Socket \n");
     }
-    
+
     //Incializa os valores do buffer a zero
-    bzero((char*) & serv_addr , sizeof(serv_addr));   
-    serv_addr.sun_family = AF_UNIX;                       
+    bzero((char*) & serv_addr , sizeof(serv_addr));
+    serv_addr.sun_family = AF_UNIX;
     strcpy(serv_addr.sun_path, UNIXSTR_PATH);
-    tamanhoServidor = strlen(serv_addr.sun_path) + sizeof(serv_addr.sun_family);    
+    tamanhoServidor = strlen(serv_addr.sun_path) + sizeof(serv_addr.sun_family);
     unlink(UNIXSTR_PATH);
 
     //Liga o socket a um endereco
@@ -291,7 +291,7 @@ void criaServidor () {
     if (novoSocket < 0) {                                        //Verifica o erro na aceitacao da ligacao
         printf ( "Erro na aceitacao \n" );
     }
-    
+
     //Criacao de um novo processo
     int pid;
     if ((pid = fork()) < 0 ) {
@@ -314,7 +314,7 @@ int main(int argc, char const * argv[]){
     printf ( "################################# \n" );              //Menu
     int selecao = 0;   ;                                                //Variavel que guarda o valor introduzido pelo utilizador
     int acaba = 0;
-    while (!acaba) { 
+    while (!acaba) {
         if(fimSimulacao == 1) {                                 //Se a selecao for 1
             acaba = 1;
         }else{
@@ -322,7 +322,7 @@ int main(int argc, char const * argv[]){
                 printf ( "Introduza uma opção: \n" );               //Pede ao utilizador para introduzir uma opcao
                 scanf ( "%d" , &selecao );                          //Le valor introduzido pelo utilizador
             }
-            criaServidor();                                         //Cria o servidor   
+            criaServidor();                                         //Cria o servidor
         }
     }
     return 0;

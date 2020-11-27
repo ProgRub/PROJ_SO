@@ -26,21 +26,20 @@ struct Configuration
     int tamanhoFilaCentro1;
     int tamanhoFilaCentro2;
     int tamanhoHospital;
+    int numeroMedicos;
     float probabilidadePositivo;
     float probabilidadeTesteNormalFalsoPositivo;
     float probabilidadeTesteRapidoFalsoPositivo;
+    float probabilidadeNaoIdosoPrecisaHospital;
     int tempoSimulacao;
 };
 
 struct pessoa{
-
-};
-
-struct centroTeste{
-};
-
-struct hospital{
-};
-
-struct isolamento{
+    int centroTeste;
+    int testouPositivo;
+    int falsoPositivo;
+    int idoso; //indica se a pessoa e idosa, e assim tem prioridade
+    int precisaHospital; //indica se a pessoa precisa de ir para o hospital, idosos precisam automaticamente
+    int tempoMaximoEspera;
+    int estado; //0 - a espera, 1 - isolamento, 2 - hospital
 };

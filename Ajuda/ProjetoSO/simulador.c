@@ -16,24 +16,24 @@ int probDesistenciaDepoisDeTerBilhete;
 int probDesistirDepoisDeEstarMetro;
 int probSerVip;
 int probDesistenciaFilaVIP;
-int probDesistenciaFilaNormal;  
+int probDesistenciaFilaNormal;
 
 //Outras
 int numeroDePessoasMaximo;
 int tempoViagem;  //Tempo de viagem do comboio de uma estação a outra
-int tempoEsperaComboioEstacao;  //Tempo que o comboio espera que os passageiros entrem 
+int tempoEsperaComboioEstacao;  //Tempo que o comboio espera que os passageiros entrem
 
 //Para ser o atendimento e compra do bilhete
-int Pessoa_a_ser_atendida[5] = {0,0,0,0,0}; //0->Balcao estacao 0; 1->Balcao estacao 1; 2->Balcao estacao 2; 3->Balcao estacao 3; 4->Balcao estacao 4; 
+int Pessoa_a_ser_atendida[5] = {0,0,0,0,0}; //0->Balcao estacao 0; 1->Balcao estacao 1; 2->Balcao estacao 2; 3->Balcao estacao 3; 4->Balcao estacao 4;
 int Fila_para_ser_atendida [5][2]={{0,0},{0,0},{0,0},{0,0},{0,0}}; //Numero de pessoas na fila do balcao n, {0->VIP 1->Normal}
-int Numero_VIP_frente_desistir;  //Quantidade de pessoas que fazem a pessoa VIP desistir de comprar o bilhete 
-int Numero_normal_frente_desistir;  //Quantidade de pessoas que fazem a pessoa Normal desistir de comprar o bilhete 
+int Numero_VIP_frente_desistir;  //Quantidade de pessoas que fazem a pessoa VIP desistir de comprar o bilhete
+int Numero_normal_frente_desistir;  //Quantidade de pessoas que fazem a pessoa Normal desistir de comprar o bilhete
 
 
 //Metro
 int Lotacao_maxima_metro; //Quantidade maxima de pessoas por metro
-int Quantidade_pessoas_espera[5]={0,0,0,0,0}; //0->estacao 0 e metro 0; 1->estacao 1 e metro 1; 2->estacao 2 e metro 0; 3->estacao 3 e metro 1; 4->estacao 4 e metro 1; 
-int Quantidade_pessoas_espera_metro1_estacao2 = 0; 
+int Quantidade_pessoas_espera[5]={0,0,0,0,0}; //0->estacao 0 e metro 0; 1->estacao 1 e metro 1; 2->estacao 2 e metro 0; 3->estacao 3 e metro 1; 4->estacao 4 e metro 1;
+int Quantidade_pessoas_espera_metro1_estacao2 = 0;
 
 
 // Metros
@@ -49,12 +49,12 @@ sem_t trincoAuxiliarApagar;////////////////////////////////////////
 sem_t TrincoEnviaMensagem;
 sem_t TrincoPessoaFila;
 sem_t TrincoCriaPessoa;
-sem_t TrincoPessoaChegouFila[5]; 
-sem_t TrincoPessoaEstaSerAtendida[5]; 
+sem_t TrincoPessoaChegouFila[5];
+sem_t TrincoPessoaEstaSerAtendida[5];
 sem_t TrincoAtendimentoVIP[5];
-sem_t TrincoAtendimentoNormal[5]; 
-sem_t EntraComboioXChegouEstacaoY[2][3]; 
-sem_t SaiComboioXChegouEstacaoY[2][3]; 
+sem_t TrincoAtendimentoNormal[5];
+sem_t EntraComboioXChegouEstacaoY[2][3];
+sem_t SaiComboioXChegouEstacaoY[2][3];
 sem_t TrincoQuantidadePessoasEstacao[5]; //0->estacao 0 e metro 0; 1->estacao 1 e metro 1; 2->estacao 2 e metro 0; 3->estacao 3 e metro 1; 4->estacao 4 e metro 1;
 sem_t TrincoPessoasComboio[2];  //0->metro 0; 1->metro 1
 sem_t SemMetroEsperaPessoasSair[2];  //0->metro 0; 1->metro 1
@@ -71,7 +71,7 @@ void escreverSimuladorFicheiro(char textoFicheiro []){
     fp = fopen ("simulador.txt", "a");  // Abre o ficheiro em modo de acrescentar texto
 
     if (fp == NULL) { // Verifica se o ficheiro existe
-        printf("Não foi possível abrir o ficheiro %s.", "simulador.txt"); 
+        printf("Não foi possível abrir o ficheiro %s.", "simulador.txt");
     }else{
         fprintf(fp, "%s", textoFicheiro); // Escreve no ficheiro o texto
         fclose(fp); // Encerra a conexão com o ficheiro
@@ -122,7 +122,7 @@ int metroPessoaTemApanhar (int estacao, int DestinoPessoa){
             return 1;
         }
     }
-    
+
 }
 
 
@@ -140,78 +140,78 @@ void carregaDados(){
         FILE * ficheiro;
         ficheiro = fopen(nomeFicheiro, "r");
 
-        if (ficheiro == NULL) { 
-            printf("Não foi possível abrir o ficheiro %s.", nomeFicheiro); 
+        if (ficheiro == NULL) {
+            printf("Não foi possível abrir o ficheiro %s.", nomeFicheiro);
         }else{
             char buffer[150];
             int j =0;
-            while(fgets(buffer, 150, ficheiro)){    
+            while(fgets(buffer, 150, ficheiro)){
                 for(int l = 0; l<4; l++){
                     if (buffer[l] == ':'){
                         break;
                     }else{
                         if (isalpha(buffer[l])){
-                            printf("ERRO! Inseriu um valor com o carater '%c' na linha %i \n", buffer[l],j+1);  
-                            erro = true;  
+                            printf("ERRO! Inseriu um valor com o carater '%c' na linha %i \n", buffer[l],j+1);
+                            erro = true;
                         }
                     }
-                }               
-                char *token = strtok(buffer, ":");                      
+                }
+                char *token = strtok(buffer, ":");
                 value[j]=atoi(token);
-                j++;       
-            }          
+                j++;
+            }
             if(value[0] < 0){
                 printf("Erro! A capacidade dos comboios é invalida. Introduza um valor positivo\n");
-                erro = true; 
+                erro = true;
             }
             else if(value[1] <1){
                 printf("Erro! O numero de pessoas VIP que estão a frente é invalido. Introduza um maior que 0\n");
-                erro = true; 
+                erro = true;
             }
             else if( value[2] <1){
                 printf("Erro! O numero de pessoas Normais que estão a frente é invalido. Introduza um maior que 0\n");
-                erro = true; 
+                erro = true;
             }
             else if(value[3] <0 || value[3]  > 100){
                 printf("Erro! A probabilidade de desistencia VIP na fila é invalida. Introduza um valor entre 0 e 100 inclusivo\n");
-                erro = true; 
+                erro = true;
             }
             else if(value[4] <0 || value[4]  > 100){
                 printf("Erro! A probabilidade de desistencia Normal na fila é invalida. Introduza um valor entre 0 e 100 inclusivo\n");
-                erro = true; 
+                erro = true;
             }
             else if(value[5] <0 || value[5] > 100){
                 printf("Erro! A probabilidade de desistencia VIP na estacao é invalida.Introduza um valor entre 0 e 100 inclusivo\n");
-                erro = true; 
+                erro = true;
             }
             else if(value[6] <0 || value[6]  > 100){
                 printf("Erro! A probabilidade de desistencia Normal na estacao é invalida. Introduza um valor entre 0 e 100 inclusivo\n");
-                erro = true; 
+                erro = true;
             }
             else if(value[7] <0 || value[7] > 100){
                 printf("Erro! A probabilidade de ser VIP é invalida.Introduza um valor entre 0 e 100 inclusivo\n");
-                erro = true; 
+                erro = true;
             }
             else if( value[8] <1){
                 printf("Erro! Para a simulação ocorrer tem de existir no minimo 1 pessoa.\n");
-                erro = true; 
+                erro = true;
             }
             else if(value[9] <= 0){
                 printf("Erro! O tempo de viagem é invalido.\n");
-                erro = true; 
+                erro = true;
             }
             else if(value[10]<=0){
                 printf("Erro! O tempo que o metro espera na estação é invalido.\n");
-                erro = true; 
-            }    
-        }  
+                erro = true;
+            }
+        }
         if (erro){
             int selecao = 0;
             printf ( "Faça as alteraçoes necessarias! Prima 1 para continuar: \n" );               //Pede ao utilizador para introduzir uma opcao
             while(selecao != 1) {
                 scanf ( "%d" , &selecao );                          //Le valor introduzido pelo utilizador
             }
-        } 
+        }
         fclose(ficheiro);
     }
     Lotacao_maxima_metro = value[0];
@@ -231,26 +231,26 @@ void carregaDados(){
 /*###################################################*/
 /*                   Envia Mensagem                  */
 /*###################################################*/
-void EnviaMensagem( char *fp, int sockfd) {    
-    //Fecha trinco    
+void EnviaMensagem( char *fp, int sockfd) {
+    //Fecha trinco
     sem_wait(&TrincoEnviaMensagem);
-   
-    
-    int numero;                                                       
-    char mensagem[TamLinha];                                              
-    if( strcpy(mensagem, fp) != 0 ) { 
-        numero = strlen(mensagem) + 1;                                  
-        if( write( sockfd, mensagem, numero) != numero) {                   
+
+
+    int numero;
+    char mensagem[TamLinha];
+    if( strcpy(mensagem, fp) != 0 ) {
+        numero = strlen(mensagem) + 1;
+        if( write( sockfd, mensagem, numero) != numero) {
             printf ( "Erro cliente no write! \n" );
         }else{
             //printf ( "Mensagem Enviada! \n" );
         }
-    }   
+    }
 
-    usleep(2000);                                                                   
+    usleep(2000);
     //Abre trinco
     sem_post(&TrincoEnviaMensagem);
-} 
+}
 
 
 /*###################################################*/
@@ -267,7 +267,7 @@ struct pessoa criaPessoa(){
 
     //Cria a pessoa
     struct pessoa p;
-    p.estacao = valorAleatorioEstacaoInicial;  
+    p.estacao = valorAleatorioEstacaoInicial;
     p.destino = valorAleatorioEstacaoDEstino;
     p.temBilhete = false;
     p.VIP = probabilidade(probSerVip);
@@ -280,13 +280,13 @@ struct pessoa criaPessoa(){
     p.desistiu = false;
 
     //Caso os valores de destino e da estacao atual sejam iguais altera-os
-    if (p.estacao == p.destino){    
+    if (p.estacao == p.destino){
         p.destino = 2;
     }
 
     usleep(100000);
 
-    //Manda mensagem a dizer que criou pessoa 
+    //Manda mensagem a dizer que criou pessoa
     escreverSimuladorFicheiro("Uma pessoa foi criada\n");
     printf("Uma pessoa foi criada\n");
 
@@ -302,7 +302,7 @@ struct pessoa criaPessoa(){
 void FilaEspera(struct pessoa *p){
     char textoEscrever[500];
     sem_wait(&TrincoPessoaChegouFila[p->estacao]);
-   
+
 
     //Inicializacao dos tempos de controlo
     clock_t tempo_Inicial_compra, tempo_espera_final, tempo_espera_inicial;
@@ -323,13 +323,13 @@ void FilaEspera(struct pessoa *p){
 
         //Caso a pessoa que chegou seja VIP
         if (p->VIP == true){
-            sem_wait(&TrincoPessoaFila); 
+            sem_wait(&TrincoPessoaFila);
 
             //A pessoa vip pensa em desistir porque a estacao tem um numero maximo maior
             if (!probabilidade(probDesistenciaFilaVIP) && Fila_para_ser_atendida[p->estacao][0]< Numero_VIP_frente_desistir){
                 //A pessoa vip nao desiste e espera pelo atendimento
                 Fila_para_ser_atendida[p->estacao][0] ++;
-                sem_post(&TrincoPessoaFila); 
+                sem_post(&TrincoPessoaFila);
 
                 sprintf(mensagem, "B%i-0-%i", p->estacao,p->VIP);
                 EnviaMensagem(mensagem, sockfd);
@@ -355,10 +355,10 @@ void FilaEspera(struct pessoa *p){
             }
         }else{
 
-            sem_wait(&TrincoPessoaFila); 
+            sem_wait(&TrincoPessoaFila);
 
             //A pessoa normal pensa em desistir
-            if (!probabilidade(probDesistenciaFilaNormal) && (Fila_para_ser_atendida [p->estacao][1] + Fila_para_ser_atendida[p->estacao][0]  < Numero_normal_frente_desistir )){ 
+            if (!probabilidade(probDesistenciaFilaNormal) && (Fila_para_ser_atendida [p->estacao][1] + Fila_para_ser_atendida[p->estacao][0]  < Numero_normal_frente_desistir )){
                 //A pessoa normal nao desiste
                 Fila_para_ser_atendida[p->estacao][1] ++;
                 sem_post(&TrincoPessoaFila);
@@ -368,7 +368,7 @@ void FilaEspera(struct pessoa *p){
                 sprintf(textoEscrever, "Uma pessoa Normal colocou-se na fila na estação %i.\n" , p->estacao);
                 escreverSimuladorFicheiro(textoEscrever);
                 printf("Uma pessoa Normal colocou-se na fila na estação %i.\n" , p->estacao);
-                
+
                 sem_post(&TrincoPessoaChegouFila[p->estacao]);
                 sem_wait(&TrincoAtendimentoNormal[p->estacao]);
             }else{
@@ -376,23 +376,23 @@ void FilaEspera(struct pessoa *p){
 
                 //A pessoa normal desiste
                 p->desistiu = true;
-                
+
                 sprintf(mensagem, "B%i-1-%i", p->estacao,p->VIP);
                 EnviaMensagem(mensagem, sockfd);
                 sprintf(textoEscrever, "Uma pessoa Normal desistiu na estacao %i.\n", p->estacao);
                 escreverSimuladorFicheiro(textoEscrever);
-                printf("Uma pessoa Normal desistiu na estacao %i.\n", p->estacao); 
+                printf("Uma pessoa Normal desistiu na estacao %i.\n", p->estacao);
 
                 sem_post(&TrincoPessoaChegouFila[p->estacao]);
                 return;
             }
         }
-        
+
         tempo_Inicial_compra = clock();
-        tempo_espera_final = clock();    
+        tempo_espera_final = clock();
     }
 
-    //A pessoa esta a ser atendida   
+    //A pessoa esta a ser atendida
     sem_wait(&TrincoPessoaEstaSerAtendida[p->estacao]);
 
     //Tempo de espera na fila
@@ -410,7 +410,7 @@ void FilaEspera(struct pessoa *p){
     printf(textoEscrever);
 
     //Se a pessoa e VIP
-    sem_wait(&TrincoPessoaFila); 
+    sem_wait(&TrincoPessoaFila);
     if (!logoAtendida){
         if (p->VIP ){
             Fila_para_ser_atendida[p->estacao][0]--;
@@ -422,7 +422,7 @@ void FilaEspera(struct pessoa *p){
     }else{
         sprintf(mensagem, "B%i-2-%i", p->estacao,p->VIP);
     }
-    sem_post(&TrincoPessoaFila); 
+    sem_post(&TrincoPessoaFila);
 
 
     p->temBilhete = true;
@@ -431,7 +431,7 @@ void FilaEspera(struct pessoa *p){
     clock_t tempo_Final_Compra = clock();
     float tempoEsperaCompra = ((float) (tempo_Final_Compra - tempo_Inicial_compra) / CLOCKS_PER_SEC)*10000;
     sprintf(mensagem, "B%i-4-%f", p->estacao, tempoEsperaCompra);
-    
+
     EnviaMensagem(mensagem, sockfd);
     sprintf(textoEscrever, "Uma pessoa comprou bilhete na estação %i e demorou %f a comprar o bilhete\n", p->estacao, tempoEsperaCompra);
     escreverSimuladorFicheiro(textoEscrever);
@@ -441,7 +441,7 @@ void FilaEspera(struct pessoa *p){
 
     //A pessoa vai acabar de ser atendida
     sem_wait(&TrincoPessoaFila);
-    
+
     //Caso hajam pessoas VIP
     if(Fila_para_ser_atendida[p->estacao][0]>0){
         sem_post(&TrincoAtendimentoVIP[p->estacao]);
@@ -456,7 +456,7 @@ void FilaEspera(struct pessoa *p){
     }
     sem_post(&TrincoPessoaFila);
 
-    //A pessoa acabou de ser atendida  
+    //A pessoa acabou de ser atendida
     sem_post(&TrincoPessoaEstaSerAtendida[p->estacao]);
 }
 
@@ -483,11 +483,11 @@ void EsperaMetro(struct pessoa *p){
         sem_post(&TrincoQuantidadePessoasEstacao[p->estacao]);
 
         //pessoa foi criada na estacao 2
-        if (p->estacao == 0){ 
+        if (p->estacao == 0){
             // tem que apanha o metro 0
-            if (p->destino % 2 == 0){ 
+            if (p->destino % 2 == 0){
                 //espera que o comboio 0 chegue à estação 0
-                sem_wait(&EntraComboioXChegouEstacaoY[0][0]); 
+                sem_wait(&EntraComboioXChegouEstacaoY[0][0]);
 
                 //Mandar mensagem
                 printf("a pessoa entrou no metro \n");
@@ -501,13 +501,13 @@ void EsperaMetro(struct pessoa *p){
 
                     //Adiciona a pessoa a lista de pessoas que vao sair na mesma saida (proxima estacao do metro)
                     metros[0].pessoasEsperaSaida[1]++;
-                    
+
                     //Retira a pessoa da lista da estacao
                     sem_wait(&TrincoQuantidadePessoasEstacao[0]);
                     Quantidade_pessoas_espera[0]--;
                     sem_post(&TrincoQuantidadePessoasEstacao[0]);
 
-                    //Abre novamente o trinco 
+                    //Abre novamente o trinco
                     sem_post(&TrincoPessoasComboio[0]);
 
                     //Espera que o metro chegue a estacao
@@ -520,7 +520,7 @@ void EsperaMetro(struct pessoa *p){
                     sem_wait(&TrincoPessoasComboio[0]);
                     metros[0].numeroPassageirosAtual--;
                     metros[0].pessoasEsperaSaida[1]--;
-                    
+
 
                     printf("A pessoa desistiu quando estava no metro\n");
                     //Mandar mensagem
@@ -531,7 +531,7 @@ void EsperaMetro(struct pessoa *p){
                     }else{
                         sem_post(&TrincoPessoasComboio[0]);
                     }
-   
+
                 }else{
                     int posicao = PosicaoEstacaoVetor(0, p->destino);
 
@@ -543,18 +543,18 @@ void EsperaMetro(struct pessoa *p){
                     Quantidade_pessoas_espera[0]--;
                     sem_post(&TrincoQuantidadePessoasEstacao[0]);
 
-                    //Abre novamente o trinco 
+                    //Abre novamente o trinco
                     sem_post(&TrincoPessoasComboio[0]);
 
                     //Espera que o metro chegue a estacao
-                    sem_wait(&SaiComboioXChegouEstacaoY[0][posicao]); 
+                    sem_wait(&SaiComboioXChegouEstacaoY[0][posicao]);
 
                     //Retira a pessoa do metro
                     sem_wait(&TrincoPessoasComboio[0]);
                     p->estaComboio = false;
                     metros[0].numeroPassageirosAtual--;
                     metros[0].pessoasEsperaSaida[posicao]--;
-                    
+
 
                     //Manda mensagem
                     printf("A pessoa chegou ao destino %d \n", p->destino);
@@ -573,11 +573,11 @@ void EsperaMetro(struct pessoa *p){
                             sem_post(&TrincoPessoasComboio[0]);
                         }
                     }
-                    
+
                 }
             }else{// tem que apanha o metro 1
                 //espera que o comboio 0 chegue à estação 0
-                sem_wait(&EntraComboioXChegouEstacaoY[0][0]); 
+                sem_wait(&EntraComboioXChegouEstacaoY[0][0]);
 
                 //Mandar mensagem
                 printf("a pessoa entrou no metro \n");
@@ -585,11 +585,11 @@ void EsperaMetro(struct pessoa *p){
 
                 //Fecha o trinco para a pessoa entrar no metro
                 sem_wait(&TrincoPessoasComboio[0]);
-                
+
                 //Adiciona a pessoa a lista de pessoas que vao sair na mesma saida (2)
                 metros[0].pessoasEsperaSaida[1]++;
                 metros[0].numeroPassageirosAtual++;
-                
+
                 //Retira a pessoa da lista da estacao
                 sem_wait(&TrincoQuantidadePessoasEstacao[0]);
                 Quantidade_pessoas_espera[0]--;
@@ -624,15 +624,15 @@ void EsperaMetro(struct pessoa *p){
                 //Adiciona a pessoa da lista da estacao
                 sem_wait(&TrincoQuantidadePessoasEstacao[2]);
                 Quantidade_pessoas_espera_metro1_estacao2++;
-                sem_post(&TrincoQuantidadePessoasEstacao[2]);                
-                
-                //Abre o trinco das pessoas a entrarem 
+                sem_post(&TrincoQuantidadePessoasEstacao[2]);
+
+                //Abre o trinco das pessoas a entrarem
                 sem_post(&TrincoPessoasComboio[0]);
-                
+
 
 
                 //espera que o comboio 1 chegue à estação 1
-                sem_wait(&EntraComboioXChegouEstacaoY[1][1]); 
+                sem_wait(&EntraComboioXChegouEstacaoY[1][1]);
 
                 //Mandar mensagem
                 //printf("a pessoa entrou no metro \n");
@@ -641,7 +641,7 @@ void EsperaMetro(struct pessoa *p){
                 //Adiciona a pessoa ao metro
                 sem_wait(&TrincoPessoasComboio[1]);
                 metros[1].numeroPassageirosAtual++;
-            
+
                 //Adiciona a pessoa a lista de pessoas que vao sair na mesma saida (destino da pessoa)
                 int posicao = PosicaoEstacaoVetor(1, p->destino);
                 metros[1].pessoasEsperaSaida[posicao]++;
@@ -651,11 +651,11 @@ void EsperaMetro(struct pessoa *p){
                 Quantidade_pessoas_espera_metro1_estacao2--;
                 sem_post(&TrincoQuantidadePessoasEstacao[1]);
 
-                //Acabou de adicionar a pessoa 
+                //Acabou de adicionar a pessoa
                 sem_post(&TrincoPessoasComboio[1]);
 
                 //Espera que o metro chegue a estacao
-                sem_wait(&SaiComboioXChegouEstacaoY[1][posicao]); 
+                sem_wait(&SaiComboioXChegouEstacaoY[1][posicao]);
 
                 //Retira a pessoa do metro
                 sem_wait(&TrincoPessoasComboio[1]);
@@ -681,13 +681,13 @@ void EsperaMetro(struct pessoa *p){
                         sem_post(&TrincoPessoasComboio[1]);
                     }
                 }
-                
+
             }
         }else{//A pessoa foi criada noutra estacao 1
             // tem que apanha o metro 1
-            if (p->destino == 2 || p->destino == 3){ 
+            if (p->destino == 2 || p->destino == 3){
                 //espera que o comboio 1 chegue à estação 1
-                sem_wait(&EntraComboioXChegouEstacaoY[1][0]); 
+                sem_wait(&EntraComboioXChegouEstacaoY[1][0]);
 
                 //Mandar mensagem
                 printf("a pessoa entrou no metro \n");
@@ -746,7 +746,7 @@ void EsperaMetro(struct pessoa *p){
                     sem_post(&TrincoPessoasComboio[1]);
 
                     //Espera que o metro chegue a estacao
-                    sem_wait(&SaiComboioXChegouEstacaoY[1][posicao]); 
+                    sem_wait(&SaiComboioXChegouEstacaoY[1][posicao]);
 
                     //Retira a pessoa do metro
                     sem_wait(&TrincoPessoasComboio[1]);
@@ -756,7 +756,7 @@ void EsperaMetro(struct pessoa *p){
                     sem_post(&TrincoPessoasComboio[1]);
 
                     //Manda mensagem
-                    
+
                     printf("A pessoa chegou ao destino %d \n", p->destino);
                     if (p->destino == 2){
                         if (metros[1].pessoasEsperaSaida[1]==0){
@@ -776,7 +776,7 @@ void EsperaMetro(struct pessoa *p){
                 }
             }else{// tem que apanha o metro 0
                 //espera que o comboio 1 chegue à estação 1
-                sem_wait(&EntraComboioXChegouEstacaoY[1][0]); 
+                sem_wait(&EntraComboioXChegouEstacaoY[1][0]);
 
                 //Mandar mensagem
                 printf("a pessoa entrou no metro \n");
@@ -817,18 +817,18 @@ void EsperaMetro(struct pessoa *p){
                     //a pessoa desiste
                     return;
                 }
-            
+
 
                 //Adiciona a pessoa da lista da estacao
                 sem_wait(&TrincoQuantidadePessoasEstacao[2]);
                 Quantidade_pessoas_espera[2]++;
                 sem_post(&TrincoQuantidadePessoasEstacao[2]);
-                
+
                 //A pessoa acabou de chegar a estacao
                 sem_post(&TrincoPessoasComboio[1]);
 
                 //espera que o comboio 0 chegue à estação 1
-                sem_wait(&EntraComboioXChegouEstacaoY[0][1]); 
+                sem_wait(&EntraComboioXChegouEstacaoY[0][1]);
 
                 //Mandar mensagem
                 printf("a pessoa entrou no metro \n");
@@ -836,7 +836,7 @@ void EsperaMetro(struct pessoa *p){
 
                 sem_wait(&TrincoPessoasComboio[0]);
                 metros[0].numeroPassageirosAtual++;
-                
+
                 int posicao = PosicaoEstacaoVetor(0, p->destino);
 
                 //Retira a pessoa da lista da estacao
@@ -849,7 +849,7 @@ void EsperaMetro(struct pessoa *p){
                 sem_post(&TrincoPessoasComboio[0]);
 
                 //Espera que o metro chegue a estacao
-                sem_wait(&SaiComboioXChegouEstacaoY[0][posicao]); 
+                sem_wait(&SaiComboioXChegouEstacaoY[0][posicao]);
 
                 //Retira a pessoa do metro
                 sem_wait(&TrincoPessoasComboio[0]);
@@ -922,12 +922,12 @@ void movimentarMetro(struct metro *m){
             m->idEstacaoSeguinte = 0;
 
             printf("O metro %i vai sair para a estacao %i\n", m->id, m->trajeto[m->idEstacaoAtual]);
-            
+
             sleep(tempoViagem); // Tempo de viagem 2 s
-            
+
             //Envia a mensagem de fim de viagem
             sprintf(mensagem, "M%i-3-0", m->id);
-            EnviaMensagem(mensagem, sockfd);  
+            EnviaMensagem(mensagem, sockfd);
 
         }else if (m->idEstacaoAtual == 1){
             //Envia mensagem de começo de viagem
@@ -942,7 +942,7 @@ void movimentarMetro(struct metro *m){
 
             //Envia a mensagem de fim de viagem
             sprintf(mensagem, "M%i-3-0", m->id);
-            EnviaMensagem(mensagem, sockfd);    
+            EnviaMensagem(mensagem, sockfd);
 
         }else{
             //Envia mensagem de começo de viagem
@@ -959,7 +959,7 @@ void movimentarMetro(struct metro *m){
 
             //Envia a mensagem de fim de viagem
             sprintf(mensagem, "M%i-3-0", m->id);
-            EnviaMensagem(mensagem, sockfd);    
+            EnviaMensagem(mensagem, sockfd);
         }
     }else{
         if(m->idEstacaoAtual == 0){
@@ -970,36 +970,36 @@ void movimentarMetro(struct metro *m){
             m->direcao = 1;
             m->idEstacaoAtual = 1;
             m->idEstacaoSeguinte = 2;
-            
+
             printf("O metro %i vai sair para a estacao %i\n",m->id, m->trajeto[m->idEstacaoAtual]);
 
             sleep(tempoViagem); // Tempo de viagem 2 s
-            
+
             //Envia a mensagem de fim de viagem
             sprintf(mensagem, "M%i-3-0", m->id);
-            EnviaMensagem(mensagem, sockfd);  
+            EnviaMensagem(mensagem, sockfd);
 
         }else if (m->idEstacaoAtual == 1){
             //Envia mensagem de começo de viagem
             sprintf(mensagem, "M%i-2-0", m->id );
             EnviaMensagem(mensagem, sockfd);
-  
+
             printf("O metro %i vai sair para a estacao %i\n",m->id, m->trajeto[m->idEstacaoSeguinte]);
 
             m->idEstacaoAtual = 0;
             m->idEstacaoSeguinte = 1;
 
             sleep(tempoViagem); // Tempo de viagem 2 s
-            
+
             //Envia a mensagem de fim de viagem
             sprintf(mensagem, "M%i-3-0", m->id);
-            EnviaMensagem(mensagem, sockfd);   
+            EnviaMensagem(mensagem, sockfd);
 
         }else{
             //Envia mensagem de começo de viagem
             sprintf(mensagem, "M%i-2-0", m->id );
             EnviaMensagem(mensagem, sockfd);
-  
+
             printf("O metro %i vai sair para a estacao %i\n",m->id, m->trajeto[m->idEstacaoSeguinte]);
 
             m->idEstacaoAtual = 1;
@@ -1009,8 +1009,8 @@ void movimentarMetro(struct metro *m){
 
             //Envia a mensagem de fim de viagem
             sprintf(mensagem, "M%i-3-0", m->id);
-            EnviaMensagem(mensagem, sockfd);   
-        } 
+            EnviaMensagem(mensagem, sockfd);
+        }
     }
 }
 
@@ -1042,14 +1042,14 @@ void * Metro(void * ptr){
             for (int e = 0; e<valor; e++){
                 sem_post(&SaiComboioXChegouEstacaoY[*numeroMetro][m->idEstacaoAtual]);
             }
-            
+
             //Fica à espera que as pessoas saiam do metro
             sem_wait(&SemMetroEsperaPessoasSair[*numeroMetro]);
-            
+
         }
         /*printf("-Pessoas no metro %d depois da libertacao na estacao %d: [%d,%d,%d]\n", *numeroMetro, m->trajeto[m->idEstacaoAtual] ,m->pessoasEsperaSaida[0],m->pessoasEsperaSaida[1],m->pessoasEsperaSaida[2]);
         printf("------------------------------------------------------\n");*/
-        
+
 
 
         //Obtem a quantidade de pessoas a espera na estacao de apanhar o metro
@@ -1103,7 +1103,7 @@ void * Metro(void * ptr){
 
         //Arranca com o metro para a proxima estacao
 
-        movimentarMetro(m);    
+        movimentarMetro(m);
 
         sem_wait(&TrincoQuantidadePessoasEstacao[m->trajeto[m->idEstacaoAtual]]);
         if(Quantidade_pessoas_espera[0] == 0 && Quantidade_pessoas_espera[1] == 0 && Quantidade_pessoas_espera[2] == 0 && Quantidade_pessoas_espera[3]== 0 && Quantidade_pessoas_espera[4] == 0 && Quantidade_pessoas_espera_metro1_estacao2 == 0){
@@ -1136,11 +1136,11 @@ void Pessoa(void * ptr){
     if (!p.desistiu){
         EsperaMetro(&p);
     }
- 
+
     escreverSimuladorFicheiro("Acabou");
 }
- 
- 
+
+
 /*###################################################*/
 /*           Inicializacoes necessarias              */
 /*###################################################*/
@@ -1185,14 +1185,14 @@ int criarSocket ( ) {
     int tamanhoServidor;
 
     //Cria o socket
-    int sockfd = socket(AF_UNIX, SOCK_STREAM, 0);                                          
-    if(sockfd < 0) {                                                                         
+    int sockfd = socket(AF_UNIX, SOCK_STREAM, 0);
+    if(sockfd < 0) {
         printf("Erro: socket nao foi criado \n");
     }
 
     //Colocar o socket a zero
     bzero((char *) &end_serv, sizeof(end_serv));
-    
+
     //Dominio do socket
     end_serv.sun_family = AF_UNIX;
     strcpy(end_serv.sun_path, UNIXSTR_PATH);
@@ -1202,11 +1202,11 @@ int criarSocket ( ) {
     int varprint = 0;
     while( connect( sockfd, (struct sockaddr *) &end_serv, tamanhoServidor) < 0) {
         if (varprint==0){
-            printf("Espera pelo monitor.\n"); 
+            printf("Espera pelo monitor.\n");
             varprint = 1;
         }
     }
-    printf("Simulador pronto.\n"); 
+    printf("Simulador pronto.\n");
     return sockfd;
 }
 
@@ -1214,7 +1214,7 @@ int criarSocket ( ) {
 /*###################################################*/
 /*                  Simulacao                        */
 /*###################################################*/
-void simulacao(int sockfd) { 
+void simulacao(int sockfd) {
     srand(time(NULL));
     inicializacao();
 
@@ -1224,10 +1224,10 @@ void simulacao(int sockfd) {
     int zero = 0;
     int um = 1;
 
-    pthread_create ( &IDTarefaMetro[0] , NULL , Metro, &zero);          
-    pthread_create ( &IDTarefaMetro[1] , NULL , Metro, &um );         
+    pthread_create ( &IDTarefaMetro[0] , NULL , Metro, &zero);
+    pthread_create ( &IDTarefaMetro[1] , NULL , Metro, &um );
 
-   
+
     int i;
     for (i=0; i<numeroDePessoasMaximo; i++){
         pthread_create ( &IDtarefas[i] , NULL , Pessoa, NULL);
@@ -1235,45 +1235,22 @@ void simulacao(int sockfd) {
     }
 
     for (i=0; i<numeroDePessoasMaximo; i++){
-        pthread_join ( IDtarefas[i] , NULL); 
+        pthread_join ( IDtarefas[i] , NULL);
     }
 
     pthread_join ( IDTarefaMetro[0] , NULL);
-    pthread_join ( IDTarefaMetro[1] , NULL); 
+    pthread_join ( IDTarefaMetro[1] , NULL);
 
     //Acaba a simulacao
-    EnviaMensagem("X-X-1", sockfd);              
+    EnviaMensagem("X-X-1", sockfd);
 }
 
 /*###################################################*/
 /*                      Main                         */
 /*###################################################*/
 int main ( int argc , char const * argv[] ) {
-    sockfd = criarSocket();  
+    sockfd = criarSocket();
     simulacao(sockfd);
     close(sockfd);
     return 1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
