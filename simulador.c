@@ -5,8 +5,48 @@
 
 #include "config.h"
 
+int sockfd = 0;
+
+
 int main(int argc, char *argv[])
 {
+    sockfd = criaSocket();
+}
+
+int criaSocket(){
+    //Variaveis
+    struct sockaddr_un end_serv;
+    int tamanhoServidor;
+
+    //Cria o socket
+    int sockfd = socket(AF_UNIX, SOCK_STREAM, 0);                                          
+    if(sockfd < 0) {                                                                         
+        printf("Erro: socket nao foi criado \n");
+    }
+
+    //Colocar o socket a zero
+    bzero((char *) &end_serv, sizeof(end_serv));
+    
+    //Dominio do socket
+    end_serv.sun_family = AF_UNIX;
+    strcpy(end_serv.sun_path, UNIXSTR_PATH);
+    tamanhoServidor = strlen(end_serv.sun_path) + sizeof( end_serv.sun_family);
+
+    // Estabelece a ligacao com o socket
+    int varprint = 0;
+    while( connect( sockfd, (struct sockaddr *) &end_serv, tamanhoServidor) < 0) {
+        if (varprint==0){
+            printf("Espera pelo monitor.\n"); 
+            varprint = 1;
+        }
+    }
+    printf("Simulador pronto.\n"); 
+    return sockfd;
+}
+
+/*
+void leitura(argc, __argv){
+
     if (argc == 2)
     {
         struct Configuration configuracao;
@@ -83,3 +123,4 @@ int main(int argc, char *argv[])
     perror("ERRO!\n(Só) É preciso passar como argumento o ficheiro de configuração.");
     exit(EXIT_FAILURE);
 }
+*/

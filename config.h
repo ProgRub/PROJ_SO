@@ -11,7 +11,7 @@
 #include <string.h>
 #include <time.h>
 
-#define UNIXSTR_PATH "/tmp/s.2035417"
+#define UNIXSTR_PATH "/tmp/s.2045218"
 #define TamLinha 1024       //tamanho maximo do buffer
 #define TRUE 1
 #define FALSE 0
