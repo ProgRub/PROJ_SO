@@ -12,7 +12,7 @@
 #include <time.h>
 
 #define UNIXSTR_PATH "/tmp/s.2045218"
-#define TamLinha 1024       //tamanho maximo do buffer
+#define TAMANHO_LINHA 1024       //tamanho maximo do buffer
 #define TRUE 1
 #define FALSE 0
 
@@ -31,6 +31,7 @@ struct Configuration
     float probabilidadeTesteNormalFalsoPositivo;
     float probabilidadeTesteRapidoFalsoPositivo;
     float probabilidadeNaoIdosoPrecisaHospital;
+    int tempoCurar;
     int tempoSimulacao;
 };
 
@@ -43,3 +44,19 @@ struct pessoa{
     int tempoMaximoEspera;
     int estado; //0 - a espera, 1 - isolamento, 2 - hospital
 };
+
+
+//METODOS DEFINIDOS
+//simulador.c
+void simulacao(char * filename);
+void carregarConfiguracao(char nomeFicheiro[]);
+void iniciarSemaforosETrincos();
+int criaSocket();
+void criaPessoa();
+void enviarMensagem( char *mensagemAEnviar);
+
+//monitor.c
+void escreveEmFicheiro(char *mensagem);
+void criaServidor();
+void trataMensagem(char mensagem[]);
+void leituraSocket(int sockfd);

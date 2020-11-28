@@ -5,35 +5,54 @@
 
 #include "config.h"
 
+#define TAMANHO_CONFIGURACAO 15
+
 //VARIAVEIS GLOBAIS
 
 int socketfd = 0; //socket
 
 struct Configuration configuracao; //configuracao da simulacao
 
-int numeroPessoas=0;
-int numeroCasosPositivos=0;
-int numeroCasosAtivos=0;
-int numeroDoentesNoHospital=0;
+//TRINCOS E SEMAFOROS
+pthread_mutex_t mutexCriarPessoa;
+pthread_mutex_t mutexEnviarMensagem;
+sem_t filaEsperaCentro1;
+sem_t filaEsperaCentro2;
+sem_t semaforoMedicos;
+sem_t semaforoDoentes;
+
+int numeroPessoas = 0;
+int numeroCasosPositivos = 0;
+int numeroCasosAtivos = 0;
+int numeroDoentesNoHospital = 0;
+
+void enviarMensagem(char *mensagemAEnviar)
+{
+    pthread_mutex_lock(&mutexEnviarMensagem);
+    int numero;
+    char mensagem[TAMANHO_LINHA];
+    if (strcpy(mensagem, mensagemAEnviar) != 0)
+    {
+        numero = strlen(mensagem) + 1;
+        if (write(socketfd, mensagem, numero) != numero)
+        {
+            printf("Erro no write!\n");
+        }
+    }
+    pthread_mutex_unlock(&mutexEnviarMensagem);
+}
+
+void criaPessoa()
+{
+}
 
 int main(int argc, char *argv[])
 {
     if (argc == 2)
     {
-        carregarConfiguracao(argv[1]);
-        printf("Tempo medio de chegada: %d\n", configuracao.tempoMedioChegada);
-        printf("Tempo ate o resultado do teste normal: %d\n", configuracao.tempoTesteNormal);
-        printf("Tempo ate o resultado do teste rapido: %d\n", configuracao.tempoTesteRapido);
-        printf("Tempo de espera no centro de testes 1: %d\n", configuracao.tempoEsperaCentro1);
-        printf("Tempo de espera no centro de testes 2: %d\n", configuracao.tempoEsperaCentro2);
-        printf("Tamanho maximo da fila no centro de testes 1: %d\n", configuracao.tamanhoFilaCentro1);
-        printf("Tamanho maximo da fila no centro de testes 2: %d\n", configuracao.tamanhoFilaCentro2);
-        printf("Tamanho maximo do hospital: %d\n", configuracao.tamanhoHospital);
-        printf("Probabilidade de um teste regressar positivo: %f\n", configuracao.probabilidadePositivo);
-        printf("Probabilidade do teste normal dar falso positivo: %f\n", configuracao.probabilidadeTesteNormalFalsoPositivo);
-        printf("Probabilidade do teste rapido dar falso positivo: %f\n", configuracao.probabilidadeTesteRapidoFalsoPositivo);
-        printf("Duracao da simulacao: %d\n", configuracao.tempoSimulacao);
         socketfd = criaSocket();
+        simulacao(argv[1]);
+        close(socketfd);
         return 0;
     }
     else
@@ -50,8 +69,8 @@ int criaSocket()
     int tamanhoServidor;
 
     //Cria o socket
-    int sockfd = socket(AF_UNIX, SOCK_STREAM, 0);
-    if (sockfd < 0)
+    socketfd = socket(AF_UNIX, SOCK_STREAM, 0);
+    if (socketfd < 0)
     {
         printf("Erro: socket nao foi criado \n");
     }
@@ -66,7 +85,7 @@ int criaSocket()
 
     // Estabelece a ligacao com o socket
     int varprint = 0;
-    while (connect(sockfd, (struct sockaddr *)&end_serv, tamanhoServidor) < 0)
+    while (connect(socketfd, (struct sockaddr *)&end_serv, tamanhoServidor) < 0)
     {
         if (varprint == 0)
         {
@@ -75,7 +94,19 @@ int criaSocket()
         }
     }
     printf("Simulador pronto. Esperando pelo início da simulação...\n");
-    return sockfd;
+    return socketfd;
+}
+
+void iniciarSemaforosETrincos()
+{
+    if (pthread_mutex_init(&mutexCriarPessoa, NULL) != 0)
+    {
+        printf("Inicializacao do trinco falhou.\n");
+    }
+    sem_init(&filaEsperaCentro1, 0, configuracao.tamanhoFilaCentro1);
+    sem_init(&filaEsperaCentro2, 0, configuracao.tamanhoFilaCentro2);
+    sem_init(&semaforoMedicos, 0, configuracao.numeroMedicos);
+    sem_init(&semaforoDoentes, 0, configuracao.tamanhoHospital);
 }
 
 void carregarConfiguracao(char nomeFicheiro[])
@@ -109,8 +140,8 @@ void carregarConfiguracao(char nomeFicheiro[])
         p = strtok(NULL, "\n");
     }
     char *array[2];
-    char *values[14];
-    for (int index = 0; index < 14; index++)
+    char *values[TAMANHO_CONFIGURACAO];
+    for (int index = 0; index < TAMANHO_CONFIGURACAO; index++)
     {
         char *aux = strtok(lines[index], ":");
         i = 0;
@@ -136,5 +167,40 @@ void carregarConfiguracao(char nomeFicheiro[])
     configuracao.probabilidadeTesteNormalFalsoPositivo = strtof(values[10], NULL);
     configuracao.probabilidadeTesteRapidoFalsoPositivo = strtof(values[11], NULL);
     configuracao.probabilidadeNaoIdosoPrecisaHospital = strtof(values[12], NULL);
-    configuracao.tempoSimulacao = strtol(values[13], NULL, 10);
+    configuracao.tempoCurar = strtol(values[13], NULL, 10);
+    configuracao.tempoSimulacao = strtol(values[14], NULL, 10);
+}
+
+void simulacao(char * filename)
+{
+    srand(time(NULL));
+    iniciarSemaforosETrincos();
+    carregarConfiguracao(filename);
+    // printf("Tempo medio de chegada: %d\n", configuracao.tempoMedioChegada);
+    // printf("Tempo ate o resultado do teste normal: %d\n", configuracao.tempoTesteNormal);
+    // printf("Tempo ate o resultado do teste rapido: %d\n", configuracao.tempoTesteRapido);
+    // printf("Tempo de espera no centro de testes 1: %d\n", configuracao.tempoEsperaCentro1);
+    // printf("Tempo de espera no centro de testes 2: %d\n", configuracao.tempoEsperaCentro2);
+    // printf("Tamanho maximo da fila no centro de testes 1: %d\n", configuracao.tamanhoFilaCentro1);
+    // printf("Tamanho maximo da fila no centro de testes 2: %d\n", configuracao.tamanhoFilaCentro2);
+    // printf("Tamanho maximo do hospital: %d\n", configuracao.tamanhoHospital);
+    // printf("Probabilidade de um teste regressar positivo: %f\n", configuracao.probabilidadePositivo);
+    // printf("Probabilidade do teste normal dar falso positivo: %f\n", configuracao.probabilidadeTesteNormalFalsoPositivo);
+    // printf("Probabilidade do teste rapido dar falso positivo: %f\n", configuracao.probabilidadeTesteRapidoFalsoPositivo);
+    // printf("Duracao da simulacao: %d\n", configuracao.tempoSimulacao);
+
+    int tempoDecorrido=0;
+    int timeStampAnterior = (unsigned)time(NULL);
+    int auxTimeStamp;
+    enviarMensagem("Z-Z-0"); //Mensagem que indica o comeco da simulacao
+    while(tempoDecorrido!=configuracao.tempoSimulacao){
+        auxTimeStamp=(unsigned)time(NULL);
+        if(auxTimeStamp!=timeStampAnterior){
+            printf("CHEGOU\n");
+            tempoDecorrido++;
+            timeStampAnterior=auxTimeStamp;
+        }
+    }
+
+    enviarMensagem("Z-Z-1"); //Mensagem que indica o fim da simulacao
 }

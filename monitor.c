@@ -5,19 +5,18 @@
 
 #include "config.h"
 
-int socketfd;
 int fimSimulacao = FALSE;
 
 void leituraSocket(int sockfd)
 {
-    socketfd = sockfd;
     int numero = 0;
-    char buffer[TamLinha];
+    char buffer[TAMANHO_LINHA];
     while (!fimSimulacao)
-    {                                              //Enquanto a simulacao nao acabar
-        numero = read(socketfd, buffer, TamLinha); //Le a mensagem do socket e guarda no buffer
+    {
+        numero = read(sockfd, buffer, TAMANHO_LINHA); //Le a mensagem do socket e guarda no buffer
         if (numero == 0)
         { //Quando chega ao fim
+            printf("FIM");
             break;
         }
         else if (numero < 0)
@@ -33,6 +32,40 @@ void leituraSocket(int sockfd)
 
 void trataMensagem(char mensagem[])
 {
+    //Auxiliario
+    char bufferAuxiliario[30];
+    strcpy(bufferAuxiliario, mensagem);
+    char *valoresSeparados[3][30];
+    int index = 0;
+
+    //Obtem o head da lista ligada que se obtem separando bufferAuxiliario por "-"
+    char *auxiliario = strtok(bufferAuxiliario, "-");
+
+    //Ciclo que percorre e vai separando pelos _ e copiando para valoresSeparados[i]
+    while (auxiliario != NULL)
+    {
+        strcpy(valoresSeparados[index++], auxiliario);
+        auxiliario = strtok(NULL, "-");
+    }
+    // printf("FIM_WHILE");
+
+    //Onde vai guardar os valores depois da divisao
+    int acontecimento = strtol(valoresSeparados[2], NULL, 10);
+
+    if (valoresSeparados[0][0] == 'Z' && valoresSeparados[1][0] == 'Z')
+    {
+        if (acontecimento == 0)
+        {
+            printf("Bem vindo! A simulação comecou!\n");
+        }
+        else
+        {
+            printf("O tempo limite da simulacao foi atingido.\n");
+            fimSimulacao = TRUE;
+            // leituraSocket();
+            // printf("%d", fimSimulacao);
+        }
+    }
 }
 
 void criaServidor()
@@ -68,7 +101,6 @@ void criaServidor()
     //Criacao de um novo scoket
     tamanhoCliente = sizeof(end_cli);
     novoSocket = accept(sockfd, (struct sockaddr *)&end_cli, &tamanhoCliente);
-    // printf("%d\n",novoSocket);
     if (novoSocket < 0)
     {
         printf("Erro na aceitacao \n");
@@ -95,19 +127,27 @@ int main(int argc, char *argv[])
     // printf ( "2: Limpar ficheiros da simulacao \n" );
     printf("################################# \n");
     int opcao = 0;
-    while (!fimSimulacao)
+    int acaba = 0;
+    while (!acaba)
     {
-        while (opcao != 1)
+        if (fimSimulacao == TRUE)
         {
-            printf("Opcao: ");
-            scanf("%d", &opcao); //Le valor introduzido
-            if (opcao != 1)
-            {
-                printf("Isso nao e uma simulacao.\n");
-                opcao = 0;
-            }
+            acaba = TRUE;
         }
-        criaServidor();
+        else
+        {
+            while (opcao != 1)
+            {
+                printf("Opcao: ");
+                scanf("%d", &opcao); //Le valor introduzido
+                if (opcao != 1)
+                {
+                    printf("Isso nao e uma simulacao.\n");
+                    opcao = 0;
+                }
+            }
+            criaServidor();
+        }
     }
     return 0;
     // criaServidor();
