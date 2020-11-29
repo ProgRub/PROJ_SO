@@ -124,12 +124,18 @@ void criaServidor()
 
 void escreveEmFicheiroEMonitor(char *mensagem)
 {
-    printf("%s",mensagem);
-    FILE *registoFile;
-    registoFile = fopen("Relatorio.txt", "w");
-    // char *mensagem="Estado atual => Simulacao a decorrer!\nUtilizadores: 203\nCasos positivos: 18\nCasos em estudo: 11\nTempo medio de espera: 13 min.";
-    fprintf(registoFile, "%s", mensagem);
-    fclose(registoFile);
+    FILE *ficheiroRegisto;
+    ficheiroRegisto = fopen("Relatorio.txt", "w");
+    if (ficheiroRegisto == NULL)
+    {
+        printf("Nao foi possivel abrir o ficheiro &s.\n", "Relatorio.txt");
+    }
+    else
+    {
+        printf("%s", mensagem);
+        fprintf(ficheiroRegisto, "%s", mensagem);
+        fclose(ficheiroRegisto);
+    }
 }
 
 void imprimirInformacao()
@@ -144,25 +150,25 @@ void imprimirInformacao()
     {
         escreveEmFicheiroEMonitor("Estado atual => Simulacao finalizada.\n");
     }
-    sprintf(texto,"Pessoas: %d\n",numeroPessoas);
+    sprintf(texto, "Pessoas: %d\n", numeroPessoas);
     escreveEmFicheiroEMonitor(texto);
-    sprintf(texto,"Pessoas a espera no centro 1: %d\n",tamanhoFilaCentro1);
+    sprintf(texto, "Pessoas a espera no centro 1: %d\n", tamanhoFilaCentro1);
     escreveEmFicheiroEMonitor(texto);
-    sprintf(texto,"Pessoas a espera no centro 2: %d\n",tamanhoFilaCentro2);
+    sprintf(texto, "Pessoas a espera no centro 2: %d\n", tamanhoFilaCentro2);
     escreveEmFicheiroEMonitor(texto);
-    sprintf(texto,"Casos positivos (total): %d\n",casosPositivosTotal);
+    sprintf(texto, "Casos positivos (total): %d\n", casosPositivosTotal);
     escreveEmFicheiroEMonitor(texto);
-    sprintf(texto,"Casos positivos (ativos): %d\n",casosPositivosAtivos);
+    sprintf(texto, "Casos positivos (ativos): %d\n", casosPositivosAtivos);
     escreveEmFicheiroEMonitor(texto);
-    sprintf(texto,"Casos em estudo: %d\n",casosEmEstudo);
+    sprintf(texto, "Casos em estudo: %d\n", casosEmEstudo);
     escreveEmFicheiroEMonitor(texto);
-    sprintf(texto,"Numero de mortos: %d\n",numeroMortos);
+    sprintf(texto, "Numero de mortos: %d\n", numeroMortos);
     escreveEmFicheiroEMonitor(texto);
-    sprintf(texto,"Casos recuperados: %d\n",casosRecuperados);
+    sprintf(texto, "Casos recuperados: %d\n", casosRecuperados);
     escreveEmFicheiroEMonitor(texto);
-    sprintf(texto,"Doentes no hospital: %d\n",doentesNoHospital);
+    sprintf(texto, "Doentes no hospital: %d\n", doentesNoHospital);
     escreveEmFicheiroEMonitor(texto);
-    sprintf(texto,"Medicos disponiveis: %d\n",medicosDisponiveis);
+    sprintf(texto, "Medicos disponiveis: %d\n", medicosDisponiveis);
     escreveEmFicheiroEMonitor(texto);
     escreveEmFicheiroEMonitor(SEPARADOR);
 }
