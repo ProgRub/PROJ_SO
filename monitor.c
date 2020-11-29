@@ -4,8 +4,10 @@
 // 2028616 José Alejandro Ferreira Gouveia
 
 #include "config.h"
+char SEPARADOR[] = "++++++++++++++++++++++++++++++++++++++++++++\n";
 
 int fimSimulacao = FALSE;
+int numeroPessoas = 0, tamanhoFilaCentro1 = 0, tamanhoFilaCentro2 = 0, casosPositivosTotal = 0, casosPositivosAtivos = 0, casosEmEstudo = 0, numeroMortos = 0, casosRecuperados = 0, doentesNoHospital = 0, medicosDisponiveis = 0;
 
 void leituraSocket(int sockfd)
 {
@@ -120,6 +122,51 @@ void criaServidor()
     close(novoSocket);
 }
 
+void escreveEmFicheiroEMonitor(char *mensagem)
+{
+    printf("%s",mensagem);
+    FILE *registoFile;
+    registoFile = fopen("Relatorio.txt", "w");
+    // char *mensagem="Estado atual => Simulacao a decorrer!\nUtilizadores: 203\nCasos positivos: 18\nCasos em estudo: 11\nTempo medio de espera: 13 min.";
+    fprintf(registoFile, "%s", mensagem);
+    fclose(registoFile);
+}
+
+void imprimirInformacao()
+{
+    char texto[TAMANHO_LINHA];
+    escreveEmFicheiroEMonitor(SEPARADOR);
+    if (!fimSimulacao)
+    {
+        escreveEmFicheiroEMonitor("Estado atual => Simulacao a decorrer!\n");
+    }
+    else
+    {
+        escreveEmFicheiroEMonitor("Estado atual => Simulacao finalizada.\n");
+    }
+    sprintf(texto,"Pessoas: %d\n",numeroPessoas);
+    escreveEmFicheiroEMonitor(texto);
+    sprintf(texto,"Pessoas a espera no centro 1: %d\n",tamanhoFilaCentro1);
+    escreveEmFicheiroEMonitor(texto);
+    sprintf(texto,"Pessoas a espera no centro 2: %d\n",tamanhoFilaCentro2);
+    escreveEmFicheiroEMonitor(texto);
+    sprintf(texto,"Casos positivos (total): %d\n",casosPositivosTotal);
+    escreveEmFicheiroEMonitor(texto);
+    sprintf(texto,"Casos positivos (ativos): %d\n",casosPositivosAtivos);
+    escreveEmFicheiroEMonitor(texto);
+    sprintf(texto,"Casos em estudo: %d\n",casosEmEstudo);
+    escreveEmFicheiroEMonitor(texto);
+    sprintf(texto,"Numero de mortos: %d\n",numeroMortos);
+    escreveEmFicheiroEMonitor(texto);
+    sprintf(texto,"Casos recuperados: %d\n",casosRecuperados);
+    escreveEmFicheiroEMonitor(texto);
+    sprintf(texto,"Doentes no hospital: %d\n",doentesNoHospital);
+    escreveEmFicheiroEMonitor(texto);
+    sprintf(texto,"Medicos disponiveis: %d\n",medicosDisponiveis);
+    escreveEmFicheiroEMonitor(texto);
+    escreveEmFicheiroEMonitor(SEPARADOR);
+}
+
 int main(int argc, char *argv[])
 {
     printf("########### Bem vindo ########### \n");
@@ -150,14 +197,4 @@ int main(int argc, char *argv[])
         }
     }
     return 0;
-    // criaServidor();
-}
-
-void escreveEmFicheiro(char *mensagem)
-{
-    FILE *registoFile;
-    registoFile = fopen("Relatorio.txt", "w");
-    // char *mensagem="Estado atual => Simulacao a decorrer!\nUtilizadores: 203\nCasos positivos: 18\nCasos em estudo: 11\nTempo medio de espera: 13 min.";
-    fprintf(registoFile, "%s", mensagem);
-    fclose(registoFile);
 }

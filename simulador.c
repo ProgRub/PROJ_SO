@@ -5,8 +5,6 @@
 
 #include "config.h"
 
-#define TAMANHO_CONFIGURACAO 15
-
 //VARIAVEIS GLOBAIS
 
 int socketfd = 0; //socket
@@ -167,8 +165,10 @@ void carregarConfiguracao(char nomeFicheiro[])
     configuracao.probabilidadeTesteNormalFalsoPositivo = strtof(values[10], NULL);
     configuracao.probabilidadeTesteRapidoFalsoPositivo = strtof(values[11], NULL);
     configuracao.probabilidadeNaoIdosoPrecisaHospital = strtof(values[12], NULL);
-    configuracao.tempoCurar = strtol(values[13], NULL, 10);
-    configuracao.tempoSimulacao = strtol(values[14], NULL, 10);
+    configuracao.probabilidadeIdosoMorrer = strtof(values[13], NULL);
+    configuracao.probabilidadeNaoIdosoMorrer = strtof(values[14], NULL);
+    configuracao.tempoCurar = strtol(values[15], NULL, 10);
+    configuracao.tempoSimulacao = strtol(values[16], NULL, 10);
 }
 
 void simulacao(char * filename)

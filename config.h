@@ -15,6 +15,7 @@
 #define TAMANHO_LINHA 1024       //tamanho maximo do buffer
 #define TRUE 1
 #define FALSE 0
+#define TAMANHO_CONFIGURACAO 17
 
 struct Configuration
 {
@@ -31,6 +32,8 @@ struct Configuration
     float probabilidadeTesteNormalFalsoPositivo;
     float probabilidadeTesteRapidoFalsoPositivo;
     float probabilidadeNaoIdosoPrecisaHospital;
+    float probabilidadeIdosoMorrer;
+    float probabilidadeNaoIdosoMorrer;
     int tempoCurar;
     int tempoSimulacao;
 };
@@ -56,7 +59,7 @@ void criaPessoa();
 void enviarMensagem( char *mensagemAEnviar);
 
 //monitor.c
-void escreveEmFicheiro(char *mensagem);
+void escreveEmFicheiroEMonitor(char *mensagem);
 void criaServidor();
 void trataMensagem(char mensagem[]);
 void leituraSocket(int sockfd);

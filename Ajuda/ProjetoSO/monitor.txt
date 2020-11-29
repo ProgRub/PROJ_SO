@@ -74374,3 +74374,6267 @@ Pessoas Normal que desistiram : 0
 Pessoas VIP atendidas : 0
 Pessoas Normal atendidas : 6
 
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.420000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.420000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.310000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.420000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.310000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.420000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.310000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.420000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.310000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.420000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 3
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.310000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.420000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 3
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.310000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 3.780000
+Tempo médio de compra: 1.420000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 3
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.310000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 3.780000
+Tempo médio de compra: 1.420000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 3
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.310000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: -1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 3.780000
+Tempo médio de compra: 1.420000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 3
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.310000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: -1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 3.780000
+Tempo médio de compra: 2.670000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 3
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.310000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 3.780000
+Tempo médio de compra: 2.670000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 3
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.740000
+Tempo médio de compra: 1.310000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 3.780000
+Tempo médio de compra: 2.670000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.740000
+Tempo médio de compra: 1.310000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 3.780000
+Tempo médio de compra: 2.670000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.740000
+Tempo médio de compra: 1.715000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 3.780000
+Tempo médio de compra: 2.670000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.740000
+Tempo médio de compra: 1.715000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 3.780000
+Tempo médio de compra: 2.670000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.740000
+Tempo médio de compra: 1.715000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 3.780000
+Tempo médio de compra: 2.670000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.740000
+Tempo médio de compra: 1.715000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 3.780000
+Tempo médio de compra: 2.670000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.740000
+Tempo médio de compra: 1.715000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 3.780000
+Tempo médio de compra: 2.670000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.740000
+Tempo médio de compra: 1.715000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 3
+Pessoas VIP na fila: 0
+Tempo médio de espera: 3.780000
+Tempo médio de compra: 2.670000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.740000
+Tempo médio de compra: 1.715000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 4
+Pessoas VIP na fila: 0
+Tempo médio de espera: 3.780000
+Tempo médio de compra: 2.670000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.740000
+Tempo médio de compra: 1.715000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 4
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.873333
+Tempo médio de compra: 2.670000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.740000
+Tempo médio de compra: 1.715000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 3
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.873333
+Tempo médio de compra: 2.670000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.740000
+Tempo médio de compra: 1.715000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 3
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.873333
+Tempo médio de compra: 2.283334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.740000
+Tempo médio de compra: 1.715000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 4
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.873333
+Tempo médio de compra: 2.283334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 21.406668
+Tempo médio de compra: 1.715000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 4
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.873333
+Tempo médio de compra: 2.283334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 21.406668
+Tempo médio de compra: 1.715000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 4
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.873333
+Tempo médio de compra: 2.283334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 21.406668
+Tempo médio de compra: 1.703333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 4
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.873333
+Tempo médio de compra: 2.283334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 21.406668
+Tempo médio de compra: 1.703333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 4
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.873333
+Tempo médio de compra: 2.283334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 21.406668
+Tempo médio de compra: 1.703333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.873333
+Tempo médio de compra: 2.283334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 3
+Pessoas VIP na fila: 0
+Tempo médio de espera: 21.406668
+Tempo médio de compra: 1.703333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.873333
+Tempo médio de compra: 2.283334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 4
+Pessoas VIP na fila: 0
+Tempo médio de espera: 21.406668
+Tempo médio de compra: 1.703333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.873333
+Tempo médio de compra: 2.283334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 21.406668
+Tempo médio de compra: 1.703333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 11.873333
+Tempo médio de compra: 2.283334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 21.406668
+Tempo médio de compra: 1.703333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 20.457500
+Tempo médio de compra: 2.283334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 21.406668
+Tempo médio de compra: 1.703333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 4
+Pessoas VIP na fila: 0
+Tempo médio de espera: 20.457500
+Tempo médio de compra: 2.283334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 21.406668
+Tempo médio de compra: 1.703333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 4
+Pessoas VIP na fila: 0
+Tempo médio de espera: 20.457500
+Tempo médio de compra: 2.447500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 21.406668
+Tempo médio de compra: 1.703333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 20.457500
+Tempo médio de compra: 2.447500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 21.406668
+Tempo médio de compra: 1.703333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 20.457500
+Tempo médio de compra: 2.447500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 21.406668
+Tempo médio de compra: 1.703333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 20.457500
+Tempo médio de compra: 2.447500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 21.406668
+Tempo médio de compra: 1.703333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 20.457500
+Tempo médio de compra: 2.447500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 21.406668
+Tempo médio de compra: 1.703333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 20.457500
+Tempo médio de compra: 2.447500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 32.337502
+Tempo médio de compra: 1.703333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 20.457500
+Tempo médio de compra: 2.447500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 4
+Pessoas VIP na fila: 0
+Tempo médio de espera: 32.337502
+Tempo médio de compra: 1.703333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 20.457500
+Tempo médio de compra: 2.447500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 4
+Pessoas VIP na fila: 0
+Tempo médio de espera: 32.337502
+Tempo médio de compra: 1.667500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 20.457500
+Tempo médio de compra: 2.447500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 32.337502
+Tempo médio de compra: 1.667500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 20.457500
+Tempo médio de compra: 2.447500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 32.337502
+Tempo médio de compra: 1.667500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 6
+Pessoas VIP na fila: 0
+Tempo médio de espera: 20.457500
+Tempo médio de compra: 2.447500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 32.337502
+Tempo médio de compra: 1.667500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 7
+Pessoas VIP na fila: 0
+Tempo médio de espera: 20.457500
+Tempo médio de compra: 2.447500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 32.337502
+Tempo médio de compra: 1.667500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 8
+Pessoas VIP na fila: 0
+Tempo médio de espera: 20.457500
+Tempo médio de compra: 2.447500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 32.337502
+Tempo médio de compra: 1.667500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 20.457500
+Tempo médio de compra: 2.447500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 32.337502
+Tempo médio de compra: 1.667500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 29.432001
+Tempo médio de compra: 2.447500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 32.337502
+Tempo médio de compra: 1.667500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 8
+Pessoas VIP na fila: 0
+Tempo médio de espera: 29.432001
+Tempo médio de compra: 2.447500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 32.337502
+Tempo médio de compra: 1.667500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 8
+Pessoas VIP na fila: 0
+Tempo médio de espera: 29.432001
+Tempo médio de compra: 2.262000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 32.337502
+Tempo médio de compra: 1.667500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 29.432001
+Tempo médio de compra: 2.262000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 35.594002
+Tempo médio de compra: 1.667500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 3
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 29.432001
+Tempo médio de compra: 2.262000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 4
+Pessoas VIP na fila: 0
+Tempo médio de espera: 35.594002
+Tempo médio de compra: 1.667500
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 29.432001
+Tempo médio de compra: 2.262000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 4
+Pessoas VIP na fila: 0
+Tempo médio de espera: 35.594002
+Tempo médio de compra: 1.746000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 29.432001
+Tempo médio de compra: 2.262000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 5
+Pessoas VIP na fila: 0
+Tempo médio de espera: 35.594002
+Tempo médio de compra: 1.746000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 29.432001
+Tempo médio de compra: 2.262000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 6
+Pessoas VIP na fila: 0
+Tempo médio de espera: 35.594002
+Tempo médio de compra: 1.746000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 29.432001
+Tempo médio de compra: 2.262000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 7
+Pessoas VIP na fila: 0
+Tempo médio de espera: 35.594002
+Tempo médio de compra: 1.746000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 29.432001
+Tempo médio de compra: 2.262000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 7
+Pessoas VIP na fila: 0
+Tempo médio de espera: 35.594002
+Tempo médio de compra: 1.746000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 29.432001
+Tempo médio de compra: 2.262000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 7
+Pessoas VIP na fila: 0
+Tempo médio de espera: 35.594002
+Tempo médio de compra: 1.746000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 29.432001
+Tempo médio de compra: 2.262000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 7
+Pessoas VIP na fila: 0
+Tempo médio de espera: 35.594002
+Tempo médio de compra: 1.746000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 10
+Pessoas VIP na fila: 0
+Tempo médio de espera: 29.432001
+Tempo médio de compra: 2.262000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 7
+Pessoas VIP na fila: 0
+Tempo médio de espera: 35.594002
+Tempo médio de compra: 1.746000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 11
+Pessoas VIP na fila: 0
+Tempo médio de espera: 29.432001
+Tempo médio de compra: 2.262000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 7
+Pessoas VIP na fila: 0
+Tempo médio de espera: 35.594002
+Tempo médio de compra: 1.746000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 11
+Pessoas VIP na fila: 0
+Tempo médio de espera: 38.988335
+Tempo médio de compra: 2.262000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 7
+Pessoas VIP na fila: 0
+Tempo médio de espera: 35.594002
+Tempo médio de compra: 1.746000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 10
+Pessoas VIP na fila: 0
+Tempo médio de espera: 38.988335
+Tempo médio de compra: 2.262000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 7
+Pessoas VIP na fila: 0
+Tempo médio de espera: 35.594002
+Tempo médio de compra: 1.746000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 10
+Pessoas VIP na fila: 0
+Tempo médio de espera: 38.988335
+Tempo médio de compra: 2.243334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 7
+Pessoas VIP na fila: 0
+Tempo médio de espera: 35.594002
+Tempo médio de compra: 1.746000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 11
+Pessoas VIP na fila: 0
+Tempo médio de espera: 38.988335
+Tempo médio de compra: 2.243334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 7
+Pessoas VIP na fila: 0
+Tempo médio de espera: 41.288334
+Tempo médio de compra: 1.746000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 4
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 11
+Pessoas VIP na fila: 0
+Tempo médio de espera: 38.988335
+Tempo médio de compra: 2.243334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 6
+Pessoas VIP na fila: 0
+Tempo médio de espera: 41.288334
+Tempo médio de compra: 1.746000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 11
+Pessoas VIP na fila: 0
+Tempo médio de espera: 38.988335
+Tempo médio de compra: 2.243334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 6
+Pessoas VIP na fila: 0
+Tempo médio de espera: 41.288334
+Tempo médio de compra: 1.783333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 11
+Pessoas VIP na fila: 0
+Tempo médio de espera: 38.988335
+Tempo médio de compra: 2.243334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 6
+Pessoas VIP na fila: 0
+Tempo médio de espera: 41.288334
+Tempo médio de compra: 1.783333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 12
+Pessoas VIP na fila: 0
+Tempo médio de espera: 38.988335
+Tempo médio de compra: 2.243334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 7
+Pessoas VIP na fila: 0
+Tempo médio de espera: 41.288334
+Tempo médio de compra: 1.783333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 12
+Pessoas VIP na fila: 0
+Tempo médio de espera: 38.988335
+Tempo médio de compra: 2.243334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 8
+Pessoas VIP na fila: 0
+Tempo médio de espera: 41.288334
+Tempo médio de compra: 1.783333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 12
+Pessoas VIP na fila: 0
+Tempo médio de espera: 38.988335
+Tempo médio de compra: 2.243334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 41.288334
+Tempo médio de compra: 1.783333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 12
+Pessoas VIP na fila: 0
+Tempo médio de espera: 38.988335
+Tempo médio de compra: 2.243334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 41.288334
+Tempo médio de compra: 1.783333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 12
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.243334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 41.288334
+Tempo médio de compra: 1.783333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 11
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.243334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 41.288334
+Tempo médio de compra: 1.783333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 12
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.243334
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 41.288334
+Tempo médio de compra: 1.783333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 12
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.288572
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 10
+Pessoas VIP na fila: 0
+Tempo médio de espera: 41.288334
+Tempo médio de compra: 1.783333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 12
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.288572
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 10
+Pessoas VIP na fila: 0
+Tempo médio de espera: 47.961430
+Tempo médio de compra: 1.783333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 5
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 12
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.288572
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 47.961430
+Tempo médio de compra: 1.783333
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 12
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.288572
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 47.961430
+Tempo médio de compra: 1.885714
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 12
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.288572
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 47.961430
+Tempo médio de compra: 1.885714
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 13
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.288572
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 47.961430
+Tempo médio de compra: 1.885714
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 13
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.288572
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 47.961430
+Tempo médio de compra: 1.885714
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 13
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.288572
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 47.961430
+Tempo médio de compra: 1.885714
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 13
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.288572
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 47.961430
+Tempo médio de compra: 1.885714
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 13
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.288572
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 47.961430
+Tempo médio de compra: 1.885714
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 14
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.288572
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 47.961430
+Tempo médio de compra: 1.885714
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 15
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.288572
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 10
+Pessoas VIP na fila: 0
+Tempo médio de espera: 47.961430
+Tempo médio de compra: 1.885714
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 15
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.288572
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 10
+Pessoas VIP na fila: 0
+Tempo médio de espera: 47.961430
+Tempo médio de compra: 1.885714
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 16
+Pessoas VIP na fila: 0
+Tempo médio de espera: 48.574287
+Tempo médio de compra: 2.288572
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 10
+Pessoas VIP na fila: 0
+Tempo médio de espera: 47.961430
+Tempo médio de compra: 1.885714
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 16
+Pessoas VIP na fila: 0
+Tempo médio de espera: 58.475002
+Tempo médio de compra: 2.288572
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 10
+Pessoas VIP na fila: 0
+Tempo médio de espera: 47.961430
+Tempo médio de compra: 1.885714
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 15
+Pessoas VIP na fila: 0
+Tempo médio de espera: 58.475002
+Tempo médio de compra: 2.288572
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 8
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 10
+Pessoas VIP na fila: 0
+Tempo médio de espera: 47.961430
+Tempo médio de compra: 1.885714
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 15
+Pessoas VIP na fila: 0
+Tempo médio de espera: 58.475002
+Tempo médio de compra: 2.278750
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 8
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 10
+Pessoas VIP na fila: 0
+Tempo médio de espera: 55.477501
+Tempo médio de compra: 1.885714
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 6
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 15
+Pessoas VIP na fila: 0
+Tempo médio de espera: 58.475002
+Tempo médio de compra: 2.278750
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 8
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 55.477501
+Tempo médio de compra: 1.885714
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 15
+Pessoas VIP na fila: 0
+Tempo médio de espera: 58.475002
+Tempo médio de compra: 2.278750
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 8
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 9
+Pessoas VIP na fila: 0
+Tempo médio de espera: 55.477501
+Tempo médio de compra: 1.988750
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 15
+Pessoas VIP na fila: 0
+Tempo médio de espera: 58.475002
+Tempo médio de compra: 2.278750
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 8
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 10
+Pessoas VIP na fila: 0
+Tempo médio de espera: 55.477501
+Tempo médio de compra: 1.988750
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 15
+Pessoas VIP na fila: 0
+Tempo médio de espera: 58.475002
+Tempo médio de compra: 2.278750
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 8
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 10
+Pessoas VIP na fila: 0
+Tempo médio de espera: 55.477501
+Tempo médio de compra: 1.988750
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 7
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 16
+Pessoas VIP na fila: 0
+Tempo médio de espera: 58.475002
+Tempo médio de compra: 2.278750
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 8
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.620000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.000000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.620000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.900000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.620000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.900000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.620000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.900000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.620000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.900000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 1.620000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.900000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.620000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.900000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.620000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.000000
+Tempo médio de compra: 0.900000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 2
+Pessoas VIP na fila: 0
+Tempo médio de espera: 4.640000
+Tempo médio de compra: 0.900000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 0
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 4.640000
+Tempo médio de compra: 0.900000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 4.640000
+Tempo médio de compra: 0.930000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 4.640000
+Tempo médio de compra: 0.930000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 4.640000
+Tempo médio de compra: 0.930000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 1
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.930000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.930000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 4
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 3
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 2
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: -
+Está em viagem: 1 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
+*********************************
+     * * * M E T R O S * * *     
+*********************************
+Metro: 0
+Número de Passageiros atual: 0
+Estação atual: 0
+Está em viagem: 0 
+
+Metro: 1
+Número de Passageiros atual: 0
+Estação atual: 1
+Está em viagem: 0 
+
+*********************************
+ * * * B I L H E T E I R A  * * *
+*********************************
+Bilheteira da Estação 0
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 6.990000
+Tempo médio de compra: 0.956667
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 2
+
+Bilheteira da Estação 1
+Pessoas normais na fila: 0
+Pessoas VIP na fila: 0
+Tempo médio de espera: 0.810000
+Tempo médio de compra: 1.540000
+Pessoas VIP que desistiram : 0
+Pessoas Normal que desistiram : 0
+Pessoas VIP atendidas : 0
+Pessoas Normal atendidas : 1
+
