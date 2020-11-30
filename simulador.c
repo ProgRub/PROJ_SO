@@ -40,12 +40,36 @@ void enviarMensagem(char *mensagemAEnviar)
     pthread_mutex_unlock(&mutexEnviarMensagem);
 }
 
-void criaPessoa()
+
+int probabilidade(float prob)
 {
+    return (rand() % 100) < (prob*100);    
+}
+struct pessoa criaPessoa()
+{
+    pthread_mutex_lock(&mutexCriarPessoa);
+    int valores[2]={0,1}
+    int valorRandomCentroTeste = valores[rand()%2];
+    int valorRandomIdoso = rand() % 2;
+
+
+    struct pessoa p;
+
+    p.centroTeste = valorRandomCentroTeste;
+    p.testouPositivo = 0;
+    p.falsoPositivo = 0;
+    p.idoso = valorRandomIdoso;
+
+
+
+
+    pthread_mutex_unlock(&mutexCriarPessoa);
+    return p;
 }
 
 int main(int argc, char *argv[])
 {
+    
     if (argc == 2)
     {
         socketfd = criaSocket();

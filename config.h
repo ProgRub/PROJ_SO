@@ -39,14 +39,18 @@ struct Configuration
 };
 
 struct pessoa{
+    int id;
+    int medico; // 0-> nao é 1-> é medico 
     int centroTeste;
-    int testouPositivo;
-    int falsoPositivo;
-    int idoso; //indica se a pessoa e idosa, e assim tem prioridade
+    int estadoTeste; //0 -> nao fez teste 1 -> teste positivo 2 -> negativo 3 ->teste incunclusivo 
+    int idoso; //indica se a pessoa e idosa, e assim tem prioridade 0 -> nao é 1-> idoso
     int precisaHospital; //indica se a pessoa precisa de ir para o hospital, idosos precisam automaticamente
     int tempoMaximoEspera;
     int estado; //0 - a espera, 1 - isolamento, 2 - hospital
 };
+
+
+
 
 
 //METODOS DEFINIDOS
@@ -55,7 +59,7 @@ void simulacao(char * filename);
 void carregarConfiguracao(char nomeFicheiro[]);
 void iniciarSemaforosETrincos();
 int criaSocket();
-void criaPessoa();
+struct pessoa criaPessoa();
 void enviarMensagem( char *mensagemAEnviar);
 
 //monitor.c
