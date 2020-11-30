@@ -7,6 +7,7 @@
 char SEPARADOR[] = "++++++++++++++++++++++++++++++++++++++++++++\n";
 
 int fimSimulacao = FALSE;
+
 int numeroPessoas = 0, tamanhoFilaCentro1 = 0, tamanhoFilaCentro2 = 0, casosPositivosTotal = 0, casosPositivosAtivos = 0, casosEmEstudo = 0, numeroMortos = 0, casosRecuperados = 0, doentesNoHospital = 0, medicosDisponiveis = 0;
 
 void leituraSocket(int sockfd)
@@ -49,23 +50,24 @@ void trataMensagem(char mensagem[])
         strcpy(valoresSeparados[index++], auxiliario);
         auxiliario = strtok(NULL, "-");
     }
-    // printf("FIM_WHILE");
 
     //Onde vai guardar os valores depois da divisao
     int acontecimento = strtol(valoresSeparados[2], NULL, 10);
-
-    if (valoresSeparados[0][0] == 'Z' && valoresSeparados[1][0] == 'Z')
+    if (!strcmp(valoresSeparados[0],"Z") && !strcmp(valoresSeparados[1],"Z"))
     {
         if (acontecimento == 0)
         {
-            printf("Bem vindo! A simulação comecou!\n");
+            // printf("Bem vindo! A simulação comecou!\n");
         }
         else
         {
-            printf("O tempo limite da simulacao foi atingido.\n");
+            // printf("O tempo limite da simulacao foi atingido.\n");
             fimSimulacao = TRUE;
-            // leituraSocket();
-            // printf("%d", fimSimulacao);
+        }
+    }
+    else{
+        switch(acontecimento){
+            
         }
     }
     imprimirInformacao();
@@ -123,13 +125,18 @@ void criaServidor()
     close(novoSocket);
 }
 
+void limparFicheiro()
+{
+    fclose(fopen("Relatorio.txt", "w"));
+}
+
 void escreveEmFicheiroEMonitor(char *mensagem)
 {
     FILE *ficheiroRegisto;
-    ficheiroRegisto = fopen("Relatorio.txt", "w");
+    ficheiroRegisto = fopen("Relatorio.txt", "a");
     if (ficheiroRegisto == NULL)
     {
-        printf("Nao foi possivel abrir o ficheiro &s.\n", "Relatorio.txt");
+        printf("Nao foi possivel abrir o ficheiro %s.\n", "Relatorio.txt");
     }
     else
     {
@@ -142,6 +149,8 @@ void escreveEmFicheiroEMonitor(char *mensagem)
 void imprimirInformacao()
 {
     char texto[TAMANHO_LINHA];
+    system("clear");
+    limparFicheiro();
     escreveEmFicheiroEMonitor(SEPARADOR);
     if (!fimSimulacao)
     {
@@ -176,32 +185,24 @@ void imprimirInformacao()
 
 int main(int argc, char *argv[])
 {
-    printf("########### Bem vindo ########### \n");
+    printf("++++++++++++ Bem vindo ++++++++++++\n");
     printf("1: Comecar simulacao          \n");
     // printf ( "2: Limpar ficheiros da simulacao \n" );
-    printf("################################# \n");
+    printf("%s\n", SEPARADOR);
     int opcao = 0;
-    int acaba = 0;
-    while (!acaba)
+    while (!fimSimulacao)
     {
-        if (fimSimulacao == TRUE)
+        while (opcao != 1)
         {
-            acaba = TRUE;
-        }
-        else
-        {
-            while (opcao != 1)
+            printf("Opcao: ");
+            scanf("%d", &opcao); //Le valor introduzido
+            if (opcao != 1)
             {
-                printf("Opcao: ");
-                scanf("%d", &opcao); //Le valor introduzido
-                if (opcao != 1)
-                {
-                    printf("Isso nao e uma simulacao.\n");
-                    opcao = 0;
-                }
+                printf("Isso nao e uma simulacao.\n");
+                opcao = 0;
             }
-            criaServidor();
         }
+        criaServidor();
     }
     return 0;
 }

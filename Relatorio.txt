@@ -1,5 +1,13 @@
-Estado atual => Simulacao a decorrer!
-Utilizadores: 203
-Casos positivos: 18
-Casos em estudo: 11
-Tempo medio de espera: 13 min.
+++++++++++++++++++++++++++++++++++++++++++++
+Estado atual => Simulacao finalizada.
+Pessoas: 0
+Pessoas a espera no centro 1: 0
+Pessoas a espera no centro 2: 0
+Casos positivos (total): 0
+Casos positivos (ativos): 0
+Casos em estudo: 0
+Numero de mortos: 0
+Casos recuperados: 0
+Doentes no hospital: 0
+Medicos disponiveis: 0
+++++++++++++++++++++++++++++++++++++++++++++
