@@ -15,7 +15,14 @@
 #define TAMANHO_LINHA 1024       //tamanho maximo do buffer
 #define TRUE 1
 #define FALSE 0
-#define TAMANHO_CONFIGURACAO 17
+#define NAO_TESTOU 0
+#define POSITIVO 1
+#define NEGATIVO 2
+#define INCONCLUSIVO 3
+#define ESPERA 0
+#define ISOLAMENTO 1
+#define HOSPITAL 2
+#define TAMANHO_CONFIGURACAO 19
 
 struct Configuration
 {
@@ -28,9 +35,11 @@ struct Configuration
     int tamanhoFilaCentro2;
     int tamanhoHospital;
     int numeroMedicos;
-    float probabilidadePositivo;
-    float probabilidadeTesteNormalFalsoPositivo;
-    float probabilidadeTesteRapidoFalsoPositivo;
+    float probabilidadeSerIdoso;
+    float probabilidadeMedicoPositivo;
+    float probabilidadePopulacaoPositivo;
+    float probabilidadeTesteNormalInconclusivo;
+    float probabilidadeTesteRapidoInconclusivo;
     float probabilidadeNaoIdosoPrecisaHospital;
     float probabilidadeIdosoMorrer;
     float probabilidadeNaoIdosoMorrer;

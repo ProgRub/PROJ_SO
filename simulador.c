@@ -48,7 +48,7 @@ int probabilidade(float prob)
 struct pessoa criaPessoa()
 {
     pthread_mutex_lock(&mutexCriarPessoa);
-    int valores[2]={0,1}
+    int valores[2]={0,1};
     int valorRandomCentroTeste = valores[rand()%2];
     int valorRandomIdoso = rand() % 2;
 
@@ -56,8 +56,6 @@ struct pessoa criaPessoa()
     struct pessoa p;
 
     p.centroTeste = valorRandomCentroTeste;
-    p.testouPositivo = 0;
-    p.falsoPositivo = 0;
     p.idoso = valorRandomIdoso;
 
 
@@ -184,15 +182,17 @@ void carregarConfiguracao(char nomeFicheiro[])
     configuracao.tamanhoFilaCentro1 = strtol(values[5], NULL, 10);
     configuracao.tamanhoFilaCentro2 = strtol(values[6], NULL, 10);
     configuracao.tamanhoHospital = strtol(values[7], NULL, 10);
-    configuracao.probabilidadePositivo = strtof(values[8], NULL);
-    configuracao.numeroMedicos = strtof(values[9], NULL);
-    configuracao.probabilidadeTesteNormalFalsoPositivo = strtof(values[10], NULL);
-    configuracao.probabilidadeTesteRapidoFalsoPositivo = strtof(values[11], NULL);
-    configuracao.probabilidadeNaoIdosoPrecisaHospital = strtof(values[12], NULL);
-    configuracao.probabilidadeIdosoMorrer = strtof(values[13], NULL);
-    configuracao.probabilidadeNaoIdosoMorrer = strtof(values[14], NULL);
-    configuracao.tempoCurar = strtol(values[15], NULL, 10);
-    configuracao.tempoSimulacao = strtol(values[16], NULL, 10);
+    configuracao.numeroMedicos = strtof(values[8], NULL);
+    configuracao.probabilidadeSerIdoso = strtof(values[9], NULL);
+    configuracao.probabilidadeMedicoPositivo = strtof(values[10], NULL);
+    configuracao.probabilidadePopulacaoPositivo = strtof(values[11], NULL);
+    configuracao.probabilidadeTesteNormalInconclusivo = strtof(values[12], NULL);
+    configuracao.probabilidadeTesteRapidoInconclusivo = strtof(values[13], NULL);
+    configuracao.probabilidadeNaoIdosoPrecisaHospital = strtof(values[14], NULL);
+    configuracao.probabilidadeIdosoMorrer = strtof(values[15], NULL);
+    configuracao.probabilidadeNaoIdosoMorrer = strtof(values[16], NULL);
+    configuracao.tempoCurar = strtol(values[17], NULL, 10);
+    configuracao.tempoSimulacao = strtol(values[18], NULL, 10);
 }
 
 void simulacao(char * filename)

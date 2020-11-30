@@ -68,6 +68,7 @@ void trataMensagem(char mensagem[])
             // printf("%d", fimSimulacao);
         }
     }
+    imprimirInformacao();
 }
 
 void criaServidor()
