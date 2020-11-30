@@ -6,6 +6,7 @@
 #include <sys/stat.h>
 #include <pthread.h>
 #include <semaphore.h>
+#include <unistd.h>
 #include <ctype.h>
 #include <fcntl.h>
 #include <string.h>
@@ -36,6 +37,7 @@ struct Configuration
     int tamanhoFilaCentro2;
     int tamanhoHospital;
     int numeroMedicos;
+    int numeroPessoas;
     float probabilidadeSerIdoso;
     float probabilidadeMedicoPositivo;
     float probabilidadePopulacaoPositivo;
@@ -60,14 +62,24 @@ struct pessoa
     int estado; //0 - a espera, 1 - isolamento, 2 - hospital
 };
 
+struct centro 
+{
+    int id;
+    int numeroPessoas;
+};
+
 //METODOS DEFINIDOS
 //simulador.c
+int probabilidade(float prob);
 void simulacao(char *filename);
 void carregarConfiguracao(char nomeFicheiro[]);
 void iniciarSemaforosETrincos();
 int criaSocket();
 struct pessoa criaPessoa();
+struct pessoa criaMedico();
 void enviarMensagem(char *mensagemAEnviar);
+void Medico(void * ptr);
+void Pessoa(void * ptr);
 
 //monitor.c
 void escreveEmFicheiroEMonitor(char *mensagem);

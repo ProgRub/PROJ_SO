@@ -11,6 +11,13 @@ int socketfd = 0; //socket
 int idPessoa = 0;
 struct Configuration configuracao; //configuracao da simulacao
 
+
+
+int numeroPessoas = 0;
+int numeroCasosPositivos = 0;
+int numeroCasosAtivos = 0;
+int numeroDoentesNoHospital = 0;
+
 //TRINCOS E SEMAFOROS
 pthread_mutex_t mutexCriarPessoa;
 pthread_mutex_t mutexEnviarMensagem;
@@ -19,12 +26,11 @@ sem_t filaEsperaCentro2;
 sem_t semaforoMedicos;
 sem_t semaforoDoentes;
 
-int numeroPessoas = 0;
-int numeroCasosPositivos = 0;
-int numeroCasosAtivos = 0;
-int numeroDoentesNoHospital = 0;
+//tarefas
+pthread_t IDtarefa[510];
+pthread_t IDtarefaCentro[2];
 
-void enviarMensagem(char *mensagemAEnviar)
+void enviarMensagem(char *mensagemAEnviar)  //envia mensagem po monitor 
 {
     pthread_mutex_lock(&mutexEnviarMensagem);
     int numero;
@@ -45,6 +51,7 @@ int probabilidade(float prob)
 {
     return (rand() % 100) < (prob*100);    
 }
+
 struct pessoa criaPessoa()
 {
     int valores[2]={0,1};
@@ -206,6 +213,7 @@ void carregarConfiguracao(char nomeFicheiro[])
     configuracao.tamanhoFilaCentro2 = strtol(values[6], NULL, 10);
     configuracao.tamanhoHospital = strtol(values[7], NULL, 10);
     configuracao.numeroMedicos = strtof(values[8], NULL);
+    configuracao.numeroPessoas = strtof(values[8], NULL);
     configuracao.probabilidadeSerIdoso = strtof(values[9], NULL);
     configuracao.probabilidadeMedicoPositivo = strtof(values[10], NULL);
     configuracao.probabilidadePopulacaoPositivo = strtof(values[11], NULL);
@@ -218,10 +226,26 @@ void carregarConfiguracao(char nomeFicheiro[])
     configuracao.tempoSimulacao = strtol(values[18], NULL, 10);
 }
 
+void Pessoa(void * ptr)
+{
+    struct pessoa p = criaPessoa();
+}
+
+void Medico(void * ptr)
+{
+    struct pessoa p = criaMedico();
+}
+
+void Centro(void * ptr)
+{ 
+    
+}
+
 void simulacao(char * filename)
 {
     srand(time(NULL));
     iniciarSemaforosETrincos();
+
     carregarConfiguracao(filename);
     // printf("Tempo medio de chegada: %d\n", configuracao.tempoMedioChegada);
     // printf("Tempo ate o resultado do teste normal: %d\n", configuracao.tempoTesteNormal);
@@ -248,6 +272,61 @@ void simulacao(char * filename)
             timeStampAnterior=auxTimeStamp;
         }
     }
+
+    
+    //cria tarefas centro = 2 
+    /*
+    for (int i = 0; i < 2; i++)
+    {
+        if (pthread_create (&IDtarefaCentro[i], NULL, Centro, NULL))
+        {
+            printf(" Erro na criação da tarefa \n");
+            exit(1);
+        }
+        else
+        {
+            printf("Criada a tarefa %d\n", IDtarefaCentro[i]);
+        }
+    }*/
+
+    //cria tarefas medicos = configuracao.numeroMedicos
+    for(int i= 0; i < configuracao.numeroMedicos ; i++){
+        if (pthread_create (&IDtarefa[i], NULL, Medico, NULL))
+        {
+            printf(" Erro na criação da tarefa \n");
+            exit(1);
+        }
+        else
+        {
+            printf("Criada a tarefa %d\n", IDtarefa[i]);
+        }
+    }
+
+    //cria tarefas pessoas = configuracao.numeroPessoas
+    for(int i= configuracao.numeroMedicos; i < configuracao.numeroPessoas ; i++){
+        if (pthread_create (&IDtarefa[i], NULL, Pessoa, NULL))
+        {
+            printf(" Erro na criação da tarefa \n");
+            exit(1);
+        }
+        else
+        {
+            printf("Criada a tarefa %d\n", IDtarefa[i]);
+        }
+    }
+
+    for (int i = 0; i < configuracao.numeroMedicos; i++)
+    {
+        pthread_join(IDtarefa[i], NULL);
+    }
+
+    for (int i = configuracao.numeroMedicos; i < configuracao.numeroPessoas; i++)
+    {
+        pthread_join(IDtarefa[i], NULL);
+    }
+
+    //pthread_join(IDtarefaCentro[0], NULL);
+    //pthread_join(IDtarefaCentro[1], NULL);
 
     enviarMensagem("Z-Z-1"); //Mensagem que indica o fim da simulacao
 }
