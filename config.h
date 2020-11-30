@@ -23,6 +23,7 @@
 #define ISOLAMENTO 1
 #define HOSPITAL 2
 #define TAMANHO_CONFIGURACAO 19
+#define CENTRO_PRIORITARIO 1
 
 struct Configuration
 {

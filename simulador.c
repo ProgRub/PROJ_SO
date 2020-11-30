@@ -8,7 +8,7 @@
 //VARIAVEIS GLOBAIS
 
 int socketfd = 0; //socket
-
+int idPessoa = 0;
 struct Configuration configuracao; //configuracao da simulacao
 
 //TRINCOS E SEMAFOROS
@@ -47,22 +47,45 @@ int probabilidade(float prob)
 }
 struct pessoa criaPessoa()
 {
-    pthread_mutex_lock(&mutexCriarPessoa);
     int valores[2]={0,1};
+
+    pthread_mutex_lock(&mutexCriarPessoa);
     int valorRandomCentroTeste = valores[rand()%2];
     int valorRandomIdoso = rand() % 2;
 
 
     struct pessoa p;
-
+    p.id = idPessoa;
+    p.medico = FALSE;
     p.centroTeste = valorRandomCentroTeste;
-    p.idoso = valorRandomIdoso;
+    p.estadoTeste = NAO_TESTOU;
+    p.idoso = probabilidade(configuracao.probabilidadeSerIdoso);
+    
+    p.estado = ESPERA;
 
 
 
 
     pthread_mutex_unlock(&mutexCriarPessoa);
+    idPessoa++;
     return p;
+}
+struct pessoa criaMedico()
+{
+    pthread_mutex_lock(&mutexCriarPessoa);
+    int valores [2] = {0,1};
+    int valorRandomCentroTeste = valores[rand()%2];
+    
+    struct pessoa m;
+    m.id = idPessoa;
+    m.medico = TRUE;
+    m.idoso = FALSE;
+    m.centroTeste = valorRandomCentroTeste;
+    m.estadoTeste = NAO_TESTOU;
+    pthread_mutex_unlock(&mutexCriarPessoa);
+
+    idPessoa++;
+    return m;
 }
 
 int main(int argc, char *argv[])
