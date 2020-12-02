@@ -10,69 +10,9 @@ int fimSimulacao = FALSE;
 
 int numeroPessoas = 0, tamanhoFilaCentro1 = 0, tamanhoFilaCentro2 = 0, casosPositivosTotal = 0, casosPositivosAtivos = 0, casosEmEstudo = 0, numeroMortos = 0, casosRecuperados = 0, doentesNoHospital = 0, medicosDisponiveis = 0;
 
-void leituraSocket(int sockfd)
-{
-    int numero = 0;
-    char buffer[TAMANHO_LINHA];
-    while (!fimSimulacao)
-    {
-        numero = read(sockfd, buffer, TAMANHO_LINHA); //Le a mensagem do socket e guarda no buffer
-        if (numero == 0)
-        { //Quando chega ao fim
-            printf("FIM");
-            break;
-        }
-        else if (numero < 0)
-        {
-            printf("Erro: Nao leu do socket \n");
-        }
-        else
-        {
-            trataMensagem(buffer);
-        }
-    }
-}
-
-void trataMensagem(char mensagem[])
-{
-    //Auxiliario
-    char bufferAuxiliario[30];
-    strcpy(bufferAuxiliario, mensagem);
-    char *valoresSeparados[3][30];
-    int index = 0;
-
-    //Obtem o head da lista ligada que se obtem separando bufferAuxiliario por "-"
-    char *auxiliario = strtok(bufferAuxiliario, "-");
-
-    //Ciclo que percorre e vai separando pelos _ e copiando para valoresSeparados[i]
-    while (auxiliario != NULL)
-    {
-        strcpy(valoresSeparados[index++], auxiliario);
-        auxiliario = strtok(NULL, "-");
-    }
-
-    //Onde vai guardar os valores depois da divisao
-    int acontecimento = strtol(valoresSeparados[2], NULL, 10);
-    if (!strcmp(valoresSeparados[0],"Z") && !strcmp(valoresSeparados[1],"Z"))
-    {
-        if (acontecimento == 0)
-        {
-            // printf("Bem vindo! A simulação comecou!\n");
-        }
-        else
-        {
-            // printf("O tempo limite da simulacao foi atingido.\n");
-            fimSimulacao = TRUE;
-        }
-    }
-    else{
-        switch(acontecimento){
-            
-        }
-    }
-    imprimirInformacao();
-}
-
+/*---------------------------------------
+            SOCKETS
+-----------------------------------------*/
 void criaServidor()
 {
     //sockfd -> criacao para a primeira comunicacao
@@ -125,6 +65,83 @@ void criaServidor()
     close(novoSocket);
 }
 
+void leituraSocket(int sockfd)
+{
+    int numero = 0;
+    char buffer[TAMANHO_LINHA];
+    while (!fimSimulacao)
+    {
+        numero = read(sockfd, buffer, TAMANHO_LINHA); //Le a mensagem do socket e guarda no buffer
+        if (numero == 0)
+        { //Quando chega ao fim
+            printf("FIM");
+            break;
+        }
+        else if (numero < 0)
+        {
+            printf("Erro: Nao leu do socket \n");
+        }
+        else
+        {
+            trataMensagem(buffer);
+        }
+    }
+}
+
+void trataMensagem(char mensagem[])
+{
+    //Auxiliario
+    char bufferAuxiliario[30];
+    strcpy(bufferAuxiliario, mensagem);
+    char *valoresSeparados[3][30];
+    int index = 0;
+
+    //Obtem o head da lista ligada que se obtem separando bufferAuxiliario por "-"
+    char *auxiliario = strtok(bufferAuxiliario, "-");
+
+    //Ciclo que percorre e vai separando pelos _ e copiando para valoresSeparados[i]
+    while (auxiliario != NULL)
+    {
+        strcpy(valoresSeparados[index++], auxiliario);
+        auxiliario = strtok(NULL, "-");
+    }
+
+    //Onde vai guardar os valores depois da divisao
+    int acontecimento = strtol(valoresSeparados[2], NULL, 10);
+    if (!strcmp(valoresSeparados[0], "Z") && !strcmp(valoresSeparados[1], "Z"))
+    {
+        if (acontecimento == 0)
+        {
+            // printf("Bem vindo! A simulação comecou!\n");
+        }
+        else
+        {
+            // printf("O tempo limite da simulacao foi atingido.\n");
+            fimSimulacao = TRUE;
+        }
+    }
+    else
+    {
+        switch (acontecimento)
+        {
+        case 0: //Utilizador chegou à fila do centro 1.
+            break;
+        case 1: //Utilizador saiu da fila do centro 1, porque foi testado
+            break;
+        case 2: //Utilizador chegou à fila do centro 2.
+            break;
+        case 3: //Utilizador saiu da fila do centro 2, porque foi testado
+            break;
+        case 4:
+            break;
+        }
+    }
+    imprimirInformacao();
+}
+
+/*---------------------------------------
+            IMPRIMIR INFORMACAO
+-----------------------------------------*/
 void limparFicheiro()
 {
     fclose(fopen("Relatorio.txt", "w"));

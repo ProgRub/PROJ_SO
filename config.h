@@ -25,6 +25,7 @@
 #define HOSPITAL 2
 #define TAMANHO_CONFIGURACAO 19
 #define CENTRO_PRIORITARIO 1
+#define TAMANHO_ARRAY_TAREFAS 1000
 
 struct Configuration
 {
@@ -37,7 +38,6 @@ struct Configuration
     int tamanhoFilaCentro2;
     int tamanhoHospital;
     int numeroMedicos;
-    int numeroPessoas;
     float probabilidadeSerIdoso;
     float probabilidadeMedicoPositivo;
     float probabilidadePopulacaoPositivo;
