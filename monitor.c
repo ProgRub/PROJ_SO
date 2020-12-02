@@ -8,7 +8,7 @@ char SEPARADOR[] = "++++++++++++++++++++++++++++++++++++++++++++\n";
 
 int fimSimulacao = FALSE;
 
-int numeroPessoas = 0, tamanhoFilaCentro1 = 0, tamanhoFilaCentro2 = 0, casosPositivosTotal = 0, casosPositivosAtivos = 0, casosEmEstudo = 0, numeroMortos = 0, casosRecuperados = 0, doentesNoHospital = 0, medicosDisponiveis = 0;
+int numeroPessoas = 0, tamanhoFilaCentro1 = 0, numeroPessoasEmIsolamento = 0, tamanhoFilaCentro2 = 0, casosPositivosTotal = 0, casosPositivosAtivos = 0, casosEmEstudo = 0, numeroMortos = 0, casosRecuperados = 0, doentesNoHospital = 0, medicosDisponiveis = 0;
 
 /*---------------------------------------
             SOCKETS
@@ -125,14 +125,68 @@ void trataMensagem(char mensagem[])
         switch (acontecimento)
         {
         case 0: //Utilizador chegou à fila do centro 1.
+            numeroPessoas++;
+            tamanhoFilaCentro1++;
             break;
         case 1: //Utilizador saiu da fila do centro 1, porque foi testado
+            tamanhoFilaCentro1--;
+            casosEmEstudo++;
             break;
         case 2: //Utilizador chegou à fila do centro 2.
+            numeroPessoas++;
+            tamanhoFilaCentro2++;
             break;
         case 3: //Utilizador saiu da fila do centro 2, porque foi testado
+            tamanhoFilaCentro2--;
+            casosEmEstudo++;
             break;
-        case 4:
+        case 4: //Utilizador saiu da fila do centro 1, porque desistiu
+            tamanhoFilaCentro1--;
+            break;
+        case 5: //Utilizador saiu da fila do centro 2, porque desistiu
+            tamanhoFilaCentro2--;
+            break;
+        case 6: //Utilizador vai para isolamento
+            numeroPessoasEmIsolamento++;
+            break;
+        case 7: //Utilizador vai para o hospital
+            doentesNoHospital++;
+            break;
+        case 8: //Medico vai tratar de doente
+            medicosDisponiveis--;
+            break;
+        case 9: //Utilizador morre no hospital
+            numeroMortos++;
+            doentesNoHospital--;
+            casosPositivosAtivos--;
+            break;
+        case 10: //Utilizador morre em isolamento
+            numeroMortos++;
+            numeroPessoasEmIsolamento--;
+            casosPositivosAtivos--;
+            break;
+        case 11: //Medico acaba de tratar de doente (ou este morre) e vai para isolamento
+            numeroPessoasEmIsolamento++;
+            doentesNoHospital--;
+            break;
+        case 12: //Medico é testado em isolamento
+            casosEmEstudo++;
+            break;
+        case 13: //Utilizador testa positivo
+            casosPositivosAtivos++;
+            casosPositivosTotal++;
+            casosEmEstudo--;
+            break;
+        case 14: //Utilizador testa negativo
+            casosEmEstudo--;
+            break;
+        case 15: //O teste ao utilizador é inconclusivo
+            break;
+        case 16: //Utilizador recupera
+            casosPositivosAtivos--;
+            break;
+        case 17: //Medico criado
+            medicosDisponiveis++;
             break;
         }
     }
@@ -188,6 +242,8 @@ void imprimirInformacao()
     sprintf(texto, "Casos positivos (ativos): %d\n", casosPositivosAtivos);
     escreveEmFicheiroEMonitor(texto);
     sprintf(texto, "Casos em estudo: %d\n", casosEmEstudo);
+    escreveEmFicheiroEMonitor(texto);
+    sprintf(texto, "Pessoas em isolamento: %d\n", numeroPessoasEmIsolamento);
     escreveEmFicheiroEMonitor(texto);
     sprintf(texto, "Numero de mortos: %d\n", numeroMortos);
     escreveEmFicheiroEMonitor(texto);
