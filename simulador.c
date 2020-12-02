@@ -177,14 +177,6 @@ void simulacao(char * filename)
     int auxTimeStamp;
     enviarMensagem("Z-Z-0"); //Mensagem que indica o comeco da simulacao
     int index=0;
-    while(tempoDecorrido!=configuracao.tempoSimulacao){
-        auxTimeStamp=(unsigned)time(NULL);
-        if(auxTimeStamp!=timeStampAnterior){
-            printf("CHEGOU\n");
-            tempoDecorrido++;
-            timeStampAnterior=auxTimeStamp;
-        }
-    }
 
 
     //cria tarefas centro = 2
@@ -211,11 +203,20 @@ void simulacao(char * filename)
         }
         else
         {
-            printf("Criada a tarefa %d\n", IDtarefa[index]);
+            printf("Criado Medico %d: \n", IDtarefa[index]);
+            enviarMensagem("9-Z-17");
         }
     }
 
-    //cria tarefas pessoas
+    while(tempoDecorrido!=configuracao.tempoSimulacao){
+        auxTimeStamp=(unsigned)time(NULL);
+        if(auxTimeStamp!=timeStampAnterior){
+            printf("CHEGOU\n");
+            tempoDecorrido++;
+            timeStampAnterior=auxTimeStamp;
+        }
+/*
+        //cria tarefas pessoas
         if (pthread_create (&IDtarefa[index], NULL, Pessoa, NULL))
         {
             printf(" Erro na criação da tarefa \n");
@@ -223,9 +224,10 @@ void simulacao(char * filename)
         }
         else
         {
-            printf("Criada a tarefa %d\n", IDtarefa[index]);
+            printf("Criada Pessoa: %d\n", IDtarefa[index]);
         }
-
+        */
+    }
     // for (int i = 0; i < configuracao.numeroMedicos; i++)
     // {
     //     pthread_join(IDtarefa[i], NULL);

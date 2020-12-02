@@ -122,6 +122,7 @@ void trataMensagem(char mensagem[])
     }
     else
     {
+        printf(" valor: %d \n ", acontecimento);
         switch (acontecimento)
         {
         case 0: //Utilizador chegou à fila do centro 1.
@@ -220,7 +221,7 @@ void escreveEmFicheiroEMonitor(char *mensagem)
 void imprimirInformacao()
 {
     char texto[TAMANHO_LINHA];
-    system("clear");
+    //system("clear");
     limparFicheiro();
     escreveEmFicheiroEMonitor(SEPARADOR);
     if (!fimSimulacao)
