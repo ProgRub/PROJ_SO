@@ -82,6 +82,8 @@ void enviarMensagem(char *mensagemAEnviar) //envia mensagem po monitor
             printf("Erro no write!\n");
         }
     }
+
+    usleep(300);
     pthread_mutex_unlock(&mutexEnviarMensagem);
 }
 
@@ -137,6 +139,10 @@ struct pessoa criaMedico()
     m.centroTeste = valorRandomCentroTeste;
     m.estadoTeste = NAO_TESTOU;
 
+    printf("Criado Medico %d: \n", IDtarefa[idPessoa]);
+    char mensagem[TAMANHO_LINHA];
+    sprintf(mensagem,"%d-%d-%d",IDtarefa[idPessoa],0,17);
+    enviarMensagem(mensagem);
     idPessoa++;
     pthread_mutex_unlock(&mutexCriarPessoa);
     return m;
@@ -178,9 +184,10 @@ void simulacao(char *filename)
     // printf("Probabilidade do teste rapido dar falso positivo: %f\n", configuracao.probabilidadeTesteRapidoFalsoPositivo);
     // printf("Duracao da simulacao: %d\n", configuracao.tempoSimulacao);
 
-    int tempoDecorrido = 0;
-    int timeStampAnterior = (unsigned)time(NULL);
+    long tempoDecorrido = 0;
+    int timeStampAnterior = current_timestamp();
     int auxTimeStamp;
+    int tempoLimite = configuracao.tempoSimulacao*1000;
     enviarMensagem("Z-Z-0"); //Mensagem que indica o comeco da simulacao
     int index = 0;
 
@@ -199,7 +206,6 @@ void simulacao(char *filename)
         }
     }*/
 
-    //cria tarefas medicos = configuracao.numeroMedicos
     for (index; index < configuracao.numeroMedicos; index++)
     {
         if (pthread_create(&IDtarefa[index], NULL, Medico, NULL))
@@ -207,32 +213,22 @@ void simulacao(char *filename)
             printf(" Erro na criação da tarefa \n");
             exit(1);
         }
-        else
-        {
-            printf("Criado Medico %d: \n", IDtarefa[index]);
-            enviarMensagem("9-Z-17");
-        }
     }
-    long tempoInicialMs = current_timestamp();
-    long timeStampAnteriorMs = current_timestamp();
-    while (tempoDecorrido != configuracao.tempoSimulacao)
+    while (tempoDecorrido != tempoLimite)
     {
-        auxTimeStamp = (unsigned)time(NULL);
-
-        // gettimeofday(&tv, NULL);
-
-        // double time_in_mill = (tv.tv_sec) * 1000 + (tv.tv_usec) / 1000;
+        auxTimeStamp = current_timestamp() ;
         if (auxTimeStamp != timeStampAnterior)
         {
             tempoDecorrido++;
             timeStampAnterior = auxTimeStamp;
-            printf("CHEGOU\n");
+            // printf("CHEGOU\n");
         }
-        if (current_timestamp != timeStampAnteriorMs)
-        {
-            printf("Current time: %d \n", current_timestamp() - tempoInicialMs);
-            timeStampAnteriorMs = current_timestamp();
-        }
+        // printf("%d/%d\n",tempoDecorrido,tempoLimite);
+        // if (current_timestamp() != timeStampAnteriorMs)
+        // {
+        //     printf("Current time: %d \n", current_timestamp() - tempoInicialMs);
+        //     timeStampAnteriorMs = current_timestamp();
+        // }
         /*
         //cria tarefas pessoas
         if (pthread_create (&IDtarefa[index], NULL, Pessoa, NULL))
