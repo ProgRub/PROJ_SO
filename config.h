@@ -23,7 +23,7 @@
 #define ESPERA 0
 #define ISOLAMENTO 1
 #define HOSPITAL 2
-#define TAMANHO_CONFIGURACAO 19
+#define TAMANHO_CONFIGURACAO 17
 #define CENTRO_PRIORITARIO 1
 #define TAMANHO_ARRAY_TAREFAS 1000
 
@@ -32,8 +32,6 @@ struct Configuration
     int tempoMedioChegada;
     int tempoTesteNormal;
     int tempoTesteRapido;
-    int tempoEsperaCentro1;
-    int tempoEsperaCentro2;
     int tamanhoFilaCentro1;
     int tamanhoFilaCentro2;
     int tamanhoHospital;

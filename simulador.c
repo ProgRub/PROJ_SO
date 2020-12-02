@@ -123,6 +123,11 @@ struct pessoa criaPessoa()
     p.idoso = probabilidade(configuracao.probabilidadeSerIdoso);
 
     p.estado = ESPERA;
+
+    printf("Criado Pessoa %d: \n", IDtarefa[idPessoa]);
+    char mensagem[TAMANHO_LINHA];
+    sprintf(mensagem,"%d-%d-%d",IDtarefa[idPessoa],0,0);
+    enviarMensagem(mensagem);
     idPessoa++;
     pthread_mutex_unlock(&mutexCriarPessoa);
     return p;
@@ -223,12 +228,7 @@ void simulacao(char *filename)
             timeStampAnterior = auxTimeStamp;
             // printf("CHEGOU\n");
         }
-        // printf("%d/%d\n",tempoDecorrido,tempoLimite);
-        // if (current_timestamp() != timeStampAnteriorMs)
-        // {
-        //     printf("Current time: %d \n", current_timestamp() - tempoInicialMs);
-        //     timeStampAnteriorMs = current_timestamp();
-        // }
+
         /*
         //cria tarefas pessoas
         if (pthread_create (&IDtarefa[index], NULL, Pessoa, NULL))
@@ -318,22 +318,20 @@ void carregarConfiguracao(char nomeFicheiro[])
     configuracao.tempoMedioChegada = (int)strtol(values[0], NULL, 10);
     configuracao.tempoTesteNormal = strtol(values[1], NULL, 10);
     configuracao.tempoTesteRapido = strtol(values[2], NULL, 10);
-    configuracao.tempoEsperaCentro1 = strtol(values[3], NULL, 10);
-    configuracao.tempoEsperaCentro2 = strtol(values[4], NULL, 10);
-    configuracao.tamanhoFilaCentro1 = strtol(values[5], NULL, 10);
-    configuracao.tamanhoFilaCentro2 = strtol(values[6], NULL, 10);
-    configuracao.tamanhoHospital = strtol(values[7], NULL, 10);
-    configuracao.numeroMedicos = strtof(values[8], NULL);
-    configuracao.probabilidadeSerIdoso = strtof(values[9], NULL);
-    configuracao.probabilidadeMedicoPositivo = strtof(values[10], NULL);
-    configuracao.probabilidadePopulacaoPositivo = strtof(values[11], NULL);
-    configuracao.probabilidadeTesteNormalInconclusivo = strtof(values[12], NULL);
-    configuracao.probabilidadeTesteRapidoInconclusivo = strtof(values[13], NULL);
-    configuracao.probabilidadeNaoIdosoPrecisaHospital = strtof(values[14], NULL);
-    configuracao.probabilidadeIdosoMorrer = strtof(values[15], NULL);
-    configuracao.probabilidadeNaoIdosoMorrer = strtof(values[16], NULL);
-    configuracao.tempoCurar = strtol(values[17], NULL, 10);
-    configuracao.tempoSimulacao = strtol(values[18], NULL, 10);
+    configuracao.tamanhoFilaCentro1 = strtol(values[3], NULL, 10);
+    configuracao.tamanhoFilaCentro2 = strtol(values[4], NULL, 10);
+    configuracao.tamanhoHospital = strtol(values[5], NULL, 10);
+    configuracao.numeroMedicos = strtof(values[6], NULL);
+    configuracao.probabilidadeSerIdoso = strtof(values[7], NULL);
+    configuracao.probabilidadeMedicoPositivo = strtof(values[8], NULL);
+    configuracao.probabilidadePopulacaoPositivo = strtof(values[9], NULL);
+    configuracao.probabilidadeTesteNormalInconclusivo = strtof(values[10], NULL);
+    configuracao.probabilidadeTesteRapidoInconclusivo = strtof(values[11], NULL);
+    configuracao.probabilidadeNaoIdosoPrecisaHospital = strtof(values[12], NULL);
+    configuracao.probabilidadeIdosoMorrer = strtof(values[13], NULL);
+    configuracao.probabilidadeNaoIdosoMorrer = strtof(values[14], NULL);
+    configuracao.tempoCurar = strtol(values[15], NULL, 10);
+    configuracao.tempoSimulacao = strtol(values[16], NULL, 10);
 }
 
 int main(int argc, char *argv[])
