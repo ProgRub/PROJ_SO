@@ -228,9 +228,9 @@ void simulacao(char *filename)
             timeStampAnterior = auxTimeStamp;
             // printf("CHEGOU\n");
         }
-        printf("tempo: %d\n", tempoDecorrido);
+        // printf("tempo: %d\n", tempoDecorrido);
 
-        if (tempoDecorrido % 5 == 0))
+        if (tempoDecorrido % configuracao.tempoMedioChegada == 0)
         {
                 //cria tarefas pessoas
             if (pthread_create(&IDtarefa[index], NULL, Pessoa, NULL))
