@@ -126,7 +126,7 @@ struct pessoa criaPessoa()
 
     printf("Criado Pessoa %d: \n", IDtarefa[idPessoa]);
     char mensagem[TAMANHO_LINHA];
-    sprintf(mensagem,"%d-%d-%d",IDtarefa[idPessoa],0,0);
+    sprintf(mensagem, "%d-%d-%d", IDtarefa[idPessoa], 0, 0);
     enviarMensagem(mensagem);
     idPessoa++;
     pthread_mutex_unlock(&mutexCriarPessoa);
@@ -146,7 +146,7 @@ struct pessoa criaMedico()
 
     printf("Criado Medico %d: \n", IDtarefa[idPessoa]);
     char mensagem[TAMANHO_LINHA];
-    sprintf(mensagem,"%d-%d-%d",IDtarefa[idPessoa],0,17);
+    sprintf(mensagem, "%d-%d-%d", IDtarefa[idPessoa], 0, 17);
     enviarMensagem(mensagem);
     idPessoa++;
     pthread_mutex_unlock(&mutexCriarPessoa);
@@ -192,7 +192,7 @@ void simulacao(char *filename)
     long tempoDecorrido = 0;
     int timeStampAnterior = current_timestamp();
     int auxTimeStamp;
-    int tempoLimite = configuracao.tempoSimulacao*1000;
+    int tempoLimite = configuracao.tempoSimulacao * 1000;
     enviarMensagem("Z-Z-0"); //Mensagem que indica o comeco da simulacao
     int index = 0;
 
@@ -221,31 +221,25 @@ void simulacao(char *filename)
     }
     while (tempoDecorrido != tempoLimite)
     {
-        auxTimeStamp = current_timestamp() ;
+        auxTimeStamp = current_timestamp();
         if (auxTimeStamp != timeStampAnterior)
         {
             tempoDecorrido++;
             timeStampAnterior = auxTimeStamp;
             // printf("CHEGOU\n");
         }
+        printf("tempo: %d\n", tempoDecorrido);
 
-        /*
-        //cria tarefas pessoas
-        if (pthread_create (&IDtarefa[index], NULL, Pessoa, NULL))
+        if (tempoDecorrido % 5 == 0))
         {
-            printf(" Erro na criação da tarefa \n");
-            exit(1);
+                //cria tarefas pessoas
+            if (pthread_create(&IDtarefa[index], NULL, Pessoa, NULL))
+             {
+                printf(" Erro na criação da tarefa \n");
+                exit(1);
+            }
         }
-        else
-        {
-            printf("Criada Pessoa: %d\n", IDtarefa[index]);
-        }
-        */
     }
-    // for (int i = 0; i < configuracao.numeroMedicos; i++)
-    // {
-    //     pthread_join(IDtarefa[i], NULL);
-    // }
 
     for (int i = 0; i < TAMANHO_ARRAY_TAREFAS; i++)
     {
