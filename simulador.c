@@ -11,6 +11,8 @@ int socketfd = 0; //socket
 int idPessoa = 0;
 struct Configuration configuracao; //configuracao da simulacao
 
+struct timeval tv;
+
 // int numeroPessoas = 0;
 // int numeroCasosPositivos = 0;
 // int numeroCasosAtivos = 0;
@@ -67,7 +69,7 @@ int criaSocket()
     return socketfd;
 }
 
-void enviarMensagem(char *mensagemAEnviar)  //envia mensagem po monitor
+void enviarMensagem(char *mensagemAEnviar) //envia mensagem po monitor
 {
     pthread_mutex_lock(&mutexEnviarMensagem);
     int numero;
@@ -89,21 +91,27 @@ void enviarMensagem(char *mensagemAEnviar)  //envia mensagem po monitor
 
 int probabilidade(float prob)
 {
-    return (rand() % 100) < (prob*100);
+    return (rand() % 100) < (prob * 100);
 }
-
+long long current_timestamp()
+{
+    struct timeval te;
+    gettimeofday(&te, NULL);                                         // get current time
+    long long milliseconds = te.tv_sec * 1000LL + te.tv_usec / 1000; // calculate milliseconds
+    // printf("milliseconds: %lld\n", milliseconds);
+    return milliseconds;
+}
 /*---------------------------------------
             PESSOA
 -----------------------------------------*/
 
 struct pessoa criaPessoa()
 {
-    int valores[2]={0,1};
+    int valores[2] = {0, 1};
 
     pthread_mutex_lock(&mutexCriarPessoa);
-    int valorRandomCentroTeste = rand()%2;
+    int valorRandomCentroTeste = rand() % 2;
     int valorRandomIdoso = rand() % 2;
-
 
     struct pessoa p;
     p.id = idPessoa;
@@ -120,7 +128,7 @@ struct pessoa criaPessoa()
 struct pessoa criaMedico()
 {
     pthread_mutex_lock(&mutexCriarPessoa);
-    int valorRandomCentroTeste = rand()%2;
+    int valorRandomCentroTeste = rand() % 2;
 
     struct pessoa m;
     m.id = idPessoa;
@@ -134,26 +142,24 @@ struct pessoa criaMedico()
     return m;
 }
 
-void Pessoa(void * ptr)
+void Pessoa(void *ptr)
 {
     struct pessoa p = criaPessoa();
 }
-void Medico(void * ptr)
+void Medico(void *ptr)
 {
     struct pessoa p = criaMedico();
 }
 
-
-void Centro(void * ptr)
+void Centro(void *ptr)
 {
-
 }
 
 /*---------------------------------------
             SIMULACAO
 -----------------------------------------*/
 
-void simulacao(char * filename)
+void simulacao(char *filename)
 {
     srand(time(NULL));
     iniciarSemaforosETrincos();
@@ -172,12 +178,11 @@ void simulacao(char * filename)
     // printf("Probabilidade do teste rapido dar falso positivo: %f\n", configuracao.probabilidadeTesteRapidoFalsoPositivo);
     // printf("Duracao da simulacao: %d\n", configuracao.tempoSimulacao);
 
-    int tempoDecorrido=0;
+    int tempoDecorrido = 0;
     int timeStampAnterior = (unsigned)time(NULL);
     int auxTimeStamp;
     enviarMensagem("Z-Z-0"); //Mensagem que indica o comeco da simulacao
-    int index=0;
-
+    int index = 0;
 
     //cria tarefas centro = 2
     /*
@@ -195,8 +200,9 @@ void simulacao(char * filename)
     }*/
 
     //cria tarefas medicos = configuracao.numeroMedicos
-    for(index; index < configuracao.numeroMedicos ; index++){
-        if (pthread_create (&IDtarefa[index], NULL, Medico, NULL))
+    for (index; index < configuracao.numeroMedicos; index++)
+    {
+        if (pthread_create(&IDtarefa[index], NULL, Medico, NULL))
         {
             printf(" Erro na criação da tarefa \n");
             exit(1);
@@ -207,15 +213,27 @@ void simulacao(char * filename)
             enviarMensagem("9-Z-17");
         }
     }
+    long tempoInicialMs = current_timestamp();
+    long timeStampAnteriorMs = current_timestamp();
+    while (tempoDecorrido != configuracao.tempoSimulacao)
+    {
+        auxTimeStamp = (unsigned)time(NULL);
 
-    while(tempoDecorrido!=configuracao.tempoSimulacao){
-        auxTimeStamp=(unsigned)time(NULL);
-        if(auxTimeStamp!=timeStampAnterior){
-            printf("CHEGOU\n");
+        // gettimeofday(&tv, NULL);
+
+        // double time_in_mill = (tv.tv_sec) * 1000 + (tv.tv_usec) / 1000;
+        if (auxTimeStamp != timeStampAnterior)
+        {
             tempoDecorrido++;
-            timeStampAnterior=auxTimeStamp;
+            timeStampAnterior = auxTimeStamp;
+            printf("CHEGOU\n");
         }
-/*
+        if (current_timestamp != timeStampAnteriorMs)
+        {
+            printf("Current time: %d \n", current_timestamp() - tempoInicialMs);
+            timeStampAnteriorMs = current_timestamp();
+        }
+        /*
         //cria tarefas pessoas
         if (pthread_create (&IDtarefa[index], NULL, Pessoa, NULL))
         {
@@ -255,8 +273,6 @@ void iniciarSemaforosETrincos()
     sem_init(&semaforoMedicos, 0, configuracao.numeroMedicos);
     sem_init(&semaforoDoentes, 0, configuracao.tamanhoHospital);
 }
-
-
 
 void carregarConfiguracao(char nomeFicheiro[])
 {
