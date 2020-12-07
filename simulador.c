@@ -135,13 +135,11 @@ struct pessoa criaPessoa()
 struct pessoa criaMedico()
 {
     pthread_mutex_lock(&mutexCriarPessoa);
-    int valorRandomCentroTeste = rand() % 2;
-
     struct pessoa m;
     m.id = idPessoa;
     m.medico = TRUE;
     m.idoso = FALSE;
-    m.centroTeste = valorRandomCentroTeste;
+    m.centroTeste = CENTRO_PRIORITARIO;
     m.estadoTeste = NAO_TESTOU;
 
     printf("Criado Medico %d: \n", IDtarefa[idPessoa]);
