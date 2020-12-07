@@ -64,7 +64,7 @@ struct pessoa
     int precisaHospital; //indica se a pessoa precisa de ir para o hospital, idosos precisam automaticamente
     int tempoMaximoEspera;
     int estado; //0 - a espera, 1 - isolamento, 2 - hospital
-    // int idMedicoQueTestou;  //ver com o grupo
+    // int idMedicoQueTestou;  //ver com o grupo 
 };
 
 struct centroTeste

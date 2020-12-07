@@ -26,8 +26,8 @@ sem_t filaEsperaCentro2;
 sem_t semaforoMedicos;
 sem_t semaforoDoentes;
 
-//tarefas
-pthread_t IDtarefa[TAMANHO_ARRAY_TAREFAS];
+//tarefas 
+pthread_t IDtarefa[TAMANHO_ARRAY_TAREFAS]; //pessos e enfermeiros 
 pthread_t IDtarefaCentro[2];
 
 /*---------------------------------------
