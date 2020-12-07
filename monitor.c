@@ -74,7 +74,7 @@ void leituraSocket(int sockfd)
         numero = read(sockfd, buffer, TAMANHO_LINHA); //Le a mensagem do socket e guarda no buffer
         if (numero == 0)
         { //Quando chega ao fim
-            printf("FIM");
+            // printf("FIM");
             break;
         }
         else if (numero < 0)
@@ -83,6 +83,7 @@ void leituraSocket(int sockfd)
         }
         else
         {
+        printf("Mensagem Recebida");
             trataMensagem(buffer);
         }
     }
@@ -220,7 +221,7 @@ void escreveEmFicheiroEMonitor(char *mensagem)
 void imprimirInformacao()
 {
     char texto[TAMANHO_LINHA];
-    //system("clear");
+    system("clear");
     limparFicheiro();
     escreveEmFicheiroEMonitor(SEPARADOR);
     if (!fimSimulacao)

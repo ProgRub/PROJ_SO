@@ -1,7 +1,7 @@
 ++++++++++++++++++++++++++++++++++++++++++++
-Estado atual => Simulacao a decorrer!
-Pessoas: 1464
-Pessoas a espera no centro 1: 1464
+Estado atual => Simulacao finalizada.
+Pessoas: 18
+Pessoas a espera no centro 1: 18
 Pessoas a espera no centro 2: 0
 Casos positivos (total): 0
 Casos positivos (ativos): 0
@@ -10,5 +10,5 @@ Pessoas em isolamento: 0
 Numero de mortos: 0
 Casos recuperados: 0
 Doentes no hospital: 0
-Medicos disponiveis: 9
+Medicos disponiveis: 4
 ++++++++++++++++++++++++++++++++++++++++++++

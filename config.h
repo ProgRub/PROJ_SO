@@ -23,9 +23,13 @@
 #define ESPERA 0
 #define ISOLAMENTO 1
 #define HOSPITAL 2
-#define TAMANHO_CONFIGURACAO 17
+#define EM_CASA 3
+#define TAMANHO_CONFIGURACAO 19
 #define CENTRO_PRIORITARIO 1
-#define TAMANHO_ARRAY_TAREFAS 1000
+#define TAMANHO_ARRAY_TAREFAS 100000
+#define MINUTO 33 //em milisegundos
+#define HORA 33*60 //em milisegundos
+#define DIA 33*60*24 //em milisegundos
 
 struct Configuration
 {
@@ -34,6 +38,8 @@ struct Configuration
     int tempoTesteRapido;
     int tamanhoFilaCentro1;
     int tamanhoFilaCentro2;
+    int numeroPontosTestagemCentro1;
+    int numeroPontosTestagemCentro2;
     int tamanhoHospital;
     int numeroMedicos;
     float probabilidadeSerIdoso;
@@ -60,7 +66,7 @@ struct pessoa
     int estado; //0 - a espera, 1 - isolamento, 2 - hospital
 };
 
-struct centro 
+struct centro
 {
     int id;
     int numeroPessoas;
