@@ -66,10 +66,14 @@ struct pessoa
     int estado; //0 - a espera, 1 - isolamento, 2 - hospital
 };
 
-struct centro
+struct centroTeste
 {
     int id;
-    int numeroPessoas;
+    int numeroPessoasNormalEspera;
+    int numeroPessoasPrioritariasEspera;
+    sem_t filaEsperaNormal;
+    sem_t filaEsperaPrioritario;
+    sem_t pontosTestagem;
 };
 
 //METODOS DEFINIDOS
