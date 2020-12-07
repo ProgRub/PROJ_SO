@@ -126,7 +126,7 @@ void trataMensagem(char mensagem[])
         int especificacaoAcontecimento = strtol(valoresSeparados[3], NULL, 10);
         switch (acontecimento)
         {
-        case 0: //Utilizador chegou à fila de um centro.
+        case 0: //Pessoa chegou à fila de um centro.
             numeroPessoas++;
             if (especificacaoAcontecimento == 1)
             {
@@ -137,7 +137,10 @@ void trataMensagem(char mensagem[])
                 tamanhoFilaCentro2++;
             }
             break;
-        case 1: //Utilizador saiu da fila de um centro, porque foi testado
+        
+        //A mensagem com este case é enviada depois da mensagem com o case 0
+        //Temos que criar uma variavel na estrutura da pessoa que guarda o id do enfermeiro no simulador
+        case 1: //Pessoa saiu da fila de um centro, porque vai ser testado
             casosEmEstudo++;
             if (especificacaoAcontecimento == 1)
             {
@@ -148,7 +151,9 @@ void trataMensagem(char mensagem[])
                 tamanhoFilaCentro2--;
             }
             break;
-        case 2: //Utilizador saiu da fila de um centro, porque desistiu
+
+        //A mensagem com este case é enviada depois da mensagem com o case 0
+        case 2: //Pessoa saiu da fila de um centro, porque desistiu
             if (especificacaoAcontecimento == 1)
             {
                 tamanhoFilaCentro1--;
@@ -158,48 +163,120 @@ void trataMensagem(char mensagem[])
                 tamanhoFilaCentro2--;
             }
             break;
-        case 3: //Utilizador vai para isolamento
+
+        //A mensagem com este case é enviada depois da mensagem com o case 5
+        case 3: //Pessoa vai para isolamento
             numeroPessoasEmIsolamento++;
+            casosEmEstudo++;
             break;
-        case 4: //Utilizador vai para o hospital
+
+        //case 4: //Utilizador vai para o hospital
+        //    doentesNoHospital++;
+        //    break;
+
+        //A mensagem com este case é enviada depois da mensagem com o case 3
+        case 4: //Pessoa vai para o hospital se o teste for positivo e sai do isolamento
             doentesNoHospital++;
+            casosPositivosAtivos++;
+            casosPositivosTotal++;
+            numeroPessoasEmIsolamento--;
+            casosEmEstudo--;
             break;
-        case 5: //Medico vai tratar de doente
+
+        //A mensagem com este case é enviada depois da mensagem com o case 1
+        case 5: //Enfermeiro é chamado para comecar a testagem de uma pessoa
             medicosDisponiveis--;
             break;
-        case 6://Medico acaba de tratar de doente (ou este morre) e o médico vai para isolamento
-            numeroPessoasEmIsolamento++;
-            doentesNoHospital--;
+
+        //O caso 6 não faz sentido, o medico só deverá ser enviado para isolamento em caso que um dos seus anteriores pacientes 
+        //tenha dado teste positivos
+        //case 6://Medico acaba de tratar de doente (ou este morre) e o médico vai para isolamento
+        //    numeroPessoasEmIsolamento++;
+        //    doentesNoHospital--;
+        //    casosPositivosAtivos--;
+        //    if (especificacaoAcontecimento == 1)
+        //    {
+        //        numeroMortos++;
+        //    }
+        //    break;
+
+        //A mensagem com este case é enviada depois da mensagem com o case 5
+        case 6://Enfermeiro acaba a testagem do paciente e envia-o para isolamento, ficando assim disponviel
+            medicosDisponiveis++;
+            break;
+        
+
+        //O caso 7 não faz sentido, pois o isolamento serve apenas para a pessoa saber o resultado, se o resultado for positivo é enviada
+        //para internamento
+        //Sendo assim a pessoa só poderá morrer durante o internamento no hospital
+        //case 7: //Utilizador morre no isolamento
+        //    numeroMortos++;
+        //    numeroPessoasEmIsolamento--;
+        //    casosPositivosAtivos--;
+        //    break;
+
+        //A mensagem com este case é enviada depois da mensagem com o case 4
+        case 7: //Paciente pode ou não morrer no hospital 
             casosPositivosAtivos--;
             if (especificacaoAcontecimento == 1)
             {
                 numeroMortos++;
             }
             break;
-        case 7: //Utilizador morre no isolamento
-            numeroMortos++;
-            numeroPessoasEmIsolamento--;
-            casosPositivosAtivos--;
-            break;
-        case 8: //Medico é testado em isolamento
+
+        //case 8: //Medico é testado em isolamento
+        //    casosEmEstudo++;
+        //    break;
+
+        //A mensagem com este case é enviada depois da mensagem com o case 4
+        case 8: //O enfermeiro é enviado para isolamento pois um dos seus pacientes testou positivo
             casosEmEstudo++;
+            numeroPessoasEmIsolamento++;
+            medicosDisponiveis--;
             break;
-        case 9: //Utilizador testa positivo
-            casosPositivosAtivos++;
-            casosPositivosTotal++;
-            casosEmEstudo--;
-            break;
-        case 10://Utilizador testa negativo
-            casosEmEstudo--;
-            break;
-        case 11: //Utilizador recupera
+
+        //Este case é o case 4
+        //case 9: //Utilizador testa positivo
+        //    casosPositivosAtivos++;
+        //    casosPositivosTotal++;
+        //    casosEmEstudo--;
+        //    break;
+
+        case 9: //Enfermeiro pode ou não morrer no hospital, se morrer esse enfermeiro é substituido
             casosPositivosAtivos--;
+            medicosDisponiveis++;
+            if (especificacaoAcontecimento == 1)
+            {
+                numeroMortos++;
+            }
             break;
-        case 12: //Medico criado
+
+        //A mensagem com este case é enviada depois da mensagem com o case 3
+        case 10://Paciente testa negativo e sai do isolamento
+            casosEmEstudo--;
+            numeroPessoasEmIsolamento--;
+            break;
+
+        //A mensagem com este case é enviada depois da mensagem com o case 8
+        case 11://Enfermeiro testa negativo e sai do isolamento
+            casosEmEstudo--;
+            numeroPessoasEmIsolamento--;
             medicosDisponiveis++;
             break;
-        case 13: //O teste ao utilizador é inconclusivo
+
+        //Este case é o "else" do case 7
+        //case 11: //Utilizador recupera
+        //    casosPositivosAtivos--;
+        //    break;
+
+        case 12: //Enfermeiro criado
+            medicosDisponiveis++;
+            break;
+
+        //A mensagem com este case é enviada depois da mensagem com o case 3
+        case 13: //O teste do paciente foi inconclusivo e por isso tem que ser enviado para um nova testagem
             casosEmEstudo--;
+            numeroPessoasEmIsolamento--;
             break;
         }
     }
