@@ -186,27 +186,25 @@ void trataMensagem(char mensagem[])
         case 8: //Medico é testado em isolamento
             casosEmEstudo++;
             break;
-        case 9:
-            break;
-        case 10: //Utilizador morre em isolamento
+        case 9: //Utilizador morre em isolamento
             numeroMortos++;
             casosPositivosAtivos--;
             break;
-        case 11: //Utilizador testa positivo
+        case 10: //Utilizador testa positivo
             casosPositivosAtivos++;
             casosPositivosTotal++;
             casosEmEstudo--;
             break;
-        case 12://Utilizador testa negativo
+        case 11://Utilizador testa negativo
             casosEmEstudo--;
             break;
-        case 13: //Utilizador recupera
+        case 12: //Utilizador recupera
             casosPositivosAtivos--;
             break;
-        case 14: //Medico criado
+        case 13: //Medico criado
             medicosDisponiveis++;
             break;
-        case 15: //O teste ao utilizador é inconclusivo
+        case 14: //O teste ao utilizador é inconclusivo
             casosEmEstudo--;
             break;
         }
