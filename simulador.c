@@ -10,7 +10,6 @@
 int socketfd = 0; //socket
 int idPessoa = 0;
 struct Configuration configuracao; //configuracao da simulacao
-long tempoDecorrido = 0;           //em milisegundos
 
 struct timeval tv;
 
@@ -84,7 +83,7 @@ void enviarMensagem(char *mensagemAEnviar) //envia mensagem po monitor
         }
     }
 
-    usleep(400);
+    usleep(300);
     pthread_mutex_unlock(&mutexEnviarMensagem);
 }
 
@@ -125,9 +124,9 @@ struct pessoa criaPessoa()
 
     p.estado = ESPERA;
 
-    printf("Criado Pessoa %d: \n", idPessoa);
+    printf("Criado Pessoa %d: \n", IDtarefa[idPessoa]);
     char mensagem[TAMANHO_LINHA];
-    sprintf(mensagem, "%d-%d-%d", idPessoa, 0, 0);
+    sprintf(mensagem, "%d-%d-%d-%d", IDtarefa[idPessoa], 0, 0, p.centroTeste);
     enviarMensagem(mensagem);
     idPessoa++;
     pthread_mutex_unlock(&mutexCriarPessoa);
@@ -143,9 +142,9 @@ struct pessoa criaMedico()
     m.centroTeste = CENTRO_PRIORITARIO;
     m.estadoTeste = NAO_TESTOU;
 
-    printf("Criado Medico %d: \n", idPessoa);
+    printf("Criado Medico %d: \n", IDtarefa[idPessoa]);
     char mensagem[TAMANHO_LINHA];
-    sprintf(mensagem, "%d-%d-%d", idPessoa, 0, 17);
+    sprintf(mensagem, "%d-%d-%d", IDtarefa[idPessoa], 0, 12);
     enviarMensagem(mensagem);
     idPessoa++;
     pthread_mutex_unlock(&mutexCriarPessoa);
@@ -187,6 +186,8 @@ void simulacao(char *filename)
     // printf("Probabilidade do teste normal dar falso positivo: %f\n", configuracao.probabilidadeTesteNormalFalsoPositivo);
     // printf("Probabilidade do teste rapido dar falso positivo: %f\n", configuracao.probabilidadeTesteRapidoFalsoPositivo);
     // printf("Duracao da simulacao: %d\n", configuracao.tempoSimulacao);
+
+    long tempoDecorrido = 0;
     int timeStampAnterior = current_timestamp();
     int auxTimeStamp;
     int tempoLimite = configuracao.tempoSimulacao * 1000;
@@ -219,22 +220,22 @@ void simulacao(char *filename)
     while (tempoDecorrido != tempoLimite)
     {
         auxTimeStamp = current_timestamp();
-        if (auxTimeStamp != timeStampAnterior) //Passou um milisegundo
+        if (auxTimeStamp != timeStampAnterior)
         {
             tempoDecorrido++;
-            // printf("Tempo: %d\n", tempoDecorrido);
             timeStampAnterior = auxTimeStamp;
-
-            if (tempoDecorrido % (configuracao.tempoMedioChegada * MINUTO) == 0)
-            {
-                //cria tarefas pessoas
-                if (pthread_create(&IDtarefa[index], NULL, Pessoa, NULL))
-                {
-                    printf(" Erro na criação da tarefa \n");
-                    exit(1);
-                }
-            }
             // printf("CHEGOU\n");
+        }
+        // printf("tempo: %d\n", tempoDecorrido);
+
+        if (tempoDecorrido % configuracao.tempoMedioChegada == 0)
+        {
+                //cria tarefas pessoas
+            if (pthread_create(&IDtarefa[index], NULL, Pessoa, NULL))
+             {
+                printf(" Erro na criação da tarefa \n");
+                exit(1);
+            }
         }
     }
 
@@ -311,20 +312,18 @@ void carregarConfiguracao(char nomeFicheiro[])
     configuracao.tempoTesteRapido = strtol(values[2], NULL, 10);
     configuracao.tamanhoFilaCentro1 = strtol(values[3], NULL, 10);
     configuracao.tamanhoFilaCentro2 = strtol(values[4], NULL, 10);
-    configuracao.numeroPontosTestagemCentro1 = strtol(values[5], NULL, 10);
-    configuracao.numeroPontosTestagemCentro2 = strtol(values[6], NULL, 10);
-    configuracao.tamanhoHospital = strtol(values[7], NULL, 10);
-    configuracao.numeroMedicos = strtof(values[8], NULL);
-    configuracao.probabilidadeSerIdoso = strtof(values[9], NULL);
-    configuracao.probabilidadeMedicoPositivo = strtof(values[10], NULL);
-    configuracao.probabilidadePopulacaoPositivo = strtof(values[11], NULL);
-    configuracao.probabilidadeTesteNormalInconclusivo = strtof(values[12], NULL);
-    configuracao.probabilidadeTesteRapidoInconclusivo = strtof(values[13], NULL);
-    configuracao.probabilidadeNaoIdosoPrecisaHospital = strtof(values[14], NULL);
-    configuracao.probabilidadeIdosoMorrer = strtof(values[15], NULL);
-    configuracao.probabilidadeNaoIdosoMorrer = strtof(values[16], NULL);
-    configuracao.tempoCurar = strtol(values[17], NULL, 10);
-    configuracao.tempoSimulacao = strtol(values[18], NULL, 10);
+    configuracao.tamanhoHospital = strtol(values[5], NULL, 10);
+    configuracao.numeroMedicos = strtof(values[6], NULL);
+    configuracao.probabilidadeSerIdoso = strtof(values[7], NULL);
+    configuracao.probabilidadeMedicoPositivo = strtof(values[8], NULL);
+    configuracao.probabilidadePopulacaoPositivo = strtof(values[9], NULL);
+    configuracao.probabilidadeTesteNormalInconclusivo = strtof(values[10], NULL);
+    configuracao.probabilidadeTesteRapidoInconclusivo = strtof(values[11], NULL);
+    configuracao.probabilidadeNaoIdosoPrecisaHospital = strtof(values[12], NULL);
+    configuracao.probabilidadeIdosoMorrer = strtof(values[13], NULL);
+    configuracao.probabilidadeNaoIdosoMorrer = strtof(values[14], NULL);
+    configuracao.tempoCurar = strtol(values[15], NULL, 10);
+    configuracao.tempoSimulacao = strtol(values[16], NULL, 10);
 }
 
 int main(int argc, char *argv[])
