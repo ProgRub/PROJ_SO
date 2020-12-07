@@ -83,7 +83,7 @@ void leituraSocket(int sockfd)
         }
         else
         {
-        printf("Mensagem Recebida");
+            printf("Mensagem Recebida");
             trataMensagem(buffer);
         }
     }
@@ -94,7 +94,7 @@ void trataMensagem(char mensagem[])
     //Auxiliario
     char bufferAuxiliario[30];
     strcpy(bufferAuxiliario, mensagem);
-    char *valoresSeparados[3][30];
+    char *valoresSeparados[4][30];
     int index = 0;
 
     //Obtem o head da lista ligada que se obtem separando bufferAuxiliario por "-"
@@ -109,7 +109,7 @@ void trataMensagem(char mensagem[])
 
     //Onde vai guardar os valores depois da divisao
     int acontecimento = strtol(valoresSeparados[2], NULL, 10);
-    if (!strcmp(valoresSeparados[0], "Z") && !strcmp(valoresSeparados[1], "Z"))
+    if (!strcmp(valoresSeparados[0], "Z") && !strcmp(valoresSeparados[1], "Z") && !strcmp(valoresSeparados[3], "Z"))
     {
         if (acontecimento == 0)
         {
@@ -123,71 +123,91 @@ void trataMensagem(char mensagem[])
     }
     else
     {
+        int especificacaoAcontecimento = strtol(valoresSeparados[3], NULL, 10);
         switch (acontecimento)
         {
-        case 0: //Utilizador chegou à fila do centro 1.
+        case 0: //Utilizador chegou à fila de um centro.
             numeroPessoas++;
-            tamanhoFilaCentro1++;
+            if (especificacaoAcontecimento == 1)
+            {
+                tamanhoFilaCentro1++;
+            }
+            else
+            {
+                tamanhoFilaCentro2++;
+            }
             break;
-        case 1: //Utilizador saiu da fila do centro 1, porque foi testado
-            tamanhoFilaCentro1--;
+        case 1: //Utilizador saiu da fila de um centro, porque foi testado
             casosEmEstudo++;
+            if (especificacaoAcontecimento == 1)
+            {
+                tamanhoFilaCentro1--;
+            }
+            else
+            {
+                tamanhoFilaCentro2--;
+            }
             break;
-        case 2: //Utilizador chegou à fila do centro 2.
-            numeroPessoas++;
-            tamanhoFilaCentro2++;
+        case 2: //Utilizador saiu da fila de um centro, porque desistiu
+            if (especificacaoAcontecimento == 1)
+            {
+                tamanhoFilaCentro1--;
+            }
+            else
+            {
+                tamanhoFilaCentro2--;
+            }
             break;
-        case 3: //Utilizador saiu da fila do centro 2, porque foi testado
-            tamanhoFilaCentro2--;
-            casosEmEstudo++;
-            break;
-        case 4: //Utilizador saiu da fila do centro 1, porque desistiu
-            tamanhoFilaCentro1--;
-            break;
-        case 5: //Utilizador saiu da fila do centro 2, porque desistiu
-            tamanhoFilaCentro2--;
-            break;
-        case 6: //Utilizador vai para isolamento
+        case 3: //Utilizador vai para isolamento
             numeroPessoasEmIsolamento++;
             break;
-        case 7: //Utilizador vai para o hospital
+        case 4: //Utilizador vai para o hospital
             doentesNoHospital++;
             break;
-        case 8: //Medico vai tratar de doente
+        case 5: //Medico vai tratar de doente
             medicosDisponiveis--;
             break;
-        case 9: //Utilizador morre no hospital
+        case 6: //Utilizador morre ou no hospital ou em isolamento
             numeroMortos++;
-            doentesNoHospital--;
             casosPositivosAtivos--;
+            if (especificacaoAcontecimento == 1)
+            {
+                doentesNoHospital--;
+            }
+            else
+            {
+                numeroPessoasEmIsolamento--;
+            }
+            break;
+        case 7://Medico acaba de tratar de doente (ou este morre) e vai para isolamento
+            numeroPessoasEmIsolamento++;
+            doentesNoHospital--;
+            break;
+        case 8: //Medico é testado em isolamento
+            casosEmEstudo++;
+            break;
+        case 9:
             break;
         case 10: //Utilizador morre em isolamento
             numeroMortos++;
-            numeroPessoasEmIsolamento--;
             casosPositivosAtivos--;
             break;
-        case 11: //Medico acaba de tratar de doente (ou este morre) e vai para isolamento
-            numeroPessoasEmIsolamento++;
-            doentesNoHospital--;
-            break;
-        case 12: //Medico é testado em isolamento
-            casosEmEstudo++;
-            break;
-        case 13: //Utilizador testa positivo
+        case 11: //Utilizador testa positivo
             casosPositivosAtivos++;
             casosPositivosTotal++;
             casosEmEstudo--;
             break;
-        case 14: //Utilizador testa negativo
+        case 12://Utilizador testa negativo
             casosEmEstudo--;
             break;
-        case 15: //O teste ao utilizador é inconclusivo
-            break;
-        case 16: //Utilizador recupera
+        case 13: //Utilizador recupera
             casosPositivosAtivos--;
             break;
-        case 17: //Medico criado
+        case 14: //Medico criado
             medicosDisponiveis++;
+            break;
+        case 15: //O teste ao utilizador é inconclusivo
+            casosEmEstudo--;
             break;
         }
     }
