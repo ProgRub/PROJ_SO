@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-Untitled-1",
+      "appliesTo": "Untitled-1.c",
+      "type": "launch"
+    }
+  ]
+}

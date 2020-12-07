@@ -167,44 +167,38 @@ void trataMensagem(char mensagem[])
         case 5: //Medico vai tratar de doente
             medicosDisponiveis--;
             break;
-        case 6: //Utilizador morre ou no hospital ou em isolamento
-            numeroMortos++;
+        case 6://Medico acaba de tratar de doente (ou este morre) e o médico vai para isolamento
+            numeroPessoasEmIsolamento++;
+            doentesNoHospital--;
             casosPositivosAtivos--;
             if (especificacaoAcontecimento == 1)
             {
-                doentesNoHospital--;
-            }
-            else
-            {
-                numeroPessoasEmIsolamento--;
+                numeroMortos++;
             }
             break;
-        case 7://Medico acaba de tratar de doente (ou este morre) e vai para isolamento
-            numeroPessoasEmIsolamento++;
-            doentesNoHospital--;
+        case 7: //Utilizador morre no isolamento
+            numeroMortos++;
+            numeroPessoasEmIsolamento--;
+            casosPositivosAtivos--;
             break;
         case 8: //Medico é testado em isolamento
             casosEmEstudo++;
             break;
-        case 9: //Utilizador morre em isolamento
-            numeroMortos++;
-            casosPositivosAtivos--;
-            break;
-        case 10: //Utilizador testa positivo
+        case 9: //Utilizador testa positivo
             casosPositivosAtivos++;
             casosPositivosTotal++;
             casosEmEstudo--;
             break;
-        case 11://Utilizador testa negativo
+        case 10://Utilizador testa negativo
             casosEmEstudo--;
             break;
-        case 12: //Utilizador recupera
+        case 11: //Utilizador recupera
             casosPositivosAtivos--;
             break;
-        case 13: //Medico criado
+        case 12: //Medico criado
             medicosDisponiveis++;
             break;
-        case 14: //O teste ao utilizador é inconclusivo
+        case 13: //O teste ao utilizador é inconclusivo
             casosEmEstudo--;
             break;
         }
