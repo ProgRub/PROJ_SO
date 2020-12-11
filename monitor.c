@@ -161,45 +161,54 @@ void trataMensagem(char mensagem[])
         case 3: //Utilizador vai para isolamento
             numeroPessoasEmIsolamento++;
             break;
-        case 4: //Utilizador vai para o hospital
+        case 4: //Utilizador vai para o hospital e sai do isolamento
             doentesNoHospital++;
+            numeroPessoasEmIsolamento--;
             break;
         case 5: //Medico vai tratar de doente
             medicosDisponiveis--;
             break;
         case 6://Medico acaba de tratar de doente (ou este morre) e o médico vai para isolamento
-            numeroPessoasEmIsolamento++;
             doentesNoHospital--;
-            casosPositivosAtivos--;
-            if (especificacaoAcontecimento == 1)
-            {
-                numeroMortos++;
-            }
+            numeroPessoasEmIsolamento++;
             break;
-        case 7: //Utilizador morre no isolamento
-            numeroMortos++;
-            numeroPessoasEmIsolamento--;
-            casosPositivosAtivos--;
-            break;
-        case 8: //Medico é testado em isolamento
+        case 7: //Medico é testado em isolamento
             casosEmEstudo++;
             break;
-        case 9: //Utilizador testa positivo
+        case 8: //Utilizador testa positivo
             casosPositivosAtivos++;
             casosPositivosTotal++;
             casosEmEstudo--;
             break;
-        case 10://Utilizador testa negativo
+        case 9://Utilizador testa negativo
             casosEmEstudo--;
+            numeroPessoasEmIsolamento--;
+            if (especificacaoAcontecimento == 1)
+            {
+                medicosDisponiveis++;
+            }
             break;
-        case 11: //Utilizador recupera
+        case 10: //Utilizador ou Medico recupera
             casosPositivosAtivos--;
+            if (especificacaoAcontecimento == 1)
+            {
+                medicosDisponiveis++;
+            }
             break;
-        case 12: //Medico criado
+        case 11: //Medico criado
             medicosDisponiveis++;
             break;
-        case 13: //O teste ao utilizador é inconclusivo
+        case 12: //O teste ao utilizador é inconclusivo
             casosEmEstudo--;
+            numeroPessoasEmIsolamento--;
+            break;
+        case 13: //Utilizador ou Medico morre
+            numeroMortos++;
+            casosPositivosAtivos--;
+            if (especificacaoAcontecimento == 1)
+            {
+                medicosDisponiveis--;
+            }
             break;
         }
     }
