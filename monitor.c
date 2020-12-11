@@ -169,13 +169,13 @@ void trataMensagem(char mensagem[])
             numeroPessoasEmIsolamento++;
             casosEmEstudo++;
             break;
-        case 4: //Utilizador vai para o hospital e sai do isolamento
+        case 4: //Pessoa vai para o hospital e sai do isolamento
             doentesNoHospital++;
             numeroPessoasEmIsolamento--;
             break;
 
         //A mensagem com este case é enviada depois da mensagem com o case 1
-        case 5: //Enfermeiro é chamado para comecar a testagem de uma pessoa
+        case 5: //Medico vai tratar doente
             medicosDisponiveis--;
             break;
         case 6://Medico acaba de tratar de doente (ou este morre) e o médico vai para isolamento
@@ -187,12 +187,12 @@ void trataMensagem(char mensagem[])
             numeroPessoasEmIsolamento++;
             medicosDisponiveis--;
             break;
-        case 8: //Utilizador testa positivo
+        case 8: //Pessoa testa positivo
             casosPositivosAtivos++;
             casosPositivosTotal++;
             casosEmEstudo--;
             break;
-        case 9://Utilizador testa negativo
+        case 9://Pessoa testa negativo
             casosEmEstudo--;
             numeroPessoasEmIsolamento--;
             if (especificacaoAcontecimento == 1)
@@ -200,7 +200,7 @@ void trataMensagem(char mensagem[])
                 medicosDisponiveis++;
             }
             break;
-        case 10: //Utilizador ou Medico recupera
+        case 10: //Pessoa ou Medico recupera
             casosPositivosAtivos--;
             if (especificacaoAcontecimento == 1)
             {
@@ -210,11 +210,11 @@ void trataMensagem(char mensagem[])
         case 11: //Medico criado
             medicosDisponiveis++;
             break;
-        case 12: //O teste ao utilizador é inconclusivo
+        case 12: //O teste ao pessoa é inconclusivo
             casosEmEstudo--;
             numeroPessoasEmIsolamento--;
             break;
-        case 13: //Utilizador ou Medico morre
+        case 13: //Pessoa ou Medico morre
             numeroMortos++;
             casosPositivosAtivos--;
             if (especificacaoAcontecimento == 1)
