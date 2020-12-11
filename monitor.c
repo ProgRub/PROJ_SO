@@ -126,7 +126,7 @@ void trataMensagem(char mensagem[])
         int especificacaoAcontecimento = strtol(valoresSeparados[3], NULL, 10);
         switch (acontecimento)
         {
-        case 0: //Utilizador chegou à fila de um centro.
+        case 0: //Pessoa chegou à fila de um centro.
             numeroPessoas++;
             if (especificacaoAcontecimento == 1)
             {
@@ -137,7 +137,10 @@ void trataMensagem(char mensagem[])
                 tamanhoFilaCentro2++;
             }
             break;
-        case 1: //Utilizador saiu da fila de um centro, porque foi testado
+        
+        //A mensagem com este case é enviada depois da mensagem com o case 0
+        //Temos que criar uma variavel na estrutura da pessoa que guarda o id do enfermeiro no simulador
+        case 1: //Pessoa saiu da fila de um centro, porque vai ser testado
             casosEmEstudo++;
             if (especificacaoAcontecimento == 1)
             {
@@ -148,7 +151,9 @@ void trataMensagem(char mensagem[])
                 tamanhoFilaCentro2--;
             }
             break;
-        case 2: //Utilizador saiu da fila de um centro, porque desistiu
+
+        //A mensagem com este case é enviada depois da mensagem com o case 0
+        case 2: //Pessoa saiu da fila de um centro, porque desistiu
             if (especificacaoAcontecimento == 1)
             {
                 tamanhoFilaCentro1--;
@@ -158,14 +163,19 @@ void trataMensagem(char mensagem[])
                 tamanhoFilaCentro2--;
             }
             break;
-        case 3: //Utilizador vai para isolamento
+
+        //A mensagem com este case é enviada depois da mensagem com o case 5
+        case 3: //Pessoa vai para isolamento
             numeroPessoasEmIsolamento++;
+            casosEmEstudo++;
             break;
         case 4: //Utilizador vai para o hospital e sai do isolamento
             doentesNoHospital++;
             numeroPessoasEmIsolamento--;
             break;
-        case 5: //Medico vai tratar de doente
+
+        //A mensagem com este case é enviada depois da mensagem com o case 1
+        case 5: //Enfermeiro é chamado para comecar a testagem de uma pessoa
             medicosDisponiveis--;
             break;
         case 6://Medico acaba de tratar de doente (ou este morre) e o médico vai para isolamento
@@ -174,6 +184,8 @@ void trataMensagem(char mensagem[])
             break;
         case 7: //Medico é testado em isolamento
             casosEmEstudo++;
+            numeroPessoasEmIsolamento++;
+            medicosDisponiveis--;
             break;
         case 8: //Utilizador testa positivo
             casosPositivosAtivos++;
