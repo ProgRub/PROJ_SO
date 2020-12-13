@@ -30,26 +30,25 @@ pthread_t IDtarefa[TAMANHO_ARRAY_TAREFAS]; //pessos e enfermeiros
 
 int criaSocket()
 {
-    //Variaveis
     struct sockaddr_un end_serv;
     int tamanhoServidor;
 
-    //Cria o socket
+    //Criar o socket
     socketfd = socket(AF_UNIX, SOCK_STREAM, 0);
     if (socketfd < 0)
     {
         printf("Erro: socket nao foi criado \n");
     }
 
-    //Colocar o socket a zero
+    //Zerar o socket
     bzero((char *)&end_serv, sizeof(end_serv));
 
-    //Dominio do socket
+    //Familia do socket
     end_serv.sun_family = AF_UNIX;
     strcpy(end_serv.sun_path, UNIXSTR_PATH);
     tamanhoServidor = strlen(end_serv.sun_path) + sizeof(end_serv.sun_family);
 
-    // Estabelece a ligacao com o socket
+    // Estabelecer a ligacao com o socket
     int varprint = 0;
     while (connect(socketfd, (struct sockaddr *)&end_serv, tamanhoServidor) < 0)
     {

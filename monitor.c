@@ -120,7 +120,7 @@ void trataMensagem(char mensagem[])
     //Obtem o head da lista ligada que se obtem separando bufferAuxiliario por "-"
     char *auxiliario = strtok(bufferAuxiliario, "-");
 
-    //Ciclo que percorre e vai separando pelos _ e copiando para valoresSeparados[i]
+    //Ciclo que percorre e vai separando pelos - e copiando para valoresSeparados[i]
     while (auxiliario != NULL)
     {
         strcpy(valoresSeparados[index++], auxiliario);
