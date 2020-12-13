@@ -8,7 +8,27 @@ char SEPARADOR[] = "++++++++++++++++++++++++++++++++++++++++++++\n";
 
 int fimSimulacao = FALSE;
 
-int numeroPessoas = 0, tamanhoFilaCentro1 = 0, numeroPessoasEmIsolamento = 0, tamanhoFilaCentro2 = 0, casosPositivosTotal = 0, casosPositivosAtivos = 0, casosEmEstudo = 0, numeroMortos = 0, casosRecuperados = 0, doentesNoHospital = 0, medicosDisponiveis = 0;
+int numeroPessoas = 0, tempoMedioEspera = 0, tamanhoFilaCentro1 = 0, numeroPessoasEmIsolamento = 0, tamanhoFilaCentro2 = 0, casosPositivosTotal = 0, casosPositivosAtivos = 0, casosEmEstudo = 0, numeroMortos = 0, casosRecuperados = 0, doentesNoHospital = 0, medicosDisponiveis = 0;
+
+int temposEspera[TAMANHO_ARRAY_TAREFAS];
+/*---------------------------------------
+            FUNCOES AUXILIARES
+-----------------------------------------*/
+
+void calcularMediaTemposEspera()
+{
+    int numeroPessoasTestadasNosCentros = 0, somaTemposEspera = 0;
+    int index = 0;
+    for (index; index < TAMANHO_ARRAY_TAREFAS; index++)
+    {
+        if (temposEspera[index] != -1)
+        {
+            numeroPessoasTestadasNosCentros++;
+            somaTemposEspera += temposEspera[index];
+        }
+    }
+    tempoMedioEspera = somaTemposEspera / numeroPessoasTestadasNosCentros;
+}
 
 /*---------------------------------------
             SOCKETS
@@ -83,7 +103,7 @@ void leituraSocket(int sockfd)
         }
         else
         {
-            printf("Mensagem Recebida");
+            // printf("Mensagem Recebida");
             trataMensagem(buffer);
         }
     }
@@ -123,11 +143,14 @@ void trataMensagem(char mensagem[])
     }
     else
     {
+        int idPessoa = strtol(valoresSeparados[0], NULL, 10);
+        int timestamp = strtol(valoresSeparados[1], NULL, 10);
         int especificacaoAcontecimento = strtol(valoresSeparados[3], NULL, 10);
         switch (acontecimento)
         {
         case 0: //Pessoa chegou à fila de um centro.
             numeroPessoas++;
+            temposEspera[idPessoa] = timestamp;
             if (especificacaoAcontecimento == 1)
             {
                 tamanhoFilaCentro1++;
@@ -137,11 +160,13 @@ void trataMensagem(char mensagem[])
                 tamanhoFilaCentro2++;
             }
             break;
-        
+
         //A mensagem com este case é enviada depois da mensagem com o case 0
         //Temos que criar uma variavel na estrutura da pessoa que guarda o id do enfermeiro no simulador
         case 1: //Pessoa saiu da fila de um centro, porque vai ser testado
             casosEmEstudo++;
+            temposEspera[idPessoa] = timestamp - temposEspera[idPessoa];
+            pthread_create(NULL, NULL, calcularMediaTemposEspera, NULL);
             if (especificacaoAcontecimento == 1)
             {
                 tamanhoFilaCentro1--;
@@ -178,7 +203,7 @@ void trataMensagem(char mensagem[])
         case 5: //Medico vai tratar doente
             medicosDisponiveis--;
             break;
-        case 6://Medico acaba de tratar de doente (ou este morre) e o médico vai para isolamento
+        case 6: //Medico acaba de tratar de doente (ou este morre) e o médico vai para isolamento
             doentesNoHospital--;
             numeroPessoasEmIsolamento++;
             break;
@@ -192,7 +217,7 @@ void trataMensagem(char mensagem[])
             casosPositivosTotal++;
             casosEmEstudo--;
             break;
-        case 9://Pessoa testa negativo
+        case 9: //Pessoa testa negativo
             casosEmEstudo--;
             numeroPessoasEmIsolamento--;
             if (especificacaoAcontecimento == 1)
@@ -254,7 +279,7 @@ void escreveEmFicheiroEMonitor(char *mensagem)
 void imprimirInformacao()
 {
     char texto[TAMANHO_LINHA];
-    system("clear");
+    // system("clear");
     limparFicheiro();
     escreveEmFicheiroEMonitor(SEPARADOR);
     if (!fimSimulacao)
@@ -287,11 +312,18 @@ void imprimirInformacao()
     escreveEmFicheiroEMonitor(texto);
     sprintf(texto, "Medicos disponiveis: %d\n", medicosDisponiveis);
     escreveEmFicheiroEMonitor(texto);
+    sprintf(texto, "Tempo medio de espera (em minutos): %d\n", tempoMedioEspera);
+    escreveEmFicheiroEMonitor(texto);
     escreveEmFicheiroEMonitor(SEPARADOR);
 }
 
 int main(int argc, char *argv[])
 {
+    int index = 0;
+    for (index; index < TAMANHO_ARRAY_TAREFAS; index++)
+    {
+        temposEspera[index] = -1;
+    }
     printf("++++++++++++ Bem vindo ++++++++++++\n");
     printf("1: Comecar simulacao          \n");
     // printf ( "2: Limpar ficheiros da simulacao \n" );

@@ -10,25 +10,19 @@
 int socketfd = 0; //socket
 int idPessoa = 0;
 struct Configuration configuracao; //configuracao da simulacao
-
-struct timeval tv;
-
-// int numeroPessoas = 0;
-// int numeroCasosPositivos = 0;
-// int numeroCasosAtivos = 0;
-// int numeroDoentesNoHospital = 0;
+long tempoDecorrido = 0;
+struct centroTeste1 centroTeste1;
+struct centroTeste2 centroTeste2;
 
 //TRINCOS E SEMAFOROS
 pthread_mutex_t mutexCriarPessoa;
+pthread_mutex_t mutexFilaEspera;
 pthread_mutex_t mutexEnviarMensagem;
-sem_t filaEsperaCentro1;
-sem_t filaEsperaCentro2;
 sem_t semaforoMedicos;
 sem_t semaforoDoentes;
 
-//tarefas 
-pthread_t IDtarefa[TAMANHO_ARRAY_TAREFAS]; //pessos e enfermeiros 
-pthread_t IDtarefaCentro[2];
+//tarefas
+pthread_t IDtarefa[TAMANHO_ARRAY_TAREFAS]; //pessos e enfermeiros
 
 /*---------------------------------------
             SOCKETS
@@ -83,7 +77,7 @@ void enviarMensagem(char *mensagemAEnviar) //envia mensagem po monitor
         }
     }
 
-    usleep(300);
+    usleep(750);
     pthread_mutex_unlock(&mutexEnviarMensagem);
 }
 
@@ -109,25 +103,18 @@ long long current_timestamp()
 
 struct pessoa criaPessoa()
 {
-    int valores[2] = {0, 1};
-
     pthread_mutex_lock(&mutexCriarPessoa);
-    int valorRandomCentroTeste = rand() % 2;
-    int valorRandomIdoso = rand() % 2;
 
     struct pessoa p;
     p.id = idPessoa;
     p.medico = FALSE;
-    p.centroTeste = valorRandomCentroTeste;
+    p.centroTeste = (rand() % 2) + 1;
     p.estadoTeste = NAO_TESTOU;
     p.idoso = probabilidade(configuracao.probabilidadeSerIdoso);
 
     p.estado = ESPERA;
 
-    printf("Criado Pessoa %d: \n", IDtarefa[idPessoa]);
-    char mensagem[TAMANHO_LINHA];
-    sprintf(mensagem, "%d-%d-%d-%d", IDtarefa[idPessoa], 0, 0, p.centroTeste);
-    enviarMensagem(mensagem);
+    printf("Criado Pessoa %d: \n", idPessoa);
     idPessoa++;
     pthread_mutex_unlock(&mutexCriarPessoa);
     return p;
@@ -142,10 +129,7 @@ struct pessoa criaMedico()
     m.centroTeste = CENTRO_PRIORITARIO;
     m.estadoTeste = NAO_TESTOU;
 
-    printf("Criado Medico %d: \n", IDtarefa[idPessoa]);
-    char mensagem[TAMANHO_LINHA];
-    sprintf(mensagem, "%d-%d-%d", IDtarefa[idPessoa], 0, 12);
-    enviarMensagem(mensagem);
+    printf("Criado Medico %d: \n", idPessoa);
     idPessoa++;
     pthread_mutex_unlock(&mutexCriarPessoa);
     return m;
@@ -153,15 +137,49 @@ struct pessoa criaMedico()
 
 void Pessoa(void *ptr)
 {
-    struct pessoa p = criaPessoa();
+    struct pessoa pessoa = criaPessoa();
+    FilaEspera(&pessoa);
+}
+
+void FilaEspera(struct pessoa *pessoa)
+{
+    pthread_mutex_lock(&mutexFilaEspera);
+    long timestamp = tempoDecorrido;
+    if (pessoa->centroTeste == 1)
+    {
+        if (centroTeste1.numeroPessoasEspera < configuracao.tamanhoFilaCentro1)
+        {
+            char mensagem[TAMANHO_LINHA];
+            sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 0, 1);
+            enviarMensagem(mensagem);
+            centroTeste1.numeroPessoasEspera++;
+        }
+    }
+    else
+    {
+        if ((centroTeste2.numeroPessoasNormalEspera + centroTeste2.numeroPessoasPrioritariasEspera) < configuracao.tamanhoFilaCentro2)
+        {
+            char mensagem[TAMANHO_LINHA];
+            sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 0, 2);
+            enviarMensagem(mensagem);
+            if (pessoa->idoso)
+            {
+                centroTeste2.numeroPessoasPrioritariasEspera++;
+            }
+            else
+            {
+                centroTeste2.numeroPessoasNormalEspera++;
+            }
+        }
+    }
+    pthread_mutex_unlock(&mutexFilaEspera);
 }
 void Medico(void *ptr)
 {
     struct pessoa p = criaMedico();
-}
-
-void Centro(void *ptr)
-{
+    char mensagem[TAMANHO_LINHA];
+    sprintf(mensagem, "%d-%d-%d-%d", idPessoa, tempoDecorrido, 11, "Z");
+    enviarMensagem(mensagem);
 }
 
 /*---------------------------------------
@@ -174,48 +192,20 @@ void simulacao(char *filename)
     iniciarSemaforosETrincos();
 
     carregarConfiguracao(filename);
-    // printf("Tempo medio de chegada: %d\n", configuracao.tempoMedioChegada);
-    // printf("Tempo ate o resultado do teste normal: %d\n", configuracao.tempoTesteNormal);
-    // printf("Tempo ate o resultado do teste rapido: %d\n", configuracao.tempoTesteRapido);
-    // printf("Tempo de espera no centro de testes 1: %d\n", configuracao.tempoEsperaCentro1);
-    // printf("Tempo de espera no centro de testes 2: %d\n", configuracao.tempoEsperaCentro2);
-    // printf("Tamanho maximo da fila no centro de testes 1: %d\n", configuracao.tamanhoFilaCentro1);
-    // printf("Tamanho maximo da fila no centro de testes 2: %d\n", configuracao.tamanhoFilaCentro2);
-    // printf("Tamanho maximo do hospital: %d\n", configuracao.tamanhoHospital);
-    // printf("Probabilidade de um teste regressar positivo: %f\n", configuracao.probabilidadePositivo);
-    // printf("Probabilidade do teste normal dar falso positivo: %f\n", configuracao.probabilidadeTesteNormalFalsoPositivo);
-    // printf("Probabilidade do teste rapido dar falso positivo: %f\n", configuracao.probabilidadeTesteRapidoFalsoPositivo);
-    // printf("Duracao da simulacao: %d\n", configuracao.tempoSimulacao);
-
-    long tempoDecorrido = 0;
     int timeStampAnterior = current_timestamp();
     int auxTimeStamp;
-    int tempoLimite = configuracao.tempoSimulacao * 1000;
-    enviarMensagem("Z-Z-0"); //Mensagem que indica o comeco da simulacao
+    int tempoLimite = configuracao.tempoSimulacao * DIA;
+    enviarMensagem("Z-Z-0-Z"); //Mensagem que indica o comeco da simulacao
     int index = 0;
-
-    //cria tarefas centro = 2
-    /*
-    for (int i = 0; i < 2; i++)
-    {
-        if (pthread_create (&IDtarefaCentro[i], NULL, Centro, NULL))
-        {
-            printf(" Erro na criação da tarefa \n");
-            exit(1);
-        }
-        else
-        {
-            printf("Criada a tarefa %d\n", IDtarefaCentro[i]);
-        }
-    }*/
 
     for (index; index < configuracao.numeroMedicos; index++)
     {
-        if (pthread_create(&IDtarefa[index], NULL, Medico, NULL))
+        if (pthread_create(&IDtarefa[idPessoa], NULL, Medico, NULL))
         {
             printf(" Erro na criação da tarefa \n");
             exit(1);
         }
+        usleep(50);
     }
     while (tempoDecorrido != tempoLimite)
     {
@@ -224,30 +214,24 @@ void simulacao(char *filename)
         {
             tempoDecorrido++;
             timeStampAnterior = auxTimeStamp;
-            // printf("CHEGOU\n");
-        }
-        // printf("tempo: %d\n", tempoDecorrido);
-
-        if (tempoDecorrido % configuracao.tempoMedioChegada == 0)
-        {
+            if (tempoDecorrido % (configuracao.tempoMedioChegada * MINUTO) == 0)
+            {
                 //cria tarefas pessoas
-            if (pthread_create(&IDtarefa[index], NULL, Pessoa, NULL))
-             {
-                printf(" Erro na criação da tarefa \n");
-                exit(1);
+                if (pthread_create(&IDtarefa[idPessoa], NULL, Pessoa, NULL))
+                {
+                    printf(" Erro na criação da tarefa \n");
+                    exit(1);
+                }
             }
         }
     }
 
-    for (int i = 0; i < TAMANHO_ARRAY_TAREFAS; i++)
-    {
-        pthread_join(IDtarefa[i], NULL);
-    }
+    // for (int i = 0; i < TAMANHO_ARRAY_TAREFAS; i++)
+    // {
+    //     pthread_join(IDtarefa[i], NULL);
+    // }
 
-    //pthread_join(IDtarefaCentro[0], NULL);
-    //pthread_join(IDtarefaCentro[1], NULL);
-
-    enviarMensagem("Z-Z-1"); //Mensagem que indica o fim da simulacao
+    enviarMensagem("Z-Z-1-Z"); //Mensagem que indica o fim da simulacao
 }
 
 void iniciarSemaforosETrincos()
@@ -256,8 +240,19 @@ void iniciarSemaforosETrincos()
     {
         printf("Inicializacao do trinco falhou.\n");
     }
-    sem_init(&filaEsperaCentro1, 0, configuracao.tamanhoFilaCentro1);
-    sem_init(&filaEsperaCentro2, 0, configuracao.tamanhoFilaCentro2);
+    if (pthread_mutex_init(&mutexFilaEspera, NULL) != 0)
+    {
+        printf("Inicializacao do trinco falhou.\n");
+    }
+    if (pthread_mutex_init(&mutexEnviarMensagem, NULL) != 0)
+    {
+        printf("Inicializacao do trinco falhou.\n");
+    }
+    sem_init(&centroTeste1.filaEspera, 0, configuracao.tamanhoFilaCentro1);
+    sem_init(&centroTeste1.pontosTestagem, configuracao.numeroPontosTestagemCentro1, configuracao.numeroPontosTestagemCentro1);
+    sem_init(&centroTeste2.filaEsperaNormal, 0, configuracao.tamanhoFilaCentro2);
+    sem_init(&centroTeste2.filaEsperaPrioritario, 0, configuracao.tamanhoFilaCentro2);
+    sem_init(&centroTeste2.pontosTestagem, configuracao.numeroPontosTestagemCentro2, configuracao.numeroPontosTestagemCentro2);
     sem_init(&semaforoMedicos, 0, configuracao.numeroMedicos);
     sem_init(&semaforoDoentes, 0, configuracao.tamanhoHospital);
 }
@@ -312,18 +307,32 @@ void carregarConfiguracao(char nomeFicheiro[])
     configuracao.tempoTesteRapido = strtol(values[2], NULL, 10);
     configuracao.tamanhoFilaCentro1 = strtol(values[3], NULL, 10);
     configuracao.tamanhoFilaCentro2 = strtol(values[4], NULL, 10);
-    configuracao.tamanhoHospital = strtol(values[5], NULL, 10);
-    configuracao.numeroMedicos = strtof(values[6], NULL);
-    configuracao.probabilidadeSerIdoso = strtof(values[7], NULL);
-    configuracao.probabilidadeMedicoPositivo = strtof(values[8], NULL);
-    configuracao.probabilidadePopulacaoPositivo = strtof(values[9], NULL);
-    configuracao.probabilidadeTesteNormalInconclusivo = strtof(values[10], NULL);
-    configuracao.probabilidadeTesteRapidoInconclusivo = strtof(values[11], NULL);
-    configuracao.probabilidadeNaoIdosoPrecisaHospital = strtof(values[12], NULL);
-    configuracao.probabilidadeIdosoMorrer = strtof(values[13], NULL);
-    configuracao.probabilidadeNaoIdosoMorrer = strtof(values[14], NULL);
-    configuracao.tempoCurar = strtol(values[15], NULL, 10);
-    configuracao.tempoSimulacao = strtol(values[16], NULL, 10);
+    configuracao.numeroPontosTestagemCentro1 = strtol(values[5], NULL, 10);
+    configuracao.numeroPontosTestagemCentro2 = strtol(values[6], NULL, 10);
+    configuracao.tamanhoHospital = strtol(values[7], NULL, 10);
+    configuracao.numeroMedicos = configuracao.tamanhoHospital - 20;
+    configuracao.probabilidadeSerIdoso = strtof(values[8], NULL);
+    configuracao.probabilidadeMedicoPositivo = strtof(values[9], NULL);
+    configuracao.probabilidadePopulacaoPositivo = strtof(values[10], NULL);
+    configuracao.probabilidadeTesteNormalInconclusivo = strtof(values[11], NULL);
+    configuracao.probabilidadeTesteRapidoInconclusivo = strtof(values[12], NULL);
+    configuracao.probabilidadeNaoIdosoPrecisaHospital = strtof(values[13], NULL);
+    configuracao.probabilidadeIdosoMorrer = strtof(values[14], NULL);
+    configuracao.probabilidadeNaoIdosoMorrer = strtof(values[15], NULL);
+    configuracao.tempoCurar = strtol(values[16], NULL, 10);
+    configuracao.tempoSimulacao = strtol(values[17], NULL, 10);
+    // printf("Tempo medio de chegada: %d\n", configuracao.tempoMedioChegada);
+    // printf("Tempo ate o resultado do teste normal: %d\n", configuracao.tempoTesteNormal);
+    // printf("Tempo ate o resultado do teste rapido: %d\n", configuracao.tempoTesteRapido);
+    // printf("Tempo de espera no centro de testes 1: %d\n", configuracao.tempoEsperaCentro1);
+    // printf("Tempo de espera no centro de testes 2: %d\n", configuracao.tempoEsperaCentro2);
+    // printf("Tamanho maximo da fila no centro de testes 1: %d\n", configuracao.tamanhoFilaCentro1);
+    // printf("Tamanho maximo da fila no centro de testes 2: %d\n", configuracao.tamanhoFilaCentro2);
+    // printf("Tamanho maximo do hospital: %d\n", configuracao.tamanhoHospital);
+    // printf("Probabilidade de um teste regressar positivo: %f\n", configuracao.probabilidadePositivo);
+    // printf("Probabilidade do teste normal dar falso positivo: %f\n", configuracao.probabilidadeTesteNormalFalsoPositivo);
+    // printf("Probabilidade do teste rapido dar falso positivo: %f\n", configuracao.probabilidadeTesteRapidoFalsoPositivo);
+    // printf("Duracao da simulacao: %d\n", configuracao.tempoSimulacao);
 }
 
 int main(int argc, char *argv[])

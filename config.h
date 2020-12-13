@@ -24,12 +24,12 @@
 #define ISOLAMENTO 1
 #define HOSPITAL 2
 #define EM_CASA 3
-#define TAMANHO_CONFIGURACAO 19
+#define TAMANHO_CONFIGURACAO 18
 #define CENTRO_PRIORITARIO 1
 #define TAMANHO_ARRAY_TAREFAS 100000
-#define MINUTO 33 //em milisegundos
-#define HORA 33*60 //em milisegundos
-#define DIA 33*60*24 //em milisegundos
+#define MINUTO 42//em milisegundos
+#define HORA 42*60 //em milisegundos
+#define DIA 42*60*24 //em milisegundos
 
 struct Configuration
 {
@@ -59,17 +59,22 @@ struct pessoa
     int id;
     int medico; // 0-> nao é 1-> é medico
     int centroTeste;
-    int estadoTeste;     //0 -> nao fez teste 1 -> teste positivo 2 -> negativo 3 ->teste incunclusivo
+    int estadoTeste;     //0 -> nao fez teste 1 -> teste positivo 2 -> negativo 3 ->teste inconclusivo
     int idoso;           //indica se a pessoa e idosa, e assim tem prioridade 0 -> nao é 1-> idoso
     int precisaHospital; //indica se a pessoa precisa de ir para o hospital, idosos precisam automaticamente
     int tempoMaximoEspera;
     int estado; //0 - a espera, 1 - isolamento, 2 - hospital
-    // int idMedicoQueTestou;  //ver com o grupo 
 };
 
-struct centroTeste
+struct centroTeste1
 {
-    int id;
+    int numeroPessoasEspera;
+    sem_t filaEspera;
+    sem_t pontosTestagem;
+};
+
+struct centroTeste2
+{
     int numeroPessoasNormalEspera;
     int numeroPessoasPrioritariasEspera;
     sem_t filaEsperaNormal;

@@ -1484,4 +1484,22 @@ Uma pessoa está a ser atendida na estacao 0 e esperou 9.280001
 Uma pessoa comprou bilhete na estação 0 e demorou 0.960000 a comprar o bilhete
 Uma pessoa está a ser atendida na estacao 0 e esperou 11.690001
 Uma pessoa comprou bilhete na estação 0 e demorou 1.010000 a comprar o bilhete
-AcabouAcabouAcabouAcabouAcabou
+AcabouAcabouAcabouAcabouAcabouUma pessoa foi criada
+Uma pessoa está a ser atendida na estacao 1 e esperou 0.000000
+Uma pessoa comprou bilhete na estação 1 e demorou 1.100000 a comprar o bilhete
+Uma pessoa foi criada
+Uma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criada
+Uma pessoa Normal colocou-se na fila na estação 1.
+Uma pessoa foi criada
+Uma pessoa está a ser atendida na estacao 0 e esperou 0.000000
+Uma pessoa comprou bilhete na estação 0 e demorou 0.840000 a comprar o bilhete
+Uma pessoa foi criada
+Uma pessoa Normal colocou-se na fila na estação 0.
+Uma pessoa está a ser atendida na estacao 1 e esperou 8.760000
+Uma pessoa comprou bilhete na estação 1 e demorou 1.330000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 0 e esperou 6.290000
+Uma pessoa comprou bilhete na estação 0 e demorou 1.410000 a comprar o bilhete
+Uma pessoa está a ser atendida na estacao 1 e esperou 14.050000
+Uma pessoa comprou bilhete na estação 1 e demorou 0.910000 a comprar o bilhete
+AcabouAcabouAcabou
