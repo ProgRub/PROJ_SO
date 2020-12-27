@@ -33,7 +33,7 @@
 #define EM_CASA 3
 
 //AUXILIAR
-#define TAMANHO_CONFIGURACAO 19
+#define TAMANHO_CONFIGURACAO 20
 #define CENTRO_PRIORITARIO 1
 #define TAMANHO_ARRAY_TAREFAS 100000
 #define MINUTO 42//em milisegundos
@@ -46,6 +46,7 @@ struct Configuration
     int tempoTesteNormal;
     int tempoTesteRapido;
     int tempoCooldownPontosTestagem;
+    int tempoMaximoEsperaMedio;
     int tamanhoFilaCentro1;
     int tamanhoFilaCentro2;
     int numeroPontosTestagemCentro1;
@@ -69,10 +70,13 @@ struct pessoa
     int id;
     int medico; // 0-> nao é 1-> é medico
     int centroTeste;
+    int tipoTeste;
     int estadoTeste;     //0 -> nao fez teste 1 -> teste positivo 2 -> negativo 3 ->teste inconclusivo
     int idoso;           //indica se a pessoa e idosa, e assim tem prioridade 0 -> nao é 1-> idoso
     int precisaHospital; //indica se a pessoa precisa de ir para o hospital, idosos precisam automaticamente
     int tempoMaximoEspera;
+    int numeroPessoasAFrenteParaDesistir;
+    int tempoChegadaFilaEspera;
     int estado; //0 - a espera, 1 - isolamento, 2 - hospital
 };
 

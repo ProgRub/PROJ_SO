@@ -166,7 +166,18 @@ void trataMensagem(char mensagem[])
         case 1: //Pessoa saiu da fila de um centro, porque vai ser testado
             casosEmEstudo++;
             temposEspera[idPessoa] = timestamp - temposEspera[idPessoa];
-            pthread_create(NULL, NULL, calcularMediaTemposEspera, NULL);
+            // pthread_create(NULL, NULL, calcularMediaTemposEspera, NULL);
+            int numeroPessoasTestadasNosCentros = 0, somaTemposEspera = 0;
+            int index = 0;
+            for (index; index < TAMANHO_ARRAY_TAREFAS; index++)
+            {
+                if (temposEspera[index] != -1)
+                {
+                    numeroPessoasTestadasNosCentros++;
+                    somaTemposEspera += temposEspera[index];
+                }
+            }
+            tempoMedioEspera = somaTemposEspera / numeroPessoasTestadasNosCentros;
             if (especificacaoAcontecimento == 1)
             {
                 tamanhoFilaCentro1--;
