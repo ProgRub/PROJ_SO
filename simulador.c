@@ -11,8 +11,10 @@ int socketfd = 0; //socket
 int idPessoa = 0;
 struct Configuration configuracao; //configuracao da simulacao
 long tempoDecorrido = 0;
-struct centroTeste1 centroTeste1;
-struct centroTeste2 centroTeste2;
+struct centroTeste1 centroTestes1;
+struct centroTeste2 centroTestes2;
+int *tempoCooldownPontosTestagemCentro1;
+int *tempoCooldownPontosTestagemCentro2;
 
 //TRINCOS E SEMAFOROS
 pthread_mutex_t mutexCriarPessoa;
@@ -20,9 +22,13 @@ pthread_mutex_t mutexFilaEspera;
 pthread_mutex_t mutexEnviarMensagem;
 sem_t semaforoMedicos;
 sem_t semaforoDoentes;
+sem_t semaforoCentroTestes1TestarPessoa;
+sem_t semaforoCentroTestes2TestarPessoa;
 
 //tarefas
-pthread_t IDtarefa[TAMANHO_ARRAY_TAREFAS]; //pessos e enfermeiros
+pthread_t IDtarefa[TAMANHO_ARRAY_TAREFAS]; //pessoas e médicos
+// phtread_t tarefaCentroTeste1;
+// pthread_t tarefaCentroTeste2;
 
 /*---------------------------------------
             SOCKETS
@@ -96,6 +102,48 @@ long long current_timestamp()
     // printf("milliseconds: %lld\n", milliseconds);
     return milliseconds;
 }
+void fazerTeste(struct pessoa *pessoa, int tipoTeste)
+{
+    float probabilidadeInconclusivo = 0.0;
+    if (tipoTeste == TESTE_NORMAL)
+    {
+        probabilidadeInconclusivo = configuracao.probabilidadeTesteNormalInconclusivo;
+    }
+    else
+    {
+        probabilidadeInconclusivo = configuracao.probabilidadeTesteRapidoInconclusivo;
+    }
+    if (probabilidade(probabilidadeInconclusivo))
+    { //Teste é inconclusivo
+        pessoa->estadoTeste = INCONCLUSIVO;
+    }
+    else
+    {
+        if (!pessoa->medico)
+        { //se a pessoa a ser testada não é médica
+            if (probabilidade(configuracao.probabilidadePopulacaoPositivo))
+            { //pessoa testou positivo
+                pessoa->estadoTeste = POSITIVO;
+            }
+            else
+            {
+                pessoa->estadoTeste = NEGATIVO;
+            }
+        }
+        else
+        { //se a pessoa a ser testada é médica
+            if (probabilidade(configuracao.probabilidadeMedicoPositivo))
+            { //médico testou positivo
+                pessoa->estadoTeste = POSITIVO;
+            }
+            else
+            {
+                pessoa->estadoTeste = NEGATIVO;
+            }
+        }
+    }
+}
+
 /*---------------------------------------
             PESSOA
 -----------------------------------------*/
@@ -146,28 +194,65 @@ void FilaEspera(struct pessoa *pessoa)
     long timestamp = tempoDecorrido;
     if (pessoa->centroTeste == 1)
     {
-        if (centroTeste1.numeroPessoasEspera < configuracao.tamanhoFilaCentro1)
+        if (centroTestes1.numeroPessoasEspera < configuracao.tamanhoFilaCentro1)
         {
             char mensagem[TAMANHO_LINHA];
             sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 0, 1);
             enviarMensagem(mensagem);
-            centroTeste1.numeroPessoasEspera++;
+            centroTestes1.numeroPessoasEspera++;
+            pthread_mutex_unlock(&mutexFilaEspera);
+            sem_wait(&centroTestes1.filaEspera);
+            sem_wait(&centroTestes1.pontosTestagem);
+            // sem_post(&semaforoCentroTestes1TestarPessoa);
+            // sem_wait(centroTestes1.pontosTestagem + centroTestes1.pontoTestagemParaEsperar);
+
+            int tipoTeste = -1;
+            if (centroTestes1.numeroPessoasEspera > configuracao.tamanhoFilaCentro1 - 5)
+            {
+                tipoTeste = TESTE_RAPIDO;
+            }
+            else
+            {
+                tipoTeste = TESTE_NORMAL;
+            }
+            fazerTeste(pessoa, tipoTeste);
+            int index=0;
+            for (index ; index < configuracao.numeroPontosTestagemCentro1; index++)
+            {
+                if (*(tempoCooldownPontosTestagemCentro1 + index) == 0) //ponto testagem está livre
+                {
+                    // sem_post(&centroTestes1.filaEspera);
+                    // sem_wait(centroTestes1.pontosTestagem + index);
+                    // pontoLivre = TRUE;
+                    *(tempoCooldownPontosTestagemCentro1 + index) = configuracao.tempoCooldownPontosTestagem;
+                    break;
+                }
+            }
+
+            // if (!pontoLivre)
+            // {
+            //     sem_wait(centroTestes1.pontosTestagem + centroTestes1.pontoTestagemParaEsperar);
+            // }
         }
     }
     else
     {
-        if ((centroTeste2.numeroPessoasNormalEspera + centroTeste2.numeroPessoasPrioritariasEspera) < configuracao.tamanhoFilaCentro2)
+        if ((centroTestes2.numeroPessoasNormalEspera + centroTestes2.numeroPessoasPrioritariasEspera) < configuracao.tamanhoFilaCentro2)
         {
             char mensagem[TAMANHO_LINHA];
             sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 0, 2);
             enviarMensagem(mensagem);
             if (pessoa->idoso)
             {
-                centroTeste2.numeroPessoasPrioritariasEspera++;
+                centroTestes2.numeroPessoasPrioritariasEspera++;
+                pthread_mutex_unlock(&mutexFilaEspera);
+                sem_wait(&centroTestes2.filaEsperaPrioritario);
             }
             else
             {
-                centroTeste2.numeroPessoasNormalEspera++;
+                centroTestes2.numeroPessoasNormalEspera++;
+                pthread_mutex_unlock(&mutexFilaEspera);
+                sem_wait(&centroTestes2.filaEsperaNormal);
             }
         }
     }
@@ -182,15 +267,54 @@ void Medico(void *ptr)
 }
 
 /*---------------------------------------
+            CENTROS TESTE
+-----------------------------------------*/
+// void criarCentro1()
+// {
+// }
+
+// void criarCentro2()
+// {
+// }
+
+// void CentroTestes1()
+// {
+//     while (TRUE)
+//     {
+//         sem_wait(&semaforoCentroTestes1TestarPessoa);
+//         int index;
+//         // int pontoLivre = FALSE;
+//         for (index = 0; index < configuracao.numeroPontosTestagemCentro1; index++)
+//         {
+//             if (*(centroTestes1.tempoCooldownPontosTestagem + index) == 0) //ponto testagem está livre
+//             {
+//                 sem_post(&centroTestes1.filaEspera);
+//                 // sem_wait(centroTestes1.pontosTestagem + index);
+//                 // pontoLivre = TRUE;
+//                 *(centroTestes1.tempoCooldownPontosTestagem + index) = configuracao.tempoCooldownPontosTestagem;
+//                 break;
+//             }
+//         }
+//     }
+// }
+
+// void CentroTestes2()
+// {
+//     while (TRUE)
+//     {
+//         sem_wait(&semaforoCentroTestes2TestarPessoa);
+//     }
+// }
+
+/*---------------------------------------
             SIMULACAO
 -----------------------------------------*/
 
 void simulacao(char *filename)
 {
     srand(time(NULL));
-    iniciarSemaforosETrincos();
-
     carregarConfiguracao(filename);
+    iniciarSemaforosETrincos();
     int timeStampAnterior = current_timestamp();
     int auxTimeStamp;
     int tempoLimite = configuracao.tempoSimulacao * DIA;
@@ -201,7 +325,7 @@ void simulacao(char *filename)
     {
         if (pthread_create(&IDtarefa[idPessoa], NULL, Medico, NULL))
         {
-            printf(" Erro na criação da tarefa \n");
+            printf("Erro na criação da tarefa\n");
             exit(1);
         }
         usleep(50);
@@ -213,12 +337,39 @@ void simulacao(char *filename)
         {
             tempoDecorrido++;
             timeStampAnterior = auxTimeStamp;
+            if (tempoDecorrido % MINUTO == 0)
+            { //passou um minuto na simulação
+                int index=0;
+                for (index; index < configuracao.numeroPontosTestagemCentro1; index++)
+                {
+                    if (*(tempoCooldownPontosTestagemCentro1 + index) == 0)
+                    {
+                        sem_post(&centroTestes1.pontosTestagem);
+                    }
+                    else if(*(tempoCooldownPontosTestagemCentro1 + index) > 0)
+                    {
+                        (*(tempoCooldownPontosTestagemCentro1 + index))--;
+                    }
+                }
+                index=0;
+                for (index; index < configuracao.numeroPontosTestagemCentro2; index++)
+                {
+                    if (*(tempoCooldownPontosTestagemCentro2 + index) > 0)
+                    {
+                        sem_post(&centroTestes2.pontosTestagem);
+                    }
+                    else if(*(tempoCooldownPontosTestagemCentro1 + index) > 0)
+                    {
+                        (*(tempoCooldownPontosTestagemCentro2 + index))--;
+                    }
+                }
+            }
             if (tempoDecorrido % (configuracao.tempoMedioChegada * MINUTO) == 0)
             {
                 //cria tarefas pessoas
                 if (pthread_create(&IDtarefa[idPessoa], NULL, Pessoa, NULL))
                 {
-                    printf(" Erro na criação da tarefa \n");
+                    printf("Erro na criação da tarefa\n");
                     exit(1);
                 }
             }
@@ -247,13 +398,35 @@ void iniciarSemaforosETrincos()
     {
         printf("Inicializacao do trinco falhou.\n");
     }
-    sem_init(&centroTeste1.filaEspera, 0, configuracao.tamanhoFilaCentro1);
-    sem_init(&centroTeste1.pontosTestagem, configuracao.numeroPontosTestagemCentro1, configuracao.numeroPontosTestagemCentro1);
-    sem_init(&centroTeste2.filaEsperaNormal, 0, configuracao.tamanhoFilaCentro2);
-    sem_init(&centroTeste2.filaEsperaPrioritario, 0, configuracao.tamanhoFilaCentro2);
-    sem_init(&centroTeste2.pontosTestagem, configuracao.numeroPontosTestagemCentro2, configuracao.numeroPontosTestagemCentro2);
+
+    // sem_init(&centroTestes2.pontosTestagem, configuracao.numeroPontosTestagemCentro2, configuracao.numeroPontosTestagemCentro2);
+    sem_init(&centroTestes1.filaEspera, 0, configuracao.tamanhoFilaCentro1);
+    sem_init(&centroTestes1.pontosTestagem, 0, configuracao.numeroPontosTestagemCentro1);
+    // sem_init(&centroTestes1.pontosTestagem, configuracao.numeroPontosTestagemCentro1, configuracao.numeroPontosTestagemCentro1);
+    // centroTestes1.pontosTestagem = (sem_t *)calloc(configuracao.numeroPontosTestagemCentro1, sizeof(sem_t));
+    tempoCooldownPontosTestagemCentro1 = (int *)calloc(configuracao.numeroPontosTestagemCentro1, sizeof(int));
+    int index=0;
+    for (index ; index < configuracao.numeroPontosTestagemCentro1; index++)
+    {
+        *(tempoCooldownPontosTestagemCentro1+ index) = 0;
+    }
+
+    sem_init(&centroTestes2.filaEsperaNormal, 0, configuracao.tamanhoFilaCentro2);
+    sem_init(&centroTestes2.filaEsperaPrioritario, 0, configuracao.tamanhoFilaCentro2);
+    sem_init(&centroTestes2.pontosTestagem, 0, configuracao.numeroPontosTestagemCentro2);
+    // centroTestes2.pontosTestagem = (sem_t *)calloc(configuracao.numeroPontosTestagemCentro2, sizeof(sem_t));
+    tempoCooldownPontosTestagemCentro2 = (int *)calloc(configuracao.numeroPontosTestagemCentro2, sizeof(int));
+    index=0;
+    for (index ; index < configuracao.numeroPontosTestagemCentro2; index++)
+    {
+        // sem_init(centroTestes2.pontosTestagem + index, 0, 1);
+        *(tempoCooldownPontosTestagemCentro2+ index) = 0;
+    }
+
     sem_init(&semaforoMedicos, 0, configuracao.numeroMedicos);
     sem_init(&semaforoDoentes, 0, configuracao.tamanhoHospital);
+    sem_init(&semaforoCentroTestes1TestarPessoa, 0, 0);
+    sem_init(&semaforoCentroTestes2TestarPessoa, 0, 0);
 }
 
 void carregarConfiguracao(char nomeFicheiro[])
@@ -304,22 +477,23 @@ void carregarConfiguracao(char nomeFicheiro[])
     configuracao.tempoMedioChegada = (int)strtol(values[0], NULL, 10);
     configuracao.tempoTesteNormal = strtol(values[1], NULL, 10);
     configuracao.tempoTesteRapido = strtol(values[2], NULL, 10);
-    configuracao.tamanhoFilaCentro1 = strtol(values[3], NULL, 10);
-    configuracao.tamanhoFilaCentro2 = strtol(values[4], NULL, 10);
-    configuracao.numeroPontosTestagemCentro1 = strtol(values[5], NULL, 10);
-    configuracao.numeroPontosTestagemCentro2 = strtol(values[6], NULL, 10);
-    configuracao.tamanhoHospital = strtol(values[7], NULL, 10);
+    configuracao.tempoCooldownPontosTestagem = strtol(values[3], NULL, 10);
+    configuracao.tamanhoFilaCentro1 = strtol(values[4], NULL, 10);
+    configuracao.tamanhoFilaCentro2 = strtol(values[5], NULL, 10);
+    configuracao.numeroPontosTestagemCentro1 = strtol(values[6], NULL, 10);
+    configuracao.numeroPontosTestagemCentro2 = strtol(values[7], NULL, 10);
+    configuracao.tamanhoHospital = strtol(values[8], NULL, 10);
     configuracao.numeroMedicos = configuracao.tamanhoHospital - 20;
-    configuracao.probabilidadeSerIdoso = strtof(values[8], NULL);
-    configuracao.probabilidadeMedicoPositivo = strtof(values[9], NULL);
-    configuracao.probabilidadePopulacaoPositivo = strtof(values[10], NULL);
-    configuracao.probabilidadeTesteNormalInconclusivo = strtof(values[11], NULL);
-    configuracao.probabilidadeTesteRapidoInconclusivo = strtof(values[12], NULL);
-    configuracao.probabilidadeNaoIdosoPrecisaHospital = strtof(values[13], NULL);
-    configuracao.probabilidadeIdosoMorrer = strtof(values[14], NULL);
-    configuracao.probabilidadeNaoIdosoMorrer = strtof(values[15], NULL);
-    configuracao.tempoCurar = strtol(values[16], NULL, 10);
-    configuracao.tempoSimulacao = strtol(values[17], NULL, 10);
+    configuracao.probabilidadeSerIdoso = strtof(values[9], NULL);
+    configuracao.probabilidadeMedicoPositivo = strtof(values[10], NULL);
+    configuracao.probabilidadePopulacaoPositivo = strtof(values[11], NULL);
+    configuracao.probabilidadeTesteNormalInconclusivo = strtof(values[12], NULL);
+    configuracao.probabilidadeTesteRapidoInconclusivo = strtof(values[13], NULL);
+    configuracao.probabilidadeNaoIdosoPrecisaHospital = strtof(values[14], NULL);
+    configuracao.probabilidadeIdosoMorrer = strtof(values[15], NULL);
+    configuracao.probabilidadeNaoIdosoMorrer = strtof(values[16], NULL);
+    configuracao.tempoCurar = strtol(values[17], NULL, 10);
+    configuracao.tempoSimulacao = strtol(values[18], NULL, 10);
     // printf("Tempo medio de chegada: %d\n", configuracao.tempoMedioChegada);
     // printf("Tempo ate o resultado do teste normal: %d\n", configuracao.tempoTesteNormal);
     // printf("Tempo ate o resultado do teste rapido: %d\n", configuracao.tempoTesteRapido);
