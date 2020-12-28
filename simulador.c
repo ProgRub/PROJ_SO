@@ -205,10 +205,41 @@ void Pessoa(void *ptr)
     struct pessoa pessoa = criaPessoa();
     FilaEspera(&pessoa);
 
+<<<<<<< HEAD
     char mensagem[TAMANHO_LINHA];
     if (!pessoa.desistiu)
     {
         sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 3, "Z");
+=======
+    int tipoTeste = -1;
+    int tempoEsperaTeste = 0;
+    if (centroTestes1.numeroPessoasEspera > configuracao.tamanhoFilaCentro1 - 5)
+    {
+        tempoEsperaTeste = configuracao.tempoTesteRapido * HORA;
+    }
+    else
+    {
+        tempoEsperaTeste = configuracao.tempoTesteNormal * HORA;
+    }
+    usleep(tempoEsperaTeste);
+    fazerTeste(&pessoa);
+    if (pessoa.estadoTeste == POSITIVO)
+    {
+        printf("Pessoa %d testou positivo \n", pessoa.id);
+        sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 8, "Z");
+        enviarMensagem(mensagem);
+    }
+    else if (pessoa.estadoTeste == NEGATIVO)
+    {
+        printf("Pessoa %d testou negativo \n", pessoa.id);
+        sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 9, 0);
+        enviarMensagem(mensagem);
+    }
+    else
+    {   
+        printf("Pessoa %d testou inconclusivo \n", pessoa.id);
+        sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 12, "Z");
+>>>>>>> febf0ec9213c6b07a27327f3e9d282c70ce28b51
         enviarMensagem(mensagem);
         int tipoTeste = -1;
         int tempoEsperaTeste = 0;
