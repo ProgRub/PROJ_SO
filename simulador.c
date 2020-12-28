@@ -214,16 +214,19 @@ void Pessoa(void *ptr)
     fazerTeste(&pessoa);
     if (pessoa.estadoTeste == POSITIVO)
     {
+        printf("Pessoa %d testou positivo \n", pessoa.id);
         sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 8, "Z");
         enviarMensagem(mensagem);
     }
     else if (pessoa.estadoTeste == NEGATIVO)
     {
+        printf("Pessoa %d testou negativo \n", pessoa.id);
         sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 9, 0);
         enviarMensagem(mensagem);
     }
     else
-    {
+    {   
+        printf("Pessoa %d testou inconclusivo \n", pessoa.id);
         sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 12, "Z");
         enviarMensagem(mensagem);
     }
