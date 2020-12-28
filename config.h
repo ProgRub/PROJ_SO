@@ -77,6 +77,7 @@ struct pessoa
     int tempoMaximoEspera;
     int numeroPessoasAFrenteParaDesistir;
     int tempoChegadaFilaEspera;
+    int desistiu;
     int estado; //0 - a espera, 1 - isolamento, 2 - hospital
 };
 
@@ -91,8 +92,8 @@ struct centroTeste2
 {
     int numeroPessoasNormalEspera;
     int numeroPessoasPrioritariasEspera;
-    sem_t filaEsperaNormal;
-    sem_t filaEsperaPrioritario;
+    sem_t filaEspera;
+    sem_t normalPodeAvancar;
     sem_t pontosTestagem;
 };
 
