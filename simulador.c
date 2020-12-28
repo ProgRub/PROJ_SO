@@ -16,6 +16,7 @@ struct centroTeste1 centroTestes1;
 struct centroTeste2 centroTestes2;
 int *tempoCooldownPontosTestagemCentro1;
 int *tempoCooldownPontosTestagemCentro2;
+int idososTestadosConsecutivamente = 0;
 
 //TRINCOS E SEMAFOROS
 pthread_mutex_t mutexCriarPessoa;
@@ -27,8 +28,6 @@ sem_t semaforoDoentes;
 
 //tarefas
 pthread_t IDtarefa[TAMANHO_ARRAY_TAREFAS]; //pessoas e médicos
-// phtread_t tarefaCentroTeste1;
-// pthread_t tarefaCentroTeste2;
 
 /*---------------------------------------
             SOCKETS
@@ -174,7 +173,7 @@ struct pessoa criaPessoa()
     p.tempoMaximoEspera = numeroAleatorio(configuracao.tempoMaximoEsperaMedio, configuracao.tempoMaximoEsperaMedio / 4);
     p.estado = ESPERA;
 
-    printf("Criado Pessoa %d: \n", idPessoa);
+    // printf("Criado Pessoa %d: \n", idPessoa);
     idPessoa++;
     pthread_mutex_unlock(&mutexCriarPessoa);
     return p;
@@ -190,7 +189,7 @@ struct pessoa criaMedico()
     m.centroTeste = CENTRO_PRIORITARIO;
     m.estadoTeste = NAO_TESTOU;
 
-    printf("Criado Medico %d: \n", idPessoa);
+    // printf("Criado Medico %d: \n", idPessoa);
     idPessoa++;
     pthread_mutex_unlock(&mutexCriarPessoa);
     return m;
@@ -213,6 +212,21 @@ void Pessoa(void *ptr)
     }
     usleep(tempoEsperaTeste);
     fazerTeste(&pessoa);
+    if (pessoa.estadoTeste == POSITIVO)
+    {
+        sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 8, "Z");
+        enviarMensagem(mensagem);
+    }
+    else if (pessoa.estadoTeste == NEGATIVO)
+    {
+        sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 9, 0);
+        enviarMensagem(mensagem);
+    }
+    else
+    {
+        sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 12, "Z");
+        enviarMensagem(mensagem);
+    }
 }
 
 void FilaEspera(struct pessoa *pessoa)
@@ -231,7 +245,7 @@ void FilaEspera(struct pessoa *pessoa)
             {
                 printf("A pessoa com o id %d desistiu fila 1.\n", pessoa->id);
                 pthread_mutex_unlock(&mutexFilaEspera);
-                sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 2, 1);
+                sprintf(mensagem, "%d-%d-%d-%d", pessoa->id, timestamp, 2, 1);
                 enviarMensagem(mensagem);
                 return;
             }
@@ -242,46 +256,65 @@ void FilaEspera(struct pessoa *pessoa)
                 pessoa->tipoTeste = TESTE_RAPIDO;
             }
             pthread_mutex_unlock(&mutexFilaEspera);
-            printf("A pessoa com o id %d chegou1 a fila.\n", pessoa->id);
+            // printf("A pessoa com o id %d chegou1 a fila.\n", pessoa->id);
             sem_wait(&centroTestes1.filaEspera);
-            printf("A pessoa com o id %d chegou2 a fila.\n", pessoa->id);
+            printf("A pessoa com o id %d vai ser testada quando houver ponto livre no centro 1.\n", pessoa->id);
             sem_wait(&centroTestes1.pontosTestagem);
-            printf("A pessoa com o id %d chegou3 a fila.\n", pessoa->id);
+            printf("A pessoa com o id %d foi testada no centro 1.\n", pessoa->id);
             pthread_mutex_lock(&mutexVariaveisSimulacao);
             if (minutosDecorridos - pessoa->tempoChegadaFilaEspera > pessoa->tempoMaximoEspera)
             { //passou muito tempo à espera, a pessoa desiste
                 pthread_mutex_unlock(&mutexVariaveisSimulacao);
-                sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 2, 1);
+                sprintf(mensagem, "%d-%d-%d-%d", pessoa->id, timestamp, 2, 1);
                 enviarMensagem(mensagem);
                 pthread_mutex_lock(&mutexVariaveisSimulacao);
             }
             else
             { //não desiste, vai ser testada
                 pthread_mutex_unlock(&mutexVariaveisSimulacao);
-                sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 1, 1);
+                sprintf(mensagem, "%d-%d-%d-%d", pessoa->id, timestamp, 1, 1);
                 enviarMensagem(mensagem);
                 pthread_mutex_lock(&mutexVariaveisSimulacao);
                 int index = 0;
                 for (index; index < configuracao.numeroPontosTestagemCentro1; index++)
                 {
-                    printf("%d\n", *(tempoCooldownPontosTestagemCentro1 + index));
+                    // printf("%d\n", *(tempoCooldownPontosTestagemCentro1 + index));
                     if (*(tempoCooldownPontosTestagemCentro1 + index) == -1) //ponto testagem está livre, começa-se o cooldown
                     {
                         *(tempoCooldownPontosTestagemCentro1 + index) = configuracao.tempoCooldownPontosTestagem;
-                        printf("%d\n", *(tempoCooldownPontosTestagemCentro1 + index));
+                        // printf("%d\n", *(tempoCooldownPontosTestagemCentro1 + index));
                         break;
                     }
                 }
             }
+            pthread_mutex_lock(&mutexFilaEspera);
+            sem_post(&centroTestes1.filaEspera);
+            centroTestes1.numeroPessoasEspera--;
+            pthread_mutex_unlock(&mutexFilaEspera);
             pthread_mutex_unlock(&mutexVariaveisSimulacao);
         }
     }
     else
     {
-        if ((centroTestes2.numeroPessoasNormalEspera + centroTestes2.numeroPessoasPrioritariasEspera) < configuracao.tamanhoFilaCentro2)
+        int numeroPessoasEsperaCentro2 = centroTestes2.numeroPessoasNormalEspera + centroTestes2.numeroPessoasPrioritariasEspera;
+        if (numeroPessoasEsperaCentro2 < configuracao.tamanhoFilaCentro2)
         {
-            sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 0, 2);
+            printf("A pessoa com o id %d chegou a fila2.\n", pessoa->id);
+            sprintf(mensagem, "%d-%d-%d-%d", pessoa->id, timestamp, 0, 2);
             enviarMensagem(mensagem);
+            if (pessoa->numeroPessoasAFrenteParaDesistir < numeroPessoasEsperaCentro2)
+            {
+                printf("A pessoa com o id %d desistiu fila 2.\n", pessoa->id);
+                pthread_mutex_unlock(&mutexFilaEspera);
+                sprintf(mensagem, "%d-%d-%d-%d", pessoa->id, timestamp, 2, 2);
+                enviarMensagem(mensagem);
+                return;
+            }
+            pessoa->tempoChegadaFilaEspera = timestamp;
+            if (numeroPessoasEsperaCentro2 > configuracao.tamanhoFilaCentro2 - 5)
+            {
+                pessoa->tipoTeste = TESTE_RAPIDO;
+            }
             if (pessoa->idoso)
             {
                 centroTestes2.numeroPessoasPrioritariasEspera++;
@@ -294,60 +327,65 @@ void FilaEspera(struct pessoa *pessoa)
                 pthread_mutex_unlock(&mutexFilaEspera);
                 sem_wait(&centroTestes2.filaEsperaNormal);
             }
-            printf("A pessoa com o id %d chegou a fila2.\n", pessoa->id);
-            sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 0, 2);
-            enviarMensagem(mensagem);
-            if (pessoa->numeroPessoasAFrenteParaDesistir < centroTestes1.numeroPessoasEspera)
+            sem_wait(&centroTestes2.pontosTestagem);
+            if (pessoa->idoso)
             {
-                printf("A pessoa com o id %d desistiu fila 2.\n", pessoa->id);
-                pthread_mutex_unlock(&mutexFilaEspera);
-                sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 2, 2);
-                enviarMensagem(mensagem);
-                return;
-            }
-            pessoa->tempoChegadaFilaEspera = timestamp;
-            centroTestes1.numeroPessoasEspera++;
-            if (centroTestes1.numeroPessoasEspera > configuracao.tamanhoFilaCentro2 - 5)
-            {
-                pessoa->tipoTeste = TESTE_RAPIDO;
+                idososTestadosConsecutivamente++;
             }
             pthread_mutex_unlock(&mutexFilaEspera);
-            printf("A pessoa com o id %d chegou1 a fila2.\n", pessoa->id);
             sem_wait(&centroTestes1.filaEspera);
-            printf("A pessoa com o id %d chegou2 a fila2.\n", pessoa->id);
+            printf("A pessoa com o id %d vai ser testada quando houver ponto livre no centro 2.\n", pessoa->id);
             sem_wait(&centroTestes1.pontosTestagem);
-            printf("A pessoa com o id %d chegou3 a fila2.\n", pessoa->id);
+            printf("A pessoa com o id %d foi testada no centro 2.\n", pessoa->id);
             pthread_mutex_lock(&mutexVariaveisSimulacao);
             //MANDAR minutosDecorridos - pessoa->tempoChegadaFilaEspera EM VEZ DE TIMESTAMP
             if (minutosDecorridos - pessoa->tempoChegadaFilaEspera > pessoa->tempoMaximoEspera)
             { //passou muito tempo à espera, a pessoa desiste
                 pthread_mutex_unlock(&mutexVariaveisSimulacao);
-                sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 2, 2);
+                sprintf(mensagem, "%d-%d-%d-%d", pessoa->id, timestamp, 2, 2);
                 enviarMensagem(mensagem);
                 pthread_mutex_lock(&mutexVariaveisSimulacao);
             }
             else
             { //não desiste, vai ser testada
                 pthread_mutex_unlock(&mutexVariaveisSimulacao);
-                sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 1, 2);
+                sprintf(mensagem, "%d-%d-%d-%d", pessoa->id, timestamp, 1, 2);
                 enviarMensagem(mensagem);
                 pthread_mutex_lock(&mutexVariaveisSimulacao);
                 int index = 0;
                 for (index; index < configuracao.numeroPontosTestagemCentro2; index++)
                 {
-                    printf("%d\n", *(tempoCooldownPontosTestagemCentro2 + index));
+                    // printf("%d\n", *(tempoCooldownPontosTestagemCentro2 + index));
                     if (*(tempoCooldownPontosTestagemCentro2 + index) == -1) //ponto testagem está livre, começa-se o cooldown
                     {
                         *(tempoCooldownPontosTestagemCentro2 + index) = configuracao.tempoCooldownPontosTestagem;
-                        printf("%d\n", *(tempoCooldownPontosTestagemCentro2 + index));
+                        // printf("%d\n", *(tempoCooldownPontosTestagemCentro2 + index));
                         break;
                     }
                 }
             }
             pthread_mutex_unlock(&mutexVariaveisSimulacao);
+            pthread_mutex_lock(&mutexFilaEspera);
+            if (pessoa->idoso)
+            {
+                centroTestes2.numeroPessoasPrioritariasEspera--;
+            }
+            else
+            {
+                centroTestes2.numeroPessoasNormalEspera--;
+            }
+            if (centroTestes2.numeroPessoasPrioritariasEspera > 0 && idososTestadosConsecutivamente < 5)
+            {
+                sem_post(&centroTestes2.filaEsperaPrioritario);
+            }
+            else
+            {
+                sem_post(&centroTestes2.filaEsperaNormal);
+                idososTestadosConsecutivamente = 0;
+            }
+            pthread_mutex_unlock(&mutexFilaEspera);
         }
     }
-    pthread_mutex_unlock(&mutexFilaEspera);
 }
 void Medico(void *ptr)
 {
@@ -445,19 +483,24 @@ void simulacao(char *filename)
                     {
                         (*(tempoCooldownPontosTestagemCentro1 + index))--;
                     }
+                    printf("%d ", *(tempoCooldownPontosTestagemCentro1 + index));
                 }
+                printf("\n");
                 index = 0;
                 for (index; index < configuracao.numeroPontosTestagemCentro2; index++)
                 {
-                    if (*(tempoCooldownPontosTestagemCentro2 + index) > 0)
+                    if (*(tempoCooldownPontosTestagemCentro2 + index) == 0)
                     {
                         sem_post(&centroTestes2.pontosTestagem);
+                        (*(tempoCooldownPontosTestagemCentro2 + index))--;
                     }
-                    else if (*(tempoCooldownPontosTestagemCentro1 + index) > 0)
+                    else if (*(tempoCooldownPontosTestagemCentro2 + index) > 0)
                     {
                         (*(tempoCooldownPontosTestagemCentro2 + index))--;
                     }
+                    printf("%d ", *(tempoCooldownPontosTestagemCentro2 + index));
                 }
+                printf("\n");
                 if (minutosDecorridos % configuracao.tempoMedioChegada == 0)
                 {
                     //cria tarefas pessoas
@@ -503,7 +546,7 @@ void iniciarSemaforosETrincos()
     }
 
     // sem_init(&centroTestes2.pontosTestagem, configuracao.numeroPontosTestagemCentro2, configuracao.numeroPontosTestagemCentro2);
-    sem_init(&centroTestes1.filaEspera, 0, configuracao.tamanhoFilaCentro1);
+    sem_init(&centroTestes1.filaEspera, 0, configuracao.numeroPontosTestagemCentro1);
     sem_init(&centroTestes1.pontosTestagem, 0, configuracao.numeroPontosTestagemCentro1);
     // sem_init(&centroTestes1.pontosTestagem, configuracao.numeroPontosTestagemCentro1, configuracao.numeroPontosTestagemCentro1);
     // centroTestes1.pontosTestagem = (sem_t *)calloc(configuracao.numeroPontosTestagemCentro1, sizeof(sem_t));
@@ -514,8 +557,8 @@ void iniciarSemaforosETrincos()
         *(tempoCooldownPontosTestagemCentro1 + index) = -1;
     }
 
-    sem_init(&centroTestes2.filaEsperaNormal, 0, configuracao.tamanhoFilaCentro2);
-    sem_init(&centroTestes2.filaEsperaPrioritario, 0, configuracao.tamanhoFilaCentro2);
+    sem_init(&centroTestes2.filaEsperaNormal, 0, configuracao.numeroPontosTestagemCentro2);
+    sem_init(&centroTestes2.filaEsperaPrioritario, 0, configuracao.numeroPontosTestagemCentro2);
     sem_init(&centroTestes2.pontosTestagem, 0, configuracao.numeroPontosTestagemCentro2);
     // centroTestes2.pontosTestagem = (sem_t *)calloc(configuracao.numeroPontosTestagemCentro2, sizeof(sem_t));
     tempoCooldownPontosTestagemCentro2 = (int *)calloc(configuracao.numeroPontosTestagemCentro2, sizeof(int));
