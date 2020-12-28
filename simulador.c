@@ -224,7 +224,7 @@ void FilaEspera(struct pessoa *pessoa)
     {
         if (centroTestes1.numeroPessoasEspera < configuracao.tamanhoFilaCentro1)
         {
-            // printf("CHEGOU0\n");
+            printf("A pessoa com o id %d chegou a fila.\n", pessoa->id);
             sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 0, 1);
             enviarMensagem(mensagem);
             if (pessoa->numeroPessoasAFrenteParaDesistir < centroTestes1.numeroPessoasEspera)
@@ -242,9 +242,9 @@ void FilaEspera(struct pessoa *pessoa)
                 pessoa->tipoTeste = TESTE_RAPIDO;
             }
             pthread_mutex_unlock(&mutexFilaEspera);
-            // printf("CHEGOU1\n");
+            printf("A pessoa com o id %d chegou1 a fila.\n", pessoa->id);
             sem_wait(&centroTestes1.filaEspera);
-            // printf("CHEGOU2\n");
+            printf("A pessoa com o id %d chegou a fila.\n", pessoa->id);
             sem_wait(&centroTestes1.pontosTestagem);
             // printf("CHEGOU3\n");
             pthread_mutex_lock(&mutexVariaveisSimulacao);
