@@ -242,11 +242,11 @@ void FilaEspera(struct pessoa *pessoa)
                 pessoa->tipoTeste = TESTE_RAPIDO;
             }
             pthread_mutex_unlock(&mutexFilaEspera);
-            printf("A pessoa com o id %d chegou1 a fila.\n", pessoa->id);
+            //printf("A pessoa com o id %d chegou1 a fila.\n", pessoa->id);
             sem_wait(&centroTestes1.filaEspera);
-            printf("A pessoa com o id %d chegou2 a fila.\n", pessoa->id);
+            printf("A pessoa com o id %d vai ser testada quando houver um posto livre no centro 1.\n", pessoa->id);
             sem_wait(&centroTestes1.pontosTestagem);
-            printf("A pessoa com o id %d chegou3 a fila.\n", pessoa->id);
+            printf("A pessoa com o id %d foi testada.\n", pessoa->id);
             pthread_mutex_lock(&mutexVariaveisSimulacao);
             if (minutosDecorridos - pessoa->tempoChegadaFilaEspera > pessoa->tempoMaximoEspera)
             { //passou muito tempo à espera, a pessoa desiste
@@ -312,11 +312,11 @@ void FilaEspera(struct pessoa *pessoa)
                 pessoa->tipoTeste = TESTE_RAPIDO;
             }
             pthread_mutex_unlock(&mutexFilaEspera);
-            printf("A pessoa com o id %d chegou1 a fila2.\n", pessoa->id);
+            //printf("A pessoa com o id %d chegou1 a fila2.\n", pessoa->id);
             sem_wait(&centroTestes1.filaEspera);
-            printf("A pessoa com o id %d chegou2 a fila2.\n", pessoa->id);
+            printf("A pessoa com o id %d vai ser testada quando houver um posto livre no centro 2.\n", pessoa->id);
             sem_wait(&centroTestes1.pontosTestagem);
-            printf("A pessoa com o id %d chegou3 a fila2.\n", pessoa->id);
+            printf("A pessoa com o id %d foi testada.\n", pessoa->id);
             pthread_mutex_lock(&mutexVariaveisSimulacao);
             //MANDAR minutosDecorridos - pessoa->tempoChegadaFilaEspera EM VEZ DE TIMESTAMP
             if (minutosDecorridos - pessoa->tempoChegadaFilaEspera > pessoa->tempoMaximoEspera)
