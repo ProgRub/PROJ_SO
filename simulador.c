@@ -229,7 +229,7 @@ void FilaEspera(struct pessoa *pessoa)
             enviarMensagem(mensagem);
             if (pessoa->numeroPessoasAFrenteParaDesistir < centroTestes1.numeroPessoasEspera)
             {
-                // printf("DESISTIU");
+                printf("A pessoa com o id %d desistiu fila 1.\n", pessoa->id);
                 pthread_mutex_unlock(&mutexFilaEspera);
                 sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 2, 1);
                 enviarMensagem(mensagem);
@@ -244,9 +244,9 @@ void FilaEspera(struct pessoa *pessoa)
             pthread_mutex_unlock(&mutexFilaEspera);
             printf("A pessoa com o id %d chegou1 a fila.\n", pessoa->id);
             sem_wait(&centroTestes1.filaEspera);
-            printf("A pessoa com o id %d chegou a fila.\n", pessoa->id);
+            printf("A pessoa com o id %d chegou2 a fila.\n", pessoa->id);
             sem_wait(&centroTestes1.pontosTestagem);
-            // printf("CHEGOU3\n");
+            printf("A pessoa com o id %d chegou3 a fila.\n", pessoa->id);
             pthread_mutex_lock(&mutexVariaveisSimulacao);
             if (minutosDecorridos - pessoa->tempoChegadaFilaEspera > pessoa->tempoMaximoEspera)
             { //passou muito tempo à espera, a pessoa desiste
@@ -294,12 +294,12 @@ void FilaEspera(struct pessoa *pessoa)
                 pthread_mutex_unlock(&mutexFilaEspera);
                 sem_wait(&centroTestes2.filaEsperaNormal);
             }
-            // printf("CHEGOU0\n");
+            printf("A pessoa com o id %d chegou a fila2.\n", pessoa->id);
             sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 0, 2);
             enviarMensagem(mensagem);
             if (pessoa->numeroPessoasAFrenteParaDesistir < centroTestes1.numeroPessoasEspera)
             {
-                // printf("DESISTIU");
+                printf("A pessoa com o id %d desistiu fila 2.\n", pessoa->id);
                 pthread_mutex_unlock(&mutexFilaEspera);
                 sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 2, 2);
                 enviarMensagem(mensagem);
@@ -312,11 +312,11 @@ void FilaEspera(struct pessoa *pessoa)
                 pessoa->tipoTeste = TESTE_RAPIDO;
             }
             pthread_mutex_unlock(&mutexFilaEspera);
-            // printf("CHEGOU1\n");
+            printf("A pessoa com o id %d chegou1 a fila2.\n", pessoa->id);
             sem_wait(&centroTestes1.filaEspera);
-            // printf("CHEGOU2\n");
+            printf("A pessoa com o id %d chegou2 a fila2.\n", pessoa->id);
             sem_wait(&centroTestes1.pontosTestagem);
-            // printf("CHEGOU3\n");
+            printf("A pessoa com o id %d chegou3 a fila2.\n", pessoa->id);
             pthread_mutex_lock(&mutexVariaveisSimulacao);
             //MANDAR minutosDecorridos - pessoa->tempoChegadaFilaEspera EM VEZ DE TIMESTAMP
             if (minutosDecorridos - pessoa->tempoChegadaFilaEspera > pessoa->tempoMaximoEspera)
