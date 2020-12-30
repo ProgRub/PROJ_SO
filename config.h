@@ -90,6 +90,8 @@ struct pessoa
     int tempoChegadaFilaEspera;
     int desistiu;
     int estado; //0 - a espera, 1 - isolamento, 2 - hospital
+    sem_t semaforoPessoa;
+    int numeroDiasDesdePositivo;
 };
 
 struct centroTeste1
