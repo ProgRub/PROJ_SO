@@ -237,7 +237,7 @@ void Pessoa(void *ptr)
             fazerTeste(&pessoa);
             if (pessoa.estadoTeste == POSITIVO)
             {
-                printf("Pessoa %d testou positivo \n", pessoa.id);
+                printf(VERDE "Pessoa %d testou positivo \n" RESET, pessoa.id);
                 sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 8, "Z");
                 enviarMensagem(mensagem);
                 sem_init(&pessoa.semaforoPessoa, 0, 0);
@@ -246,14 +246,14 @@ void Pessoa(void *ptr)
             }
             else if (pessoa.estadoTeste == NEGATIVO)
             {
-                printf("Pessoa %d testou negativo \n", pessoa.id);
+                printf(VERDE "Pessoa %d testou negativo \n" RESET, pessoa.id);
                 sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 9, 0);
                 enviarMensagem(mensagem);
                 break;
             }
             else
             {
-                printf("Pessoa %d testou inconclusivo \n", pessoa.id);
+                printf(VERDE "Pessoa %d testou inconclusivo \n" RESET, pessoa.id);
                 sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 12, "Z");
                 enviarMensagem(mensagem);
             }
@@ -295,12 +295,12 @@ void FilaEspera(struct pessoa *pessoa)
     { //CENTRO TESTES 1
         if (centroTestes1.numeroPessoasEspera < configuracao.tamanhoFilaCentro1)
         {
-            printf("A pessoa com o id %d chegou a fila do centro 1.\n", pessoa->id);
+            printf( "A pessoa com o id %d chegou a fila do centro 1.\n", pessoa->id);
             sprintf(mensagem, "%d-%d-%d-%d", idPessoa, timestamp, 0, 1);
             enviarMensagem(mensagem);
             if (pessoa->numeroPessoasAFrenteParaDesistir < centroTestes1.numeroPessoasEspera)
             {
-                printf("A pessoa com o id %d desistiu da fila do 1 porque tinha muita gente a frente.\n", pessoa->id);
+                printf( VERMELHO "A pessoa com o id %d desistiu da fila do 1 porque tinha muita gente a frente.\n" RESET, pessoa->id);
                 pthread_mutex_unlock(&mutexFilaEspera);
                 sprintf(mensagem, "%d-%d-%d-%d", pessoa->id, timestamp, 2, 1);
                 enviarMensagem(mensagem);
@@ -321,7 +321,7 @@ void FilaEspera(struct pessoa *pessoa)
             { //passou muito tempo à espera, a pessoa desiste
                 pessoa->desistiu = TRUE;
                 sem_post(&centroTestes1.filaEspera);
-                printf("A pessoa com o id %d desistiu no centro 1 porque passou muito tempo a espera.\n", pessoa->id);
+                printf( VERMELHO "A pessoa com o id %d desistiu no centro 1 porque passou muito tempo a espera.\n" RESET, pessoa->id);
                 pthread_mutex_unlock(&mutexVariaveisSimulacao);
                 sprintf(mensagem, "%d-%d-%d-%d", pessoa->id, timestamp, 2, 1);
                 enviarMensagem(mensagem);
@@ -332,7 +332,7 @@ void FilaEspera(struct pessoa *pessoa)
                 pthread_mutex_unlock(&mutexVariaveisSimulacao);
                 // printf("A pessoa com o id %d vai ser testada quando houver ponto livre no centro 1.\n", pessoa->id);
                 // sem_wait(&centroTestes1.pontosTestagem);
-                printf("A pessoa com o id %d foi testada no centro 1.\n", pessoa->id);
+                printf( VERDE "A pessoa com o id %d foi testada no centro 1.\n" RESET, pessoa->id);
                 sprintf(mensagem, "%d-%d-%d-%d", pessoa->id, timestamp, 1, 1);
                 enviarMensagem(mensagem);
                 pthread_mutex_lock(&mutexVariaveisSimulacao);
@@ -365,7 +365,7 @@ void FilaEspera(struct pessoa *pessoa)
             enviarMensagem(mensagem);
             if (pessoa->numeroPessoasAFrenteParaDesistir < numeroPessoasEsperaCentro2)
             {
-                printf("A pessoa %s com o id %d desistiu fila 2 porque tinha muita gente a frente.\n", pessoa->idoso ? "idoso" : "normal", pessoa->id);
+                printf( VERMELHO "A pessoa %s com o id %d desistiu fila 2 porque tinha muita gente a frente.\n" RESET, pessoa->idoso ? "idoso" : "normal", pessoa->id);
                 pthread_mutex_unlock(&mutexFilaEspera);
                 sprintf(mensagem, "%d-%d-%d-%d", pessoa->id, timestamp, 2, 2);
                 enviarMensagem(mensagem);
@@ -420,7 +420,7 @@ void FilaEspera(struct pessoa *pessoa)
                 {
                     sem_post(&centroTestes2.normalPodeAvancar);
                 }
-                printf("A pessoa %s com o id %d desistiu no centro 2 porque passou muito tempo a espera.\n", pessoa->idoso ? "idoso" : "normal", pessoa->id);
+                printf( VERMELHO "A pessoa %s com o id %d desistiu no centro 2 porque passou muito tempo a espera.\n" RESET, pessoa->idoso ? "idoso" : "normal", pessoa->id);
                 pthread_mutex_unlock(&mutexVariaveisSimulacao);
                 sprintf(mensagem, "%d-%d-%d-%d", pessoa->id, timestamp, 2, 2);
                 enviarMensagem(mensagem);
@@ -429,7 +429,7 @@ void FilaEspera(struct pessoa *pessoa)
             else
             { //não desiste, vai ser testada
                 pthread_mutex_unlock(&mutexVariaveisSimulacao);
-                printf("A pessoa %s com o id %d foi testada no centro 2.\n", pessoa->idoso ? "idoso" : "normal", pessoa->id);
+                printf(VERDE "A pessoa %s com o id %d foi testada no centro 2.\n" RESET, pessoa->idoso ? "idoso" : "normal" , pessoa->id);
                 if (pessoa->idoso)
                 {
                     idososTestadosConsecutivamente++;
@@ -628,7 +628,7 @@ void simulacao(char *filename)
                 {
                     if (tempoCooldownPontosTestagemCentro1[index] == 0)
                     {
-                        printf("POSTO DISPONIVEL1\n");
+                        printf( "POSTO DISPONIVEL1\n");
                         sem_post(&centroTestes1.filaEspera);
 
                         tempoCooldownPontosTestagemCentro1[index]--;
