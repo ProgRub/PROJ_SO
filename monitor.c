@@ -165,6 +165,7 @@ void trataMensagem(char mensagem[])
         //Temos que criar uma variavel na estrutura da pessoa que guarda o id do enfermeiro no simulador
         case 1: //Pessoa saiu da fila de um centro, porque vai ser testado
             casosEmEstudo++;
+            numeroPessoasEmIsolamento++;
             temposEspera[idPessoa] = timestamp - temposEspera[idPessoa];
             // pthread_create(NULL, NULL, calcularMediaTemposEspera, NULL);
             int numeroPessoasTestadasNosCentros = 0, somaTemposEspera = 0;
@@ -202,14 +203,11 @@ void trataMensagem(char mensagem[])
 
         //A mensagem com este case é enviada depois da mensagem com o case 5
         case 3: //Pessoa vai para isolamento
-            numeroPessoasEmIsolamento++;
-            casosEmEstudo++;
             break;
         case 4: //Pessoa vai para o hospital e sai do isolamento
             doentesNoHospital++;
             numeroPessoasEmIsolamento--;
             break;
-
         //A mensagem com este case é enviada depois da mensagem com o case 1
         case 5: //Medico vai tratar doente
             medicosDisponiveis--;
