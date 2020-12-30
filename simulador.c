@@ -267,14 +267,15 @@ void Pessoa(void *ptr)
     {
         if (pessoa.idoso || probabilidade(configuracao.probabilidadeNaoIdosoPrecisaHospital))
         { //Vai para o Hospital
-            printf("HERE\n");
             printf("A pessoa com id %d foi transportada para o hospital.\n",pessoa.id);
             pthread_mutex_lock(&mutexVariaveisHospital);
             if (numeroPacientesNoHospital < configuracao.tamanhoHospital)
             {
                 numeroPacientesNoHospital++;
                 sem_post(&semaforoMedicos);
+                printf("HERE1\n");
                 IDsDoentesNoHospital[indexArraysIDS] = pessoa.id;
+                printf("HERE2\n");
                 pthread_mutex_unlock(&mutexVariaveisHospital);
                 sem_wait(&semaforoDoentes);
             }
