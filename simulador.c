@@ -267,18 +267,20 @@ void Pessoa(void *ptr)
     {
         if (pessoa.idoso || probabilidade(configuracao.probabilidadeNaoIdosoPrecisaHospital))
         { //Vai para o Hospital
-            printf("A pessoa com id %d foi transportada para o hospital.\n",pessoa.id);
+            printf("A pessoa com id %d foi transportada para o hospital.\n", pessoa.id);
+            sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 4, "Z");
+            enviarMensagem(mensagem);
             pthread_mutex_lock(&mutexVariaveisHospital);
             if (numeroPacientesNoHospital < configuracao.tamanhoHospital)
             {
                 numeroPacientesNoHospital++;
                 sem_post(&semaforoMedicos);
-                printf("HERE1\n");
                 IDsDoentesNoHospital[indexArraysIDS] = pessoa.id;
-                printf("HERE2\n");
                 pthread_mutex_unlock(&mutexVariaveisHospital);
                 sem_wait(&semaforoDoentes);
+                pthread_mutex_lock(&mutexVariaveisHospital);
             }
+            pthread_mutex_unlock(&mutexVariaveisHospital);
         }
         // printf("PRESEMAFORO\n");
         sem_wait(&pessoa.semaforoPessoa);
@@ -482,12 +484,15 @@ void FilaEspera(struct pessoa *pessoa)
         }
     }
 }
+
 void Medico(void *ptr)
 {
     struct pessoa medico = criaMedico();
     PessoasCriadas[medico.id] = medico;
     char mensagem[TAMANHO_LINHA];
     sem_wait(&semaforoMedicos);
+    sprintf(mensagem, "%d-%d-%d-%d", medico.id, "Z", 5, "Z");
+    enviarMensagem(mensagem);
     pthread_mutex_lock(&mutexVariaveisHospital);
     IDsMedicosASerUsados[indexArraysIDS] = medico.id;
     indexArraysIDS++;
@@ -506,8 +511,6 @@ void Hospital(void *ptr)
 {
     char mensagem[TAMANHO_LINHA];
     int ultimoDia = -1;
-    IDsMedicosASerUsados = (int *)calloc(configuracao.tamanhoHospital, sizeof(int));
-    IDsDoentesNoHospital = (int *)calloc(configuracao.tamanhoHospital, sizeof(int));
     int index = 0;
     while (TRUE)
     {
@@ -583,6 +586,7 @@ void Hospital(void *ptr)
                     PessoasCriadas[IDsMedicosASerUsados[index]].numeroDiasDesdePositivo++;
                 }
             }
+            passouUmDia=FALSE;
         }
     }
 }
@@ -611,6 +615,8 @@ void simulacao(char *filename)
         }
         usleep(50);
     }
+    pthread_t hospitalThread;
+    pthread_create(&hospitalThread, NULL, Hospital, NULL);
     while (tempoDecorrido != tempoLimite)
     {
         auxTimeStamp = current_timestamp();
@@ -749,6 +755,8 @@ void iniciarSemaforosETrincos()
 
     sem_init(&semaforoMedicos, 0, 0);
     sem_init(&semaforoDoentes, 0, 0);
+    IDsMedicosASerUsados = (int *)calloc(configuracao.tamanhoHospital, sizeof(int));
+    IDsDoentesNoHospital = (int *)calloc(configuracao.tamanhoHospital, sizeof(int));
 }
 
 void carregarConfiguracao(char nomeFicheiro[])
