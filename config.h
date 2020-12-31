@@ -41,11 +41,10 @@
 #define ESPERA 0
 #define ISOLAMENTO 1
 #define HOSPITAL 2
-#define EM_CASA 3
+#define DESISTIU 3
 
 //AUXILIAR
 #define TAMANHO_CONFIGURACAO 20
-#define CENTRO_PRIORITARIO 1
 #define TAMANHO_ARRAY_TAREFAS 100000
 #define MINUTO 42//em milisegundos
 #define HORA 42*60 //em milisegundos
@@ -98,16 +97,14 @@ struct centroTeste1
 {
     int numeroPessoasEspera;
     sem_t filaEspera;
-    sem_t pontosTestagem;
 };
 
 struct centroTeste2
 {
     int numeroPessoasNormalEspera;
     int numeroPessoasPrioritariasEspera;
-    sem_t filaEspera;
-    sem_t normalPodeAvancar;
-    sem_t pontosTestagem;
+    sem_t filaEsperaPrioritaria;
+    sem_t filaEsperaNormal;
 };
 
 //METODOS DEFINIDOS
@@ -122,6 +119,7 @@ struct pessoa criaMedico();
 void enviarMensagem(char *mensagemAEnviar);
 void Medico(void * ptr);
 void Pessoa(void * ptr);
+void FilaEspera(struct pessoa * pessoa);
 
 //monitor.c
 void escreveEmFicheiroEMonitor(char *mensagem);

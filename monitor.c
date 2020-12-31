@@ -236,6 +236,7 @@ void trataMensagem(char mensagem[])
             break;
         case 10: //Pessoa ou Medico recupera
             casosPositivosAtivos--;
+            casosRecuperados++;
             if (especificacaoAcontecimento == 1)
             {
                 medicosDisponiveis++;
