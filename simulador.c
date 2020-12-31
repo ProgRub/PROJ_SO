@@ -586,7 +586,7 @@ void simulacao(char *filename) {
         int index = 0;
         for (index; index < configuracao.numeroPontosTestagemCentro1; index++) {
           if (tempoCooldownPontosTestagemCentro1[index] == 0) {
-            printf("POSTO DISPONIVEL1\n");
+            printf("POSTO DE TESTAGEM DISPONIVEL NO CENTRO 1\n");
             sem_post(&centroTestes1.filaEspera);
 
             tempoCooldownPontosTestagemCentro1[index]--;
@@ -602,7 +602,7 @@ void simulacao(char *filename) {
         int valorSemaforo = -1;
         for (index; index < configuracao.numeroPontosTestagemCentro2; index++) {
           if (tempoCooldownPontosTestagemCentro2[index] == 0) {
-            printf("POSTO DISPONIVEL2\n");
+            printf("POSTO DE TESTAGEM DISPONIVEL NO CENTRO 2\n");
             pthread_mutex_lock(&mutexFilaEspera);
             if ((centroTestes2.numeroPessoasPrioritariasEspera == 0 ||
                  idososTestadosConsecutivamente >= 5) &&
