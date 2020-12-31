@@ -642,7 +642,7 @@ void simulacao(char *filename) {
             if (IDsDoentesNoHospital[index] != 0) {//se há doente no hospital
               if (PessoasCriadas[IDsDoentesNoHospital[index]]
                       ->numeroDiasDesdePositivo == configuracao.tempoCurar) {//se já passou o tempo para curar
-          printf(CIANO "Index %d  RECUPERADO\n" RESET, index);
+                printf(CIANO "Pessoa com o ID %d RECUPERAROU\n" RESET, IDsDoentesNoHospital[index]);
                 sem_post(&PessoasCriadas[IDsDoentesNoHospital[index]]
                               ->semaforoPessoa);
                 sprintf(mensagem, "%d-%s-%d-%d", IDsDoentesNoHospital[index],
@@ -657,14 +657,15 @@ void simulacao(char *filename) {
                       0) { // tem medico a tratar de si
                     if (probabilidade(configuracao.probabilidadeIdosoMorrer /
                                       4)) {
-                      sem_post(&PessoasCriadas[IDsDoentesNoHospital[index]]
+                        sem_post(&PessoasCriadas[IDsDoentesNoHospital[index]]
                                     ->semaforoPessoa);
-                      sprintf(mensagem, "%d-%s-%d-%d",
+                        sprintf(mensagem, "%d-%s-%d-%d",
                               IDsDoentesNoHospital[index], "Z", 13, 0);
-                      enviarMensagem(mensagem);
-                      IDsDoentesNoHospital[index]=0;
-                      indexArraysIDS=index;
-                      libertarMedico=TRUE;
+                        printf(CIANO "Pessoa com o ID %d MORREU \n" RESET, IDsDoentesNoHospital[index]);       
+                        enviarMensagem(mensagem);
+                        IDsDoentesNoHospital[index]=0;
+                        indexArraysIDS=index;
+                        libertarMedico=TRUE;
                     }
                   } else { // não tem medico a tratar de si
                     if (probabilidade(configuracao.probabilidadeIdosoMorrer)) {
