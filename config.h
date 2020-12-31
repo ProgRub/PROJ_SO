@@ -42,6 +42,7 @@
 #define ISOLAMENTO 1
 #define HOSPITAL 2
 #define DESISTIU 3
+#define SOBREVIVEU 4
 
 //AUXILIAR
 #define TAMANHO_CONFIGURACAO 20
@@ -109,7 +110,9 @@ struct centroTeste2
 
 //METODOS DEFINIDOS
 //simulador.c
+int numeroAleatorio(int numeroMaximo, int numeroMinimo);
 int probabilidade(float prob);
+void fazerTeste(struct pessoa *pessoa);
 void simulacao(char *filename);
 void carregarConfiguracao(char nomeFicheiro[]);
 void iniciarSemaforosETrincos();
