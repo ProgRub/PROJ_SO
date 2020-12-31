@@ -237,7 +237,7 @@ void Pessoa(void *ptr)
             fazerTeste(&pessoa);
             if (pessoa.estadoTeste == POSITIVO)
             {
-                printf(VERDE "Pessoa %d testou positivo \n" RESET, pessoa.id);
+                printf(AMARELO "Pessoa %d testou positivo \n" RESET, pessoa.id);
                 sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 8, "Z");
                 enviarMensagem(mensagem);
                 sem_init(&pessoa.semaforoPessoa, 0, 0);
@@ -246,14 +246,14 @@ void Pessoa(void *ptr)
             }
             else if (pessoa.estadoTeste == NEGATIVO)
             {
-                printf(VERDE "Pessoa %d testou negativo \n" RESET, pessoa.id);
+                printf(AMARELO "Pessoa %d testou negativo \n" RESET, pessoa.id);
                 sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 9, 0);
                 enviarMensagem(mensagem);
                 break;
             }
             else
             {
-                printf(VERDE "Pessoa %d testou inconclusivo \n" RESET, pessoa.id);
+                printf(AMARELO "Pessoa %d testou inconclusivo \n" RESET, pessoa.id);
                 sprintf(mensagem, "%d-%d-%d-%d", pessoa.id, "Z", 12, "Z");
                 enviarMensagem(mensagem);
             }
