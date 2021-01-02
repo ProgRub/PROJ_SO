@@ -1,16 +1,16 @@
 ++++++++++++++++++++++++++++++++++++++++++++
-Estado atual => Simulacao a decorrer!
-			 DIA 2
-Pessoas: 645
-Pessoas a espera no centro 1: 1
-Pessoas a espera no centro 2: 34
-Casos positivos (total): 51
-Casos positivos (ativos): 48
-Casos em estudo: 77
-Pessoas em isolamento: 102
-Numero de mortos: 3
-Casos recuperados: 0
-Doentes no hospital: 26
-Medicos disponiveis: 272
+Estado atual => Simulacao finalizada.
+			 DIA 6
+Pessoas: 1768
+Pessoas a espera no centro 1: 2
+Pessoas a espera no centro 2: 23
+Casos positivos (total): 134
+Casos positivos (ativos): 10
+Casos em estudo: 15
+Pessoas em isolamento: 111
+Numero de mortos: 11
+Casos recuperados: 113
+Doentes no hospital: 38
+Medicos disponiveis: 251
 Tempo medio de espera (em minutos): 34
 ++++++++++++++++++++++++++++++++++++++++++++

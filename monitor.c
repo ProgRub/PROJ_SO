@@ -180,7 +180,11 @@ void trataMensagem(char mensagem[]) {
       casosEmEstudo--;
       numeroPessoasEmIsolamento--;
       if (especificacaoAcontecimento == 1) {
+        // printf("HERE %d\n",especificacaoAcontecimento);
+        // printf("HERE %d\n",medicosDisponiveis);
         medicosDisponiveis++;
+        // printf("HERE %d\n",medicosDisponiveis);
+        // while(TRUE);
       }
       break;
     case 10: // Pessoa ou Medico recupera
@@ -206,6 +210,7 @@ void trataMensagem(char mensagem[]) {
       break;
     case 14: // Passou um dia na simulação
       numeroDiasPassados++;
+      break;
     }
   }
   imprimirInformacao();
@@ -216,55 +221,58 @@ void trataMensagem(char mensagem[]) {
 -----------------------------------------*/
 void limparFicheiro() { fclose(fopen("Relatorio.txt", "w")); }
 
-void escreveEmFicheiroEMonitor(char *mensagem) {
+void escreveEmFicheiro() {
+  limparFicheiro();
   FILE *ficheiroRegisto;
   ficheiroRegisto = fopen("Relatorio.txt", "a");
   if (ficheiroRegisto == NULL) {
     printf("Nao foi possivel abrir o ficheiro %s.\n", "Relatorio.txt");
   } else {
-    printf("%s", mensagem);
-    fprintf(ficheiroRegisto, "%s", mensagem);
+    fprintf(ficheiroRegisto,"%s", SEPARADOR);
+    if (!fimSimulacao) {
+      fprintf(ficheiroRegisto,"%s", "Estado atual => Simulacao a decorrer!\n");
+    } else {
+      fprintf(ficheiroRegisto,"%s", "Estado atual => Simulacao finalizada.\n");
+    }
+    fprintf(ficheiroRegisto,"\t\t\t DIA %d\n", numeroDiasPassados);
+    fprintf(ficheiroRegisto,"Pessoas: %d\n", numeroPessoas);
+    fprintf(ficheiroRegisto,"Pessoas a espera no centro 1: %d\n", tamanhoFilaCentro1);
+    fprintf(ficheiroRegisto,"Pessoas a espera no centro 2: %d\n", tamanhoFilaCentro2);
+    fprintf(ficheiroRegisto,"Casos positivos (total): %d\n", casosPositivosTotal);
+    fprintf(ficheiroRegisto,"Casos positivos (ativos): %d\n", casosPositivosAtivos);
+    fprintf(ficheiroRegisto,"Casos em estudo: %d\n", casosEmEstudo);
+    fprintf(ficheiroRegisto,"Pessoas em isolamento: %d\n", numeroPessoasEmIsolamento);
+    fprintf(ficheiroRegisto,"Numero de mortos: %d\n", numeroMortos);
+    fprintf(ficheiroRegisto,"Casos recuperados: %d\n", casosRecuperados);
+    fprintf(ficheiroRegisto,"Doentes no hospital: %d\n", doentesNoHospital);
+    fprintf(ficheiroRegisto,"Medicos disponiveis: %d\n", medicosDisponiveis);
+    fprintf(ficheiroRegisto,"Tempo medio de espera (em minutos): %d\n", tempoMedioEspera);
+    fprintf(ficheiroRegisto,"%s", SEPARADOR);
     fclose(ficheiroRegisto);
   }
 }
 
 void imprimirInformacao() {
-  char texto[TAMANHO_LINHA];
-  // system("clear");
-  limparFicheiro();
-  escreveEmFicheiroEMonitor(SEPARADOR);
+  printf("%s", SEPARADOR);
   if (!fimSimulacao) {
-    escreveEmFicheiroEMonitor("Estado atual => Simulacao a decorrer!\n");
+    printf("%s", "Estado atual => Simulacao a decorrer!\n");
   } else {
-    escreveEmFicheiroEMonitor("Estado atual => Simulacao finalizada.\n");
+    printf("%s", "Estado atual => Simulacao finalizada.\n");
   }
-  sprintf(texto, "\t\t\t DIA %d\n", numeroDiasPassados);
-  escreveEmFicheiroEMonitor(texto);
-  sprintf(texto, "Pessoas: %d\n", numeroPessoas);
-  escreveEmFicheiroEMonitor(texto);
-  sprintf(texto, "Pessoas a espera no centro 1: %d\n", tamanhoFilaCentro1);
-  escreveEmFicheiroEMonitor(texto);
-  sprintf(texto, "Pessoas a espera no centro 2: %d\n", tamanhoFilaCentro2);
-  escreveEmFicheiroEMonitor(texto);
-  sprintf(texto, "Casos positivos (total): %d\n", casosPositivosTotal);
-  escreveEmFicheiroEMonitor(texto);
-  sprintf(texto, "Casos positivos (ativos): %d\n", casosPositivosAtivos);
-  escreveEmFicheiroEMonitor(texto);
-  sprintf(texto, "Casos em estudo: %d\n", casosEmEstudo);
-  escreveEmFicheiroEMonitor(texto);
-  sprintf(texto, "Pessoas em isolamento: %d\n", numeroPessoasEmIsolamento);
-  escreveEmFicheiroEMonitor(texto);
-  sprintf(texto, "Numero de mortos: %d\n", numeroMortos);
-  escreveEmFicheiroEMonitor(texto);
-  sprintf(texto, "Casos recuperados: %d\n", casosRecuperados);
-  escreveEmFicheiroEMonitor(texto);
-  sprintf(texto, "Doentes no hospital: %d\n", doentesNoHospital);
-  escreveEmFicheiroEMonitor(texto);
-  sprintf(texto, "Medicos disponiveis: %d\n", medicosDisponiveis);
-  escreveEmFicheiroEMonitor(texto);
-  sprintf(texto, "Tempo medio de espera (em minutos): %d\n", tempoMedioEspera);
-  escreveEmFicheiroEMonitor(texto);
-  escreveEmFicheiroEMonitor(SEPARADOR);
+  printf("\t\t\t DIA %d\n", numeroDiasPassados);
+  printf("Pessoas: %d\n", numeroPessoas);
+  printf("Pessoas a espera no centro 1: %d\n", tamanhoFilaCentro1);
+  printf("Pessoas a espera no centro 2: %d\n", tamanhoFilaCentro2);
+  printf("Casos positivos (total): %d\n", casosPositivosTotal);
+  printf("Casos positivos (ativos): %d\n", casosPositivosAtivos);
+  printf("Casos em estudo: %d\n", casosEmEstudo);
+  printf("Pessoas em isolamento: %d\n", numeroPessoasEmIsolamento);
+  printf("Numero de mortos: %d\n", numeroMortos);
+  printf("Casos recuperados: %d\n", casosRecuperados);
+  printf("Doentes no hospital: %d\n", doentesNoHospital);
+  printf("Medicos disponiveis: %d\n", medicosDisponiveis);
+  printf("Tempo medio de espera (em minutos): %d\n", tempoMedioEspera);
+  printf("%s", SEPARADOR);
 }
 
 int main(int argc, char *argv[]) {
@@ -284,5 +292,6 @@ int main(int argc, char *argv[]) {
     }
     criaServidor();
   }
+  escreveEmFicheiro();
   return 0;
 }

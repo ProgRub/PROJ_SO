@@ -98,6 +98,7 @@ struct centroTeste1
 {
     int numeroPessoasEspera;
     sem_t filaEspera;
+    int numeroPostosDisponiveis;
 };
 
 struct centroTeste2
@@ -106,6 +107,7 @@ struct centroTeste2
     int numeroPessoasPrioritariasEspera;
     sem_t filaEsperaPrioritaria;
     sem_t filaEsperaNormal;
+    int numeroPostosDisponiveis;
 };
 
 //METODOS DEFINIDOS
