@@ -87,7 +87,7 @@ void trataMensagem(char mensagem[]) {
   // Auxiliario
   char bufferAuxiliario[30];
   strcpy(bufferAuxiliario, mensagem);
-  char *valoresSeparados[4][30];
+  char valoresSeparados[3][30];
   int index = 0;
 
   // Obtem o head da lista ligada que se obtem separando bufferAuxiliario por
@@ -102,9 +102,8 @@ void trataMensagem(char mensagem[]) {
   }
 
   // Onde vai guardar os valores depois da divisao
-  int acontecimento = strtol(valoresSeparados[2], NULL, 10);
-  if (!strcmp(valoresSeparados[0], "Z") && !strcmp(valoresSeparados[1], "Z") &&
-      !strcmp(valoresSeparados[3], "Z")) {
+  int acontecimento = strtol(valoresSeparados[1], NULL, 10);
+  if (!strcmp(valoresSeparados[0], "Z") && !strcmp(valoresSeparados[2], "Z")) {
     if (acontecimento == 0) {
       // printf("Bem vindo! A simulação comecou!\n");
     } else {
@@ -112,9 +111,18 @@ void trataMensagem(char mensagem[]) {
       fimSimulacao = TRUE;
     }
   } else {
-    int idPessoa = strtol(valoresSeparados[0], NULL, 10);
-    int timestamp = strtol(valoresSeparados[1], NULL, 10);
-    int especificacaoAcontecimento = strtol(valoresSeparados[3], NULL, 10);
+    int numero;
+    if (strcmp(valoresSeparados[0], "Z")) {
+      numero = strtol(valoresSeparados[0], NULL, 10);
+    } else {
+      numero = -1;
+    }
+    int especificacaoAcontecimento;
+    if (strcmp(valoresSeparados[2], "Z")) {
+      especificacaoAcontecimento = strtol(valoresSeparados[2], NULL, 10);
+    } else {
+      especificacaoAcontecimento = -1;
+    }
     switch (acontecimento) {
     case 0: // Pessoa chegou à fila de um centro.
       numeroPessoas++;
@@ -126,13 +134,11 @@ void trataMensagem(char mensagem[]) {
       break;
 
     // A mensagem com este case é enviada depois da mensagem com o case 0
-    // Temos que criar uma variavel na estrutura da pessoa que guarda o id do
-    // enfermeiro no simulador
     case 1: // Pessoa saiu da fila de um centro, porque vai ser testado
       casosEmEstudo++;
       numeroPessoasEmIsolamento++;
       numeroPessoasTestadasNosCentros++;
-      somaTemposEspera += timestamp;
+      somaTemposEspera += numero;
       tempoMedioEspera = somaTemposEspera / numeroPessoasTestadasNosCentros;
       if (especificacaoAcontecimento == 1) {
         tamanhoFilaCentro1--;
@@ -149,10 +155,6 @@ void trataMensagem(char mensagem[]) {
         tamanhoFilaCentro2--;
       }
       break;
-
-    // A mensagem com este case é enviada depois da mensagem com o case 5
-    case 3: // Pessoa vai para isolamento
-      break;
     case 4: // Pessoa vai para o hospital e sai do isolamento
       doentesNoHospital++;
       numeroPessoasEmIsolamento--;
@@ -163,8 +165,8 @@ void trataMensagem(char mensagem[]) {
       break;
     case 6: // Medico acaba de tratar de doente (ou este morre) e o médico vai
             // para isolamento
-      doentesNoHospital--;
-      numeroPessoasEmIsolamento++;
+      doentesNoHospital -= numero;
+      numeroPessoasEmIsolamento += numero;
       break;
     case 7: // Medico é testado em isolamento
       casosEmEstudo++;
@@ -180,33 +182,25 @@ void trataMensagem(char mensagem[]) {
       casosEmEstudo--;
       numeroPessoasEmIsolamento--;
       if (especificacaoAcontecimento == 1) {
-        // printf("HERE %d\n",especificacaoAcontecimento);
-        // printf("HERE %d\n",medicosDisponiveis);
         medicosDisponiveis++;
-        // printf("HERE %d\n",medicosDisponiveis);
-        // while(TRUE);
       }
       break;
     case 10: // Pessoa ou Medico recupera
-      casosPositivosAtivos--;
-      casosRecuperados++;
-      if (especificacaoAcontecimento == 1) {
-        medicosDisponiveis++;
-      }
+      casosPositivosAtivos -= numero;
+      casosRecuperados += numero;
+      medicosDisponiveis += especificacaoAcontecimento;
       break;
     case 11: // Medico criado
-      medicosDisponiveis++;
+      medicosDisponiveis += numero;
       break;
     case 12: // O teste ao pessoa é inconclusivo
       casosEmEstudo--;
       numeroPessoasEmIsolamento--;
       break;
     case 13: // Pessoa ou Medico morre
-      numeroMortos++;
-      casosPositivosAtivos--;
-      if (especificacaoAcontecimento == 1) {
-        medicosDisponiveis--;
-      }
+      numeroMortos += numero;
+      casosPositivosAtivos -= numero;
+      medicosDisponiveis -= especificacaoAcontecimento;
       break;
     case 14: // Passou um dia na simulação
       numeroDiasPassados++;
@@ -228,26 +222,32 @@ void escreveEmFicheiro() {
   if (ficheiroRegisto == NULL) {
     printf("Nao foi possivel abrir o ficheiro %s.\n", "Relatorio.txt");
   } else {
-    fprintf(ficheiroRegisto,"%s", SEPARADOR);
+    fprintf(ficheiroRegisto, "%s", SEPARADOR);
     if (!fimSimulacao) {
-      fprintf(ficheiroRegisto,"%s", "Estado atual => Simulacao a decorrer!\n");
+      fprintf(ficheiroRegisto, "%s", "Estado atual => Simulacao a decorrer!\n");
     } else {
-      fprintf(ficheiroRegisto,"%s", "Estado atual => Simulacao finalizada.\n");
+      fprintf(ficheiroRegisto, "%s", "Estado atual => Simulacao finalizada.\n");
     }
-    fprintf(ficheiroRegisto,"\t\t\t DIA %d\n", numeroDiasPassados);
-    fprintf(ficheiroRegisto,"Pessoas: %d\n", numeroPessoas);
-    fprintf(ficheiroRegisto,"Pessoas a espera no centro 1: %d\n", tamanhoFilaCentro1);
-    fprintf(ficheiroRegisto,"Pessoas a espera no centro 2: %d\n", tamanhoFilaCentro2);
-    fprintf(ficheiroRegisto,"Casos positivos (total): %d\n", casosPositivosTotal);
-    fprintf(ficheiroRegisto,"Casos positivos (ativos): %d\n", casosPositivosAtivos);
-    fprintf(ficheiroRegisto,"Casos em estudo: %d\n", casosEmEstudo);
-    fprintf(ficheiroRegisto,"Pessoas em isolamento: %d\n", numeroPessoasEmIsolamento);
-    fprintf(ficheiroRegisto,"Numero de mortos: %d\n", numeroMortos);
-    fprintf(ficheiroRegisto,"Casos recuperados: %d\n", casosRecuperados);
-    fprintf(ficheiroRegisto,"Doentes no hospital: %d\n", doentesNoHospital);
-    fprintf(ficheiroRegisto,"Medicos disponiveis: %d\n", medicosDisponiveis);
-    fprintf(ficheiroRegisto,"Tempo medio de espera (em minutos): %d\n", tempoMedioEspera);
-    fprintf(ficheiroRegisto,"%s", SEPARADOR);
+    fprintf(ficheiroRegisto, "\t\t\t DIA %d\n", numeroDiasPassados);
+    fprintf(ficheiroRegisto, "Pessoas: %d\n", numeroPessoas);
+    fprintf(ficheiroRegisto, "Pessoas a espera no centro 1: %d\n",
+            tamanhoFilaCentro1);
+    fprintf(ficheiroRegisto, "Pessoas a espera no centro 2: %d\n",
+            tamanhoFilaCentro2);
+    fprintf(ficheiroRegisto, "Casos positivos (total): %d\n",
+            casosPositivosTotal);
+    fprintf(ficheiroRegisto, "Casos positivos (ativos): %d\n",
+            casosPositivosAtivos);
+    fprintf(ficheiroRegisto, "Casos em estudo: %d\n", casosEmEstudo);
+    fprintf(ficheiroRegisto, "Pessoas em isolamento: %d\n",
+            numeroPessoasEmIsolamento);
+    fprintf(ficheiroRegisto, "Numero de mortos: %d\n", numeroMortos);
+    fprintf(ficheiroRegisto, "Casos recuperados: %d\n", casosRecuperados);
+    fprintf(ficheiroRegisto, "Doentes no hospital: %d\n", doentesNoHospital);
+    fprintf(ficheiroRegisto, "Medicos disponiveis: %d\n", medicosDisponiveis);
+    fprintf(ficheiroRegisto, "Tempo medio de espera (em minutos): %d\n",
+            tempoMedioEspera);
+    fprintf(ficheiroRegisto, "%s", SEPARADOR);
     fclose(ficheiroRegisto);
   }
 }

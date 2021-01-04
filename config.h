@@ -46,7 +46,7 @@
 
 //AUXILIAR
 #define TAMANHO_CONFIGURACAO 20
-#define TAMANHO_ARRAY_TAREFAS 100000
+#define TAMANHO_ARRAY_TAREFAS 50000
 #define MINUTO 42//em milisegundos
 #define HORA 42*60 //em milisegundos
 #define DIA 42*60*24 //em milisegundos
