@@ -200,6 +200,10 @@ void FilaEspera(struct pessoa *pessoa) {
       enviarMensagem(mensagem);
       if (pessoa->numeroPessoasAFrenteParaDesistir <
           centroTestes1.numeroPessoasEspera) {
+        sem_getvalue(&centroTestes1.filaEspera, &valorSemaforo);
+        if (valorSemaforo < centroTestes1.numeroPostosDisponiveis) {
+          sem_post(&centroTestes1.filaEspera);
+        }
         pthread_mutex_unlock(&mutexFilaEspera);
         printf(VERMELHO "A pessoa com o id %d desistiu da fila do 1 porque "
                         "tinha muita gente a frente.\n" RESET,
@@ -271,6 +275,19 @@ void FilaEspera(struct pessoa *pessoa) {
       enviarMensagem(mensagem);
       if (pessoa->numeroPessoasAFrenteParaDesistir <
           numeroPessoasEsperaCentro2) {
+        if (centroTestes2.numeroPessoasNormalEspera > 0 &&
+            (centroTestes2.numeroPessoasPrioritariasEspera == 0 ||
+             idososTestadosConsecutivamente >= 5)) {
+          sem_getvalue(&centroTestes2.filaEsperaNormal, &valorSemaforo);
+          if (valorSemaforo < centroTestes2.numeroPostosDisponiveis) {
+            sem_post(&centroTestes2.filaEsperaNormal);
+          }
+        } else {
+          sem_getvalue(&centroTestes2.filaEsperaPrioritaria, &valorSemaforo);
+          if (valorSemaforo < centroTestes2.numeroPostosDisponiveis) {
+            sem_post(&centroTestes2.filaEsperaPrioritaria);
+          }
+        }
         pthread_mutex_unlock(&mutexFilaEspera);
         printf(VERMELHO "A pessoa %s com o id %d desistiu da fila do centro 2 "
                         "porque tinha muita gente a frente.\n" RESET,
@@ -612,7 +629,7 @@ void simulacao(char *filename) {
           enviarMensagem(mensagem);
           pthread_mutex_lock(&mutexVariaveisHospital);
           int numeroPessoasRecuperaram = 0, numeroMedicosRecuperaram = 0,
-              numeroPessoasMorreram, numeroMedicosMorreram = 0,
+              numeroPessoasMorreram=0, numeroMedicosMorreram = 0,
               numeroMedicosParaIsolamento = 0;
           for (index = 0; index < configuracao.tamanhoHospital; index++) {
             libertarMedico = FALSE;
@@ -719,12 +736,15 @@ void simulacao(char *filename) {
                                                               : "Pessoa"),
                        PessoasCriadas[index]->id);
                 numeroPessoasRecuperaram++;
+                numeroMedicosRecuperaram +=
+                    PessoasCriadas[index]->medico;
                 sem_post(&PessoasCriadas[index]->semaforoPessoa);
               } else {
                 PessoasCriadas[index]->numeroDiasDesdePositivo++;
               }
             }
           }
+          // printf(VERMELHO "%d\n%d\n%d\n%d\n%d\n" RESET,numeroPessoasRecuperaram,numeroMedicosRecuperaram,numeroPessoasMorreram,numeroMedicosMorreram,numeroMedicosParaIsolamento);
           sprintf(mensagem, "%d-%d-%d", numeroPessoasRecuperaram, 10,
                   numeroMedicosRecuperaram);
           enviarMensagem(mensagem);
