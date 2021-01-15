@@ -132,7 +132,13 @@ void fazerTeste(struct pessoa *pessoa) {
     }
   }
 }
-
+char *printTipoPessoa(struct pessoa *pessoa) {
+  char *imprimir = malloc(35);
+  sprintf(
+      imprimir, "%s %s com o id %d", (pessoa->medico ? "O medico" : "A pessoa"),
+      (pessoa->idoso ? (pessoa->medico ? "idoso" : "idosa") : "normal"), pessoa->id);
+  return imprimir;
+}
 /*---------------------------------------
             PESSOA
 -----------------------------------------*/
@@ -164,8 +170,6 @@ struct pessoa criaPessoa() {
       numeroAleatorio(configuracao.tempoMaximoEsperaMedio,
                       (configuracao.tempoMaximoEsperaMedio * 3) / 4);
   p.estado = ESPERA;
-
-  // printf("Criado Pessoa %d: \n", idPessoa);
   idPessoa++;
   pthread_mutex_unlock(&mutexCriarPessoa);
   return p;
@@ -177,11 +181,8 @@ struct pessoa criaMedico() {
   m.medico = TRUE;
   m.idoso = FALSE;
   m.tipoTeste = TESTE_NORMAL;
-  // m.centroTeste = CENTRO_PRIORITARIO;
   m.estadoTeste = NAO_TESTOU;
   m.desistiu = FALSE;
-
-  // printf("Criado Medico %d: \n", idPessoa);
   idPessoa++;
   pthread_mutex_unlock(&mutexCriarPessoa);
   return m;
@@ -192,30 +193,28 @@ void FilaEspera(struct pessoa *pessoa) {
   long timestamp = minutosDecorridos;
   int index, tempoEspera;
   int valorSemaforo = -1;
+  char *tipoPessoa;
   pthread_mutex_lock(&mutexVariaveisCentros);
   if (pessoa->centroTeste == 1) { // CENTRO TESTES 1
     if (centroTestes1.numeroPessoasEspera < configuracao.tamanhoFilaCentro1) {
-      printf("A pessoa com o id %d chegou a fila do centro 1.\n", pessoa->id);
+      tipoPessoa = printTipoPessoa(pessoa);
+      printf("%s chegou a fila do centro 1.\n", tipoPessoa);
+      free(tipoPessoa);
       sprintf(mensagem, "%d-%d-%d", "Z", 0, 1);
       enviarMensagem(mensagem);
       if (pessoa->numeroPessoasAFrenteParaDesistir <
           centroTestes1.numeroPessoasEspera) {
-        // sem_getvalue(&centroTestes1.filaEspera, &valorSemaforo);
-        // if (valorSemaforo < centroTestes1.numeroPostosDisponiveis) {
-        //   sem_post(&centroTestes1.filaEspera);
-        // }
         pthread_mutex_unlock(&mutexVariaveisCentros);
-        printf(VERMELHO "A pessoa com o id %d desistiu da fila do 1 porque "
+        tipoPessoa = printTipoPessoa(pessoa);
+        printf(VERMELHO "%s desistiu da fila do 1 porque "
                         "tinha muita gente a frente.\n" RESET,
-               pessoa->id);
+               tipoPessoa);
+        free(tipoPessoa);
         sprintf(mensagem, "%d-%d-%d", "Z", 2, 1);
         enviarMensagem(mensagem);
         pessoa->desistiu = TRUE;
-        // return;
       } else {
-        pthread_mutex_unlock(&mutexVariaveisCentros);
         pessoa->tempoChegadaFilaEspera = timestamp;
-        pthread_mutex_lock(&mutexVariaveisCentros);
         centroTestes1.numeroPessoasEspera++;
         if (centroTestes1.numeroPessoasEspera >
             configuracao.tamanhoFilaCentro1 - 5) {
@@ -225,9 +224,9 @@ void FilaEspera(struct pessoa *pessoa) {
         sem_wait(&centroTestes1.filaEspera);
         pthread_mutex_lock(&mutexVariaveisSimulacao);
         tempoEspera = minutosDecorridos - pessoa->tempoChegadaFilaEspera;
+        pthread_mutex_unlock(&mutexVariaveisSimulacao);
         if (tempoEspera > pessoa->tempoMaximoEspera) { // passou muito tempo à
           // espera, a pessoa desiste
-          pthread_mutex_unlock(&mutexVariaveisSimulacao);
           pessoa->desistiu = TRUE;
           pthread_mutex_lock(&mutexVariaveisCentros);
           sem_getvalue(&centroTestes1.filaEspera, &valorSemaforo);
@@ -235,18 +234,20 @@ void FilaEspera(struct pessoa *pessoa) {
             sem_post(&centroTestes1.filaEspera);
           }
           pthread_mutex_unlock(&mutexVariaveisCentros);
-          printf(VERMELHO "A pessoa com o id %d desistiu no centro 1 porque "
+          tipoPessoa = printTipoPessoa(pessoa);
+          printf(VERMELHO "%s desistiu no centro 1 porque "
                           "passou muito tempo a espera.\n" RESET,
-                 pessoa->id);
+                 tipoPessoa);
+          free(tipoPessoa);
           sprintf(mensagem, "%d-%d-%d", tempoEspera, 2, 1);
           enviarMensagem(mensagem);
         } else { // não desiste, vai ser testada
-          pthread_mutex_unlock(&mutexVariaveisSimulacao);
-          printf(VERDE "A pessoa com o id %d foi testada no centro 1.\n" RESET,
-                 pessoa->id);
+          tipoPessoa = printTipoPessoa(pessoa);
+          printf(VERDE "%s foi testada no centro 1.\n" RESET, tipoPessoa);
+          free(tipoPessoa);
           sprintf(mensagem, "%d-%d-%d", tempoEspera, 1, 1);
           enviarMensagem(mensagem);
-          pthread_mutex_lock(&mutexVariaveisSimulacao);
+          pthread_mutex_lock(&mutexVariaveisCentros);
           for (index = 0; index < configuracao.numeroPontosTestagemCentro1;
                index++) {
             if (tempoCooldownPontosTestagemCentro1[index] ==
@@ -258,7 +259,7 @@ void FilaEspera(struct pessoa *pessoa) {
               break;
             }
           }
-          pthread_mutex_unlock(&mutexVariaveisSimulacao);
+          pthread_mutex_unlock(&mutexVariaveisCentros);
         }
         pthread_mutex_lock(&mutexVariaveisCentros);
         centroTestes1.numeroPessoasEspera--;
@@ -270,38 +271,27 @@ void FilaEspera(struct pessoa *pessoa) {
         centroTestes2.numeroPessoasNormalEspera +
         centroTestes2.numeroPessoasPrioritariasEspera;
     if (numeroPessoasEsperaCentro2 < configuracao.tamanhoFilaCentro2) {
-      printf("A pessoa %s com o id %d chegou a fila do centro 2.\n",
-             pessoa->idoso ? "idoso" : "normal", pessoa->id);
+      tipoPessoa = printTipoPessoa(pessoa);
+      printf("%s chegou a fila do centro 2.\n", tipoPessoa);
+      free(tipoPessoa);
       sprintf(mensagem, "%d-%d-%d", "Z", 0, 2);
       enviarMensagem(mensagem);
       if (pessoa->numeroPessoasAFrenteParaDesistir <
           numeroPessoasEsperaCentro2) {
-        // if (centroTestes2.numeroPessoasNormalEspera > 0 &&
-        //     (centroTestes2.numeroPessoasPrioritariasEspera == 0 ||
-        //      idososTestadosConsecutivamente >= 5)) {
-        //   sem_getvalue(&centroTestes2.filaEsperaNormal, &valorSemaforo);
-        //   if (valorSemaforo < centroTestes2.numeroPostosDisponiveis) {
-        //     sem_post(&centroTestes2.filaEsperaNormal);
-        //   }
-        // } else {
-        //   sem_getvalue(&centroTestes2.filaEsperaPrioritaria, &valorSemaforo);
-        //   if (valorSemaforo < centroTestes2.numeroPostosDisponiveis) {
-        //     sem_post(&centroTestes2.filaEsperaPrioritaria);
-        //   }
-        // }
         pthread_mutex_unlock(&mutexVariaveisCentros);
-        printf(VERMELHO "A pessoa %s com o id %d desistiu da fila do centro 2 "
+        tipoPessoa = printTipoPessoa(pessoa);
+        printf(VERMELHO "%s desistiu da fila do centro 2 "
                         "porque tinha muita gente a frente.\n" RESET,
-               pessoa->idoso ? "idoso" : "normal", pessoa->id);
+               tipoPessoa);
+        free(tipoPessoa);
         sprintf(mensagem, "%d-%d-%d", "Z", 2, 2);
         enviarMensagem(mensagem);
         pessoa->desistiu = TRUE;
-        // return;
-      }
-      pessoa->tempoChegadaFilaEspera = timestamp;
-      if (numeroPessoasEsperaCentro2 > configuracao.tamanhoFilaCentro2 - 5) {
-        pessoa->tipoTeste = TESTE_RAPIDO;
       } else {
+        pessoa->tempoChegadaFilaEspera = timestamp;
+        if (numeroPessoasEsperaCentro2 > configuracao.tamanhoFilaCentro2 - 5) {
+          pessoa->tipoTeste = TESTE_RAPIDO;
+        }
         int aux;
         if (pessoa->idoso) {
           centroTestes2.numeroPessoasPrioritariasEspera++;
@@ -321,57 +311,70 @@ void FilaEspera(struct pessoa *pessoa) {
         }
         pthread_mutex_lock(&mutexVariaveisSimulacao);
         tempoEspera = minutosDecorridos - pessoa->tempoChegadaFilaEspera;
+        pthread_mutex_unlock(&mutexVariaveisSimulacao);
         if (tempoEspera > pessoa->tempoMaximoEspera) { // passou muito tempo à
           // espera, a pessoa desiste
-          pthread_mutex_unlock(&mutexVariaveisSimulacao);
           pessoa->desistiu = TRUE;
           pthread_mutex_lock(&mutexVariaveisCentros);
-          if (centroTestes2.numeroPessoasNormalEspera > 0 &&
-              (centroTestes2.numeroPessoasPrioritariasEspera == 0 ||
-               idososTestadosConsecutivamente >= 5)) {
+          if (pessoa->idoso) {
+            centroTestes2.numeroPessoasPrioritariasEspera--;
+          } else {
+            centroTestes2.numeroPessoasNormalEspera--;
+          }
+          int assinalarSemaforoNormal =
+              ((centroTestes2.numeroPessoasPrioritariasEspera == 0 &&
+                centroTestes2.numeroPessoasNormalEspera == 0) ||
+               (centroTestes2.numeroPessoasNormalEspera > 0 &&
+                (idososTestadosConsecutivamente >= 5 ||
+                 centroTestes2.numeroPessoasPrioritariasEspera == 0)));
+          int assinalarSemaforoPrioritario =
+              ((centroTestes2.numeroPessoasPrioritariasEspera == 0 &&
+                centroTestes2.numeroPessoasNormalEspera == 0) ||
+               (centroTestes2.numeroPessoasPrioritariasEspera > 0 &&
+                (idososTestadosConsecutivamente < 5 ||
+                 centroTestes2.numeroPessoasNormalEspera == 0)));
+          if (assinalarSemaforoNormal) {
             sem_getvalue(&centroTestes2.filaEsperaNormal, &valorSemaforo);
             if (valorSemaforo < centroTestes2.numeroPostosDisponiveis) {
               sem_post(&centroTestes2.filaEsperaNormal);
             }
-          } else {
+          }
+          if (assinalarSemaforoPrioritario) {
             sem_getvalue(&centroTestes2.filaEsperaPrioritaria, &valorSemaforo);
             if (valorSemaforo < centroTestes2.numeroPostosDisponiveis) {
               sem_post(&centroTestes2.filaEsperaPrioritaria);
             }
           }
           pthread_mutex_unlock(&mutexVariaveisCentros);
-          printf(VERMELHO "A pessoa %s com o id %d desistiu no centro 2 porque "
+          tipoPessoa = printTipoPessoa(pessoa);
+          printf(VERMELHO "%s desistiu no centro 2 porque "
                           "passou muito tempo a espera.\n" RESET,
-                 pessoa->idoso ? "idoso" : "normal", pessoa->id);
+                 tipoPessoa);
+          free(tipoPessoa);
           sprintf(mensagem, "%d-%d-%d", tempoEspera, 2, 2);
           enviarMensagem(mensagem);
         } else { // não desiste, vai ser testada
-          pthread_mutex_unlock(&mutexVariaveisSimulacao);
-          printf(VERDE
-                 "A pessoa %s com o id %d foi testada no centro 2.\n" RESET,
-                 pessoa->idoso ? "idoso" : "normal", pessoa->id);
+          tipoPessoa = printTipoPessoa(pessoa);
+          printf(VERDE "%s foi testada no centro 2.\n" RESET, tipoPessoa);
+          free(tipoPessoa);
           pthread_mutex_lock(&mutexVariaveisCentros);
           if (pessoa->idoso) {
             idososTestadosConsecutivamente++;
             sem_getvalue(&centroTestes2.filaEsperaNormal, &valorSemaforo);
             if (valorSemaforo > 0) {
-              pthread_mutex_unlock(&mutexVariaveisCentros);
               sem_wait(&centroTestes2.filaEsperaNormal);
-              pthread_mutex_lock(&mutexVariaveisCentros);
             }
           } else {
             idososTestadosConsecutivamente = 0;
             sem_getvalue(&centroTestes2.filaEsperaPrioritaria, &valorSemaforo);
             if (valorSemaforo > 0) {
-              pthread_mutex_unlock(&mutexVariaveisCentros);
               sem_wait(&centroTestes2.filaEsperaPrioritaria);
-              pthread_mutex_lock(&mutexVariaveisCentros);
             }
           }
           pthread_mutex_unlock(&mutexVariaveisCentros);
           sprintf(mensagem, "%d-%d-%d", tempoEspera, 1, 2);
           enviarMensagem(mensagem);
-          pthread_mutex_lock(&mutexVariaveisSimulacao);
+          pthread_mutex_lock(&mutexVariaveisCentros);
           for (index = 0; index < configuracao.numeroPontosTestagemCentro2;
                index++) {
             if (tempoCooldownPontosTestagemCentro2[index] ==
@@ -383,15 +386,13 @@ void FilaEspera(struct pessoa *pessoa) {
               break;
             }
           }
-          pthread_mutex_unlock(&mutexVariaveisSimulacao);
+          if (pessoa->idoso) {
+            centroTestes2.numeroPessoasPrioritariasEspera--;
+          } else {
+            centroTestes2.numeroPessoasNormalEspera--;
+          }
+          pthread_mutex_unlock(&mutexVariaveisCentros);
         }
-        pthread_mutex_lock(&mutexVariaveisCentros);
-        if (pessoa->idoso) {
-          centroTestes2.numeroPessoasPrioritariasEspera--;
-        } else {
-          centroTestes2.numeroPessoasNormalEspera--;
-        }
-        pthread_mutex_unlock(&mutexVariaveisCentros);
       }
     }
   }
@@ -401,6 +402,7 @@ void Pessoa(void *ptr) {
   struct pessoa pessoa = criaPessoa();
   PessoasCriadas[pessoa.id] = &pessoa;
   char mensagem[TAMANHO_LINHA];
+  char *tipoPessoa;
   while (TRUE) {
     FilaEspera(&pessoa);
     if (!pessoa.desistiu) {
@@ -417,7 +419,9 @@ void Pessoa(void *ptr) {
       usleep(tempoEsperaTeste);
       fazerTeste(&pessoa);
       if (pessoa.estadoTeste == POSITIVO) {
-        printf(AMARELO "Pessoa %d testou positivo \n" RESET, pessoa.id);
+        tipoPessoa = printTipoPessoa(&pessoa);
+        printf(AMARELO "%s testou positivo \n" RESET, tipoPessoa);
+        free(tipoPessoa);
         sprintf(mensagem, "%d-%d-%d", "Z", 8, "Z");
         enviarMensagem(mensagem);
         sem_init(&pessoa.semaforoPessoa, 0, 0);
@@ -425,13 +429,17 @@ void Pessoa(void *ptr) {
         pessoa.estado = ISOLAMENTO;
         break;
       } else if (pessoa.estadoTeste == NEGATIVO) {
-        printf(AMARELO "Pessoa %d testou negativo \n" RESET, pessoa.id);
+        tipoPessoa = printTipoPessoa(&pessoa);
+        printf(AMARELO "%s testou negativo \n" RESET, tipoPessoa);
+        free(tipoPessoa);
         sprintf(mensagem, "%d-%d-%d", "Z", 9, 0);
         enviarMensagem(mensagem);
         pessoa.estado = SOBREVIVEU;
         break;
       } else {
-        printf(AMARELO "Pessoa %d testou inconclusivo \n" RESET, pessoa.id);
+        tipoPessoa = printTipoPessoa(&pessoa);
+        printf(AMARELO "%s estou inconclusivo \n" RESET, tipoPessoa);
+        free(tipoPessoa);
         sprintf(mensagem, "%d-%d-%d", "Z", 12, "Z");
         enviarMensagem(mensagem);
         pessoa.estado = ESPERA;
@@ -447,9 +455,9 @@ void Pessoa(void *ptr) {
             configuracao
                 .probabilidadeNaoIdosoPrecisaHospital)) { // Vai para o Hospital
       pessoa.estado = HOSPITAL;
-      printf(CIANO
-             "A pessoa com id %d foi transportada para o hospital.\n" RESET,
-             pessoa.id);
+      tipoPessoa = printTipoPessoa(&pessoa);
+      printf(CIANO "%s foi transportada para o hospital.\n" RESET, tipoPessoa);
+      free(tipoPessoa);
       sprintf(mensagem, "%d-%d-%d", "Z", 4, "Z");
       enviarMensagem(mensagem);
       pthread_mutex_lock(&mutexVariaveisHospital);
@@ -474,6 +482,7 @@ void Medico(void *ptr) {
   PessoasCriadas[medico.id] = &medico;
   char mensagem[TAMANHO_LINHA];
   int tempoEsperaTeste;
+  char *tipoPessoa;
   sem_init(&medico.semaforoPessoa, 0, 0);
   while (TRUE) {
     sem_wait(&semaforoMedicos);
@@ -494,7 +503,9 @@ void Medico(void *ptr) {
         usleep(tempoEsperaTeste);
         fazerTeste(&medico);
         if (medico.estadoTeste == POSITIVO) {
-          printf(BRANCO "Medico %d testou positivo \n" RESET, medico.id);
+          tipoPessoa = printTipoPessoa(&medico);
+          printf(BRANCO "%s testou positivo \n" RESET, tipoPessoa);
+          free(tipoPessoa);
           sprintf(mensagem, "%d-%d-%d", "Z", 8, "Z");
           enviarMensagem(mensagem);
           // sem_init(&medico.semaforoPessoa, 0, 0);
@@ -502,13 +513,17 @@ void Medico(void *ptr) {
           medico.estado = ISOLAMENTO;
           break;
         } else if (medico.estadoTeste == NEGATIVO) {
-          printf(BRANCO "Medico %d testou negativo \n" RESET, medico.id);
+          tipoPessoa = printTipoPessoa(&medico);
+          printf(BRANCO "%s testou negativo \n" RESET, tipoPessoa);
+          free(tipoPessoa);
           sprintf(mensagem, "%d-%d-%d", "Z", 9, 1);
           enviarMensagem(mensagem);
           medico.estado = SOBREVIVEU;
           break;
         } else {
-          printf(BRANCO "Medico %d testou inconclusivo \n" RESET, medico.id);
+          tipoPessoa = printTipoPessoa(&medico);
+          printf(BRANCO "%s testou inconclusivo \n" RESET, tipoPessoa);
+          free(tipoPessoa);
           sprintf(mensagem, "%d-%d-%d", "Z", 12, "Z");
           enviarMensagem(mensagem);
           tempoEsperaTeste = configuracao.tempoTesteRapido * HORA * 1000;
@@ -522,9 +537,10 @@ void Medico(void *ptr) {
                   .probabilidadeNaoIdosoPrecisaHospital)) { // Vai para o
                                                             // Hospital
         medico.estado = HOSPITAL;
-        printf(CIANO
-               "O medico com id %d foi transportada para o hospital.\n" RESET,
-               medico.id);
+      tipoPessoa = printTipoPessoa(&medico);
+        printf(CIANO "%s foi transportada para o hospital.\n" RESET,
+               tipoPessoa);
+               free(tipoPessoa);
         sprintf(mensagem, "%d-%d-%d", "Z", 4, "Z");
         enviarMensagem(mensagem);
         pthread_mutex_lock(&mutexVariaveisHospital);
@@ -563,6 +579,7 @@ void simulacao(char *filename) {
   int tempoLimite = configuracao.tempoSimulacao * DIA;
   enviarMensagem("Z-0-Z"); // Mensagem que indica o comeco da simulacao
   int index;
+  char *tipoPessoa;
 
   for (index = 0; index < configuracao.numeroMedicos; index++) {
     if (pthread_create(&IDtarefa[idPessoa], NULL, Medico, NULL)) {
@@ -584,10 +601,14 @@ void simulacao(char *filename) {
       if (tempoDecorrido % MINUTO == 0) { // passou um minuto na simulação
         pthread_mutex_lock(&mutexVariaveisSimulacao);
         minutosDecorridos++;
+        pthread_mutex_unlock(&mutexVariaveisSimulacao);
+        pthread_mutex_lock(&mutexVariaveisCentros);
         for (index = 0; index < configuracao.numeroPontosTestagemCentro1;
              index++) {
           if (tempoCooldownPontosTestagemCentro1[index] == 0) {
-            printf(MAGENTA "POSTO DE TESTAGEM DISPONIVEL NO CENTRO 1\n" RESET);
+            printf(
+                MAGENTA
+                "Posto de testagem disponivel no centro de testes 1\n" RESET);
             centroTestes1.numeroPostosDisponiveis++;
             sem_post(&centroTestes1.filaEspera);
             tempoCooldownPontosTestagemCentro1[index]--;
@@ -599,25 +620,41 @@ void simulacao(char *filename) {
         for (index = 0; index < configuracao.numeroPontosTestagemCentro2;
              index++) {
           if (tempoCooldownPontosTestagemCentro2[index] == 0) {
-            printf(MAGENTA "POSTO DE TESTAGEM DISPONIVEL NO CENTRO 2\n" RESET);
+            printf(
+                MAGENTA
+                "Posto de testagem disponivel no centro de testes 2\n" RESET);
             centroTestes2.numeroPostosDisponiveis++;
-            pthread_mutex_unlock(&mutexVariaveisSimulacao);
-            pthread_mutex_lock(&mutexVariaveisCentros);
-            if ((centroTestes2.numeroPessoasPrioritariasEspera == 0 ||
-                 idososTestadosConsecutivamente >= 5) &&
-                centroTestes2.numeroPessoasNormalEspera > 0) {
-              sem_post(&centroTestes2.filaEsperaNormal);
-            } else {
-              sem_post(&centroTestes2.filaEsperaPrioritaria);
+            int assinalarSemaforoNormal =
+                ((centroTestes2.numeroPessoasPrioritariasEspera == 0 &&
+                  centroTestes2.numeroPessoasNormalEspera == 0) ||
+                 (centroTestes2.numeroPessoasNormalEspera > 0 &&
+                  (idososTestadosConsecutivamente >= 5 ||
+                   centroTestes2.numeroPessoasPrioritariasEspera == 0)));
+            int assinalarSemaforoPrioritario =
+                ((centroTestes2.numeroPessoasPrioritariasEspera == 0 &&
+                  centroTestes2.numeroPessoasNormalEspera == 0) ||
+                 (centroTestes2.numeroPessoasPrioritariasEspera > 0 &&
+                  (idososTestadosConsecutivamente < 5 ||
+                   centroTestes2.numeroPessoasNormalEspera == 0)));
+            if (assinalarSemaforoNormal) {
+              sem_getvalue(&centroTestes2.filaEsperaNormal, &valorSemaforo);
+              if (valorSemaforo < centroTestes2.numeroPostosDisponiveis) {
+                sem_post(&centroTestes2.filaEsperaNormal);
+              }
             }
-            pthread_mutex_unlock(&mutexVariaveisCentros);
-            pthread_mutex_lock(&mutexVariaveisSimulacao);
+            if (assinalarSemaforoPrioritario) {
+              sem_getvalue(&centroTestes2.filaEsperaPrioritaria,
+                           &valorSemaforo);
+              if (valorSemaforo < centroTestes2.numeroPostosDisponiveis) {
+                sem_post(&centroTestes2.filaEsperaPrioritaria);
+              }
+            }
             tempoCooldownPontosTestagemCentro2[index]--;
           } else if (tempoCooldownPontosTestagemCentro2[index] > 0) {
             tempoCooldownPontosTestagemCentro2[index]--;
           }
         }
-        pthread_mutex_unlock(&mutexVariaveisSimulacao);
+        pthread_mutex_unlock(&mutexVariaveisCentros);
         if (minutosDecorridos % configuracao.tempoMedioChegada == 0) {
           // cria tarefas pessoas
           if (pthread_create(&IDtarefa[idPessoa], NULL, Pessoa, NULL)) {
@@ -640,17 +677,12 @@ void simulacao(char *filename) {
               if (PessoasCriadas[IDsDoentesNoHospital[index]]
                       ->numeroDiasDesdePositivo ==
                   configuracao.tempoCurar) { // se já passou o tempo para curar
-                printf(
-                    CIANO "%s com o ID %d recuperou\n" RESET,
-                    (PessoasCriadas[IDsDoentesNoHospital[index]]->medico == TRUE
-                         ? "Medico"
-                         : "Pessoa"),
-                    IDsDoentesNoHospital[index]);
+      tipoPessoa = printTipoPessoa(
+                           PessoasCriadas[IDsDoentesNoHospital[index]]);
+                printf(CIANO "%s recuperou\n" RESET,tipoPessoa);
+                free(tipoPessoa);
                 sem_post(&PessoasCriadas[IDsDoentesNoHospital[index]]
                               ->semaforoPessoa);
-                // sprintf(mensagem, "%d-%d-%d", "Z", 10,
-                //         PessoasCriadas[IDsDoentesNoHospital[index]]->medico);
-                // enviarMensagem(mensagem);
                 numeroPessoasRecuperaram++;
                 numeroMedicosRecuperaram +=
                     PessoasCriadas[IDsDoentesNoHospital[index]]->medico;
@@ -668,8 +700,10 @@ void simulacao(char *filename) {
                   if (pessoaMorreu) {
                     sem_post(&PessoasCriadas[IDsDoentesNoHospital[index]]
                                   ->semaforoPessoa);
-                    printf(CIANO "Pessoa com o ID %d morreu \n" RESET,
-                           IDsDoentesNoHospital[index]);
+      tipoPessoa = printTipoPessoa(
+                           PessoasCriadas[IDsDoentesNoHospital[index]]);
+                    printf(CIANO "%s morreu \n" RESET,tipoPessoa);
+                    free(tipoPessoa);
                     // sprintf(mensagem, "%d-%d-%d", "Z", 13, 0);
                     // enviarMensagem(mensagem);
                     numeroPessoasMorreram++;
@@ -689,13 +723,10 @@ void simulacao(char *filename) {
                   if (pessoaMorreu) {
                     sem_post(&PessoasCriadas[IDsDoentesNoHospital[index]]
                                   ->semaforoPessoa);
-                    printf(
-                        CIANO "%s com o ID %d morreu \n" RESET,
-                        (PessoasCriadas[IDsDoentesNoHospital[index]]->medico ==
-                                 TRUE
-                             ? "Medico"
-                             : "Pessoa"),
-                        IDsDoentesNoHospital[index]);
+      tipoPessoa = printTipoPessoa(
+                           PessoasCriadas[IDsDoentesNoHospital[index]]);
+                    printf(CIANO "%s morreu \n" RESET,tipoPessoa);
+                    free(tipoPessoa);
                     // sprintf(
                     //     mensagem, "%d-%d-%d", "Z", 13,
                     //     PessoasCriadas[IDsDoentesNoHospital[index]]->medico);
@@ -734,10 +765,10 @@ void simulacao(char *filename) {
                 PessoasCriadas[index]->estadoTeste == POSITIVO) {
               if (PessoasCriadas[index]->numeroDiasDesdePositivo ==
                   configuracao.tempoCurar) { // se já passou o tempo para curar
-                printf(AZUL "%s com o ID %d recuperou em isolamento.\n" RESET,
-                       (PessoasCriadas[index]->medico == TRUE ? "Medico"
-                                                              : "Pessoa"),
-                       PessoasCriadas[index]->id);
+      tipoPessoa = printTipoPessoa(PessoasCriadas[index]);
+                printf(AZUL "%s recuperou em isolamento.\n" RESET,
+                       tipoPessoa);
+                       free(tipoPessoa);
                 numeroPessoasRecuperaram++;
                 sem_post(&PessoasCriadas[index]->semaforoPessoa);
               } else {
@@ -757,12 +788,6 @@ void simulacao(char *filename) {
       }
     }
   }
-  // printf("FIM %d %d\n",tempoDecorrido,tempoLimite);
-
-  // for (int i = 0; i < TAMANHO_ARRAY_TAREFAS; i++)
-  // {
-  //     pthread_join(IDtarefa[i], NULL);
-  // }
   enviarMensagem("Z-1-Z"); // Mensagem que indica o fim da simulacao
 }
 
@@ -782,23 +807,28 @@ void iniciarSemaforosETrincos() {
   if (pthread_mutex_init(&mutexVariaveisHospital, NULL) != 0) {
     printf("Inicializacao do trinco falhou.\n");
   }
-  sem_init(&centroTestes1.filaEspera, 0, 0);
+  sem_init(&centroTestes1.filaEspera, 0,
+           configuracao.numeroPontosTestagemCentro1);
   sem_init(&semaforoEnviarMensagem, 0, 1);
+  centroTestes1.numeroPostosDisponiveis =
+      configuracao.numeroPontosTestagemCentro1;
   tempoCooldownPontosTestagemCentro1 =
       (int *)calloc(configuracao.numeroPontosTestagemCentro1, sizeof(int));
-  int index = 0;
-  for (index; index < configuracao.numeroPontosTestagemCentro1; index++) {
-    tempoCooldownPontosTestagemCentro1[index] = 0;
+  int index;
+  for (index = 0; index < configuracao.numeroPontosTestagemCentro1; index++) {
+    tempoCooldownPontosTestagemCentro1[index] = -1;
   }
 
-  sem_init(&centroTestes2.filaEsperaPrioritaria, 0, 0);
+  sem_init(&centroTestes2.filaEsperaPrioritaria, 0,
+           configuracao.numeroPontosTestagemCentro2);
   sem_init(&centroTestes2.filaEsperaNormal, 0,
            configuracao.numeroPontosTestagemCentro2);
+  centroTestes2.numeroPostosDisponiveis =
+      configuracao.numeroPontosTestagemCentro2;
   tempoCooldownPontosTestagemCentro2 =
       (int *)calloc(configuracao.numeroPontosTestagemCentro2, sizeof(int));
-  index = 0;
-  for (index; index < configuracao.numeroPontosTestagemCentro2; index++) {
-    tempoCooldownPontosTestagemCentro2[index] = 0;
+  for (index = 0; index < configuracao.numeroPontosTestagemCentro2; index++) {
+    tempoCooldownPontosTestagemCentro2[index] = -1;
   }
 
   sem_init(&semaforoMedicos, 0, 0);
