@@ -115,6 +115,7 @@ struct centroTeste2
 int numeroAleatorio(int numeroMaximo, int numeroMinimo);
 int probabilidade(float prob);
 void fazerTeste(struct pessoa *pessoa);
+char *printTipoPessoa(struct pessoa *pessoa);
 void simulacao(char *filename);
 void carregarConfiguracao(char nomeFicheiro[]);
 void iniciarSemaforosETrincos();

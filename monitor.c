@@ -85,126 +85,170 @@ void leituraSocket(int sockfd) {
 
 void trataMensagem(char mensagem[]) {
   // Auxiliario
-  char bufferAuxiliario[30];
+  char bufferAuxiliario[TAMANHO_LINHA];
   strcpy(bufferAuxiliario, mensagem);
+  char mensagensSeparadas[15][30];
   char valoresSeparados[3][30];
   int index = 0;
+  int indexMensagem=0;
+  int i = 0;
+  int numeroMensagens = 0;
+  char *p = strtok(bufferAuxiliario, "/");
 
-  // Obtem o head da lista ligada que se obtem separando bufferAuxiliario por
-  // "-"
-  char *auxiliario = strtok(bufferAuxiliario, "-");
-
-  // Ciclo que percorre e vai separando pelos - e copiando para
-  // valoresSeparados[i]
-  while (auxiliario != NULL) {
-    strcpy(valoresSeparados[index++], auxiliario);
-    auxiliario = strtok(NULL, "-");
+  while (p != NULL) {
+    strcpy(mensagensSeparadas[numeroMensagens++], p);
+    p = strtok(NULL, "/");
   }
 
-  // Onde vai guardar os valores depois da divisao
-  int acontecimento = strtol(valoresSeparados[1], NULL, 10);
-  if (!strcmp(valoresSeparados[0], "Z") && !strcmp(valoresSeparados[2], "Z")) {
-    if (acontecimento == 0) {
-      // printf("Bem vindo! A simulação comecou!\n");
-    } else {
-      // printf("O tempo limite da simulacao foi atingido.\n");
-      fimSimulacao = TRUE;
-    }
-  } else {
-    int numero;
-    if (strcmp(valoresSeparados[0], "Z")) {
-      numero = strtol(valoresSeparados[0], NULL, 10);
-    } else {
-      numero = -1;
-    }
-    int especificacaoAcontecimento;
-    if (strcmp(valoresSeparados[2], "Z")) {
-      especificacaoAcontecimento = strtol(valoresSeparados[2], NULL, 10);
-    } else {
-      especificacaoAcontecimento = -1;
-    }
-    switch (acontecimento) {
-    case 0: // Pessoa chegou à fila de um centro.
-      numeroPessoas++;
-      if (especificacaoAcontecimento == 1) {
-        tamanhoFilaCentro1++;
-      } else {
-        tamanhoFilaCentro2++;
-      }
-      break;
+  // for (i = 0; i < 15; ++i) {
+  //     printf("%s\n", mensagensSeparadas[i]);}
+  
+  // Obtem o head da lista ligada que se obtem separando bufferAuxiliario por
+  // "-"
+  while (indexMensagem < numeroMensagens) {
+  index = 0;
+    char *auxiliario = strtok(mensagensSeparadas[indexMensagem], "-");
+      // strcpy(valoresSeparados[index++], auxiliario);
+      // printf("%s\n", auxiliario);
+    indexMensagem++;
 
-    // A mensagem com este case é enviada depois da mensagem com o case 0
-    case 1: // Pessoa saiu da fila de um centro, porque vai ser testado
-      casosEmEstudo++;
-      numeroPessoasEmIsolamento++;
-      numeroPessoasTestadasNosCentros++;
-      somaTemposEspera += numero;
-      tempoMedioEspera = somaTemposEspera / numeroPessoasTestadasNosCentros;
-      if (especificacaoAcontecimento == 1) {
-        tamanhoFilaCentro1--;
-      } else {
-        tamanhoFilaCentro2--;
-      }
-      break;
+    // Ciclo que percorre e vai separando pelos - e copiando para
+    // valoresSeparados[i]
+    while (auxiliario != NULL) {
+      strcpy(valoresSeparados[index++], auxiliario);
+      auxiliario = strtok(NULL, "-");
+    }
 
-    // A mensagem com este case é enviada depois da mensagem com o case 0
-    case 2: // Pessoa saiu da fila de um centro, porque desistiu
-      if (especificacaoAcontecimento == 1) {
-        tamanhoFilaCentro1--;
+  // for (i = 0; i < 3; ++i) {
+  //     printf("%d %s\n", i,valoresSeparados[i]);}
+
+    // Onde vai guardar os valores depois da divisao
+    int acontecimento = strtol(valoresSeparados[1], NULL, 10);
+    if (!strcmp(valoresSeparados[0], "Z") &&
+        !strcmp(valoresSeparados[2], "Z")) {
+      if (acontecimento == 0) {
+        // printf("Bem vindo! A simulação comecou!\n");
       } else {
-        tamanhoFilaCentro2--;
+        // printf("O tempo limite da simulacao foi atingido.\n");
+        fimSimulacao = TRUE;
       }
-      break;
-    case 4: // Pessoa vai para o hospital e sai do isolamento
-      doentesNoHospital++;
-      numeroPessoasEmIsolamento--;
-      break;
-    // A mensagem com este case é enviada depois da mensagem com o case 1
-    case 5: // Medico vai tratar doente
-      medicosDisponiveis--;
-      break;
-    case 6: // Medico acaba de tratar de doente (ou este morre) e o médico vai
-            // para isolamento
-      doentesNoHospital -= numero;
-      numeroPessoasEmIsolamento += numero;
-      break;
-    case 7: // Medico é testado em isolamento
-      casosEmEstudo++;
-      numeroPessoasEmIsolamento++;
-      medicosDisponiveis--;
-      break;
-    case 8: // Pessoa testa positivo
-      casosPositivosAtivos++;
-      casosPositivosTotal++;
-      casosEmEstudo--;
-      break;
-    case 9: // Pessoa testa negativo
-      casosEmEstudo--;
-      numeroPessoasEmIsolamento--;
-      if (especificacaoAcontecimento == 1) {
-        medicosDisponiveis++;
+    } else {
+      int numero;
+      if (strcmp(valoresSeparados[0], "Z")) {
+        numero = strtol(valoresSeparados[0], NULL, 10);
+      } else {
+        numero = -1;
       }
-      break;
-    case 10: // Pessoa ou Medico recupera
-      casosPositivosAtivos -= numero;
-      casosRecuperados += numero;
-      medicosDisponiveis += especificacaoAcontecimento;
-      break;
-    case 11: // Medico criado
-      medicosDisponiveis += numero;
-      break;
-    case 12: // O teste ao pessoa é inconclusivo
-      casosEmEstudo--;
-      numeroPessoasEmIsolamento--;
-      break;
-    case 13: // Pessoa ou Medico morre
-      numeroMortos += numero;
-      casosPositivosAtivos -= numero;
-      medicosDisponiveis -= especificacaoAcontecimento;
-      break;
-    case 14: // Passou um dia na simulação
-      numeroDiasPassados++;
-      break;
+      int especificacaoAcontecimento;
+      if (strcmp(valoresSeparados[2], "Z")) {
+        especificacaoAcontecimento = strtol(valoresSeparados[2], NULL, 10);
+      } else {
+        especificacaoAcontecimento = -1;
+      }
+      switch (acontecimento) {
+      case 0: // Pessoa chegou à fila de um centro.
+        // numeroPessoas++;
+        if (especificacaoAcontecimento == 1) {
+          tamanhoFilaCentro1=numero;
+        } else {
+          tamanhoFilaCentro2=numero;
+        }
+        break;
+
+      // A mensagem com este case é enviada depois da mensagem com o case 0
+      case 1: // Pessoa saiu da fila de um centro, porque vai ser testado
+        casosEmEstudo++;
+        numeroPessoasEmIsolamento++;
+        numeroPessoasTestadasNosCentros++;
+        somaTemposEspera += numero;
+        tempoMedioEspera = somaTemposEspera / numeroPessoasTestadasNosCentros;
+        if (especificacaoAcontecimento == 1) {
+          tamanhoFilaCentro1--;
+        } else {
+          tamanhoFilaCentro2--;
+        }
+        break;
+
+      // A mensagem com este case é enviada depois da mensagem com o case 0
+      case 2: // Pessoa saiu da fila de um centro, porque desistiu
+        if (especificacaoAcontecimento == 1) {
+          tamanhoFilaCentro1--;
+        } else {
+          tamanhoFilaCentro2--;
+        }
+        break;
+      case 4: // Pessoa vai para o hospital e sai do isolamento
+        doentesNoHospital++;
+        numeroPessoasEmIsolamento--;
+        break;
+      // A mensagem com este case é enviada depois da mensagem com o case 1
+      case 5: // Medico vai tratar doente
+        medicosDisponiveis--;
+        break;
+      case 6: // Medico acaba de tratar de doente (ou este morre) e o médico vai
+              // para isolamento
+        doentesNoHospital -= numero;
+        numeroPessoasEmIsolamento += numero;
+        break;
+      case 7: // Medico é testado em isolamento
+        casosEmEstudo++;
+        numeroPessoasEmIsolamento++;
+        medicosDisponiveis--;
+        break;
+      case 8: // Pessoa testa positivo
+        casosPositivosAtivos++;
+        casosPositivosTotal++;
+        casosEmEstudo--;
+        break;
+      case 9: // Pessoa testa negativo
+        casosEmEstudo--;
+        numeroPessoasEmIsolamento--;
+        if (especificacaoAcontecimento == 1) {
+          medicosDisponiveis++;
+        }
+        break;
+      case 10: // Pessoa ou Medico recupera
+        casosPositivosAtivos -= numero;
+        casosRecuperados += numero;
+        medicosDisponiveis += especificacaoAcontecimento;
+        break;
+      case 11: // Medico criado
+        medicosDisponiveis = numero;
+        break;
+      case 12: // O teste ao pessoa é inconclusivo
+        casosEmEstudo--;
+        numeroPessoasEmIsolamento--;
+        break;
+      case 13: // Pessoa ou Medico morre
+        numeroMortos += numero;
+        casosPositivosAtivos -= numero;
+        medicosDisponiveis -= especificacaoAcontecimento;
+        break;
+      case 14: // Passou um dia na simulação
+        numeroDiasPassados++;
+        break;
+      case 15:
+        casosPositivosAtivos = numero;
+        break;
+      case 16:
+        casosPositivosTotal = numero;
+        break;
+      case 17:
+        casosEmEstudo = numero;
+        break;
+      case 18:
+        numeroPessoasEmIsolamento = numero;
+        break;
+      case 19:
+        numeroPessoas = numero;
+        break;
+      case 20:
+        doentesNoHospital = numero;
+        break;
+        case 21:
+        tempoMedioEspera=numero;
+        break;
+      }
     }
   }
   imprimirInformacao();
