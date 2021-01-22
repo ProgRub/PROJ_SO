@@ -253,7 +253,7 @@ void FilaEspera(struct pessoa *pessoa) {
           free(tipoPessoa);
         } else { // não desiste, vai ser testada
           tipoPessoa = printTipoPessoa(pessoa);
-          printf(VERDE "%s foi testada no centro 1.\n" RESET, tipoPessoa);
+          // printf(VERDE "%s foi testada no centro 1.\n" RESET, tipoPessoa);
           free(tipoPessoa);
           pthread_mutex_lock(&mutexVariaveisCentros);
           centroTestes1.numeroPessoasEspera--;
@@ -367,7 +367,7 @@ void FilaEspera(struct pessoa *pessoa) {
           free(tipoPessoa);
         } else { // não desiste, vai ser testada
           tipoPessoa = printTipoPessoa(pessoa);
-          printf(VERDE "%s foi testada no centro 2.\n" RESET, tipoPessoa);
+          // printf(VERDE "%s foi testada no centro 2.\n" RESET, tipoPessoa);
           free(tipoPessoa);
           pthread_mutex_lock(&mutexVariaveisCentros);
           if (pessoa->idoso) {
@@ -671,10 +671,10 @@ void simulacao(char *filename) {
     pthread_mutex_lock(&mutexVariaveisCentros);
     centroTestes1.numeroPostosDisponiveis++;
     centroTestes2.numeroPostosDisponiveis++;
-    tempoCooldownPontosTestagemCentro1
-        [configuracao.numeroPontosTestagemCentro1] = -1;
-    tempoCooldownPontosTestagemCentro2
-        [configuracao.numeroPontosTestagemCentro2 ] = -1;
+    tempoCooldownPontosTestagemCentro1[configuracao
+                                           .numeroPontosTestagemCentro1] = -1;
+    tempoCooldownPontosTestagemCentro2[configuracao
+                                           .numeroPontosTestagemCentro2] = -1;
     sem_post(&centroTestes1.filaEspera);
     assinalarSemaforoNormal =
         ((centroTestes2.numeroPessoasPrioritariasEspera == 0 &&
@@ -762,12 +762,13 @@ void simulacao(char *filename) {
         }
         sem_post(&mutexVariaveisMonitor);
         pthread_mutex_lock(&mutexVariaveisCentros);
-        for (index = 0; index < configuracao.numeroPontosTestagemCentro1+1;
+        for (index = 0; index < configuracao.numeroPontosTestagemCentro1 + 1;
              index++) {
           if (tempoCooldownPontosTestagemCentro1[index] == 0) {
-            printf(
-                MAGENTA
-                "Posto de testagem disponivel no centro de testes 1\n" RESET);
+            // printf(
+            //     MAGENTA
+            //     "Posto de testagem disponivel no centro de testes 1\n"
+            //     RESET);
             centroTestes1.numeroPostosDisponiveis++;
             sem_post(&centroTestes1.filaEspera);
             tempoCooldownPontosTestagemCentro1[index]--;
@@ -775,12 +776,13 @@ void simulacao(char *filename) {
             tempoCooldownPontosTestagemCentro1[index]--;
           }
         }
-        for (index = 0; index < configuracao.numeroPontosTestagemCentro2+1;
+        for (index = 0; index < configuracao.numeroPontosTestagemCentro2 + 1;
              index++) {
           if (tempoCooldownPontosTestagemCentro2[index] == 0) {
-            printf(
-                MAGENTA
-                "Posto de testagem disponivel no centro de testes 2\n" RESET);
+            // printf(
+            //     MAGENTA
+            //     "Posto de testagem disponivel no centro de testes 2\n"
+            //     RESET);
             centroTestes2.numeroPostosDisponiveis++;
             assinalarSemaforoNormal =
                 ((centroTestes2.numeroPessoasPrioritariasEspera == 0 &&
@@ -833,7 +835,7 @@ void simulacao(char *filename) {
           pthread_mutex_lock(&mutexVariaveisHospital);
           numeroPessoasRecuperaramHospital = 0,
           numeroPessoasRecuperaramIsolamento = 0, numeroPessoasMorreram = 0,
-          numeroMedicosParaIsolamento = 0;
+          numeroMedicosParaIsolamento = 0, numeroMedicosRecuperaram = 0;
           for (index = 0; index < configuracao.tamanhoHospital; index++) {
             libertarMedico = FALSE;
             if (IDsDoentesNoHospital[index] != -1) { // se há doente no hospital
@@ -971,10 +973,10 @@ void simulacao(char *filename) {
             pthread_mutex_lock(&mutexVariaveisCentros);
             centroTestes1.numeroPostosDisponiveis++;
             centroTestes2.numeroPostosDisponiveis++;
-    tempoCooldownPontosTestagemCentro1
-        [configuracao.numeroPontosTestagemCentro1] = -1;
-    tempoCooldownPontosTestagemCentro2
-        [configuracao.numeroPontosTestagemCentro2 ] = -1;
+            tempoCooldownPontosTestagemCentro1
+                [configuracao.numeroPontosTestagemCentro1] = -1;
+            tempoCooldownPontosTestagemCentro2
+                [configuracao.numeroPontosTestagemCentro2] = -1;
             sem_post(&centroTestes1.filaEspera);
             assinalarSemaforoNormal =
                 ((centroTestes2.numeroPessoasPrioritariasEspera == 0 &&
@@ -1029,12 +1031,14 @@ void simulacao(char *filename) {
             if (valorSemaforo > 0) {
               sem_wait(&centroTestes1.filaEspera);
             }
-    for (index=0;index<configuracao.numeroPontosTestagemCentro1+1;index++){
-      printf("%d\n",tempoCooldownPontosTestagemCentro1[index]);
-    }
-    for (index=0;index<configuracao.numeroPontosTestagemCentro2+1;index++){
-      printf("%d\n",tempoCooldownPontosTestagemCentro2[index]);
-    }
+            // for
+            // (index=0;index<configuracao.numeroPontosTestagemCentro1+1;index++){
+            //   printf("%d\n",tempoCooldownPontosTestagemCentro1[index]);
+            // }
+            // for
+            // (index=0;index<configuracao.numeroPontosTestagemCentro2+1;index++){
+            //   printf("%d\n",tempoCooldownPontosTestagemCentro2[index]);
+            // }
             pthread_mutex_unlock(&mutexVariaveisCentros);
             printf("---------------------------------------------FIM "
                    "PICO--------------------------------------------\n");
