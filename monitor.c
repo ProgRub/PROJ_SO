@@ -8,7 +8,7 @@ char SEPARADOR[] = "++++++++++++++++++++++++++++++++++++++++++++\n";
 
 int fimSimulacao = FALSE;
 
-int numeroPessoas = 0, numeroDiasPassados = 0, tempoMedioEspera = 0,
+int numeroPessoas = 0, numeroDiasPassados = 1, tempoMedioEspera = 0,
     tamanhoFilaCentro1 = 0, numeroPessoasEmIsolamento = 0,
     tamanhoFilaCentro2 = 0, casosPositivosTotal = 0, casosPositivosAtivos = 0,
     casosEmEstudo = 0, numeroMortos = 0, casosRecuperados = 0,
@@ -156,97 +156,103 @@ void trataMensagem(char mensagem[]) {
         break;
 
       // A mensagem com este case é enviada depois da mensagem com o case 0
-      case 1: // Pessoa saiu da fila de um centro, porque vai ser testado
-        casosEmEstudo++;
-        numeroPessoasEmIsolamento++;
-        numeroPessoasTestadasNosCentros++;
-        somaTemposEspera += numero;
-        tempoMedioEspera = somaTemposEspera / numeroPessoasTestadasNosCentros;
-        if (especificacaoAcontecimento == 1) {
-          tamanhoFilaCentro1--;
-        } else {
-          tamanhoFilaCentro2--;
-        }
-        break;
+      // case 1: // Pessoa saiu da fila de um centro, porque vai ser testado
+      //   casosEmEstudo++;
+      //   numeroPessoasEmIsolamento++;
+      //   numeroPessoasTestadasNosCentros++;
+      //   somaTemposEspera += numero;
+      //   tempoMedioEspera = somaTemposEspera / numeroPessoasTestadasNosCentros;
+      //   if (especificacaoAcontecimento == 1) {
+      //     tamanhoFilaCentro1--;
+      //   } else {
+      //     tamanhoFilaCentro2--;
+      //   }
+      //   break;
 
-      // A mensagem com este case é enviada depois da mensagem com o case 0
-      case 2: // Pessoa saiu da fila de um centro, porque desistiu
-        if (especificacaoAcontecimento == 1) {
-          tamanhoFilaCentro1--;
-        } else {
-          tamanhoFilaCentro2--;
-        }
+      // // A mensagem com este case é enviada depois da mensagem com o case 0
+      // case 2: // Pessoa saiu da fila de um centro, porque desistiu
+      //   if (especificacaoAcontecimento == 1) {
+      //     tamanhoFilaCentro1--;
+      //   } else {
+      //     tamanhoFilaCentro2--;
+      //   }
+      //   break;
+      // case 4: // Pessoa vai para o hospital e sai do isolamento
+      //   doentesNoHospital++;
+      //   numeroPessoasEmIsolamento--;
+      //   break;
+      // // A mensagem com este case é enviada depois da mensagem com o case 1
+      // case 5: // Medico vai tratar doente
+      //   medicosDisponiveis--;
+      //   break;
+      // case 6: // Medico acaba de tratar de doente (ou este morre) e o médico vai
+      //         // para isolamento
+      //   doentesNoHospital -= numero;
+      //   numeroPessoasEmIsolamento += numero;
+      //   break;
+      // case 7: // Medico é testado em isolamento
+      //   casosEmEstudo++;
+      //   numeroPessoasEmIsolamento++;
+      //   medicosDisponiveis--;
+      //   break;
+      // case 8: // Pessoa testa positivo
+      //   casosPositivosAtivos++;
+      //   casosPositivosTotal++;
+      //   casosEmEstudo--;
+      //   break;
+      // case 9: // Pessoa testa negativo
+      //   casosEmEstudo--;
+      //   numeroPessoasEmIsolamento--;
+      //   if (especificacaoAcontecimento == 1) {
+      //     medicosDisponiveis++;
+      //   }
+      //   break;
+      // case 10: // Pessoa ou Medico recupera
+      //   // casosPositivosAtivos -= numero;
+      //   casosRecuperados += numero;
+      //   // medicosDisponiveis += especificacaoAcontecimento;
+      //   break;
+      // case 12: // O teste ao pessoa é inconclusivo
+      //   casosEmEstudo--;
+      //   numeroPessoasEmIsolamento--;
+      //   break;
+      // case 13: // Pessoa ou Medico morre
+      //   numeroMortos += numero;
+      //   // casosPositivosAtivos -= numero;
+      //   // medicosDisponiveis -= especificacaoAcontecimento;
+      //   break;
+      case 1:
+        casosPositivosAtivos = numero;
         break;
-      case 4: // Pessoa vai para o hospital e sai do isolamento
-        doentesNoHospital++;
-        numeroPessoasEmIsolamento--;
+      case 2:
+        casosPositivosTotal = numero;
         break;
-      // A mensagem com este case é enviada depois da mensagem com o case 1
-      case 5: // Medico vai tratar doente
-        medicosDisponiveis--;
+      case 3:
+        casosEmEstudo = numero;
         break;
-      case 6: // Medico acaba de tratar de doente (ou este morre) e o médico vai
-              // para isolamento
-        doentesNoHospital -= numero;
-        numeroPessoasEmIsolamento += numero;
+      case 4:
+        numeroPessoasEmIsolamento = numero;
         break;
-      case 7: // Medico é testado em isolamento
-        casosEmEstudo++;
-        numeroPessoasEmIsolamento++;
-        medicosDisponiveis--;
+      case 5:
+        numeroPessoas = numero;
         break;
-      case 8: // Pessoa testa positivo
-        casosPositivosAtivos++;
-        casosPositivosTotal++;
-        casosEmEstudo--;
+      case 6:
+        doentesNoHospital = numero;
         break;
-      case 9: // Pessoa testa negativo
-        casosEmEstudo--;
-        numeroPessoasEmIsolamento--;
-        if (especificacaoAcontecimento == 1) {
-          medicosDisponiveis++;
-        }
+        case 7:
+        tempoMedioEspera=numero;
         break;
-      case 10: // Pessoa ou Medico recupera
-        casosPositivosAtivos -= numero;
-        casosRecuperados += numero;
-        medicosDisponiveis += especificacaoAcontecimento;
+        case 8:
+        casosRecuperados=numero;
+        break;
+        case 9:
+        numeroMortos=numero;
+        break;
+      case 10: // Passou um dia na simulação
+        numeroDiasPassados++;
         break;
       case 11: // Medico criado
         medicosDisponiveis = numero;
-        break;
-      case 12: // O teste ao pessoa é inconclusivo
-        casosEmEstudo--;
-        numeroPessoasEmIsolamento--;
-        break;
-      case 13: // Pessoa ou Medico morre
-        numeroMortos += numero;
-        casosPositivosAtivos -= numero;
-        medicosDisponiveis -= especificacaoAcontecimento;
-        break;
-      case 14: // Passou um dia na simulação
-        numeroDiasPassados++;
-        break;
-      case 15:
-        casosPositivosAtivos = numero;
-        break;
-      case 16:
-        casosPositivosTotal = numero;
-        break;
-      case 17:
-        casosEmEstudo = numero;
-        break;
-      case 18:
-        numeroPessoasEmIsolamento = numero;
-        break;
-      case 19:
-        numeroPessoas = numero;
-        break;
-      case 20:
-        doentesNoHospital = numero;
-        break;
-        case 21:
-        tempoMedioEspera=numero;
         break;
       }
     }

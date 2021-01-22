@@ -43,9 +43,10 @@
 #define HOSPITAL 2
 #define DESISTIU 3
 #define SOBREVIVEU 4
+#define MORREU 5
 
 //AUXILIAR
-#define TAMANHO_CONFIGURACAO 20
+#define TAMANHO_CONFIGURACAO 22
 #define TAMANHO_ARRAY_TAREFAS 50000
 #define MINUTO 42//em milisegundos
 #define HORA 42*60 //em milisegundos
@@ -63,17 +64,19 @@ struct Configuration
     int numeroPontosTestagemCentro1;
     int numeroPontosTestagemCentro2;
     int tamanhoHospital;
-    int numeroMedicos;
     float probabilidadeSerIdoso;
     float probabilidadeMedicoPositivo;
     float probabilidadePopulacaoPositivo;
     float probabilidadeTesteNormalInconclusivo;
     float probabilidadeTesteRapidoInconclusivo;
+    float probabilidadeIdosoPrecisaHospital;
     float probabilidadeNaoIdosoPrecisaHospital;
     float probabilidadeIdosoMorrer;
     float probabilidadeNaoIdosoMorrer;
     int tempoCurar;
     int tempoSimulacao;
+    int diasPicos[15];
+    int duracoesPicos[15];
 };
 
 struct pessoa
