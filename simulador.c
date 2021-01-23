@@ -595,15 +595,10 @@ void Medico(void *ptr) {
   char mensagem[TAMANHO_LINHA];
   int tempoEsperaTeste;
   char *tipoPessoa;
-  int index;
+  int index,idPaciente;
   sem_init(&medico.semaforoPessoa, 0, 0);
   while (TRUE) {
     sem_wait(&semaforoMedicos);
-    tipoPessoa = printTipoPessoa(&medico);
-    printf(CIANO "%s vai tratar do doente.\n" RESET,
-           tipoPessoa); //É dada a mensagem a indicar que o médico X está a
-                        // tratar do paciente
-    free(tipoPessoa);
     sem_wait(&mutexVariaveisMonitor);
     medicosDisponiveis--; // Diminui o número de médicos disponiveis
     sem_post(&mutexVariaveisMonitor);
@@ -612,10 +607,16 @@ void Medico(void *ptr) {
       if (IDsMedicosASerUsados[index] == -1) {
         IDsMedicosASerUsados[index] =
             medico.id; // O médico é colocado na lista de medicos a ser usados
+        idPaciente=IDsDoentesNoHospital[index];
         break;
       }
     }
     pthread_mutex_unlock(&mutexVariaveisHospital);
+    tipoPessoa = printTipoPessoa(&medico);
+    printf(CIANO "%s vai tratar do paciente com id %d.\n" RESET,
+           tipoPessoa,idPaciente); //É dada a mensagem a indicar que o médico X está a
+                        // tratar do paciente
+    free(tipoPessoa);
     sem_post(&semaforoDoentes);
     sem_wait(
         &medico.semaforoPessoa); // Medico acabou de tratar de doente ou este
@@ -1019,6 +1020,9 @@ void simulacao(char *filename) {
                                                // em isolamento
                 PessoasCriadas[IDsMedicosASerUsados[index]]->estado =
                     ISOLAMENTO; // O estado do médico passa a ser isolamento
+                  tipoPessoa = printTipoPessoa(PessoasCriadas[IDsMedicosASerUsados[index]]);
+                  printf(CIANO "%s vai para isolamento.\n" RESET, tipoPessoa);
+                  free(tipoPessoa);
                 sem_post(&PessoasCriadas[IDsMedicosASerUsados[index]]
                               ->semaforoPessoa);
                 IDsMedicosASerUsados[index] =
