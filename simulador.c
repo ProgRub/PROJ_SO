@@ -149,11 +149,9 @@ struct pessoa criaPessoa() { // Cria a pessoa
     p.tipoTeste = TESTE_NORMAL;
     p.idoso = probabilidade(configuracao.probabilidadeSerIdoso);
     if (p.idoso) {
-        p.centroTeste = probabilidade(0.90) + 1; // pessoas idosas preferem o centro de testes 2, o
-                                                 // prioritário, probabilidade tenderá a dar 1+1=2
+        p.centroTeste = probabilidade(0.90) + 1; // pessoas idosas preferem o centro de testes 2, o prioritário, probabilidade tenderá a dar 1+1=2
     } else {
-        p.centroTeste = probabilidade(0.10) + 1; // pessoas normais preferem o centro de testes 1,
-                                                 // probabilidade tenderá a dar 0 + 1 = centro de testes 1
+        p.centroTeste = probabilidade(0.10) + 1; // pessoas normais preferem o centro de testes 1, probabilidade tenderá a dar 0 + 1 = centro de testes 1
     }
     p.desistiu = FALSE;
     if (p.centroTeste == 1) {
@@ -190,17 +188,13 @@ void FilaEspera(struct pessoa *pessoa) {
     int index, tempoEspera;
     int valorSemaforo; // Fica com o tamanho do semaforo
     char *tipoPessoa;
-    pthread_mutex_lock(&mutexVariaveisCentros);
-    if (pessoa->centroTeste == 1) {                                                // CENTRO TESTES 1
-        if (centroTestes1.numeroPessoasEspera < configuracao.tamanhoFilaCentro1) { // Se o numero de pessoas na fila de espera
-                                                                                   // for menor que o tamanho da fila avança
+    if (pessoa->centroTeste == 1) { // CENTRO TESTES 1
+        pthread_mutex_lock(&mutexVariaveisCentros);
+        if (centroTestes1.numeroPessoasEspera < configuracao.tamanhoFilaCentro1) { // Se o numero de pessoas na fila de espera for menor que o tamanho da fila avança
             tipoPessoa = printTipoPessoa(pessoa);
             printf("%s chegou a fila do centro 1.\n", tipoPessoa);
             free(tipoPessoa);
-            if (pessoa->numeroPessoasAFrenteParaDesistir < centroTestes1.numeroPessoasEspera) { // Se o numero de pessoas na fila
-                                                                                                // de espera for maior que o
-                                                                                                // numero de pessoas a frente que
-                                                                                                // essa pessoa admite, ela desiste
+            if (pessoa->numeroPessoasAFrenteParaDesistir < centroTestes1.numeroPessoasEspera) { // Se o numero de pessoas na fila de espera for maior que o numero de pessoas a frente que essa pessoa admite, ela desiste
                 pthread_mutex_unlock(&mutexVariaveisCentros);
                 tipoPessoa = printTipoPessoa(pessoa);
                 printf(VERMELHO "%s desistiu da fila do 1 porque "
@@ -208,27 +202,20 @@ void FilaEspera(struct pessoa *pessoa) {
                        tipoPessoa);
                 free(tipoPessoa);
                 pessoa->desistiu = TRUE; // Pessoa desiste
-            } else {                     // Senão é aumentado o numero de pessoas em espera, calculado e
-                                         // registado o tempo de maximo de espera dessa pessoa e mais
-                                         // tarde verificado se a pessoa desiste a espera ou é testada
+            } else {                     // Senão é aumentado o numero de pessoas em espera, calculado e registado o tempo de maximo de espera dessa pessoa e mais tarde verificado se a pessoa desiste a espera ou é testada
                 pessoa->tempoChegadaFilaEspera = timestamp;
                 centroTestes1.numeroPessoasEspera++; //É aumentado o numero de pessoas em espera
                 pthread_mutex_unlock(&mutexVariaveisCentros);
                 sem_wait(&centroTestes1.filaEspera);
                 pthread_mutex_lock(&mutexVariaveisSimulacao);
-                tempoEspera = minutosDecorridos - pessoa->tempoChegadaFilaEspera; // Calculado e registado o tempo de
-                                                                                  // maximo de espera dessa pessoa
+                tempoEspera = minutosDecorridos - pessoa->tempoChegadaFilaEspera; // Calculado e registado o tempo de maximo de espera dessa pessoa
                 pthread_mutex_unlock(&mutexVariaveisSimulacao);
-                if (tempoEspera > pessoa->tempoMaximoEspera) { // Se passou muito tempo à espera, a
-                                                               // pessoa desiste
+                if (tempoEspera > pessoa->tempoMaximoEspera) { // Se passou muito tempo à espera, a pessoa desiste
                     pessoa->desistiu = TRUE;                   // Pessoa desiste
                     pthread_mutex_lock(&mutexVariaveisCentros);
-                    centroTestes1.numeroPessoasEspera--; //É diminuido o número de pessoas
-                                                         // em espera
+                    centroTestes1.numeroPessoasEspera--; //É diminuido o número de pessoas em espera
                     sem_getvalue(&centroTestes1.filaEspera, &valorSemaforo);
-                    if (valorSemaforo < centroTestes1.numeroPostosDisponiveis) { // Liberta uma pessoa da
-                                                                                 // fila caso haja posto de
-                                                                                 // testagem disponiveis
+                    if (valorSemaforo < centroTestes1.numeroPostosDisponiveis) { // Liberta uma pessoa da fila caso haja posto de testagem disponiveis
                         sem_post(&centroTestes1.filaEspera);
                     }
                     pthread_mutex_unlock(&mutexVariaveisCentros);
@@ -242,16 +229,12 @@ void FilaEspera(struct pessoa *pessoa) {
                     printf(VERDE "%s foi testada no centro 1.\n" RESET, tipoPessoa);
                     free(tipoPessoa);
                     pthread_mutex_lock(&mutexVariaveisCentros);
-                    centroTestes1.numeroPessoasEspera--; //É diminuido o número de pessoas
-                                                         // em espera
+                    centroTestes1.numeroPessoasEspera--; //É diminuido o número de pessoas em espera
                     for (index = 0; index < configuracao.numeroPontosTestagemCentro1; index++) {
-                        if (tempoCooldownPontosTestagemCentro1[index] == -1) // Verifica qual o posto testagem livre e começa-se o
-                                                                             // cooldown
+                        if (tempoCooldownPontosTestagemCentro1[index] == -1) // Verifica qual o posto testagem livre e começa-se o cooldown
                         {
-                            centroTestes1.numeroPostosDisponiveis--;                                              // Diminui o numero de
-                                                                                                                  // postos disponiveis
-                            tempoCooldownPontosTestagemCentro1[index] = configuracao.tempoCooldownPontosTestagem; //É atribuito o cooldown ao
-                                                                                                                  // posto escolhido
+                            centroTestes1.numeroPostosDisponiveis--;                                              // Diminui o numero depostos disponiveis
+                            tempoCooldownPontosTestagemCentro1[index] = configuracao.tempoCooldownPontosTestagem; //É atribuito o cooldown ao posto escolhido
                             break;
                         }
                     }
@@ -261,50 +244,41 @@ void FilaEspera(struct pessoa *pessoa) {
                     pessoasEmIsolamento++;           // O numero de pessoas em isolamento aumenta
                     casosEmEstudo++;                 // O numero de casos em estudo aumenta
                     numeroPessoasTestadas++;         // O numero de pessoas testadas aumenta
-                    somaTemposEspera += tempoEspera; //É somado o tempo de espera que essa pessoa esteve
-                                                     // sujeita para depois ser feita a média
+                    somaTemposEspera += tempoEspera; //É somado o tempo de espera que essa pessoa esteve sujeita para depois ser feita a média
                     sem_post(&mutexVariaveisMonitor);
                 }
             }
         } else {
             pthread_mutex_unlock(&mutexVariaveisCentros);
         }
-    } else {                                                                                                                      // CENTRO TESTES 2
-        int numeroPessoasEsperaCentro2 = centroTestes2.numeroPessoasNormalEspera + centroTestes2.numeroPessoasPrioritariasEspera; // O numero de pessoas em espera
-                                                                                                                                  // do centro 2 é a soma do numero
-                                                                                                                                  // de pessoas normais em espera
-                                                                                                                                  // com o numero de pessoas
-                                                                                                                                  // prioritarias em espera
+    } else { // CENTRO TESTES 2
+        pthread_mutex_lock(&mutexVariaveisCentros);
+        int numeroPessoasEsperaCentro2 =
+            centroTestes2.numeroPessoasNormalEspera +
+            centroTestes2.numeroPessoasPrioritariasEspera; // O numero de pessoas em espera do centro 2 é a soma do numero de pessoas normais em espera com o numero de pessoas prioritarias em espera
         pthread_mutex_unlock(&mutexVariaveisCentros);
         if (numeroPessoasEsperaCentro2 < configuracao.tamanhoFilaCentro2) { // Se o numero de pessoas na fila de espera
                                                                             // for menor que o tamanho da fila avança
             tipoPessoa = printTipoPessoa(pessoa);
             printf("%s chegou a fila do centro 2.\n", tipoPessoa);
             free(tipoPessoa);
-            if (pessoa->numeroPessoasAFrenteParaDesistir < numeroPessoasEsperaCentro2) { // Se o numero de pessoas na fila de
-                                                                                         // espera for maior que o numero de
-                                                                                         // pessoas a frente que essa pessoa
-                                                                                         // admite, ela desiste
+            if (pessoa->numeroPessoasAFrenteParaDesistir < numeroPessoasEsperaCentro2) { // Se o numero de pessoas na fila de espera for maior que o numero de pessoas a frente que essa pessoa admite, ela desiste
                 tipoPessoa = printTipoPessoa(pessoa);
                 printf(VERMELHO "%s desistiu da fila do centro 2 "
                                 "porque tinha muita gente a frente.\n" RESET,
                        tipoPessoa);
                 free(tipoPessoa);
                 pessoa->desistiu = TRUE; // Pessoa desiste
-            } else {                     // Senão, é verificado se a pessoa é um idoso ou não para depois
-                                         // ser aumentada a respetiva fila de espera (normal ou
-                                         // prioritaria), calculado e registado o tempo de maximo de
-                                         // espera dessa pessoa e mais tarde verificado se a pessoa
-                                         // desiste a espera ou é testada
+            } else { // Senão, é verificado se a pessoa é um idoso ou não para depois ser aumentada a respetiva fila de espera (normal ou prioritaria), calculado e registado o tempo de maximo de espera dessa pessoa e mais
+                     // tarde verificado se a pessoa desiste a espera ou é testada
                 pessoa->tempoChegadaFilaEspera = timestamp;
                 int aux;
                 if (pessoa->idoso) { // Verifica se é um idoso ou não
                     pthread_mutex_lock(&mutexVariaveisCentros);
                     centroTestes2.numeroPessoasPrioritariasEspera++;
-                    if (!(centroTestes2.numeroPessoasPrioritariasEspera == 0 || idososTestadosConsecutivamente >= 5)) { // Se o numero de pessoas na fila de espera
-                                                                                                                        // prioritaria for diferente de 0 e o numero de idosos
-                                                                                                                        // testados consecutivamente for menor que 5 então a
-                                                                                                                        // fila de espera normal é colocada em pausa
+                    if (!(centroTestes2.numeroPessoasPrioritariasEspera == 0 ||
+                          idososTestadosConsecutivamente >=
+                              5)) { // Se o numero de pessoas na fila de espera prioritaria for diferente de 0 e o numero de idosos testados consecutivamente for menor que 5 então a fila de espera normal é colocada em pausa
                         sem_getvalue(&centroTestes2.filaEsperaNormal, &valorSemaforo);
                         for (aux = 0; aux < valorSemaforo; aux++) {
                             sem_wait(&centroTestes2.filaEsperaNormal);
@@ -314,24 +288,19 @@ void FilaEspera(struct pessoa *pessoa) {
                     sem_wait(&centroTestes2.filaEsperaPrioritaria);
                 } else { // Se não for idoso
                     pthread_mutex_lock(&mutexVariaveisCentros);
-                    centroTestes2.numeroPessoasNormalEspera++; // Aumenta o numero de pessoas da
-                                                               // fila de espera normal
+                    centroTestes2.numeroPessoasNormalEspera++; // Aumenta o numero de pessoas da fila de espera normal
                     pthread_mutex_unlock(&mutexVariaveisCentros);
                     sem_wait(&centroTestes2.filaEsperaNormal);
                 }
                 pthread_mutex_lock(&mutexVariaveisSimulacao);
-                tempoEspera = minutosDecorridos - pessoa->tempoChegadaFilaEspera; //É calculado e registado o tempo de
-                                                                                  // maximo de espera dessa pessoa
+                tempoEspera = minutosDecorridos - pessoa->tempoChegadaFilaEspera; //É calculado e registado o tempo de maximo de espera dessa pessoa
                 pthread_mutex_unlock(&mutexVariaveisSimulacao);
-                if (tempoEspera > pessoa->tempoMaximoEspera) { // Se passou muito tempo à espera, a
-                                                               // pessoa desiste
+                if (tempoEspera > pessoa->tempoMaximoEspera) { // Se passou muito tempo à espera, a pessoa desiste
                     pessoa->desistiu = TRUE;                   // Pessoa desistiu
                     pthread_mutex_lock(&mutexVariaveisCentros);
-                    if (pessoa->idoso) { // Se for idoso, ele é retirado da fila
-                                         // prioritaria porque desistiu
+                    if (pessoa->idoso) { // Se for idoso, ele é retirado da fila prioritaria porque desistiu
                         centroTestes2.numeroPessoasPrioritariasEspera--;
-                    } else { // Se for normal, ele é retirado da fila normal porque
-                             // desistiu
+                    } else { // Se for normal, ele é retirado da fila normal porque desistiu
                         centroTestes2.numeroPessoasNormalEspera--;
                     }
                     int assinalarSemaforoNormal = ((centroTestes2.numeroPessoasPrioritariasEspera == 0 && centroTestes2.numeroPessoasNormalEspera == 0) ||
@@ -361,37 +330,29 @@ void FilaEspera(struct pessoa *pessoa) {
                     printf(VERDE "%s foi testada no centro 2.\n" RESET, tipoPessoa);
                     free(tipoPessoa);
                     pthread_mutex_lock(&mutexVariaveisCentros);
-                    if (pessoa->idoso) { // Se for idoso, é aumentado o numero de idosos
-                                         // testados consecutivamente e fila normal fica
-                                         // em espera
+                    if (pessoa->idoso) { // Se for idoso, é aumentado o numero de idosos testados consecutivamente e fila normal fica em espera
                         idososTestadosConsecutivamente++;
                         sem_getvalue(&centroTestes2.filaEsperaNormal, &valorSemaforo);
                         if (valorSemaforo > 0) {
                             sem_wait(&centroTestes2.filaEsperaNormal);
                         }
-                    } else { // Senão o numero de idosos testados consecutivamente é
-                             // colocado a 0 e a fila prioritaria fica em espera
+                    } else { // Senão o numero de idosos testados consecutivamente é colocado a 0 e a fila prioritaria fica em espera
                         idososTestadosConsecutivamente = 0;
                         sem_getvalue(&centroTestes2.filaEsperaPrioritaria, &valorSemaforo);
                         if (valorSemaforo > 0) {
                             sem_wait(&centroTestes2.filaEsperaPrioritaria);
                         }
                     }
-                    if (pessoa->idoso) { // Se for idoso, ele é retirado da fila
-                                         // prioritaria para que seja testado
+                    if (pessoa->idoso) { // Se for idoso, ele é retirado da fila prioritaria para que seja testado
                         centroTestes2.numeroPessoasPrioritariasEspera--;
-                    } else { // Se for normal, ele é retirado da fila normal para que seja
-                             // testado
+                    } else { // Se for normal, ele é retirado da fila normal para que seja testado
                         centroTestes2.numeroPessoasNormalEspera--;
                     }
                     for (index = 0; index < configuracao.numeroPontosTestagemCentro2; index++) {
-                        if (tempoCooldownPontosTestagemCentro2[index] == -1) // Verifica qual o posto testagem livre e começa-se o
-                                                                             // cooldown
+                        if (tempoCooldownPontosTestagemCentro2[index] == -1) // Verifica qual o posto testagem livre e começa-se o cooldown
                         {
-                            centroTestes2.numeroPostosDisponiveis--;                                              // Diminui o numero de
-                                                                                                                  // postos disponiveis
-                            tempoCooldownPontosTestagemCentro2[index] = configuracao.tempoCooldownPontosTestagem; //É atribuito o cooldown ao
-                                                                                                                  // posto escolhido
+                            centroTestes2.numeroPostosDisponiveis--;                                              // Diminui o numero de postos disponiveis
+                            tempoCooldownPontosTestagemCentro2[index] = configuracao.tempoCooldownPontosTestagem; //É atribuito o cooldown ao posto escolhido
                             break;
                         }
                     }
@@ -401,8 +362,7 @@ void FilaEspera(struct pessoa *pessoa) {
                     pessoasEmIsolamento++;           // O numero de pessoas em isolamento aumenta
                     casosEmEstudo++;                 // O numero de casos em estudo aumenta
                     numeroPessoasTestadas++;         // O numero de pessoas testadas aumenta
-                    somaTemposEspera += tempoEspera; //É somado o tempo de espera que essa pessoa esteve
-                                                     // sujeita para depois ser feita a média
+                    somaTemposEspera += tempoEspera; //É somado o tempo de espera que essa pessoa esteve sujeita para depois ser feita a média
                     sem_post(&mutexVariaveisMonitor);
                 }
             }
@@ -418,9 +378,7 @@ void Pessoa(void *ptr) {
     char mensagem[TAMANHO_LINHA];
     char *tipoPessoa;
     while (TRUE) {
-        FilaEspera(&pessoa); // Entra na função FilaEspera para decidir se a pessoa
-                             // desiste durante o processo de espera ou termina o
-                             // processo indo para o isolamento
+        FilaEspera(&pessoa); // Entra na função FilaEspera para decidir se a pessoa desiste durante o processo de espera ou termina o processo indo para o isolamento
         if (!pessoa.desistiu) {
             int tempoEsperaTeste = 0;
             if (pessoa.tipoTeste == TESTE_RAPIDO) { // Se o tipo de teste for teste rapido
@@ -485,14 +443,12 @@ void Pessoa(void *ptr) {
                 pessoa.estado = HOSPITAL; // O estado da pessoa é colocado hospital
                 tipoPessoa = printTipoPessoa(&pessoa);
                 printf(CIANO "%s foi transportada para o hospital.\n" RESET,
-                       tipoPessoa); //É dada a mensagem que a pessoa foi enviada para o
-                                    // hospital
+                       tipoPessoa); //É dada a mensagem que a pessoa foi enviada para o hospital
                 free(tipoPessoa);
                 sem_post(&semaforoMedicos);
                 sem_wait(&mutexVariaveisMonitor);
                 pessoasEmIsolamento--;       // Diminui o numero de pessoas em isolamento
-                numeroPacientesNoHospital++; // Aumenta o numero de pacientes no
-                                             // hospital
+                numeroPacientesNoHospital++; // Aumenta o numero de pacientes no hospital
                 sem_post(&mutexVariaveisMonitor);
                 sem_wait(&semaforoDoentes);
             } else {
@@ -530,12 +486,10 @@ void Medico(void *ptr) {
         pthread_mutex_unlock(&mutexVariaveisHospital);
         tipoPessoa = printTipoPessoa(&medico);
         printf(CIANO "%s vai tratar do paciente com id %d.\n" RESET, tipoPessoa,
-               idPaciente); //É dada a mensagem a indicar que o médico X está a
-                            // tratar do paciente
+               idPaciente); //É dada a mensagem a indicar que o médico X está a tratar do paciente
         free(tipoPessoa);
         sem_post(&semaforoDoentes);
-        sem_wait(&medico.semaforoPessoa); // Medico acabou de tratar de doente ou este
-                                          // morreu -> sai da espera no semaforo
+        sem_wait(&medico.semaforoPessoa); // Medico acabou de tratar de doente ou este morreu -> sai da espera no semaforo
         tempoEsperaTeste = configuracao.tempoTesteRapido * HORA * 1000;
         if (medico.estado == ISOLAMENTO) { // Se o medico estiver no isolamento
             while (TRUE) {
@@ -578,14 +532,11 @@ void Medico(void *ptr) {
             medico.numeroDiasDesdePositivo = 0; // Coloca a 0 o numero de dias desde o ultimo caso positivo
             if (medico.precisaHospital) {       // Vai para o Hospital se houver camas livres
                 pthread_mutex_lock(&mutexVariaveisHospital);
-                if (numeroPacientesNoHospital < configuracao.tamanhoHospital) { // Se o numero de pacientes no hospital for
-                    // menor que o tamanho do hospital, o médico
-                    // é colocada no hospital
-                    medico.estado = HOSPITAL; // O estado do medico é colocado hospital
+                if (numeroPacientesNoHospital < configuracao.tamanhoHospital) { // Se o numero de pacientes no hospital for menor que o tamanho do hospital, o médico é colocada no hospital
+                    medico.estado = HOSPITAL;                                   // O estado do medico é colocado hospital
                     tipoPessoa = printTipoPessoa(&medico);
                     printf(CIANO "%s foi transportada para o hospital.\n" RESET,
-                           tipoPessoa); //É dada a mensagem que o médico foi enviado para
-                                        // o hospital
+                           tipoPessoa); //É dada a mensagem que o médico foi enviado para o hospital
                     free(tipoPessoa);
                     for (index = 0; index < configuracao.tamanhoHospital; index++) {
                         if (IDsDoentesNoHospital[index] == -1) {
@@ -597,8 +548,7 @@ void Medico(void *ptr) {
                     pthread_mutex_unlock(&mutexVariaveisHospital);
                     sem_wait(&mutexVariaveisMonitor);
                     pessoasEmIsolamento--;       // Diminui o numero de pessoas em isolamento
-                    numeroPacientesNoHospital++; // Aumenta o numero de pacientes no
-                                                 // hospital
+                    numeroPacientesNoHospital++; // Aumenta o numero de pacientes no hospital
                     sem_post(&mutexVariaveisMonitor);
                     sem_wait(&semaforoDoentes);
                 } else {
@@ -633,8 +583,7 @@ void simulacao(char *filename) {
     int index;
     char *tipoPessoa;
     char mensagensAEnviar[TAMANHO_LINHA];
-    for (index = 0; index < configuracao.tamanhoHospital; index++) { //É colocada a lista de doentes no hospital e a lista medicos
-                                                                     // a serem usados a -1 (Não está lá ninguem)
+    for (index = 0; index < configuracao.tamanhoHospital; index++) { //É colocada a lista de doentes no hospital e a lista medicos a serem usados a -1 (Não está lá ninguem)
         IDsDoentesNoHospital[index] = -1;
         IDsMedicosASerUsados[index] = -1;
     }
@@ -659,10 +608,9 @@ void simulacao(char *filename) {
     int proximoInstanteChegada = numeroAleatorio(tempoMedioChegadaCentros + tempoMedioChegadaCentros / 2, tempoMedioChegadaCentros - tempoMedioChegadaCentros / 2);
     int indexPicos = 0, fimPico = 0;
 
-    if (configuracao.diasPicos[indexPicos] == numeroDia) { // Se o dia atual for igual a um dos dias de pico as
-                                                           // probablidades de a população e os medicos darem positivo
-        // aumentam O tempo medio de chegadas é divido por 2 É aberto
-        // mais 1 posto em cada centro
+    if (configuracao.diasPicos[indexPicos] == numeroDia) { // Se o dia atual for igual a um dos dias de pico as probablidades de a população e os medicos darem positivo aumentam
+                                                           // O tempo medio de chegadas é divido por 2
+                                                           //É aberto mais 1 posto em cada centro
         fimPico = configuracao.diasPicos[indexPicos] + configuracao.duracoesPicos[indexPicos];
         tempoMedioChegadaCentros /= 2;
         configuracao.probabilidadePopulacaoPositivo += 0.1;
@@ -693,15 +641,12 @@ void simulacao(char *filename) {
         printf("---------------------------------------------INICIO "
                "PICO--------------------------------------------\n");
     }
-    while (tempoDecorrido != tempoLimite) { // Enquanto o tempo decorrido não for igual ao tempo
-                                            // limite a simulação continua
+    while (tempoDecorrido != tempoLimite) { // Enquanto o tempo decorrido não for igual ao tempo limite a simulação continua
         auxTimeStamp = current_timestamp();
-        if (auxTimeStamp != timeStampAnterior) { // Se o tempo atual for diferente do tempo
-                                                 // anterior, aumenta o tempo
+        if (auxTimeStamp != timeStampAnterior) { // Se o tempo atual for diferente do tempoanterior, aumenta o tempo
             tempoDecorrido++;                    // Aumenta o tempo decorrido
             timeStampAnterior = auxTimeStamp;
-            if (tempoDecorrido % MINUTO == 0) { // Passou um minuto na simulação e é
-                                                // enviada as mensagens para o monitor
+            if (tempoDecorrido % MINUTO == 0) { // Passou um minuto na simulação e é enviada as mensagens para o monitor
                 pthread_mutex_lock(&mutexVariaveisSimulacao);
                 minutosDecorridos++; // Aumenta o numero de minutos decorridos
                 pthread_mutex_unlock(&mutexVariaveisSimulacao);
@@ -735,8 +680,7 @@ void simulacao(char *filename) {
                 strcat(mensagensAEnviar, "/");
                 sprintf(mensagem, "%d-%d-%d", medicosDisponiveis, 11, 0);
                 strcat(mensagensAEnviar, mensagem);
-                if (numeroPessoasTestadas > 0) { // Se o numero de pessoas testadas for maior que 0, é enviada a
-                                                 // mensagem com a media de tempo de espera
+                if (numeroPessoasTestadas > 0) { // Se o numero de pessoas testadas for maior que 0, é enviada a mensagem com a media de tempo de espera
                     tempoMedioEspera = somaTemposEspera / numeroPessoasTestadas;
                     strcat(mensagensAEnviar, "/");
                     sprintf(mensagem, "%d-%d-%d", tempoMedioEspera, 7, 0);
@@ -745,23 +689,19 @@ void simulacao(char *filename) {
                 sem_post(&mutexVariaveisMonitor);
                 pthread_mutex_lock(&mutexVariaveisCentros);
                 for (index = 0; index < configuracao.numeroPontosTestagemCentro1 + 1; index++) {
-                    if (tempoCooldownPontosTestagemCentro1[index] == 0) { // Se o tempo de cooldown do posto for igual a 0, esse posto
-                                                                          // é colocado como disponivel
+                    if (tempoCooldownPontosTestagemCentro1[index] == 0) { // Se o tempo de cooldown do posto for igual a 0, esse posto é colocado como disponivel
                         printf(MAGENTA "Posto de testagem disponivel no centro de testes 1\n" RESET);
                         centroTestes1.numeroPostosDisponiveis++;
                         sem_post(&centroTestes1.filaEspera);
                         tempoCooldownPontosTestagemCentro1[index]--;
-                    } else if (tempoCooldownPontosTestagemCentro1[index] > 0) { // Se o tempo de cooldown do posto for maior que 0, é
-                                                                                // feita a contagem decrescente do cooldown
+                    } else if (tempoCooldownPontosTestagemCentro1[index] > 0) { // Se o tempo de cooldown do posto for maior que 0, é feita a contagem decrescente do cooldown
                         tempoCooldownPontosTestagemCentro1[index]--;
                     }
                 }
                 for (index = 0; index < configuracao.numeroPontosTestagemCentro2 + 1; index++) {
-                    if (tempoCooldownPontosTestagemCentro2[index] == 0) { // Se o tempo de cooldown atinge os 0, o posto é colocado
-                                                                          // como disponivel
+                    if (tempoCooldownPontosTestagemCentro2[index] == 0) { // Se o tempo de cooldown atinge os 0, o posto é colocado como disponivel
                         printf(MAGENTA "Posto de testagem disponivel no centro de testes 2\n" RESET);
-                        centroTestes2.numeroPostosDisponiveis++; //É aumentado o numero de
-                                                                 // postos disponiveis
+                        centroTestes2.numeroPostosDisponiveis++; //É aumentado o numero de postos disponiveis
                         assinalarSemaforoNormal = ((centroTestes2.numeroPessoasPrioritariasEspera == 0 && centroTestes2.numeroPessoasNormalEspera == 0) ||
                                                    (centroTestes2.numeroPessoasNormalEspera > 0 && (idososTestadosConsecutivamente >= 5 || centroTestes2.numeroPessoasPrioritariasEspera == 0)));
                         assinalarSemaforoPrioritario = ((centroTestes2.numeroPessoasPrioritariasEspera == 0 && centroTestes2.numeroPessoasNormalEspera == 0) ||
@@ -769,8 +709,7 @@ void simulacao(char *filename) {
                         if (assinalarSemaforoNormal) {
                             sem_getvalue(&centroTestes2.filaEsperaNormal, &valorSemaforo);
                             if (valorSemaforo < centroTestes2.numeroPostosDisponiveis) {
-                                sem_post(&centroTestes2.filaEsperaNormal); // Liberta fila
-                                                                           // normal
+                                sem_post(&centroTestes2.filaEsperaNormal); // Liberta fila normal
                             }
                         }
                         if (assinalarSemaforoPrioritario) {
@@ -779,10 +718,8 @@ void simulacao(char *filename) {
                                 sem_post(&centroTestes2.filaEsperaPrioritaria); // Liberta fila prioritaria
                             }
                         }
-                        tempoCooldownPontosTestagemCentro2[index]--;            // Coloca o tempo de
-                                                                                // cooldown a -1;
-                    } else if (tempoCooldownPontosTestagemCentro2[index] > 0) { // Se o tempo de cooldown do posto for maior que 0, é
-                                                                                // feita a contagem decrescente do cooldown
+                        tempoCooldownPontosTestagemCentro2[index]--;            // Coloca o tempo decooldown a -1;
+                    } else if (tempoCooldownPontosTestagemCentro2[index] > 0) { // Se o tempo de cooldown do posto for maior que 0, é feita a contagem decrescente do cooldown
                         tempoCooldownPontosTestagemCentro2[index]--;
                     }
                 }
@@ -813,11 +750,8 @@ void simulacao(char *filename) {
                                 printf(CIANO "%s recuperou no hospital.\n" RESET, tipoPessoa);
                                 free(tipoPessoa);
                                 sem_post(&PessoasCriadas[IDsDoentesNoHospital[index]]->semaforoPessoa);
-                                numeroPessoasRecuperaramHospital++;                                              // Aumenta o numero de
-                                                                                                                 // pessoas que recuperaram
-                                                                                                                 // no hospital
-                                numeroMedicosRecuperaram += PessoasCriadas[IDsDoentesNoHospital[index]]->medico; // Se a pessoa for médico (+1), é aumentado o
-                                                                                                                 // numero de medicos que recuperaram
+                                numeroPessoasRecuperaramHospital++;                                              // Aumenta o numero de pessoas que recuperaram no hospital
+                                numeroMedicosRecuperaram += PessoasCriadas[IDsDoentesNoHospital[index]]->medico; // Se a pessoa for médico (+1), é aumentado o numero de medicos que recuperaram
                                 PessoasCriadas[IDsDoentesNoHospital[index]]->estado = SOBREVIVEU;
                                 IDsDoentesNoHospital[index] = -1;                         // A vaga do hospital passa a estar livre
                                 libertarMedico = TRUE;                                    // O medico deve ir para isolamento
@@ -832,39 +766,30 @@ void simulacao(char *filename) {
                                     tipoPessoa = printTipoPessoa(PessoasCriadas[IDsDoentesNoHospital[index]]);
                                     printf(CIANO "%s morreu no hospital.\n" RESET, tipoPessoa);
                                     free(tipoPessoa);
-                                    numeroPessoasMorreramHospital++;                              //É aumentado o número de
-                                                                                                  // pessoas que morreram
+                                    numeroPessoasMorreramHospital++;                              //É aumentado o número de pessoas que morreram
                                     PessoasCriadas[IDsDoentesNoHospital[index]]->estado = MORREU; // O estado da pessoa passa para morreu
                                     IDsDoentesNoHospital[index] = -1;                             // A vaga do hospital passa a estar livre
                                     libertarMedico = TRUE;                                        // O medico deve ir para isolamento
                                 }
                             }
-                            if (IDsMedicosASerUsados[index] != -1 && libertarMedico) {            // Se o médico tiver sido utilizado e já
-                                                                                                  // estiver livre, é enviado para isolamento
-                                numeroMedicosParaIsolamento++;                                    //É aumentado o número de médicos
-                                                                                                  // em isolamento
+                            if (IDsMedicosASerUsados[index] != -1 && libertarMedico) {            // Se o médico tiver sido utilizado e já estiver livre, é enviado para isolamento
+                                numeroMedicosParaIsolamento++;                                    //É aumentado o número de médicos em isolamento
                                 PessoasCriadas[IDsMedicosASerUsados[index]]->estado = ISOLAMENTO; // O estado do médico passa a ser isolamento
                                 tipoPessoa = printTipoPessoa(PessoasCriadas[IDsMedicosASerUsados[index]]);
                                 printf(CIANO "%s vai para isolamento.\n" RESET, tipoPessoa);
                                 free(tipoPessoa);
                                 sem_post(&PessoasCriadas[IDsMedicosASerUsados[index]]->semaforoPessoa);
-                                IDsMedicosASerUsados[index] = -1; // A posição que o medico estava a utilizar na lista de
-                                                                  // médicos a ser utilizados passa a ficar livre para que
-                                                                  // possa ser preenchido por um novo médico
+                                IDsMedicosASerUsados[index] = -1; // A posição que o medico estava a utilizar na lista de médicos a ser utilizados passa a ficar livre para que
                             }
                         }
-                        if (IDsDoentesNoHospital[index] != -1) {                                    // Se a pessoa não recuperou e não morreu, aumentar o
-                                                                                                    // contador
-                            PessoasCriadas[IDsDoentesNoHospital[index]]->numeroDiasDesdePositivo++; //É aumentado o numero de dias
-                                                                                                    // desde que a pessoa teve teste
-                                                                                                    // positivo
+                        if (IDsDoentesNoHospital[index] != -1) {                                    // Se a pessoa não recuperou e não morreu, aumentar o contador
+                            PessoasCriadas[IDsDoentesNoHospital[index]]->numeroDiasDesdePositivo++; //É aumentado o numero de dias desde que a pessoa teve teste positivo
                         }
                     }
                     pthread_mutex_unlock(&mutexVariaveisHospital);
                     int idPessoaAtual = idPessoa;
                     for (index = 0; index < idPessoaAtual; index++) {
-                        if (PessoasCriadas[index] != NULL && PessoasCriadas[index]->estado == ISOLAMENTO && PessoasCriadas[index]->estadoTeste == POSITIVO) { // Se a pessoa se encontra em isolamento com o
-                                                                                                                                                              // teste positivo
+                        if (PessoasCriadas[index] != NULL && PessoasCriadas[index]->estado == ISOLAMENTO && PessoasCriadas[index]->estadoTeste == POSITIVO) { // Se a pessoa se encontra em isolamento com o teste positivo
                             if (PessoasCriadas[index]->precisaHospital) {
                                 if (PessoasCriadas[index]->idoso) {
                                     pessoaMorreu = probabilidade(configuracao.probabilidadeIdosoMorrer);
@@ -884,18 +809,12 @@ void simulacao(char *filename) {
                                 printf(AZUL "%s recuperou em isolamento.\n" RESET, tipoPessoa);
                                 free(tipoPessoa);
                                 PessoasCriadas[index]->estado = SOBREVIVEU;                // O estado da pessoa passa a ser sobreviveu
-                                PessoasCriadas[index]->estadoTeste = NAO_TESTOU;           // O estado do teste da pessoa passa a ser nao
-                                                                                           // testou
-                                numeroPessoasRecuperaramIsolamento++;                      //É aumentado o numero de
-                                                                                           // pessoas que recuperaram
-                                                                                           // no isolamento
-                                numeroMedicosRecuperaram += PessoasCriadas[index]->medico; // Caso a pessoa seja médico (+1) é aumentado
-                                                                                           // o numero de medicos que recuperaram
+                                PessoasCriadas[index]->estadoTeste = NAO_TESTOU;           // O estado do teste da pessoa passa a ser nao testou
+                                numeroPessoasRecuperaramIsolamento++;                      //É aumentado o numero de pessoas que recuperaram no isolamento
+                                numeroMedicosRecuperaram += PessoasCriadas[index]->medico; // Caso a pessoa seja médico (+1) é aumentado o numero de medicos que recuperaram
                                 sem_post(&PessoasCriadas[index]->semaforoPessoa);
                             } else {                                              // Se ainda não passou o tempo para curar
-                                PessoasCriadas[index]->numeroDiasDesdePositivo++; //É aumentado o numero de dias
-                                                                                  // desde que a pessoa teve
-                                                                                  // teste positivo
+                                PessoasCriadas[index]->numeroDiasDesdePositivo++; //É aumentado o numero de dias desde que a pessoa teve teste positivo
                             }
                         }
                     }
@@ -921,9 +840,7 @@ void simulacao(char *filename) {
                     strcat(mensagensAEnviar, "/");
                     sprintf(mensagem, "%d-%d-%d", numeroMortos, 9, 0);
                     strcat(mensagensAEnviar, mensagem);
-                    if (configuracao.diasPicos[indexPicos] == numeroDia) { // Se o dia atual for igual a um dos dias de pico as
-                                                                           // probablidades de a população e os medicos darem
-                                                                           // positivo aumentam O tempo medio de chegadas é
+                    if (configuracao.diasPicos[indexPicos] == numeroDia) { // Se o dia atual for igual a um dos dias de pico as probablidades de a população e os medicos darem positivo aumentam O tempo medio de chegadas é
                                                                            // divido por 2 É aberto mais 1 posto em cada centro
                         fimPico = configuracao.diasPicos[indexPicos] + configuracao.duracoesPicos[indexPicos];
                         tempoMedioChegadaCentros /= 2;
@@ -942,8 +859,7 @@ void simulacao(char *filename) {
                         if (assinalarSemaforoNormal) {
                             sem_getvalue(&centroTestes2.filaEsperaNormal, &valorSemaforo);
                             if (valorSemaforo < centroTestes2.numeroPostosDisponiveis) {
-                                sem_post(&centroTestes2.filaEsperaNormal); // Liberta fila
-                                                                           // normal
+                                sem_post(&centroTestes2.filaEsperaNormal); // Liberta fila normal
                             }
                         }
                         if (assinalarSemaforoPrioritario) {
@@ -955,8 +871,8 @@ void simulacao(char *filename) {
                         pthread_mutex_unlock(&mutexVariaveisCentros);
                         printf("---------------------------------------------INICIO "
                                "PICO--------------------------------------------\n");
-                    } else if (fimPico == numeroDia) { // Se o dia atual for igual a um dos dias de fim de pico as probablidades de a população e os medicos darem positivo voltam ao normal O tempo medio de chegadas volta ao
-                                                       // normal E o numero de postos por centro voltam ao normal
+                    } else if (fimPico == numeroDia) { // Se o dia atual for igual a um dos dias de fim de pico as probablidades de a população e os medicos darem positivo voltam ao normal O tempo medio de chegadas volta
+                                                       // aonormal E o numero de postos por centro voltam ao normal
                         tempoMedioChegadaCentros *= 2;
                         configuracao.probabilidadePopulacaoPositivo -= 0.1;
                         configuracao.probabilidadeMedicoPositivo -= 0.1;
