@@ -113,10 +113,7 @@ void trataMensagem(char mensagem[]) {
         // Onde vai guardar os valores depois da divisao
         int acontecimento = strtol(valoresSeparados[1], NULL, 10);
         if (!strcmp(valoresSeparados[0], "Z") && !strcmp(valoresSeparados[2], "Z")) {
-            if (acontecimento == 0) {
-                // printf("Bem vindo! A simulação comecou!\n");
-            } else {
-                // printf("O tempo limite da simulacao foi atingido.\n");
+            if (acontecimento ==1) {
                 fimSimulacao = TRUE;
             }
         } else {

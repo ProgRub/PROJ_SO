@@ -190,12 +190,13 @@ void FilaEspera(struct pessoa *pessoa) {
     char *tipoPessoa;
     if (pessoa->centroTeste == 1) { // CENTRO TESTES 1
         pthread_mutex_lock(&mutexVariaveisCentros);
-        if (centroTestes1.numeroPessoasEspera < configuracao.tamanhoFilaCentro1) { // Se o numero de pessoas na fila de espera for menor que o tamanho da fila avança
+        int pessoasNaFila = centroTestes1.numeroPessoasEspera;
+        pthread_mutex_unlock(&mutexVariaveisCentros);
+        if (pessoasNaFila < configuracao.tamanhoFilaCentro1) { // Se o numero de pessoas na fila de espera for menor que o tamanho da fila avança
             tipoPessoa = printTipoPessoa(pessoa);
             printf("%s chegou a fila do centro 1.\n", tipoPessoa);
             free(tipoPessoa);
-            if (pessoa->numeroPessoasAFrenteParaDesistir < centroTestes1.numeroPessoasEspera) { // Se o numero de pessoas na fila de espera for maior que o numero de pessoas a frente que essa pessoa admite, ela desiste
-                pthread_mutex_unlock(&mutexVariaveisCentros);
+            if (pessoa->numeroPessoasAFrenteParaDesistir < pessoasNaFila) { // Se o numero de pessoas na fila de espera for maior que o numero de pessoas a frente que essa pessoa admite, ela desiste
                 tipoPessoa = printTipoPessoa(pessoa);
                 printf(VERMELHO "%s desistiu da fila do 1 porque "
                                 "tinha muita gente a frente.\n" RESET,
@@ -204,6 +205,7 @@ void FilaEspera(struct pessoa *pessoa) {
                 pessoa->desistiu = TRUE; // Pessoa desiste
             } else {                     // Senão é aumentado o numero de pessoas em espera, calculado e registado o tempo de maximo de espera dessa pessoa e mais tarde verificado se a pessoa desiste a espera ou é testada
                 pessoa->tempoChegadaFilaEspera = timestamp;
+                pthread_mutex_lock(&mutexVariaveisCentros);
                 centroTestes1.numeroPessoasEspera++; //É aumentado o numero de pessoas em espera
                 pthread_mutex_unlock(&mutexVariaveisCentros);
                 sem_wait(&centroTestes1.filaEspera);
@@ -276,14 +278,6 @@ void FilaEspera(struct pessoa *pessoa) {
                 if (pessoa->idoso) { // Verifica se é um idoso ou não
                     pthread_mutex_lock(&mutexVariaveisCentros);
                     centroTestes2.numeroPessoasPrioritariasEspera++;
-                    if (!(centroTestes2.numeroPessoasPrioritariasEspera == 0 ||
-                          idososTestadosConsecutivamente >=
-                              5)) { // Se o numero de pessoas na fila de espera prioritaria for diferente de 0 e o numero de idosos testados consecutivamente for menor que 5 então a fila de espera normal é colocada em pausa
-                        sem_getvalue(&centroTestes2.filaEsperaNormal, &valorSemaforo);
-                        for (aux = 0; aux < valorSemaforo; aux++) {
-                            sem_wait(&centroTestes2.filaEsperaNormal);
-                        }
-                    }
                     pthread_mutex_unlock(&mutexVariaveisCentros);
                     sem_wait(&centroTestes2.filaEsperaPrioritaria);
                 } else { // Se não for idoso
@@ -690,8 +684,8 @@ void simulacao(char *filename) {
                 pthread_mutex_lock(&mutexVariaveisCentros);
                 for (index = 0; index < configuracao.numeroPontosTestagemCentro1 + 1; index++) {
                     if (tempoCooldownPontosTestagemCentro1[index] == 0) { // Se o tempo de cooldown do posto for igual a 0, esse posto é colocado como disponivel
-                        printf(MAGENTA "Posto de testagem disponivel no centro de testes 1\n" RESET);
                         centroTestes1.numeroPostosDisponiveis++;
+                        printf(MAGENTA "%d %s de testagem disponivel no centro 1.\n" RESET,centroTestes1.numeroPostosDisponiveis,(centroTestes1.numeroPostosDisponiveis==1?"posto":"postos"));
                         sem_post(&centroTestes1.filaEspera);
                         tempoCooldownPontosTestagemCentro1[index]--;
                     } else if (tempoCooldownPontosTestagemCentro1[index] > 0) { // Se o tempo de cooldown do posto for maior que 0, é feita a contagem decrescente do cooldown
@@ -700,8 +694,8 @@ void simulacao(char *filename) {
                 }
                 for (index = 0; index < configuracao.numeroPontosTestagemCentro2 + 1; index++) {
                     if (tempoCooldownPontosTestagemCentro2[index] == 0) { // Se o tempo de cooldown atinge os 0, o posto é colocado como disponivel
-                        printf(MAGENTA "Posto de testagem disponivel no centro de testes 2\n" RESET);
                         centroTestes2.numeroPostosDisponiveis++; //É aumentado o numero de postos disponiveis
+                        printf(MAGENTA "%d %s de testagem disponivel no centro 2.\n" RESET,centroTestes2.numeroPostosDisponiveis,(centroTestes2.numeroPostosDisponiveis==1?"posto":"postos"));
                         assinalarSemaforoNormal = ((centroTestes2.numeroPessoasPrioritariasEspera == 0 && centroTestes2.numeroPessoasNormalEspera == 0) ||
                                                    (centroTestes2.numeroPessoasNormalEspera > 0 && (idososTestadosConsecutivamente >= 5 || centroTestes2.numeroPessoasPrioritariasEspera == 0)));
                         assinalarSemaforoPrioritario = ((centroTestes2.numeroPessoasPrioritariasEspera == 0 && centroTestes2.numeroPessoasNormalEspera == 0) ||
@@ -726,6 +720,9 @@ void simulacao(char *filename) {
                 pthread_mutex_unlock(&mutexVariaveisCentros);
                 if (minutosDecorridos % proximoInstanteChegada == 0) {
                     proximoInstanteChegada = numeroAleatorio(tempoMedioChegadaCentros + tempoMedioChegadaCentros / 2, tempoMedioChegadaCentros - tempoMedioChegadaCentros / 2);
+                    if (proximoInstanteChegada==0){
+                        proximoInstanteChegada++;
+                    }
                     // Cria tarefas pessoas
                     if (pthread_create(&IDtarefa[idPessoa], NULL, Pessoa, NULL)) {
                         printf("Erro na criação da tarefa\n");
@@ -924,19 +921,19 @@ void iniciarSemaforosETrincos() {
     sem_init(&centroTestes1.filaEspera, 0, configuracao.numeroPontosTestagemCentro1);
     sem_init(&mutexVariaveisMonitor, 0, 1);
     sem_init(&semaforoEnviarMensagem, 0, 1);
-    centroTestes1.numeroPostosDisponiveis = configuracao.numeroPontosTestagemCentro1;
+    centroTestes1.numeroPostosDisponiveis = 0;
     tempoCooldownPontosTestagemCentro1 = (int *)calloc(configuracao.numeroPontosTestagemCentro1 + 1, sizeof(int));
     int index;
     for (index = 0; index < configuracao.numeroPontosTestagemCentro1; index++) {
-        tempoCooldownPontosTestagemCentro1[index] = -1;
+        tempoCooldownPontosTestagemCentro1[index] = 0;
     }
     tempoCooldownPontosTestagemCentro1[index] = -2;
     sem_init(&centroTestes2.filaEsperaPrioritaria, 0, configuracao.numeroPontosTestagemCentro2);
     sem_init(&centroTestes2.filaEsperaNormal, 0, configuracao.numeroPontosTestagemCentro2);
-    centroTestes2.numeroPostosDisponiveis = configuracao.numeroPontosTestagemCentro2;
+    centroTestes2.numeroPostosDisponiveis = 0;
     tempoCooldownPontosTestagemCentro2 = (int *)calloc(configuracao.numeroPontosTestagemCentro2 + 1, sizeof(int));
     for (index = 0; index < configuracao.numeroPontosTestagemCentro2; index++) {
-        tempoCooldownPontosTestagemCentro2[index] = -1;
+        tempoCooldownPontosTestagemCentro2[index] = 0;
     }
     tempoCooldownPontosTestagemCentro2[index] = -2;
 
