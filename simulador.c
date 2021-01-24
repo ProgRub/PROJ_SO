@@ -575,7 +575,7 @@ void simulacao(char *filename) {
     int timeStampAnterior = current_timestamp();
     int auxTimeStamp, numeroDia = 1;
     int tempoLimite = configuracao.tempoSimulacao * DIA;
-    enviarMensagem("Z-0-Z"); // Mensagem que indica o comeco da simulacao
+    enviarMensagem("Z_0_Z"); // Mensagem que indica o comeco da simulacao
     int index;
     char *tipoPessoa;
     char mensagensAEnviar[TAMANHO_LINHA];
@@ -877,7 +877,7 @@ void simulacao(char *filename) {
             }
         }
     }
-    enviarMensagem("Z-1-Z"); // Mensagem que indica o fim da simulacao
+    enviarMensagem("Z_1_Z"); // Mensagem que indica o fim da simulacao
 }
 
 void iniciarSemaforosETrincos() {
