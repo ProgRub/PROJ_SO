@@ -471,7 +471,7 @@ void Medico(void *ptr) {
         sem_post(&mutexVariaveisMonitor);
         pthread_mutex_lock(&mutexVariaveisHospital);
         for (index = 0; index < configuracao.tamanhoHospital; index++) {
-            if (IDsMedicosASerUsados[index] == -1 && IDsDoentesNoHospital[index]!=-1) {
+            if (IDsMedicosASerUsados[index] == -1 && IDsDoentesNoHospital[index] != -1) {
                 IDsMedicosASerUsados[index] = medico.id; // O médico é colocado na lista de medicos a ser usados
                 idPaciente = IDsDoentesNoHospital[index];
                 break;
@@ -628,42 +628,6 @@ void simulacao(char *filename) {
                 pthread_mutex_unlock(&mutexVariaveisSimulacao);
                 mensagensAEnviar[0] = '\0';
                 pthread_mutex_lock(&mutexVariaveisCentros);
-                sprintf(mensagem, "%d-%d-%d", centroTestes1.numeroPessoasEspera, 0, 1);
-                strcat(mensagensAEnviar, mensagem);
-                strcat(mensagensAEnviar, "/");
-                sprintf(mensagem, "%d-%d-%d", centroTestes2.numeroPessoasNormalEspera + centroTestes2.numeroPessoasPrioritariasEspera, 0, 2);
-                pthread_mutex_unlock(&mutexVariaveisCentros);
-                strcat(mensagensAEnviar, mensagem);
-                strcat(mensagensAEnviar, "/");
-                sprintf(mensagem, "%d-%d-%d", idPessoa - configuracao.tamanhoHospital, 5, 0);
-                strcat(mensagensAEnviar, mensagem);
-                strcat(mensagensAEnviar, "/");
-                sem_wait(&mutexVariaveisMonitor);
-                sprintf(mensagem, "%d-%d-%d", casosPositivosAtivos, 1, 0);
-                strcat(mensagensAEnviar, mensagem);
-                strcat(mensagensAEnviar, "/");
-                sprintf(mensagem, "%d-%d-%d", casosPositivosTotal, 2, 0);
-                strcat(mensagensAEnviar, mensagem);
-                strcat(mensagensAEnviar, "/");
-                sprintf(mensagem, "%d-%d-%d", casosEmEstudo, 3, 0);
-                strcat(mensagensAEnviar, mensagem);
-                strcat(mensagensAEnviar, "/");
-                sprintf(mensagem, "%d-%d-%d", pessoasEmIsolamento, 4, 0);
-                strcat(mensagensAEnviar, mensagem);
-                strcat(mensagensAEnviar, "/");
-                sprintf(mensagem, "%d-%d-%d", numeroPacientesNoHospital, 6, 0);
-                strcat(mensagensAEnviar, mensagem);
-                strcat(mensagensAEnviar, "/");
-                sprintf(mensagem, "%d-%d-%d", medicosDisponiveis, 11, 0);
-                strcat(mensagensAEnviar, mensagem);
-                if (numeroPessoasTestadas > 0) { // Se o numero de pessoas testadas for maior que 0, é enviada a mensagem com a media de tempo de espera
-                    tempoMedioEspera = somaTemposEspera / numeroPessoasTestadas;
-                    strcat(mensagensAEnviar, "/");
-                    sprintf(mensagem, "%d-%d-%d", tempoMedioEspera, 7, 0);
-                    strcat(mensagensAEnviar, mensagem);
-                }
-                sem_post(&mutexVariaveisMonitor);
-                pthread_mutex_lock(&mutexVariaveisCentros);
                 for (index = 0; index < configuracao.numeroPontosTestagemCentro1 + 1; index++) {
                     if (tempoCooldownPontosTestagemCentro1[index] == 0) { // Se o tempo de cooldown do posto for igual a 0, esse posto é colocado como disponivel
                         centroTestes1.numeroPostosDisponiveis++;
@@ -716,7 +680,6 @@ void simulacao(char *filename) {
                            "%d---------------------------------------------\n",
                            ++numeroDia); //É indicado o dia
                     sprintf(mensagem, "%d-%d-%d", 0, 10, 0);
-                    strcat(mensagensAEnviar, "/");
                     strcat(mensagensAEnviar, mensagem);
                     pthread_mutex_lock(&mutexVariaveisHospital);
                     numeroPessoasRecuperaramHospital = 0, numeroPessoasRecuperaramIsolamento = 0, numeroPessoasMorreramHospital = 0, numeroPessoasMorreramIsolamento = 0, numeroMedicosParaIsolamento = 0,
@@ -819,9 +782,10 @@ void simulacao(char *filename) {
                     strcat(mensagensAEnviar, "/");
                     sprintf(mensagem, "%d-%d-%d", numeroMortos, 9, 0);
                     strcat(mensagensAEnviar, mensagem);
+                    strcat(mensagensAEnviar, "/");
                     if (configuracao.diasPicos[indexPicos] == numeroDia && !emPico) { // Se o dia atual for igual a um dos dias de pico as probablidades de a população e os medicos darem positivo aumentam O tempo medio de
                                                                                       // chegadas é divido por 2 É aberto mais 1 posto em cada centro
-                        emPico=TRUE;
+                        emPico = TRUE;
                         fimPico = configuracao.diasPicos[indexPicos] + configuracao.duracoesPicos[indexPicos];
                         tempoMedioChegadaCentros /= 2;
                         configuracao.probabilidadePopulacaoPositivo += 0.1;
@@ -844,7 +808,7 @@ void simulacao(char *filename) {
                             }
                         }
                         fimPico = 0;
-                        emPico=FALSE;
+                        emPico = FALSE;
                         pthread_mutex_lock(&mutexVariaveisCentros);
                         tempoCooldownPontosTestagemCentro1[configuracao.numeroPontosTestagemCentro1] = -2;
                         tempoCooldownPontosTestagemCentro2[configuracao.numeroPontosTestagemCentro2] = -2;
@@ -867,6 +831,42 @@ void simulacao(char *filename) {
                                "PICO--------------------------------------------\n");
                     }
                 }
+                pthread_mutex_lock(&mutexVariaveisCentros);
+                sprintf(mensagem, "%d-%d-%d", centroTestes1.numeroPessoasEspera, 0, 1);
+                strcat(mensagensAEnviar, mensagem);
+                strcat(mensagensAEnviar, "/");
+                sprintf(mensagem, "%d-%d-%d", centroTestes2.numeroPessoasNormalEspera + centroTestes2.numeroPessoasPrioritariasEspera, 0, 2);
+                pthread_mutex_unlock(&mutexVariaveisCentros);
+                strcat(mensagensAEnviar, mensagem);
+                strcat(mensagensAEnviar, "/");
+                sprintf(mensagem, "%d-%d-%d", idPessoa - configuracao.tamanhoHospital, 5, 0);
+                strcat(mensagensAEnviar, mensagem);
+                strcat(mensagensAEnviar, "/");
+                sem_wait(&mutexVariaveisMonitor);
+                sprintf(mensagem, "%d-%d-%d", casosPositivosAtivos, 1, 0);
+                strcat(mensagensAEnviar, mensagem);
+                strcat(mensagensAEnviar, "/");
+                sprintf(mensagem, "%d-%d-%d", casosPositivosTotal, 2, 0);
+                strcat(mensagensAEnviar, mensagem);
+                strcat(mensagensAEnviar, "/");
+                sprintf(mensagem, "%d-%d-%d", casosEmEstudo, 3, 0);
+                strcat(mensagensAEnviar, mensagem);
+                strcat(mensagensAEnviar, "/");
+                sprintf(mensagem, "%d-%d-%d", pessoasEmIsolamento, 4, 0);
+                strcat(mensagensAEnviar, mensagem);
+                strcat(mensagensAEnviar, "/");
+                sprintf(mensagem, "%d-%d-%d", numeroPacientesNoHospital, 6, 0);
+                strcat(mensagensAEnviar, mensagem);
+                strcat(mensagensAEnviar, "/");
+                sprintf(mensagem, "%d-%d-%d", medicosDisponiveis, 11, 0);
+                strcat(mensagensAEnviar, mensagem);
+                if (numeroPessoasTestadas > 0) { // Se o numero de pessoas testadas for maior que 0, é enviada a mensagem com a media de tempo de espera
+                    tempoMedioEspera = somaTemposEspera / numeroPessoasTestadas;
+                    strcat(mensagensAEnviar, "/");
+                    sprintf(mensagem, "%d-%d-%d", tempoMedioEspera, 7, 0);
+                    strcat(mensagensAEnviar, mensagem);
+                }
+                sem_post(&mutexVariaveisMonitor);
                 enviarMensagem(mensagensAEnviar);
             }
         }
