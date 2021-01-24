@@ -471,7 +471,7 @@ void Medico(void *ptr) {
         sem_post(&mutexVariaveisMonitor);
         pthread_mutex_lock(&mutexVariaveisHospital);
         for (index = 0; index < configuracao.tamanhoHospital; index++) {
-            if (IDsMedicosASerUsados[index] == -1) {
+            if (IDsMedicosASerUsados[index] == -1 && IDsDoentesNoHospital[index]!=-1) {
                 IDsMedicosASerUsados[index] = medico.id; // O médico é colocado na lista de medicos a ser usados
                 idPaciente = IDsDoentesNoHospital[index];
                 break;
@@ -821,6 +821,7 @@ void simulacao(char *filename) {
                     strcat(mensagensAEnviar, mensagem);
                     if (configuracao.diasPicos[indexPicos] == numeroDia && !emPico) { // Se o dia atual for igual a um dos dias de pico as probablidades de a população e os medicos darem positivo aumentam O tempo medio de
                                                                                       // chegadas é divido por 2 É aberto mais 1 posto em cada centro
+                        emPico=TRUE;
                         fimPico = configuracao.diasPicos[indexPicos] + configuracao.duracoesPicos[indexPicos];
                         tempoMedioChegadaCentros /= 2;
                         configuracao.probabilidadePopulacaoPositivo += 0.1;
@@ -843,6 +844,7 @@ void simulacao(char *filename) {
                             }
                         }
                         fimPico = 0;
+                        emPico=FALSE;
                         pthread_mutex_lock(&mutexVariaveisCentros);
                         tempoCooldownPontosTestagemCentro1[configuracao.numeroPontosTestagemCentro1] = -2;
                         tempoCooldownPontosTestagemCentro2[configuracao.numeroPontosTestagemCentro2] = -2;
