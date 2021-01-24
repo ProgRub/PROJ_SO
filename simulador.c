@@ -232,7 +232,7 @@ void FilaEspera(struct pessoa *pessoa) {
                     free(tipoPessoa);
                     pthread_mutex_lock(&mutexVariaveisCentros);
                     centroTestes1.numeroPessoasEspera--; //É diminuido o número de pessoas em espera
-                    for (index = 0; index < configuracao.numeroPontosTestagemCentro1; index++) {
+                    for (index = 0; index < configuracao.numeroPontosTestagemCentro1 + 1; index++) {
                         if (tempoCooldownPontosTestagemCentro1[index] == -1) // Verifica qual o posto testagem livre e começa-se o cooldown
                         {
                             centroTestes1.numeroPostosDisponiveis--;                                              // Diminui o numero depostos disponiveis
@@ -342,7 +342,7 @@ void FilaEspera(struct pessoa *pessoa) {
                     } else { // Se for normal, ele é retirado da fila normal para que seja testado
                         centroTestes2.numeroPessoasNormalEspera--;
                     }
-                    for (index = 0; index < configuracao.numeroPontosTestagemCentro2; index++) {
+                    for (index = 0; index < configuracao.numeroPontosTestagemCentro2 + 1; index++) {
                         if (tempoCooldownPontosTestagemCentro2[index] == -1) // Verifica qual o posto testagem livre e começa-se o cooldown
                         {
                             centroTestes2.numeroPostosDisponiveis--;                                              // Diminui o numero de postos disponiveis
@@ -600,37 +600,19 @@ void simulacao(char *filename) {
     int numeroPessoasRecuperaramHospital = 0, numeroPessoasRecuperaramIsolamento = 0, numeroPessoasMorreramIsolamento = 0, numeroPessoasMorreramHospital = 0, numeroMedicosParaIsolamento = 0, numeroMedicosRecuperaram = 0;
     int tempoMedioChegadaCentros = configuracao.tempoMedioChegada;
     int proximoInstanteChegada = numeroAleatorio(tempoMedioChegadaCentros + tempoMedioChegadaCentros / 2, tempoMedioChegadaCentros - tempoMedioChegadaCentros / 2);
-    int indexPicos = 0, fimPico = 0;
+    int indexPicos = 0, fimPico = 0, emPico = FALSE;
 
     if (configuracao.diasPicos[indexPicos] == numeroDia) { // Se o dia atual for igual a um dos dias de pico as probablidades de a população e os medicos darem positivo aumentam
                                                            // O tempo medio de chegadas é divido por 2
                                                            //É aberto mais 1 posto em cada centro
+        emPico = TRUE;
         fimPico = configuracao.diasPicos[indexPicos] + configuracao.duracoesPicos[indexPicos];
         tempoMedioChegadaCentros /= 2;
         configuracao.probabilidadePopulacaoPositivo += 0.1;
         configuracao.probabilidadeMedicoPositivo += 0.1;
         pthread_mutex_lock(&mutexVariaveisCentros);
-        centroTestes1.numeroPostosDisponiveis++;
-        centroTestes2.numeroPostosDisponiveis++;
-        tempoCooldownPontosTestagemCentro1[configuracao.numeroPontosTestagemCentro1] = -1;
-        tempoCooldownPontosTestagemCentro2[configuracao.numeroPontosTestagemCentro2] = -1;
-        sem_post(&centroTestes1.filaEspera);
-        assinalarSemaforoNormal = ((centroTestes2.numeroPessoasPrioritariasEspera == 0 && centroTestes2.numeroPessoasNormalEspera == 0) ||
-                                   (centroTestes2.numeroPessoasNormalEspera > 0 && (idososTestadosConsecutivamente >= 5 || centroTestes2.numeroPessoasPrioritariasEspera == 0)));
-        assinalarSemaforoPrioritario = ((centroTestes2.numeroPessoasPrioritariasEspera == 0 && centroTestes2.numeroPessoasNormalEspera == 0) ||
-                                        (centroTestes2.numeroPessoasPrioritariasEspera > 0 && (idososTestadosConsecutivamente < 5 || centroTestes2.numeroPessoasNormalEspera == 0)));
-        if (assinalarSemaforoNormal) {
-            sem_getvalue(&centroTestes2.filaEsperaNormal, &valorSemaforo);
-            if (valorSemaforo < centroTestes2.numeroPostosDisponiveis) {
-                sem_post(&centroTestes2.filaEsperaNormal); // Liberta fila normal
-            }
-        }
-        if (assinalarSemaforoPrioritario) {
-            sem_getvalue(&centroTestes2.filaEsperaPrioritaria, &valorSemaforo);
-            if (valorSemaforo < centroTestes2.numeroPostosDisponiveis) {
-                sem_post(&centroTestes2.filaEsperaPrioritaria); // Liberta fila prioritaria
-            }
-        }
+        tempoCooldownPontosTestagemCentro1[configuracao.numeroPontosTestagemCentro1] = 0;
+        tempoCooldownPontosTestagemCentro2[configuracao.numeroPontosTestagemCentro2] = 0;
         pthread_mutex_unlock(&mutexVariaveisCentros);
         printf("---------------------------------------------INICIO "
                "PICO--------------------------------------------\n");
@@ -685,7 +667,7 @@ void simulacao(char *filename) {
                 for (index = 0; index < configuracao.numeroPontosTestagemCentro1 + 1; index++) {
                     if (tempoCooldownPontosTestagemCentro1[index] == 0) { // Se o tempo de cooldown do posto for igual a 0, esse posto é colocado como disponivel
                         centroTestes1.numeroPostosDisponiveis++;
-                        printf(MAGENTA "%d %s de testagem disponivel no centro 1.\n" RESET,centroTestes1.numeroPostosDisponiveis,(centroTestes1.numeroPostosDisponiveis==1?"posto":"postos"));
+                        printf(MAGENTA "%d %s de testagem disponivel no centro 1.\n" RESET, centroTestes1.numeroPostosDisponiveis, (centroTestes1.numeroPostosDisponiveis == 1 ? "posto" : "postos"));
                         sem_post(&centroTestes1.filaEspera);
                         tempoCooldownPontosTestagemCentro1[index]--;
                     } else if (tempoCooldownPontosTestagemCentro1[index] > 0) { // Se o tempo de cooldown do posto for maior que 0, é feita a contagem decrescente do cooldown
@@ -694,8 +676,8 @@ void simulacao(char *filename) {
                 }
                 for (index = 0; index < configuracao.numeroPontosTestagemCentro2 + 1; index++) {
                     if (tempoCooldownPontosTestagemCentro2[index] == 0) { // Se o tempo de cooldown atinge os 0, o posto é colocado como disponivel
-                        centroTestes2.numeroPostosDisponiveis++; //É aumentado o numero de postos disponiveis
-                        printf(MAGENTA "%d %s de testagem disponivel no centro 2.\n" RESET,centroTestes2.numeroPostosDisponiveis,(centroTestes2.numeroPostosDisponiveis==1?"posto":"postos"));
+                        centroTestes2.numeroPostosDisponiveis++;          //É aumentado o numero de postos disponiveis
+                        printf(MAGENTA "%d %s de testagem disponivel no centro 2.\n" RESET, centroTestes2.numeroPostosDisponiveis, (centroTestes2.numeroPostosDisponiveis == 1 ? "posto" : "postos"));
                         assinalarSemaforoNormal = ((centroTestes2.numeroPessoasPrioritariasEspera == 0 && centroTestes2.numeroPessoasNormalEspera == 0) ||
                                                    (centroTestes2.numeroPessoasNormalEspera > 0 && (idososTestadosConsecutivamente >= 5 || centroTestes2.numeroPessoasPrioritariasEspera == 0)));
                         assinalarSemaforoPrioritario = ((centroTestes2.numeroPessoasPrioritariasEspera == 0 && centroTestes2.numeroPessoasNormalEspera == 0) ||
@@ -720,7 +702,7 @@ void simulacao(char *filename) {
                 pthread_mutex_unlock(&mutexVariaveisCentros);
                 if (minutosDecorridos % proximoInstanteChegada == 0) {
                     proximoInstanteChegada = numeroAleatorio(tempoMedioChegadaCentros + tempoMedioChegadaCentros / 2, tempoMedioChegadaCentros - tempoMedioChegadaCentros / 2);
-                    if (proximoInstanteChegada==0){
+                    if (proximoInstanteChegada == 0) {
                         proximoInstanteChegada++;
                     }
                     // Cria tarefas pessoas
@@ -837,43 +819,29 @@ void simulacao(char *filename) {
                     strcat(mensagensAEnviar, "/");
                     sprintf(mensagem, "%d-%d-%d", numeroMortos, 9, 0);
                     strcat(mensagensAEnviar, mensagem);
-                    if (configuracao.diasPicos[indexPicos] == numeroDia) { // Se o dia atual for igual a um dos dias de pico as probablidades de a população e os medicos darem positivo aumentam O tempo medio de chegadas é
-                                                                           // divido por 2 É aberto mais 1 posto em cada centro
+                    if (configuracao.diasPicos[indexPicos] == numeroDia && !emPico) { // Se o dia atual for igual a um dos dias de pico as probablidades de a população e os medicos darem positivo aumentam O tempo medio de
+                                                                                      // chegadas é divido por 2 É aberto mais 1 posto em cada centro
                         fimPico = configuracao.diasPicos[indexPicos] + configuracao.duracoesPicos[indexPicos];
                         tempoMedioChegadaCentros /= 2;
                         configuracao.probabilidadePopulacaoPositivo += 0.1;
                         configuracao.probabilidadeMedicoPositivo += 0.1;
                         pthread_mutex_lock(&mutexVariaveisCentros);
-                        centroTestes1.numeroPostosDisponiveis++;
-                        centroTestes2.numeroPostosDisponiveis++;
-                        tempoCooldownPontosTestagemCentro1[configuracao.numeroPontosTestagemCentro1] = -1;
-                        tempoCooldownPontosTestagemCentro2[configuracao.numeroPontosTestagemCentro2] = -1;
-                        sem_post(&centroTestes1.filaEspera);
-                        assinalarSemaforoNormal = ((centroTestes2.numeroPessoasPrioritariasEspera == 0 && centroTestes2.numeroPessoasNormalEspera == 0) ||
-                                                   (centroTestes2.numeroPessoasNormalEspera > 0 && (idososTestadosConsecutivamente >= 5 || centroTestes2.numeroPessoasPrioritariasEspera == 0)));
-                        assinalarSemaforoPrioritario = ((centroTestes2.numeroPessoasPrioritariasEspera == 0 && centroTestes2.numeroPessoasNormalEspera == 0) ||
-                                                        (centroTestes2.numeroPessoasPrioritariasEspera > 0 && (idososTestadosConsecutivamente < 5 || centroTestes2.numeroPessoasNormalEspera == 0)));
-                        if (assinalarSemaforoNormal) {
-                            sem_getvalue(&centroTestes2.filaEsperaNormal, &valorSemaforo);
-                            if (valorSemaforo < centroTestes2.numeroPostosDisponiveis) {
-                                sem_post(&centroTestes2.filaEsperaNormal); // Liberta fila normal
-                            }
-                        }
-                        if (assinalarSemaforoPrioritario) {
-                            sem_getvalue(&centroTestes2.filaEsperaPrioritaria, &valorSemaforo);
-                            if (valorSemaforo < centroTestes2.numeroPostosDisponiveis) {
-                                sem_post(&centroTestes2.filaEsperaPrioritaria); // Liberta fila prioritaria
-                            }
-                        }
+                        tempoCooldownPontosTestagemCentro1[configuracao.numeroPontosTestagemCentro1] = 0;
+                        tempoCooldownPontosTestagemCentro2[configuracao.numeroPontosTestagemCentro2] = 0;
                         pthread_mutex_unlock(&mutexVariaveisCentros);
                         printf("---------------------------------------------INICIO "
                                "PICO--------------------------------------------\n");
-                    } else if (fimPico == numeroDia) { // Se o dia atual for igual a um dos dias de fim de pico as probablidades de a população e os medicos darem positivo voltam ao normal O tempo medio de chegadas volta
-                                                       // aonormal E o numero de postos por centro voltam ao normal
+                    } else if (fimPico == numeroDia && emPico) { // Se o dia atual for igual a um dos dias de fim de pico as probablidades de a população e os medicos darem positivo voltam ao normal O tempo medio de chegadas
+                                                                 // volta aonormal E o numero de postos por centro voltam ao normal
                         tempoMedioChegadaCentros *= 2;
                         configuracao.probabilidadePopulacaoPositivo -= 0.1;
                         configuracao.probabilidadeMedicoPositivo -= 0.1;
-                        indexPicos++;
+                        for (index = indexPicos; index < sizeof(configuracao.diasPicos) / sizeof(configuracao.diasPicos[0]); index++) {
+                            if (configuracao.diasPicos[index] > numeroDia) {
+                                indexPicos = index;
+                                break;
+                            }
+                        }
                         fimPico = 0;
                         pthread_mutex_lock(&mutexVariaveisCentros);
                         tempoCooldownPontosTestagemCentro1[configuracao.numeroPontosTestagemCentro1] = -2;
@@ -918,7 +886,7 @@ void iniciarSemaforosETrincos() {
         printf("Inicializacao do trinco falhou.\n");
     }
     // Inicialização dos semaforos e trincos
-    sem_init(&centroTestes1.filaEspera, 0, configuracao.numeroPontosTestagemCentro1);
+    sem_init(&centroTestes1.filaEspera, 0, 0);
     sem_init(&mutexVariaveisMonitor, 0, 1);
     sem_init(&semaforoEnviarMensagem, 0, 1);
     centroTestes1.numeroPostosDisponiveis = 0;
@@ -928,8 +896,8 @@ void iniciarSemaforosETrincos() {
         tempoCooldownPontosTestagemCentro1[index] = 0;
     }
     tempoCooldownPontosTestagemCentro1[index] = -2;
-    sem_init(&centroTestes2.filaEsperaPrioritaria, 0, configuracao.numeroPontosTestagemCentro2);
-    sem_init(&centroTestes2.filaEsperaNormal, 0, configuracao.numeroPontosTestagemCentro2);
+    sem_init(&centroTestes2.filaEsperaPrioritaria, 0, 0);
+    sem_init(&centroTestes2.filaEsperaNormal, 0, 0);
     centroTestes2.numeroPostosDisponiveis = 0;
     tempoCooldownPontosTestagemCentro2 = (int *)calloc(configuracao.numeroPontosTestagemCentro2 + 1, sizeof(int));
     for (index = 0; index < configuracao.numeroPontosTestagemCentro2; index++) {
