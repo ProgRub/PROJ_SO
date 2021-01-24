@@ -97,17 +97,17 @@ void trataMensagem(char mensagem[]) {
     }
 
     // Obtem o head da lista ligada que se obtem separando bufferAuxiliario por
-    // "-"
+    // "_"
     while (indexMensagem < numeroMensagens) {
         index = 0;
-        char *auxiliario = strtok(mensagensSeparadas[indexMensagem], "-");
+        char *auxiliario = strtok(mensagensSeparadas[indexMensagem], "_");
         indexMensagem++;
 
         // Ciclo que percorre e vai separando pelos - e copiando para
         // valoresSeparados[i]
         while (auxiliario != NULL) {
             strcpy(valoresSeparados[index++], auxiliario);
-            auxiliario = strtok(NULL, "-");
+            auxiliario = strtok(NULL, "_");
         }
 
         // Onde vai guardar os valores depois da divisao
@@ -143,6 +143,7 @@ void trataMensagem(char mensagem[]) {
                 break;
             case 2:
                 casosPositivosTotal = numero;
+                // printf("%s\n",mensagensSeparadas[indexMensagem]);
                 break;
             case 3:
                 casosEmEstudo = numero;
@@ -234,6 +235,7 @@ void imprimirInformacao() {
     printf("Medicos disponiveis: %d\n", medicosDisponiveis);
     printf("Tempo medio de espera (em minutos): %d\n", tempoMedioEspera);
     printf("%s", SEPARADOR);
+    escreveEmFicheiro();
 }
 
 int main(int argc, char *argv[]) {
